@@ -99,6 +99,15 @@
         $(document).ready(function()
         {
 
+            $("form").keypress(
+                function(event){
+                 if (event.which == '13') {
+                    event.preventDefault();
+                  }
+
+
+            });
+
             $(document).on("click", ".boton-news", function()
             {
                 console.log("aaaa");
@@ -113,6 +122,20 @@
                 }
             });
         });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function()
+      {
+        $('#formid').on('keyup keypress', function(e) {
+          var keyCode = e.keyCode || e.which;
+          if (keyCode === 13)
+          {
+            e.preventDefault();
+            return false;
+          }
+        });
+      });
     </script>
 
 

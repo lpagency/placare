@@ -340,6 +340,21 @@
     });
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $('#formid').on('keyup keypress', function(e)
+        {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13)
+            {
+                e.preventDefault();
+                return false;
+            }
+        });
+    });
+</script>
+
 <script type="text/template" id="product_detail">
     <section>
         <div style="position: relative;">
