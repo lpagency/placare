@@ -1,0 +1,345 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+{% include '../home/header.html' %}
+{% end %}
+
+{% block css %}
+<style type="text/css">
+    html,body{
+        font-family: 'Open Sans', sans-serif; 
+    }
+</style>
+{% end %}
+
+{% block javascript %}
+
+{% end %}
+
+
+{% block body %}
+
+{% if is_admin %}
+{% set editabletext = 'editabletext' %}
+{% else %}
+{% set editabletext = '' %}
+{% end %}
+
+
+<!-- *contenido* -->
+<div class="container min"> 
+  <div class="row step-margin-top">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="volver-vitri"> < VOLVER A LA TIENDA </div>
+      <div class="div-1">MI PEDIDO</div>
+    </div>
+    </div>
+
+
+<!-- ***  TABLA PARA SABER PEDIDO ACTUAL **** -->
+    <div class="col-md-8 col-sm-8 col-xs-12">
+      <table style="width: 100%;right: 15px;position: relative;margin-top: 21px;font-size: 11px;font-weight: 700;color: gray;">
+        <tbody class="tabla-actual"><tr>
+          <th style="">Producto</th>
+          <th style="">Detalle de producto</th>
+          <th style="">Cantidad</th>
+          <th style="">Precio</th>
+          <th style="">Subtotal</th>
+          <th style="">Eliminar</th>
+        </tr>
+      </tbody>
+      <tr>
+        <td class="td-img"><img src="https://84static.loadingplay.com/static/images/b6ae5ae3628eb2c612efeb332f2f917b__bedecbaedade_AnoukWomenBlackPrintedStraightKurtajpg.png" alt="" class="img-cart"></td>
+        <td class="nombre-chek ellipsis multiline">Accesorios 4 tipo cuero con lineas bla bla bla más <div class="tal"></div>Talla:37</td>
+        <td class="cant"> <i class="fa fa-minus remove-one che" aria-hidden="true"></i>
+               14
+             <i class="fa fa-plus add-one che" aria-hidden="true" product-id="{{! id }}"></i>
+        </td>
+        <td>$123.456</td>
+        <td class="sub-cheki">$123.456</td>
+        <td class="eliminar-cheki">X</td>
+      </tr>
+    </table>
+    </div>
+    <div style="margin-bottom:10px;"></div>
+
+    <!-- ******* FIN TABLA PEDIDO ACTUAL ***** -->
+
+
+<!-- ******* TABLA FINAL ******* -->
+
+    <div class="col-lg-4 col-md-4 col-sm-5 rightSidebar">
+      <div class="contentBox">
+        <div class="w100 costDetails">
+          <div class="table-block" id="order-detail-content">
+            <div class="w100 cartMiniTable">
+              <table id="cart-summary" class="std table">
+                <tbody>
+                  <tr>
+                    <td class="t-resumen">RESUMEN DE COMPRA</td>
+                  </tr>
+                  <tr>
+                    <td class="box-sub">SUBTOTAL</td>
+                  </tr>
+                  <tr>
+                    <td class="price sum-subtotal">$219.700</td>
+                  </tr>
+                  <tr>
+                    <td class="box-sub">IVA</td>
+                  </tr>
+                    <tr>
+                    <td class="price iva">$219.700</td>
+                  </tr>
+                     <tr>
+                    <td class="box-sub">DESPACHO</td>
+                  </tr>
+                    <tr>
+                    <td class="price despacho">$219.700</td>
+                  </tr>
+                  <tr>
+                    <td class="box-total"> TOTAL </td>
+                  </tr>
+                  <tr>
+                      <td class=" site-color" id="total-price">$219.700</td>
+                  </tr>
+            </tbody>
+            <tbody>
+        </tbody>
+        </table>
+
+      <div align="center">
+        <a class="btn btn-primary pagar btn-lg btn-block " title="checkout" onclick="checkStock()" style="margin-bottom:20px"> PAGAR &nbsp; <!-- <i class="fa fa-arrow-right"> --> </a>
+      </div>
+        <div align="center">
+           <div class="t-1">Recuerda adjuntar el comprobante de transferencia!</div>
+           <div class="t-22">Esta todo listo, pincha en pagar y continua!</div>
+        </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+     </div>
+
+    <!-- ******* FIN TABLA FINAL ***** -->
+
+    <div class="col-md-8 col-sm-8 col-xs-8">
+        <hr class="h-2">
+    </div>
+
+<!-- ****Parte informacion de despacho**** -->
+<div class="col-md-8 col-sm-8 col-xs-12">
+  <div class="info-despacho">INFORMACIÓN DE DESPACHO</div>
+      <form>
+          <div class="col-md-6 form-line">
+              <div class="form-group">
+                <input type="text" class="form-control checkout" id="" placeholder="NOMBRE*">
+              </div>
+                <div class="form-group">
+                <input type="text" class="form-control checkout" id="" placeholder="APELLIDO*">
+              </div> 
+             <div class="form-group">
+                <input type="rut" class="form-control checkout" id="rut" placeholder="RUT*">
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control checkout" id="telephone" placeholder="CELULAR*">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control checkout" id="exampleInputEmail" placeholder="EMAIL*">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control checkout" id="exampleInputEmail" placeholder="CONFIRMAR EMAIL">
+              </div> 
+            </div>
+        </form>
+
+        <form>
+          <div class="col-md-6 form-line corri">
+            <div class="texto-a">DONDE DESPACHAMOS TU PEDIDO?</div>
+            <form>
+          
+          <div class="despacho-tick">
+          <label class="del">
+            <input type="checkbox" value="" class="categ chi">
+            <i class="fa fa-check-square checkout" aria-hidden="true"></i>
+            A DOMICILIO
+          </label>
+          <label class="del">
+            <input type="checkbox" value=""  class="categ chi">
+            <i class="fa fa-check-square checkout" aria-hidden="true"></i>
+            SUCURSAL CHILEXPRESS
+          </label>
+          <label class="del">
+            <input type="checkbox" value=""  class="categ chi">
+         <i class="fa fa-check-square checkout" aria-hidden="true"></i>
+            RETIRO EN TIENDAS
+          </label>
+        </div>
+            </form>
+              <div class="form-group">
+                <input type="text" class="form-control checkout" id="" placeholder="DIRECCION*">
+              </div>
+              <div class="form-group">
+               <i class="fa fa-caret-down chek" aria-hidden="true"></i>
+                <select class="form-control comu" id="sel1">
+                  <option>COMUNA*</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <i class="fa fa-caret-down chek" aria-hidden="true"></i>
+                 <select class="form-control comu" id="sel1">
+                  <option>CIUDAD*</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+                </div>
+              
+                <div class="form-group">
+                <i class="fa fa-caret-down chek" aria-hidden="true"></i>
+                <select name="Sl_region_region" onchange="asigna_region('_region',this)" id="Sl_region_region" class="form-control comu">
+                    <option value="0" selected="selected">REGION*</option>
+                    <option value="01">Tarapaca</option>
+                    <option value="02">Antofagasta</option>
+                    <option value="03">Atacama</option>
+                    <option value="04">Coquimbo</option>
+                    <option value="05">Valparaiso</option>
+                    <option value="06">Del Libertador Bdo O'Higgins</option>
+                    <option value="07">Del Maule</option>
+                    <option value="08">Del Bio Bio</option>
+                    <option value="09">Araucania</option>
+                    <option value="10">Los Lagos</option>
+                    <option value="11">Coyhaique</option>
+                    <option value="12">Magallanes y la Ant. Chilena</option>
+                    <option value="13">Metropolitana</option>
+                    <option value="14">De Los Rios</option>
+                    <option value="15">Arica y Parinacota</option>
+                  </select>
+                </div>
+                 <div class="form-group">
+                       <input class="form-control comu" id="inputsm" type="text" placeholder="BUS">
+                  </div>
+                   <div class="form-group">
+                       <input class="form-control infor" id="inputsm" type="text" placeholder="INFORMACION ADICIONAL">
+                  </div>
+            </div>
+        </form>
+</div>
+
+<!-- ****Parte Cupon**** -->
+
+<div class="col-md-8 col-sm-8 col-xs-12">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+      <hr class="h-3">
+    </div>
+  <div class="info-cupon">INGRESA SU CUPÓN DE DESCUENTO</div>
+  <div class="col-md-6">
+     <div class="form-group">
+       <input class="form-control input-sm" id="inputsm" type="text">
+       <button type="button" class="btn btn-default guardar">GUARDAR</button>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-6">
+  <div class="form-group">
+       <input class="form-control input-sm navi" id="inputsm" type="text" placeholder="PROMOCION NAVIDAD_2017">
+       <button type="button" class="btn btn-default promo">CUPON ACTIVADO CORRECTAMENTE!</button>
+    </div>
+</div>
+</div>
+
+
+
+<!-- ****Parte pago**** -->
+
+<div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <hr class="h-3">
+    </div>
+    <div class="info-pago">INFORMACIÓN DE PAGO</div>
+
+    <form id="payment-type" method="post" novalidate="" class="myform">
+      <div class="col-md-8 col-sm-8 pon">
+        <label class="payment-label" payment-type="webpay">
+          <input type="checkbox" name="payment_type" value="webpay" class="categ">  WEBPAY 
+           <i class="fa fa-check-square pago" aria-hidden="true"></i>
+          <a href="/tos" class="ter-chek">
+            (Acepto términos y condiciones) </a>
+        </label>
+        <div class="">
+          <img src="https://7static.loadingplay.com/static/images/1ce48f3f3a634c3f648fc9fe82d35643_logo_webpay.png" class="logo_webpay-dos">
+        </div>
+        </div>
+
+        <div class="col-md-8 col-sm-8 pon">
+          <label class="payment-label" payment-type="transferencia">
+            <input type="checkbox" name="payment_type" value="transferencia" class="categ">
+            TRANSFERENCIA   <i class="fa fa-check-square pago" aria-hidden="true"></i> <a href="/tos" class="ter-chek-2">
+            (Acepto términos y condiciones) </a> <div class="suger">*Si vas a pagar con transferencia debes terminar todo el proceso de compra, si no NO podremos <br> despachar tu pedido.</div>
+          </label>
+        </div>
+
+
+        <div class="col-md-8 col-sm-8 pon">
+         <div class="texto-datos"> DATOS PARA LA TRANSFERENCIA </div>
+         <div class="box-chekk">
+          <div class="texto-trans">Cuenta corriente </div>
+          <div class="texto-trans">Giani Da Firenze SpA </div>
+          <div class="texto-trans">Rut: 76.290.674-0</div>
+          <div class="texto-trans">Banco Estado</div>
+          <div class="texto-trans">CTA 1286463</div>
+          <div class="texto-trans">Mail: contacto@gianidafirenze.cl</div>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+          <div class="form-group form-moulie">
+            <label class="control-label tra">ADJUNTAR COMPROBANTE</label>
+            <input type="text" name="file" class="imgup-add-input" style="visibility: hidden;">
+            <div class="imageuploader-container">
+              <div class="imgup" name="THEY HATIIN">             
+                <ul class="img-ulist" name="THEY SEE ME ROOOLLIN">            
+                   <li class="imgup-add-input-container"> <input type="file" class="imgup-add-input"> </li>
+                 </ul>   
+               </div>
+               </div>
+          </div>
+        </div>
+        <!-- ****Este boton debe ir oculto,solo aparece cuando ya esta cargado el comprobante estara con hidden por mientras*** -->
+        <div class="col-md-6 col-sm-6 col-xs-6">
+             <button type="button" class="btn btn-default com hidden">COMPROBANTE OK!</button>
+        </div>
+        <!-- ****Este boton debe ir oculto,solo aparece cuando ya esta cargado el comprobante*** -->
+        </div>
+         <label class="payment-label" payment-type="webpay">
+          <input type="checkbox" name="payment_type" value="webpay" class="categ">  PAGO CONVENIO
+           <i class="fa fa-check-square pago" aria-hidden="true"></i> 
+          <a href="/tos" class="ter-chek">
+            (Acepto términos y condiciones) </a>
+        </label>
+      </div>
+    </form>
+</div>
+
+ <div class="col-md-8 col-sm-8 col-xs-12">
+      <hr class="h-3">
+      <div class="despe"> Esta todo listo!! </div>
+      <button type="button" class="btn btn-default pagar-che">PAGAR</button>
+ </div>
+
+</div><!-- /.main-container -->
+
+<div style="margin-bottom:100px;"></div>
+
+
+{% include '../home/footer.html' %}
+{% end %}
+
+

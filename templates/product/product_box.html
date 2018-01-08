@@ -1,0 +1,45 @@
+<script type="text/template" id="product_template" class="hidden">
+<div class="col-md-3 col-sm-3 col-xs-6 ocultar product-box hidden-xs visible-lg visible-sm visible-md" main-price="{{! main_price }}" promotion-price="{{! promotion_price }}" >
+  <a class="" href="{{ site_base }}/sc/product/detail/{{! name|friendly }}/{{! id }}">
+    <div class="conti">
+      <div class="letrero-nuevo hidden" nuevo="{{!tags}}">Nuevo</div>
+      <div class="letrero-sale hidden" promotion-price="{{! promotion_price }}">Sale</div>
+      <img src="{{! images[0]['thumb_500'] }}" alt="" class="img-responsive image" >
+      <div class="up-ex ellipsis multiline">{{! brand }} </div>
+      <div class="inf ellipsis multiline">{{! name }}</div>
+      <div class="product-price original" promotion-price="{{! promotion_price }}" >{{! main_price|money }} </div>
+      <div class="product-price hidden oferta" promotion-price="{{! promotion_price }}">{{! promotion_price|money }} 
+      </div>
+      <div class="product-price hidden original-tachado" promotion-price="{{! promotion_price }}">{{! main_price|money }} </div>
+      <div class="product-price hidden descuento-lis" main-price="{{! main_price }}" promotion-price="{{! promotion_price }}"></div> 
+      <div class="middle">
+        <a href="{{ site_base }}/sc/product/detail/{{! name|friendly }}/{{! id }}" class="text">COMPRAR</a>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+<div class="col-md-3 col-sm-3 col-xs-6 ocultar product-box hidden-md hidden-lg hidden-sm visible-xs" main-price="{{! main_price }}" promotion-price="{{! promotion_price }}" >
+  <a class="" href="{{ site_base }}/sc/product/detail/{{! name|friendly }}/{{! id }}">
+    <div class="conti">
+      <div class="letrero-nuevo hidden" nuevo="{{!tags}}">Nuevo</div>
+      <div class="letrero-sale hidden" promotion-price="{{! promotion_price }}">Sale</div>
+      <img src="{{! images[0]['thumb_500'] }}" alt="" class="img-responsive image" >
+      <div class="up-ex ellipsis multiline">{{! brand }} </div>
+      <div class="inf ellipsis multiline">{{! name }}</div>
+      <div class="product-price original" promotion-price="{{! promotion_price }}" >{{! main_price|money }} </div>
+      <div class="product-price hidden oferta" promotion-price="{{! promotion_price }}">{{! promotion_price|money }} </div>
+      <div class="product-price hidden original-tachado" promotion-price="{{! promotion_price }}">{{! main_price|money }} </div>
+      <div class="product-price hidden descuento-lis" main-price="{{! main_price }}" promotion-price="{{! promotion_price }}"></div> 
+      <div class="middle">
+        
+      </div>
+      <a href="{{ site_base }}/sc/product/detail/{{! name|friendly }}/{{! id }}" class="text">COMPRAR</a>
+    </div>
+  </a>
+</div>
+
+
+</script>

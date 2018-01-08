@@ -1,0 +1,142 @@
+{% extends "../base.html" %}
+{% block title %}
+    {{ site.name }}
+{% end %}
+{% block css %}
+<link href="{{ site_base }}/static/js/lightGallery/dist/css/lightgallery.css" rel="stylesheet">
+{% end %}
+{% block javascript %}
+    <!-- archivos para galería -->
+    <script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/dist/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="{{ site_base }}/static/js/lightGallery/dist/js/lightgallery.js"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/dermatologia.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $("a#single_image").fancybox();
+        $('.fancybox').fancybox();
+        $("#lightgallery").lightGallery({ cssEasing: 'cubic-bezier(0.250, 0.100, 0.250, 1.000)'}); 
+        $("#home").css("text-align", "left");
+        });
+
+    </script>
+    <!-- archivos para galería -->
+{% end %}
+{% block header %}
+{% include '../home/header.html' %}
+
+{% end %}
+{% block body %}
+   
+<section>
+
+       <div style="position: relative;" class="">
+
+                    <!-- <div class="post-date" style="text-align:left;">
+                    {{! article["creation_date"].strftime("%d %b %Y") }} 
+                    </div> -->
+
+                    <img class="banner_gallery"src="{{ gallery.getImageList()[0]["thumb_500"] }}" class="img-responsive" data-original="{{ gallery.getImageList()[0]["thumb_500"] }}" alt="item">
+                    
+                    <div align="center">
+                       <div class="col-md-12">
+                        <div class="box-text-gal"></div>
+                       <h1 class="t-2 text-center">
+                         {{ gallery.title }}
+                      </h1>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                       <div align="center">
+                         <a href="#first-page-scroll" class="anchorLink">
+                           <div class="contenedor-circulo">
+                             <div  class="circulo-bajada" >
+                               <i class="fa fa-angle-down" aria-hidden="true"></i>
+                           </div>
+
+                       </div>
+                   </a>
+               </div>
+           </div>
+
+
+        </div>
+</section>
+
+        <!-- registration -->
+        <div class="container cart-list productlist" id="first-page-scroll">
+     <!--        <div class="row"> --> 
+                <div class="col-sm-12 blog-content">
+                    <article>
+                        <header class="box">
+                           <h1 class="h1-art text_title_galer">
+                                {{ gallery.caption }}
+                            </h1>
+                        </header>
+                        <!-- <div class="post-date" style="text-align:left;">
+                            25 de may 2015 
+                        </div> -->
+
+                        <div class="content articulo-text" style="text-align:left;">
+                            <div class="row">
+                                <div class="col-sm-12 t-3">
+                                    <p class="p-art">
+                                        {{ gallery.description }}
+                                    </p>
+                                </div>
+                            </div>
+        </div>
+    </div>
+                            <!-- galeria -->
+
+        <div class="container-fluid">                    
+                            <div class="row">
+                                <div class="text-center">
+                                    <div class="col-sm-12 especial">
+                                        <ul id="lightgallery" class="list-unstyled row" >
+                                        {% for i in gallery.getImageList() %}
+                                            <li class="col-md-4 text-center height-product article-img" data-responsive="{{ i["thumb_200"] }},{{ i["thumb_500"] }}" data-src="{{ i["thumb_500"] }}" data-sub-html="">
+                                                <a href="">
+                                                    <div class="container_galeria">
+                                                    <img class="img-responsive img-gallery mover" src="{{ i["thumb_500"] }}">
+
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        {% end %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fin galeria -->
+                            <div class="row">
+                                <div class="col-sm-12 especial">
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                             
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-3 blog-sidebar">
+                    <div class="widget" style="text-align:left;">
+                    </div>
+                </div>
+      <!--       </div> -->
+            </div>
+            
+            <!-- row 4 -->
+        
+
+
+
+
+
+    <!-- script para galería -->
+{% include '../home/footer.html' %}
+{% end %}

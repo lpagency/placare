@@ -1,0 +1,32 @@
+.ocultar{
+	display: none !important;
+}
+
+/*.back-menu {
+    width: 93% !important;
+}*/
+.detail-prod-img{
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 200px;
+    object-fit: scale-down;
+    margin-bottom: 7px;
+    padding-left: 0px;
+    left: 0%;
+    position: relative;
+    padding: 10px;
+}
+
+/** dejar estas 2 lineas siempre abajo */
+.show-on-promotion
+{
+    display: none!important;
+}
+
+.hide-on-promotion
+{
+    display: inherit;
+}
