@@ -290,7 +290,7 @@ $(document).ready(function()
 
         var url = getCurrentUrl();
         
-        history.pushState('', 'Placare', url+'?tag='+url_tags.join(','));
+        history.replaceState('', 'Placare', url+'?tag='+url_tags.join(','));
 
         if(shouldLoad!==false)
         {
@@ -331,7 +331,7 @@ $(document).ready(function()
 
         var url = getCurrentUrl();
 
-        history.pushState('', 'Placare', url+'?tag='+url_tags.join(','));
+        history.replaceState('', 'Placare', url+'?tag='+url_tags.join(','));
 
         if(shouldLoad!==false)
         {
@@ -375,7 +375,7 @@ $(document).ready(function()
 
         var url = getCurrentUrl();
 
-        history.pushState('', 'Placare', url+'?tag='+url_tags.join(','));
+        history.replaceState('', 'Placare', url+'?tag='+url_tags.join(','));
 
         if(shouldLoad!==false)
         {
@@ -419,7 +419,7 @@ $(document).ready(function()
 
         var url = getCurrentUrl();
 
-        history.pushState('', 'Placare', url+'?tag='+url_tags.join(','));
+        history.replaceState('', 'Placare', url+'?tag='+url_tags.join(','));
 
         if(shouldLoad!==false)
         {
@@ -463,7 +463,7 @@ $(document).ready(function()
 
         var url = getCurrentUrl();
 
-        history.pushState('', 'Placare', url+'?tag='+url_tags.join(','));
+        history.replaceState('', 'Placare', url+'?tag='+url_tags.join(','));
 
         if(shouldLoad!==false)
         {
@@ -490,9 +490,6 @@ function onLoadInit(tagGroups, tag_url){
     //Load default filter from friendly url
 
     var defaultFilter = getDefaultFilter();
-
-    if(defaultFilter!=="")
-        $("."+defaultFilter).trigger('change',[false]);
 
     // Load filters from tag parameter in url
     if(Utils.getUrlParameter('tag')!==undefined)
@@ -556,8 +553,15 @@ function limpiar()
     $(".texto-ruta").html("Home ");
     $(".fa-check-square").addClass("hidden");
 
+    var d = getDefaultFilter();
+
     $('input:checkbox').each(function(){
-        $(this).attr('checked',false);
+        // If this checkbox doesn't have the default filtering class, it enters the conditional
+        if(!$(this).hasClass(d)) 
+        {
+            $(this).attr('checked',false);
+
+        }
     });
 
     $('.filtrosRec').children().each(function()
@@ -566,9 +570,6 @@ function limpiar()
     });
 
     var defaultTag = getDefaultFilter();
-
-    if(defaultTag!=="")
-        $("."+defaultTag).trigger('change',[false]);
 
     window.tagGroups = { 
         'Categoria3' : [], 
@@ -585,7 +586,7 @@ function limpiar()
 
     var url = getCurrentUrl();
 
-    history.pushState('', 'Placare', url+'?tag='); //Agregar url custom
+    history.replaceState('', 'Placare', url+'?tag='); //Agregar url custom
 
     $('.products').html("");
     $('.products').ecommerce('destroy');
