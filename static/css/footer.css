@@ -792,9 +792,8 @@ div.image-upload.fe {
 }
 
 .img-cam {
-    width: 48%;
-    position: relative;
-    right: 0px;
+   width: 250px;
+   max-width: 100%;
 }
 
 .alme {
