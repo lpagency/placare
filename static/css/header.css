@@ -287,11 +287,8 @@ li.slogan a {
 
 }
 @media (max-width: 991px){
-.container.min {
-    width: 969px;
-}
 
-.nav>li>a {
+.nav>li>a { 
     font-size: 10px;
 }
 
