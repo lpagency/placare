@@ -516,13 +516,14 @@ div.image-upload.fe {
 
 @media (max-width: 991px){
     .no-doti {
-    position: relative;
-    left:0px;
-    width: 100%;
-}
+        position: relative;
+        left:0px;
+        width: 100%;
+    }
 .y-1, .y-2, .y-3, .y-4, .y-5{
-    width: auto;
+    width: 33%;
 }
+.y-4{ clear: left; }
 
 
 .container.min-2{
