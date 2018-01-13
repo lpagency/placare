@@ -265,8 +265,6 @@ li.slogan a {
 }
 .hed {
     position: absolute;
-    top: 121% !important;
-    left: 28% !important;
     z-index: 1000;
     display: none;
     float: right;
@@ -285,10 +283,11 @@ li.slogan a {
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 0px 0px rgba(0,0,0,.175);
 }
+.linea-prefooter{ width: 100%; }
 
 }
 @media (max-width: 991px){
-    .container.min {
+.container.min {
     width: 969px;
 }
 
