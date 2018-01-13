@@ -261,9 +261,7 @@ li.slogan a {
 .text-slogan {
     text-align: left;
     top: 8px;
-    margin-bottom: -15px;
     font-size: 12px;
-    overflow: hidden;
 }
 .hed {
     position: absolute;
@@ -362,15 +360,7 @@ a.desktop-submit {
 }
 
 .text-slogan {
-    text-align: left;
-    float: left;
-    position: relative;
-    right: 17px;
-    top: 8px;
-    margin-bottom: -15px;
     font-size: 9px;
-    height: 21px;
-    overflow: hidden;
 }
 
 }
