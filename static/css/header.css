@@ -19,7 +19,7 @@
 }
 
 .container.min{
- width: 980px;
+ max-width: 980px;
 }
 
 .desktop-query>input.desktop-searchBar {
