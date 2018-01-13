@@ -159,6 +159,10 @@ li.slogan a {
     position: relative;
     left: 0%;
 }
+.navbar-nav.sa .drowpdown{
+    float: left;
+    display: inline-block;
+}
 
 .navbar-default .navbar-nav>li>a {
     color: #999;
@@ -183,7 +187,6 @@ li.slogan a {
     color: #999;
     background-color: transparent;
     border-color: transparent;
-    float: inherit;
     margin-top: 16px;
     border-radius: 0px;
     text-align: left;
@@ -192,7 +195,7 @@ li.slogan a {
     width: 100%;
     font-size: 15px;  
     font-weight: 500;
-
+    display: inline-block;
 }
 
 .btn-primary.header:hover, .btn-primary.header:focus, .btn-primary.header:active, .btn-primary.header.active, .open>.dropdown-toggle.btn-primary.header {
@@ -295,6 +298,10 @@ li.slogan a {
 
 .nav>li>a { 
     font-size: 10px;
+}
+
+.navbar-collapse{
+    padding: 0;
 }
 
 .navbar-nav.navbar-right.dos:last-child {
