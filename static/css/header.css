@@ -256,15 +256,11 @@ li.slogan a {
 }
 /*------------------------------------------Responsive--------------------------------*/
 @media (max-width: 1199px){
-    .text-slogan {
+.text-slogan {
     text-align: left;
-    float: left;
-    position: relative;
-    left: -4%;
     top: 8px;
     margin-bottom: -15px;
     font-size: 12px;
-    height: 21px;
     overflow: hidden;
 }
 .hed {
