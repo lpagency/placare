@@ -307,6 +307,8 @@ li.slogan a {
     padding: 0;
 }
 
+.col-md-6.col-sm-12.col-xs-12 .navbar-nav{ float: none; }
+
 .navbar-nav.navbar-right.dos:last-child {
     margin-right: 16px;
     margin-bottom: -6px;
