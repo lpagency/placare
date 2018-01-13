@@ -290,6 +290,10 @@ li.slogan a {
 
 .container{ width: 100%; }
 
+.dropdown.col-md-4{
+    display: inline-block;
+}
+
 .nav>li>a { 
     font-size: 10px;
 }
