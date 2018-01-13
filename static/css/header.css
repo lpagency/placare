@@ -76,6 +76,10 @@ a.desktop-submit {
     float: right;
 }
 
+#open-cart{ 
+    cursor: pointer; 
+}
+
 li.icon {
     position: relative;
     left: 97px;
@@ -107,11 +111,9 @@ li.icon {
     position: relative;
     display: block;
     padding: 10px 15px;
-    margin-top: 8px;
     font-size: 15px;
     float: left;
     left: 0px;
-    top: 6px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 500;
@@ -141,20 +143,17 @@ li.slogan a {
 }
 
 .text-slogan {
-    text-align: left;
-    float: left;
     position: relative;
-    left: 15%;
-    top: 8px;
-    margin-bottom: -15px;
+    padding: 10px 0;
     font-size: 12px;
     height: 21px;
     overflow: hidden;
-    width: 90%;
     color: #999;
     font-weight: 400;
 }
-
+.navbar-nav{
+    float: right;
+}
 
 .navbar-nav.sa {
     float: left;

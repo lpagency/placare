@@ -76,8 +76,6 @@ hr {
     font-size: 13px;
     color: #696b79;
     font-weight: 300;
-    width: 90%;
-    right: 49px;
     text-align: left;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -94,10 +92,7 @@ hr {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    top: 9px;
-    position: relative;
     margin-bottom: 10px;
-    right: 30px;
     text-align: left;
     margin-top: 17px;
 }
@@ -335,15 +330,10 @@ div.image-upload.fo {
     font-size: 15px;
     color: #282c3f;
     font-weight:400;
-    width: 131%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    top: 9px;
-    position: relative;
     margin-bottom: 22px;
-    right: 26px;
-    text-align: left;
     margin-top: 13px;
     text-transform: uppercase;
 }
