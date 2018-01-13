@@ -465,10 +465,8 @@ hr.f-min-2 {
 }
 
 .img-foot-red-pa {
-    height: 55px;
-    width: auto;
-    float: left;
-    margin-top: -47px;
+    width: 110px;
+    max-width: 100%;
     margin-bottom: 0px;
     object-fit: scale-down;
     right: 0px;
