@@ -91,6 +91,7 @@
 
 <section class="hidden-xs">
   <div class="container min">
+    {{ read_image(site.name + '_home',500) }}
     <div class="mobile" style="background:url('{{ read_image(site.name + '_home',500) }}');     height: 175px;background-size: cover;margin-top: 0px;filter: grayscale(0%) brightness(95%);-webkit-filter: grayscale(0%) brightness(95%);-moz-filter: grayscale(0%) brightness(95%);-ms-filter: grayscale(0%) brightness(95%);-o-filter: grayscale(0%) brightness(95%);background-position: center;margin-bottom: 20px;" data-img-width="1600" data-img-height="1064" data-diff="100">
       {% if is_admin %}
         <div class="image-upload part1 lapiz visible-movil">
