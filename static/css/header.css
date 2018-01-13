@@ -294,6 +294,11 @@ li.slogan a {
 
 .dropdown.col-md-4{
     display: inline-block;
+    float: left;
+    padding-right: 10px;
+}
+.dropdown.col-md-4+.dropdown.col-md-4{
+    padding-right: 0;
 }
 
 .nav>li>a { 
