@@ -433,6 +433,7 @@ hr.f-min-2 {
 .col-md-2.y-4 {
     width: 232px;
 }
+.y-4 a{ display: inline-block; }
 
 .col-md-2.y-5 {
     width: 205px;
@@ -475,11 +476,8 @@ hr.f-min-2 {
 }
 
 .img-foot-red-pa.espe {
-    height: 28px;
-    top: 11px;
-    width: auto;
-    float: left;
-    margin-top: -47px;
+    width: 110px;
+    max-width: 100%;
     margin-bottom: 0px;
     object-fit: scale-down;
     right: 0px;
