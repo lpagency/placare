@@ -505,11 +505,11 @@ div.image-upload.fe {
     width: 100%;
 }
 
-.img-cam{
-    width: 194%;
-    position: relative;
-    right: 12px;
+.img-cam {
+   width: 250px;
+   max-width: 100%;
 }
+
 
 /*----------------------------------------------Responsive-----------------------------------*/
 
@@ -1106,10 +1106,10 @@ hr {
 }
 
 .img-cam {
-    width: 92%;
-    position: relative;
-    right: 15px;
+   width: 250px;
+   max-width: 100%;
 }
+
 
 }
 
