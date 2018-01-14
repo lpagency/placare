@@ -2,14 +2,12 @@
 .logo {
     height: 51px;
     width: 200px;
-    margin-top: -7px;
     margin-bottom: 0px;
     object-fit: scale-down;
     position: relative;
 }
 
 .caja-logo {
-    height: 51px;
     width: 154px;
     margin-top: 11px;
     margin-bottom: 0px;
