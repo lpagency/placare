@@ -232,7 +232,6 @@ div.upload input, div.image-upload input {
     width: 100%;
     float: left;
     position: relative;
-    right: 15px;
     color: white;
     background-color: #FF9D36;
     border-color: #FF9D36;
@@ -244,25 +243,15 @@ div.upload input, div.image-upload input {
 }
 
 .btn-block:hover {
-    display: block;
-    width: 100%;
     background-color: white;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    float: left;
     color: #FF9D36;
     background-color: white;
     border-color: #FF9D36;
-    border-radius: 5px;
-    height: 45px;
-    float: left;
-    position: relative;
-    right: 15px;
-    font-size: 13px;
-    font-weight: 500;
 }
 
 .modal-title {
@@ -449,8 +438,6 @@ input.cup{
 }
 
 .align-form-contact {
-    padding-left: 0px;
-    padding-right: 0px;
     margin-top: 55px;
     width: 100%;
 }
@@ -470,13 +457,9 @@ input.cup{
     border-radius: 0px;
     float: left;
     position: relative;
-    right: 6px;
 }
 
 .btn-block:hover {
-    display: block;
-    width: 100%;
-    border-radius: 0px;
     background-color: white;
     color: gray;
     border: 1px solid gray;
@@ -485,9 +468,6 @@ input.cup{
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    float: left;
-    position: relative;
-    right:0px;
 }
 
 }
