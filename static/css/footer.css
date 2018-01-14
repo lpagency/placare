@@ -153,8 +153,6 @@ a.a-footer{
     padding-bottom: 30px;
 }
 
-#footer .row .col-xs-12:nth-of-type(4){ clear: left; }
-
 ul.social{ padding-left: 0; }
 ul.social li{ margin-right: 10px; display: inline-block; }
 
@@ -191,7 +189,6 @@ div.image-upload.fo {
 
 .form-control.fot {
     border-radius: 0px;
-    height: 38px;
     font-size: 11px;
     font-weight: 700;
     width: 48%;
@@ -220,8 +217,9 @@ div.image-upload.fo {
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    padding: 5px 20px;
+    padding: 12px 20px;
 }
+.btn-default.sus{ margin-right: 10px; }
 
 .btn-default.sus:hover, .btn-default.sus-h:hover {
     color: #666465;
@@ -465,17 +463,10 @@ div.image-upload.fe {
         left:0px;
         width: 100%;
     }
-.y-1, .y-2, .y-3, .y-4, .y-5{
-    width: 33%;
-}
-.y-4{ clear: left; }
-
-
-.container.min-2{
-    width: 100%;
-}
-
-
+    #footer .row .col-xs-12:nth-of-type(4){ clear: left; }
+    .container.min-2{
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px){
