@@ -202,72 +202,31 @@ div.image-upload.fo {
     border: 1px solid rgba(128, 128, 128, 0.5);
 }
 
-.btn-default.sus {
+.btn-default.sus, .btn-default.sus-h {
     color: white;
     background-color: #666465;
     border-color: #666465;
     border-radius: 0px;
-    width: 25%;
+    width: auto;
+    display: inline-block;
     margin-top: 24px;
     font-weight: 600;
     float: left;
-    height: 38px;
     left: 18px;
     position: relative;
     padding-top: 5px;
-}
-
-.btn-default.sus:hover {
-    color: #666465;
-    background-color: white;
-    border-color: #ccc;
-    border-radius: 0px;
-    width:25%;
-    margin-top: 24px;
-    font-weight: 600;
-    height: 38px;
-    left: 18px;
-    float: left;
-    position: relative;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    padding: 5px 20px;
 }
 
-.btn-default.sus-h {
-    color: white;
-    background-color: #666465;
-    border-color: #666465;
-    border-radius: 0px;
-    width: 26%;
-    margin-top: 24px;
-    font-weight: 600;
-    float: left;
-    height: 38px;
-    left: 34px;
-    position: relative;
-    padding-top: 4px;
-}
-
-.btn-default.sus-h:hover {
+.btn-default.sus:hover, .btn-default.sus-h:hover {
     color: #666465;
     background-color: white;
     border-color: #ccc;
-    border-radius: 0px;
-    width: 26%;
-    margin-top: 24px;
-    font-weight: 600;
-    height: 38px;
-    left: 34px;
-    float: left;
-    position: relative;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
 .firma {
