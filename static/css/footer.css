@@ -14,8 +14,6 @@ hr {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    top: 9px;
-    position: relative;
     margin-bottom: 23px;
     text-transform: uppercase;
 }
