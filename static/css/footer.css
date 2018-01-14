@@ -831,40 +831,6 @@ hr.new-f {
     border-bottom: 1px solid transparent;
 }
 
-.img-foot-red-pa {
-    height: 55px;
-    width: 125px;
-    float: left;
-    margin-top: -52px;
-    margin-bottom: 56px;
-    object-fit: scale-down;
-    right: 9px;
-    position: relative;
-    padding: 0px;
-}
-
-.img-foot-red-pa.ch {
-    height: 55px;
-    width: 125px;
-    float: left;
-    margin-top: -67px;
-    margin-bottom: 30px;
-    object-fit: scale-down;
-    right: 3px;
-    position: relative;
-    padding: 0px;
-}
-.img-foot-red-pa.co {
-    height: 55px;
-    width: 125px;
-    float: left;
-    margin-top: -67px;
-    margin-bottom: 30px;
-    object-fit: scale-down;
-    right: 1px;
-    position: relative;
-    padding: 0px;
-}
 
 }
 
