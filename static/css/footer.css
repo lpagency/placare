@@ -155,6 +155,8 @@ a.a-footer{
     padding-bottom: 30px;
 }
 
+#footer .row .col-xs-12:nth-of-type(4){ clear: left; }
+
 ul.social{ padding-left: 0; }
 ul.social li{ margin-right: 10px; display: inline-block; }
 
