@@ -525,14 +525,15 @@ div.image-upload.fe {
     background-color: #666465;
     border-color: #666465;
     border-radius: 0px;
-    width: 33%;
+    width: auto;
     margin-top: 24px;
     font-weight: 600;
     float: left;
-    height: 38px;
+    height: auto;
     left: 0px;
+    padding: 5 20px;
     position: relative;
-    padding-top: 5px;
+    display: inline-block;
 }
 .btn-default.sus:hover {
     color: #666465;
