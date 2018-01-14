@@ -525,24 +525,6 @@ div.image-upload.fe {
     position: relative;
     margin-left: 0px;
     width: 100%;
-    top: -4px;
-    /* left: 338px; */
-    padding: 0px;
-}
-
-.no-dot {
-    margin-bottom: 0px;
-    width: 100%;
-    left: 0px;
-    padding: 0px;
-}
-
-.no-doti {
-    position: relative;
-    left: 0px;
-    width: 100%;
-    text-align: left;
-    padding: 0px;
 }
 
 .ul-1{
@@ -576,14 +558,6 @@ div.image-upload.fe {
     font-size: 15px;
     text-align: left;
     width: 100%;
-}
-.caja-fo-red {
-    height: 39px;
-    width: 26px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    position: relative;
-    left: 0px;
 }
 
 .img-foot-red {
