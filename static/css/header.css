@@ -197,7 +197,12 @@ li.slogan a {
     font-weight: 500;
     display: inline-block;
 }
-
+.dropdown.col-md-4{
+    margin-right: 20px;
+}
+.dropdown.col-md-4 + .dropdown.col-md-4{
+    margin-right: 0;
+}
 .btn-primary.header:hover, .btn-primary.header:focus, .btn-primary.header:active, .btn-primary.header.active, .open>.dropdown-toggle.btn-primary.header {
     color: #db8800;
     background-color: transparent;
@@ -293,16 +298,17 @@ li.slogan a {
 .dropdown.col-md-4{
     display: inline-block;
     float: left;
-    padding-right: 10px;
-}
-.dropdown.col-md-4+.dropdown.col-md-4{
-    padding-right: 0;
+    padding: 0;
+    margin-right: 20px;
 }
 .navbar-nav > li{
     margin-right: 15px;
 }
 .nav>li>a { 
     font-size: 10px;
+    padding: 10px 0;
+}
+.btn-primary.header{
     padding: 10px 0;
 }
 
