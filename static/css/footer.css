@@ -156,15 +156,15 @@ a.a-footer{
     padding-bottom: 30px;
 }
 
+ul.social{ padding-left: 0; }
+ul.social li{ margin-right: 10px; }
+
 .caja-fo-red {
     height: 39px;
     width: 26px;
-    float: left;
     margin-top: 0px;
     margin-bottom: 14px;
     position: relative;
-    left: -17px;
-    top: 45px;
     margin-right: 5px;
 }
 
@@ -644,8 +644,7 @@ div.image-upload.fe {
 .caja-fo-red {
     height: 39px;
     width: 26px;
-    float: initial;
-    margin-top: 42px;
+    margin-top: 20px;
     margin-bottom: 0px;
     position: relative;
     left: 0px;
@@ -655,7 +654,6 @@ div.image-upload.fe {
     height: 30px;
     width: 30px;
     float:initial;
-    margin-top: -47px;
     margin-bottom: 0px;
     object-fit: scale-down;
 }
