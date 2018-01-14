@@ -32,8 +32,6 @@ li{
 
 .guni{
     padding: 0px;
-    width: 101%;
-    margin-left: -3px;
 }
 .full-banner{ margin-bottom: 20px; }
 
@@ -587,20 +585,9 @@ input.cup{
 
 @media (max-width: 414px){
 .box-med {
-    width: 101%;
-    height: 369px;
-    object-fit: contain;
+    margin-bottom: 10px;
 }
-.linea-prefooter {
-    width: 92%;
-}
-.cli {
-    margin-bottom: 11px !important;
-    margin-top: -8px;
-}
-
 .article-ho{
-   margin-bottom: 11px !important;
 }
 
 
@@ -641,22 +628,7 @@ input.cup{
 }
 
 @media (max-width: 320px){
-.box-med {
-    width: 101%;
-    height: 369px;
-    object-fit: contain;
-    margin-bottom: 0px;
-}
 
-.cli {
-    margin-bottom: -61px !important;
-    margin-top: -47px;
-}
-
-
-.article-ho {
-    margin-bottom: -64px !important;
-}
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     padding: 8px;
