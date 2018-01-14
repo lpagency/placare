@@ -48,10 +48,9 @@ hr {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    top: 9px;
-    position: relative;
     margin-bottom: 23px;
     text-transform: uppercase;
+    padding-top: 20px;
 }
 
 .ul-22 {
@@ -128,11 +127,11 @@ hr {
 }
 
 .no-doti {
-    position: relative;
     left: 0px;
     width: 100%;
     margin-bottom: 25px;
     padding: 0px;
+    padding-top: 20px;
 }
 
 a.a-footer{
@@ -157,22 +156,14 @@ a.a-footer{
 }
 
 ul.social{ padding-left: 0; }
-ul.social li{ margin-right: 10px; }
+ul.social li{ margin-right: 10px; display: inline-block; }
 
 .caja-fo-red {
-    height: 39px;
-    width: 26px;
     margin-top: 0px;
     margin-bottom: 14px;
-    position: relative;
-    margin-right: 5px;
 }
 
 .img-foot-red {
-    height: 30px;
-    width: 30px;
-    float: left;
-    margin-top: -47px;
     margin-bottom: 0px;
     object-fit: scale-down;
 }
