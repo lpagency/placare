@@ -32,8 +32,6 @@ hr {
 .inform-comerc{
     width: 100%;
     position: relative;
-    left: -11px;
-  /*  z-index: 1030;*/
 }
 
 
@@ -124,9 +122,7 @@ hr {
 
 
 .no-dot {
-    position: relative;
     left: 0px;
-    width: 117%;
     margin-bottom: 0px;
     padding: 0px;
 }
@@ -507,7 +503,6 @@ div.image-upload.fe {
 }
 
 .img-cam {
-   width: 250px;
    max-width: 100%;
 }
 
