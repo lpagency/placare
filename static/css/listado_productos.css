@@ -292,7 +292,6 @@ hr.len {
     margin-top: 19px;
     margin-bottom: 9px;
     position: relative;
-    left: -3%;
     float: left;
     font-size: 12px;
     font-weight: 200;
@@ -300,13 +299,6 @@ hr.len {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-transform: capitalize;
-}
-
-.container.min.dos {
-    padding-left: 39px;
-    padding-right: 3px;
-    width: 1119px;
-    margin-bottom: 75px;
 }
 
 .up-ex {
