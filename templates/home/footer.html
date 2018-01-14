@@ -153,6 +153,75 @@
           </ul>
         </div>
       </div>
+      <!-- *******otras imagenes****** -->
+      <div class="col-md-2 col-sm-4 col-xs-12 visible-md visible-lg visible-sm hidden-xs">
+        <div class="inform-comerc-2 text-left">
+          <div class="clearfix"></div>
+          <ul class="no-dot opi">
+                    <div class="ul-2 {{editabletext}}" text-id="{{ site.name + '_footer_son_ko' }}"> {{ read_text(site.name +  '_footer_son_ko') }}
+              </div>
+              <div class="">
+                <div class="">
+                 {% if is_admin %}
+                 <div class="image-upload fe visible-movil">
+                   <label for="img_footer_des_1">
+                     <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'" >
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_footer_des_1" name="image" id="img_footer_des_1" >
+                 </div>
+                 {% end %}
+                 <a id="{{ site.name + '_footer_des_1' }}" href="{{ read_link(site.name + '_footer_des_1') }}" target="_blank">
+
+                   <img id="{{ site.name }}_footer_des_1" src="{{ read_image(site.name + '_footer_des_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_footer_des_1',200) }}'" class="img-foot-red-pa" alt="item">
+                 </a>
+                 {% if is_admin %}
+                 <img class="change-image editablelink fo" link-id="{{ site.name + '_footer_des_1' }}" content="{{ read_link(site.name + '_footer_des_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
+                 {% end %}
+               </div>
+              </div>
+               <div class="">
+                <div class="">
+                 {% if is_admin %}
+                 <div class="image-upload fe visible-movil">
+                  <label for="img_footer_des_2">
+                     <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_footer_des_2" name="image" id="img_footer_des_2" >
+                 </div>
+                 {% end %}
+                 <a id="{{ site.name + '_footer_des_2' }}" href="{{ read_link(site.name + '_footer_des_2') }}" target="_blank">
+
+                   <img id="{{ site.name }}_footer_des_2" src="{{ read_image(site.name + '_footer_des_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_footer_des_2',200) }}'" class="img-foot-red-pa espe" alt="item">
+                 </a>
+                 {% if is_admin %}
+                 <img class="change-image editablelink fo" link-id="{{ site.name + '_footer_des_2' }}" content="{{ read_link(site.name + '_footer_des_2') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
+                 {% end %}
+               </div>
+              </div>
+               <div class="">
+                <div class="">
+                 {% if is_admin %}
+                 <div class="image-upload fe visible-movil">
+                  <label for="img_footer_des_3">
+                     <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_footer_des_3" name="image" id="img_footer_des_3" >
+                 </div>
+                 {% end %}
+                 <a id="{{ site.name + '_footer_des_3' }}" href="{{ read_link(site.name + '_footer_des_3') }}" target="_blank">
+
+                   <img id="{{ site.name }}_footer_des_3" src="{{ read_image(site.name + '_footer_des_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_footer_des_3',200) }}'" class="img-foot-red-pa" alt="item">
+                 </a>
+                 {% if is_admin %}
+                 <img class="change-image editablelink fo" link-id="{{ site.name + '_footer_des_3' }}" content="{{ read_link(site.name + '_footer_des_3') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
+                 {% end %}
+               </div>
+              </div>
+          </ul>
+
+        </div>
+      </div>
+      <!-- *******otras imagenes MOOOOOOOVIL****** -->
       <!-- *****movil*** -->
       <div align="center">
         <div class="col-md-2 col-sm-2 col-xs-12 hidden-lg hidden-md hidden-sm visible-xs mi">
@@ -261,75 +330,6 @@
         </div>
       </div>
       <!-- ****fin movil**** -->
-      <!-- *******otras imagenes****** -->
-        <div class="col-md-2 col-sm-4 col-xs-12 visible-md visible-lg visible-sm hidden-xs">
-          <div class="inform-comerc-2 text-left">
-            <div class="clearfix"></div>
-            <ul class="no-dot opi">
-                      <div class="ul-2 {{editabletext}}" text-id="{{ site.name + '_footer_son_ko' }}"> {{ read_text(site.name +  '_footer_son_ko') }}
-                </div>
-                <div class="">
-                  <div class="">
-                   {% if is_admin %}
-                   <div class="image-upload fe visible-movil">
-                     <label for="img_footer_des_1">
-                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'" >
-                     </label>
-                     <input type="file" class="editableimage" image-id="{{ site.name }}_footer_des_1" name="image" id="img_footer_des_1" >
-                   </div>
-                   {% end %}
-                   <a id="{{ site.name + '_footer_des_1' }}" href="{{ read_link(site.name + '_footer_des_1') }}" target="_blank">
-
-                     <img id="{{ site.name }}_footer_des_1" src="{{ read_image(site.name + '_footer_des_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_footer_des_1',200) }}'" class="img-foot-red-pa" alt="item">
-                   </a>
-                   {% if is_admin %}
-                   <img class="change-image editablelink fo" link-id="{{ site.name + '_footer_des_1' }}" content="{{ read_link(site.name + '_footer_des_1') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
-                   {% end %}
-                 </div>
-                </div>
-                 <div class="">
-                  <div class="">
-                   {% if is_admin %}
-                   <div class="image-upload fe visible-movil">
-                    <label for="img_footer_des_2">
-                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-                     </label>
-                     <input type="file" class="editableimage" image-id="{{ site.name }}_footer_des_2" name="image" id="img_footer_des_2" >
-                   </div>
-                   {% end %}
-                   <a id="{{ site.name + '_footer_des_2' }}" href="{{ read_link(site.name + '_footer_des_2') }}" target="_blank">
-
-                     <img id="{{ site.name }}_footer_des_2" src="{{ read_image(site.name + '_footer_des_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_footer_des_2',200) }}'" class="img-foot-red-pa espe" alt="item">
-                   </a>
-                   {% if is_admin %}
-                   <img class="change-image editablelink fo" link-id="{{ site.name + '_footer_des_2' }}" content="{{ read_link(site.name + '_footer_des_2') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
-                   {% end %}
-                 </div>
-                </div>
-                 <div class="">
-                  <div class="">
-                   {% if is_admin %}
-                   <div class="image-upload fe visible-movil">
-                    <label for="img_footer_des_3">
-                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-                     </label>
-                     <input type="file" class="editableimage" image-id="{{ site.name }}_footer_des_3" name="image" id="img_footer_des_3" >
-                   </div>
-                   {% end %}
-                   <a id="{{ site.name + '_footer_des_3' }}" href="{{ read_link(site.name + '_footer_des_3') }}" target="_blank">
-
-                     <img id="{{ site.name }}_footer_des_3" src="{{ read_image(site.name + '_footer_des_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_footer_des_3',200) }}'" class="img-foot-red-pa" alt="item">
-                   </a>
-                   {% if is_admin %}
-                   <img class="change-image editablelink fo" link-id="{{ site.name + '_footer_des_3' }}" content="{{ read_link(site.name + '_footer_des_3') }}" src="{{ site_base }}/static/img/link.png" onmouseover="this.src='{{ site_base }}/static/img/link.png';" onmouseout="this.src='{{ site_base }}/static/img/link.png';">
-                   {% end %}
-                 </div>
-                </div>
-            </ul>
-
-          </div>
-        </div>
-      <!-- *******otras imagenes MOOOOOOOVIL****** -->
         <div align="center">
           <div class="col-md-2 col-sm-2 col-xs-12 hidden-lg hidden-md hidden-sm visible-xs mi">
             <div class="inform-comerc-2 text-left">
