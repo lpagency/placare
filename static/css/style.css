@@ -167,11 +167,6 @@ div.upload input, div.image-upload input {
     padding-bottom: 48px;
 }
 
-.fondo-contact {
-    width: 50%;
-    height: auto;
-}
-
 .fondo-form {
     width: 100%;
     object-fit: cover !important;
@@ -230,7 +225,6 @@ div.upload input, div.image-upload input {
 .coli {
     margin-top: 50px;
     position: relative;
-    right: 30px;
 }
 
 .btn-block {
@@ -431,10 +425,6 @@ input.cup{
     right: 11px;
 }
 
-.form-group.form-ran{
-    margin-left: -118px;
-}
-
 .box-costos{
     width: 100%;
     margin-top: 40px;
@@ -468,12 +458,10 @@ input.cup{
 .coli {
     margin-top: 50px;
     position: relative;
-    right: 14px;
 }
 
 .form-group.con {
     margin-bottom: 19px;
-    margin-left: -8px;
 }
 
 .btn-block {
