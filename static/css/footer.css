@@ -503,12 +503,6 @@ div.image-upload.fe {
     transition: all 0.5s ease;
 }
 
-.y-5 {
-    width: 181px;
-    margin-left: 0px;
-    margin-top: 90px;
-}
-
 }
 
 
@@ -524,6 +518,7 @@ div.image-upload.fe {
     margin-left: 0px;
     width: 100%;
 }
+#footer .row .col-xs-12{ padding-bottom: 0; }
 
 .d-o {
     margin-right: 0px;
@@ -873,42 +868,8 @@ hr.new-f {
 
 }
 
-@media (max-width: 700px){
-    .caja-fo-red {
-    height: 39px;
-    width: 26px;
-    float: initial;
-    margin-top: 42px;
-    margin-bottom: 0px;
-    position: relative;
-    left: 78px;
-}
-
-}
-
-@media (max-width: 580px){
-    .caja-fo-red {
-    height: 39px;
-    width: 26px;
-    float: initial;
-    margin-top: 42px;
-    margin-bottom: 0px;
-    position: relative;
-    left: 54px;
-}
-
-}
 
 @media (max-width: 500px){
-    .caja-fo-red {
-    height: 39px;
-    width: 26px;
-    float: initial;
-    margin-top: 42px;
-    margin-bottom: 0px;
-    position: relative;
-    left: 38px;
-}
 
 .op {
     text-align: left;
@@ -925,34 +886,13 @@ hr.new-f {
 
 }
 
-@media (max-width: 460px){
-    .caja-fo-red {
-    height: 39px;
-    width: 26px;
-    float: initial;
-    margin-top: 42px;
-    margin-bottom: 0px;
-    position: relative;
-    left: 30px;
-}
-
-}
 
 @media (max-width: 414px){
-.caja-fo-red {
-    height: 39px;
-    width: 26px;
-    float: initial;
-    margin-top: 17px;
-    margin-bottom: 0px;
-    position: relative;
-    left: -17px;
-}
+
 
 .alme {
     margin-left: 0px;
     padding: 0px;
-    padding-right: 10px !important;
 }
 
 .mi {
