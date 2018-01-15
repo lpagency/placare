@@ -91,7 +91,7 @@ div.upload input, div.image-upload input {
 
 .article-ho{
 /*	overflow: hidden;*/
-    margin-bottom: 11px;
+    margin-bottom: 20px;
 }
 
 .fi{
@@ -542,8 +542,6 @@ input.cup{
 @media (max-width: 414px){
 .box-med {
     margin-bottom: 10px;
-}
-.article-ho{
 }
 
 
