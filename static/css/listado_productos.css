@@ -154,6 +154,7 @@ div.image-upload.part1 {
     font-size: 13px;
     font-weight: 400;
     line-height: 13px;
+    margin-bottom: 10px;
 }
 
 .inf-rel {
@@ -1345,15 +1346,9 @@ input.check[type=radio], input.check[type=checkbox] {
     width: 100%;
     height: auto;
     margin-bottom:20px;
-    border: 1px solid white;
+    border: 1px solid #E9E9ED ;
 }
 
-.conti-de:hover {
-    width: 100%;
-    border: 1px solid #E9E9ED;
-    height: auto;
-    margin-bottom: 20px;
-}
 
 .filtro-talla.c-variable_1 {
     height: 23px;
