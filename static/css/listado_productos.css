@@ -336,10 +336,6 @@ hr.len {
 
 .original {
     color: #282c3f;
-    float: left;
-    left: 9px;
-    position: relative;
-    bottom: 18px;
     font-size: 13px;
     font-weight: 500;
 }
