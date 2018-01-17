@@ -582,21 +582,18 @@
                                          <img class="{{! images[6]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[6]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[6]['thumb_500']}}" />
                                      </div>
                                 </div>
-                            </div>
-
-                            <div align="center">
-                                <div id="mainDiv">
-                                   <div class="main-img-container main">
-                                      <img id='mainImage' class="img_prod_detail" src="{{! images[1]['thumb_500'] }}"/>
-                                   </div>
+                                <div class="col-md-10"> 
+                                    <div id="mainDiv">
+                                       <div class="main-img-container main">
+                                          <img id='mainImage' class="img_prod_detail" src="{{! images[1]['thumb_500'] }}"/>
+                                       </div>
+                                    </div>
+                                    <div align="center">
+                                       <h1 class="name  sku-detalle" class="line">SKU Producto &nbsp:&nbsp {{! sku }}</h1>
+                                    </div>
                                 </div>
-                            </div>
-                            <div align="center">
-                               <h1 class="name  sku-detalle" class="line">SKU Producto &nbsp:&nbsp {{! sku }}</h1>
-                            </div>
+                            </div>   
                         </div>
-                    </div>
-                    <div class="row">
                         <div id="product-detail-id" class="col-md-6 col-sm-12 col-xs-12 dir hidden-xs">
                             <div align="center">
                                 <h1 class="name texto-detalle" class="line" href="#">{{! name }}</h1>
