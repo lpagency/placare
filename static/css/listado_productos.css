@@ -1363,10 +1363,9 @@ input.check[type=radio], input.check[type=checkbox] {
 }
 
 .conti-de:hover {
-    position: relative;
-    width: 109%;
+    width: 100%;
     border: 1px solid #E9E9ED;
-    height: 270px;
+    height: auto;
     margin-bottom: 20px;
 }
 
