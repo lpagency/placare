@@ -148,17 +148,11 @@ div.image-upload.part1 {
 }
 
 .inf {
-    position: relative;
-    bottom: 26px;
     width: 100%;
     text-align: left;
-    left: 9px;
     color: #3e4152;
     font-size: 13px;
     font-weight: 400;
-    margin-bottom: -17px;
-    float: left;
-    height: 36px;
     line-height: 13px;
 }
 
