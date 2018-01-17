@@ -35,17 +35,6 @@
   });
 </script>
 
-<script type="text/javascript">
-    $(document).ready(function()
-    {
-
-        // $(document).on("click", "#open-cart", function()
-        // {
-        //     console.log($("#total").html());
-        // });
-    });
-</script>
-
 <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -365,392 +354,382 @@
     </section>
 
     <section class="hidden-xs">
-       <div class="container min">
-        <div class="col-md-6 col-sm-6 col-xs-12">
-
-            <div class="texto-header-pro texto-ruta-detalle">{{! bullet_1 }}</div>
-
-        </div>
+        <div class="container min">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="texto-header-pro texto-ruta-detalle">{{! bullet_1 }}</div>
+            </div>
         </div>
     </section>
+    <section>
+          <div class=" hidden-lg hidden-sm hidden-md visible-xs">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div align="center">
+                <div id="mainDiv">
+                   <div class="col-xs-12 main-img-container main">
+                      <img id='mainImage' class="img_prod_detail" src="{{! images[1]['thumb_500'] }}"/>
+                   </div>
+                </div>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-3 cre">
+                 <div class="img-container main-1 index">
+                    <img class="{{! images[1]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little uno" src="{{! images[1]['thumb_500'] }}" onload="this.onload='';this.src={{! images[1]['thumb_500']}}" />
+                 </div>
+                <div class="img-container main-1 index">
+                    <img class="{{! images[2]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little" src="{{! images[2]['thumb_500'] }}" onload="this.onload='';this.src={{! images[2]['thumb_500']}}" />
+                 </div>
 
+                  <div class="img-container main-1 index">
+                    <img class="{{! images[3]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[3]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[3]['thumb_500']}}" />
+                  </div>
 
+                  <div class="img-container main-1 index">
+                       <img class="{{! images[4]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[4]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[4]['thumb_500']}}" />
+                  </div>
 
-           <section>
-                  <div class=" hidden-lg hidden-sm hidden-md visible-xs">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <div align="center">
-                        <div id="mainDiv">
-                           <div class="col-xs-12 main-img-container main">
-                              <img id='mainImage' class="img_prod_detail" src="{{! images[1]['thumb_500'] }}"/>
-                           </div>
-                        </div>
-                        </div>
-                        <div class="col-xs-12 col-md-2 col-sm-3 cre">
-                         <div class="img-container main-1 index">
-                            <img class="{{! images[1]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little uno" src="{{! images[1]['thumb_500'] }}" onload="this.onload='';this.src={{! images[1]['thumb_500']}}" />
-                         </div>
-                        <div class="img-container main-1 index">
-                            <img class="{{! images[2]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little" src="{{! images[2]['thumb_500'] }}" onload="this.onload='';this.src={{! images[2]['thumb_500']}}" />
-                         </div>
+                  <div class="img-container main-1 index">
+                     <img class="{{! images[5]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[5]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[5]['thumb_500']}}" />
+                 </div>
 
-                          <div class="img-container main-1 index">
-                            <img class="{{! images[3]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[3]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[3]['thumb_500']}}" />
-                          </div>
+                 <div class="img-container main-1 index">
+                     <img class="{{! images[6]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[6]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[6]['thumb_500']}}" />
+                 </div>
+                 </div>
+            </div>
 
-                          <div class="img-container main-1 index">
-                               <img class="{{! images[4]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[4]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[4]['thumb_500']}}" />
-                          </div>
-
-                          <div class="img-container main-1 index">
-                             <img class="{{! images[5]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[5]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[5]['thumb_500']}}" />
-                         </div>
-
-                         <div class="img-container main-1 index">
-                             <img class="{{! images[6]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[6]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[6]['thumb_500']}}" />
-                         </div>
-                         </div>
+            <div id="product-detail-id" class="col-md-6 col-sm-12 col-xs-12 dir visible-xs hidden-md hidden-lg hidden-sm">
+                <div align="center">
+                    <h1 class="name texto-detalle" class="line" href="#">{{! name }}</h1>
+                    <div class="up-ex-detalle ellipsis multiline"> {{! brand }}</div>
+                    <div class="product-price original-de show-on-promotion" promotion_price="{{! promotion_price }}" > {{! main_price|money }} </div>
+                    <div class="descuento-detalle" main-price="{{! main_price }}" promotion-price="{{! promotion_price }}">{{! main_price }}</div>
+                    <div class="product-price oferta-de hide-on-promotion hidden" promotion-price="{{! promotion_price }}"> {{! main_price|money }} </div>
+                    <div class="precio-oferta-movil product-price oferta-de show-on-promotion" promotion-price="{{! promotion_price }}" > {{! promotion_price|money }} </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm visible-xs">
+                        <div class="linea-solin"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm hidden-xs">
+                        <div class="linea-separacion-movil"></div>
                     </div>
 
-                    <div id="product-detail-id" class="col-md-6 col-sm-12 col-xs-12 dir visible-xs hidden-md hidden-lg hidden-sm">
-                        <div align="center">
-                            <h1 class="name texto-detalle" class="line" href="#">{{! name }}</h1>
-                            <div class="up-ex-detalle ellipsis multiline"> {{! brand }}</div>
-                            <div class="product-price original-de show-on-promotion" promotion_price="{{! promotion_price }}" > {{! main_price|money }} </div>
-                            <div class="descuento-detalle" main-price="{{! main_price }}" promotion-price="{{! promotion_price }}">{{! main_price }}</div>
-                            <div class="product-price oferta-de hide-on-promotion hidden" promotion-price="{{! promotion_price }}"> {{! main_price|money }} </div>
-                            <div class="precio-oferta-movil product-price oferta-de show-on-promotion" promotion-price="{{! promotion_price }}" > {{! promotion_price|money }} </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm visible-xs">
-                                <div class="linea-solin"></div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm hidden-xs">
-                                <div class="linea-separacion-movil"></div>
-                            </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="linea-separacion hidden-xs"> </div>
+                    </div>
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="linea-separacion hidden-xs"> </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-8 col-xs-8">
-                                 <div class="nombre-talla">SELECCIONAR NÚMERO</div>
-                            </div>
-                            <div class="col-md-6 col-sm-4 col-xs-4">
-                                 <a href="" class="talla" data-toggle="modal" data-target="#myModal-talla"> No sabes tu talla?</a>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12 cre">
-                                  <div class="col-md-12 mover variants-container">
-                                            <!-- <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas">
-                                                <div class="num-tal"> 36</div>
-                                                
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
-                                                <div class="num-tal"> 37</div>
-                                                
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
-                                                <div class="num-tal"> 38</div>
-                                               
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
-                                                <div class="num-tal"> 39</div>
-                                              
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
-                                                <div class="num-tal"> 40</div>
-                                                
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
-                                                <div class="num-tal"> 41</div>
-                                                
-                                            </div> -->
+                    <div class="col-md-6 col-sm-8 col-xs-8">
+                         <div class="nombre-talla">SELECCIONAR NÚMERO</div>
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-xs-4">
+                         <a href="" class="talla" data-toggle="modal" data-target="#myModal-talla"> No sabes tu talla?</a>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 cre">
+                          <div class="col-md-12 mover variants-container">
+                                    <!-- <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas">
+                                        <div class="num-tal"> 36</div>
+                                        
                                     </div>
-                             </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-sm visible-lg visible-md">
-                            <button
-                                type="button"
-                                class="btn add-to-cart btn-success car"
-                                id="open-cart"
-                                data-toggle="modal"
-                                data-target="#myModal"
-                                product-upp="{{! upp }}"
-                                product-name="{{! name }}"
-                                product-price="{{! main_price }}"
-                                product-sku="{{! sku }}"
-                                product-id="{{! id }}"
-                                product-img="{{! images[1]['thumb_500'] }}"
-                                lp-cart-add
-                                disabled >
-                                AGREGAR AL CARRO <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="btn add-to-cart btn-success car-2"
-                                id="open-cart"
-                                data-toggle="modal"
-                                data-target="#myModal"
-                                product-upp="{{! upp }}"
-                                product-name="{{! name }}"
-                                product-price="{{! main_price }}"
-                                product-sku="{{! sku }}"
-                                product-id="{{! id }}"
-                                product-img="{{! images[1]['thumb_500'] }}"
-                                lp-cart-add
-                                disabled >
-                                COMPRAR AHORA <i class="fa fa-angle-right lis" aria-hidden="true"></i>
-                            </button>
-                             </div>
-
-                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="linea-separacion-2"> </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
+                                        <div class="num-tal"> 37</div>
+                                        
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
+                                        <div class="num-tal"> 38</div>
+                                       
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
+                                        <div class="num-tal"> 39</div>
+                                      
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
+                                        <div class="num-tal"> 40</div>
+                                        
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 size-item tallas" size="">
+                                        <div class="num-tal"> 41</div>
+                                        
+                                    </div> -->
                             </div>
+                     </div>
 
-                            <div align="center">
-                            <h3 class="descr_prod_detail ellipsis multiline visible-sm visible-md visible-lg hidden-xs">
-                            {{! description }}</h3>
-                            <div class="container hidden-md hidden-sm hidden-lg visible-xs">
-                                 <button type="button" class="btn btn-info" data-target="#demo">Descripción del producto</button>
-                            <div id="demo" class="">
-                            <h3 class="descr_prod_detail ellipsis multiline">
-                            {{! description }}</h3>
+                    <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-sm visible-lg visible-md">
+                    <button
+                        type="button"
+                        class="btn add-to-cart btn-success car"
+                        id="open-cart"
+                        data-toggle="modal"
+                        data-target="#myModal"
+                        product-upp="{{! upp }}"
+                        product-name="{{! name }}"
+                        product-price="{{! main_price }}"
+                        product-sku="{{! sku }}"
+                        product-id="{{! id }}"
+                        product-img="{{! images[1]['thumb_500'] }}"
+                        lp-cart-add
+                        disabled >
+                        AGREGAR AL CARRO <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
 
-                            </div>
-                            </div>
-                             <div class="opciones-compra">Opciones de compra</div>
-                            <div class="texto-com visible-xs visible-md visible-lg visible-sm">Envíos a todo Chile mediante Chilexpress / Correos de Chile. <br> Cambios y Devoluciones Gratis. <br> 15 días para cambios / Garantía de Satisfacción. <br>  Pago mediante Webpay (Tarjeta Débito / Crédito) o Transferencia Electrónica.</div>
-                            </div>
+                    <button
+                        type="button"
+                        class="btn add-to-cart btn-success car-2"
+                        id="open-cart"
+                        data-toggle="modal"
+                        data-target="#myModal"
+                        product-upp="{{! upp }}"
+                        product-name="{{! name }}"
+                        product-price="{{! main_price }}"
+                        product-sku="{{! sku }}"
+                        product-id="{{! id }}"
+                        product-img="{{! images[1]['thumb_500'] }}"
+                        lp-cart-add
+                        disabled >
+                        COMPRAR AHORA <i class="fa fa-angle-right lis" aria-hidden="true"></i>
+                    </button>
+                     </div>
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="linea-separacion-3 hidden-xs"> </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12 visible-xs-xs hidden-sm hidden-lg hidden-md">
-                            <div class="resis hidden-lg hidden-md hidden-sm visible-xs">
-                            <button
-                                type="button"
-                                class="btn add-to-cart btn-success car"
-                                id="open-cart"
-                                data-toggle="modal"
-                                data-target="#myModal"
-                                product-upp="{{! upp }}"
-                                product-name="{{! name }}"
-                                product-price="{{! main_price }}"
-                                product-sku="{{! sku }}"
-                                product-id="{{! id }}"
-                                product-img="{{! images[1]['thumb_500'] }}"
-                                lp-cart-add
-                                disabled>
-                                    AGREGAR AL CARRO <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="btn add-to-cart btn-success car-2"
-                                id="open-cart"
-                                data-toggle="modal"
-                                data-target="#myModal"
-                                product-upp="{{! upp }}"
-                                product-name="{{! name }}"
-                                product-price="{{! main_price }}"
-                                product-sku="{{! sku }}"
-                                product-id="{{! id }}"
-                                product-img="{{! images[1]['thumb_500'] }}"
-                                lp-cart-add
-                                disabled >
-                                    COMPRAR AHORA <i class="fa fa-angle-right lis" aria-hidden="true"></i>
-                            </button>
-                            </div>
-                             </div>
-
-                        </div>
-            </section>
-
-    <div class="container min">
-        <div class="container-fluid">
-        </div>
-        <div class="clearfix-fun-2"></div>
-        <div class="container-fluid">
-            <div class="col-md-12 col-sm-12 din">
-                <div class="box-det">
-                    <div class="col-md-6 col-sm-6 col-xs-12 hidden-xs visible-md visible-lg visible-sm">
-                        <div class="col-xs-3 col-md-2 col-sm-3">
-
-                         <div class="img-container main-1 index">
-                            <img class="{{! images[1]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little uno" src="{{! images[1]['thumb_500'] }}" onload="this.onload='';this.src={{! images[1]['thumb_500']}}" />
-                         </div>
-                        <div class="img-container main-1 index">
-                            <img class="{{! images[2]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little" src="{{! images[2]['thumb_500'] }}" onload="this.onload='';this.src={{! images[2]['thumb_500']}}" />
-                         </div>
-
-                          <div class="img-container main-1 index">
-                            <img class="{{! images[3]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[3]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[3]['thumb_500']}}" />
-                          </div>
-
-                          <div class="img-container main-1 index">
-                               <img class="{{! images[4]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[4]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[4]['thumb_500']}}" />
-                          </div>
-
-                          <div class="img-container main-1 index">
-                             <img class="{{! images[5]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[5]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[5]['thumb_500']}}" />
-                         </div>
-
-                         <div class="img-container main-1 index">
-                             <img class="{{! images[6]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[6]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[6]['thumb_500']}}" />
-                         </div>
-                        </div>
-
-                        <div align="center">
-                        <div id="mainDiv">
-                           <div class="main-img-container main">
-                              <img id='mainImage' class="img_prod_detail" src="{{! images[1]['thumb_500'] }}"/>
-                           </div>
-                        </div>
-                        </div>
-                        <div align="center">
-                           <h1 class="name  sku-detalle" class="line">SKU Producto &nbsp:&nbsp {{! sku }}</h1>
-                        </div>
+                     <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="linea-separacion-2"> </div>
                     </div>
 
+                    <div align="center">
+                    <h3 class="descr_prod_detail ellipsis multiline visible-sm visible-md visible-lg hidden-xs">
+                    {{! description }}</h3>
+                    <div class="container hidden-md hidden-sm hidden-lg visible-xs">
+                         <button type="button" class="btn btn-info" data-target="#demo">Descripción del producto</button>
+                    <div id="demo" class="">
+                    <h3 class="descr_prod_detail ellipsis multiline">
+                    {{! description }}</h3>
 
+                    </div>
+                    </div>
+                     <div class="opciones-compra">Opciones de compra</div>
+                    <div class="texto-com visible-xs visible-md visible-lg visible-sm">Envíos a todo Chile mediante Chilexpress / Correos de Chile. <br> Cambios y Devoluciones Gratis. <br> 15 días para cambios / Garantía de Satisfacción. <br>  Pago mediante Webpay (Tarjeta Débito / Crédito) o Transferencia Electrónica.</div>
+                    </div>
 
-                    <div id="product-detail-id" class="col-md-6 col-sm-12 col-xs-12 dir hidden-xs">
-                        <div align="center">
-                            <h1 class="name texto-detalle" class="line" href="#">{{! name }}</h1>
-                            <div class="up-ex-detalle ellipsis multiline"> {{! brand }}</div>
-                            <div class="product-price product-price-2 original-de"> {{! main_price|money }}</div>
-                            <div class="descuento-detalle" main-price="{{! main_price }}" promotion-price="{{! promotion_price }}"></div>
-                            <div class="product-price precio-oferta oferta-de"> {{! promotion_price|money }}</div>
-                             <div class="col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm visible-xs">
-                                <div class="linea-separacion-movil"> </div>
-                            </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="linea-separacion-3 hidden-xs"> </div>
+                    </div>
 
+                    <div class="col-md-12 col-sm-12 col-xs-12 visible-xs-xs hidden-sm hidden-lg hidden-md">
+                    <div class="resis hidden-lg hidden-md hidden-sm visible-xs">
+                    <button
+                        type="button"
+                        class="btn add-to-cart btn-success car"
+                        id="open-cart"
+                        data-toggle="modal"
+                        data-target="#myModal"
+                        product-upp="{{! upp }}"
+                        product-name="{{! name }}"
+                        product-price="{{! main_price }}"
+                        product-sku="{{! sku }}"
+                        product-id="{{! id }}"
+                        product-img="{{! images[1]['thumb_500'] }}"
+                        lp-cart-add
+                        disabled>
+                            AGREGAR AL CARRO <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="linea-separacion hidden-xs"> </div>
-                            </div>
+                    <button
+                        type="button"
+                        class="btn add-to-cart btn-success car-2"
+                        id="open-cart"
+                        data-toggle="modal"
+                        data-target="#myModal"
+                        product-upp="{{! upp }}"
+                        product-name="{{! name }}"
+                        product-price="{{! main_price }}"
+                        product-sku="{{! sku }}"
+                        product-id="{{! id }}"
+                        product-img="{{! images[1]['thumb_500'] }}"
+                        lp-cart-add
+                        disabled >
+                            COMPRAR AHORA <i class="fa fa-angle-right lis" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container min">
+        <!--<div class="container-fluid">
+        </div>
+        <div class="clearfix-fun-2"></div>-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 din">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 hidden-xs visible-md visible-lg visible-sm">
+                            <div class="row">
+                                <div class="col-xs-3 col-md-2 col-sm-3">
+                                     <div class="img-container main-1 index">
+                                        <img class="{{! images[1]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little uno" src="{{! images[1]['thumb_500'] }}" onload="this.onload='';this.src={{! images[1]['thumb_500']}}" />
+                                     </div>
+                                    <div class="img-container main-1 index">
+                                        <img class="{{! images[2]['thumb_500']|hide_if_empty}} col-xs-3 img_prod_little" src="{{! images[2]['thumb_500'] }}" onload="this.onload='';this.src={{! images[2]['thumb_500']}}" />
+                                     </div>
 
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                 <div class="nombre-talla">SELECCIONAR UNA TALLA</div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                 <a href="" class="talla" data-toggle="modal" data-target="#myModal-talla"> No sabes tu talla?</a>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12 variants-container">
-                            </div>
+                                      <div class="img-container main-1 index">
+                                        <img class="{{! images[3]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[3]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[3]['thumb_500']}}" />
+                                      </div>
 
-                            <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-sm visible-lg visible-md">
-                            <button
-                                type="button"
-                                class="btn add-to-cart btn-success car"
-                                id="open-cart"
-                                data-toggle="modal"
-                                data-target="#myModal"
-                                product-upp="{{! upp }}"
-                                product-name="{{! name }}"
-                                product-price="{{! main_price }}"
-                                product-sku="{{! sku }}"
-                                product-id="{{! id }}"
-                                product-img="{{! images[1]['thumb_500'] }}"
-                                lp-cart-add
-                                disabled>
-                                    AGREGAR AL CARRO <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </button>
+                                      <div class="img-container main-1 index">
+                                           <img class="{{! images[4]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[4]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[4]['thumb_500']}}" />
+                                      </div>
 
-                            <button
-                                type="button"
-                                class="btn add-to-cart btn-success car-2"
-                                id="open-cart"
-                                data-toggle="modal"
-                                data-target="#myModal"
-                                product-upp="{{! upp }}"
-                                product-name="{{! name }}"
-                                product-price="{{! main_price }}"
-                                product-sku="{{! sku }}"
-                                product-id="{{! id }}"
-                                product-img="{{! images[1]['thumb_500'] }}"
-                                lp-cart-add
-                                disabled>
-                                    COMPRAR AHORA <i class="fa fa-angle-right lis" aria-hidden="true"></i>
-                            </button>
-                             </div>
+                                      <div class="img-container main-1 index">
+                                         <img class="{{! images[5]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[5]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[5]['thumb_500']}}" />
+                                     </div>
 
-                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="linea-separacion-2"> </div>
+                                     <div class="img-container main-1 index">
+                                         <img class="{{! images[6]['thumb_500']|hide_if_empty }} col-xs-3  img_prod_little" src="{{! images[6]['thumb_500'] }}" title="" alt="" onload="this.onload='';this.src={{! images[6]['thumb_500']}}" />
+                                     </div>
+                                </div>
                             </div>
 
                             <div align="center">
-                            <h3 class="desi visible-sm visible-md visible-lg hidden-xs">
-                            Descripción del producto</h3>
-                            <h3 class="descr_prod_detail ellipsis multiline visible-sm visible-md visible-lg hidden-xs">
-                            {{! description }}</h3>
-<!--                        <h3 class="material ellipsis multiline visible-sm visible-md visible-lg hidden-xs">
-                            </h3> -->
-                            <div class="standar visible-xs visible-md visible-lg visible-sm">Opciones de Compra </div>
-                            <div class="texto-com visible-xs visible-md visible-lg visible-sm">Envíos a todo Chile mediante Chilexpress / Correos de Chile. <br> Cambios y Devoluciones Gratis. <br> 15 días para cambios / Garantía de Satisfacción. <br>  Pago mediante Webpay (Tarjeta Débito / Crédito) o Transferencia Electrónica.</div>
-                            <div class="container hidden-md hidden-sm hidden-lg visible-xs">
-                                 <button type="button" class="btn btn-info" data-target="#demo">Detalle de producto <i class="fa fa-plus" aria-hidden="true"></i> </button>
-                            <div id="demo" class="">
-                            <h3 class="descr_prod_detail ellipsis multiline">
-                            {{! description }}</h3>
-                            <h3 class="medidas ellipsis multiline">
-                            {{! bullet_1 }}</h3>
-
+                                <div id="mainDiv">
+                                   <div class="main-img-container main">
+                                      <img id='mainImage' class="img_prod_detail" src="{{! images[1]['thumb_500'] }}"/>
+                                   </div>
+                                </div>
                             </div>
+                            <div align="center">
+                               <h1 class="name  sku-detalle" class="line">SKU Producto &nbsp:&nbsp {{! sku }}</h1>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="product-detail-id" class="col-md-6 col-sm-12 col-xs-12 dir hidden-xs">
+                            <div align="center">
+                                <h1 class="name texto-detalle" class="line" href="#">{{! name }}</h1>
+                                <div class="up-ex-detalle ellipsis multiline"> {{! brand }}</div>
+                                <div class="product-price product-price-2 original-de"> {{! main_price|money }}</div>
+                                <div class="descuento-detalle" main-price="{{! main_price }}" promotion-price="{{! promotion_price }}"></div>
+                                <div class="product-price precio-oferta oferta-de"> {{! promotion_price|money }}</div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm visible-xs">
+                                    <div class="linea-separacion-movil"> </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="linea-separacion hidden-xs"> </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                     <div class="nombre-talla">SELECCIONAR UNA TALLA</div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                     <a href="" class="talla" data-toggle="modal" data-target="#myModal-talla"> No sabes tu talla?</a>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 variants-container">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-sm visible-lg visible-md">
+                                    <button
+                                        type="button"
+                                        class="btn add-to-cart btn-success car"
+                                        id="open-cart"
+                                        data-toggle="modal"
+                                        data-target="#myModal"
+                                        product-upp="{{! upp }}"
+                                        product-name="{{! name }}"
+                                        product-price="{{! main_price }}"
+                                        product-sku="{{! sku }}"
+                                        product-id="{{! id }}"
+                                        product-img="{{! images[1]['thumb_500'] }}"
+                                        lp-cart-add
+                                        disabled>
+                                            AGREGAR AL CARRO <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="btn add-to-cart btn-success car-2"
+                                        id="open-cart"
+                                        data-toggle="modal"
+                                        data-target="#myModal"
+                                        product-upp="{{! upp }}"
+                                        product-name="{{! name }}"
+                                        product-price="{{! main_price }}"
+                                        product-sku="{{! sku }}"
+                                        product-id="{{! id }}"
+                                        product-img="{{! images[1]['thumb_500'] }}"
+                                        lp-cart-add
+                                        disabled>
+                                            COMPRAR AHORA <i class="fa fa-angle-right lis" aria-hidden="true"></i>
+                                    </button>
+                                 </div>
+
+                                 <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="linea-separacion-2"> </div>
+                                </div>
+
+                                <div align="center">
+                                    <h3 class="desi visible-sm visible-md visible-lg hidden-xs">
+                                        Descripción del producto</h3>
+                                    <h3 class="descr_prod_detail ellipsis multiline visible-sm visible-md visible-lg hidden-xs">
+                                    {{! description }}</h3>
+                                    <!-- <h3 class="material ellipsis multiline visible-sm visible-md visible-lg hidden-xs">
+                                </h3> -->
+                                    <div class="standar visible-xs visible-md visible-lg visible-sm">Opciones de Compra </div>
+                                     <div class="texto-com visible-xs visible-md visible-lg visible-sm">Envíos a todo Chile mediante Chilexpress / Correos de Chile. <br> Cambios y Devoluciones Gratis. <br> 15 días para cambios / Garantía de Satisfacción. <br>  Pago mediante Webpay (Tarjeta Débito / Crédito) o Transferencia Electrónica.</div>
+                                    <div class="container hidden-md hidden-sm hidden-lg visible-xs">
+                                         <button type="button" class="btn btn-info" data-target="#demo">Detalle de producto <i class="fa fa-plus" aria-hidden="true"></i> </button>
+                                        <div id="demo" class="">
+                                            <h3 class="descr_prod_detail ellipsis multiline">
+                                            {{! description }}</h3>
+                                            <h3 class="medidas ellipsis multiline">
+                                            {{! bullet_1 }}</h3>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="linea-separacion-3 hidden-xs"> </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 visible-xs-xs hidden-sm hidden-lg hidden-md">
+                                    <div class="resis hidden-lg hidden-md hidden-sm visible-xs">
+                                        <button
+                                            type="button"
+                                            class="btn add-to-cart btn-success car"
+                                            id="open-cart"
+                                            data-toggle="modal"
+                                            data-target="#myModal"
+                                            product-upp="{{! upp }}"
+                                            product-name="{{! name }}"
+                                            product-price="{{! main_price }}"
+                                            product-sku="{{! sku }}"
+                                            product-id="{{! id }}"
+                                            product-img="{{! images[1]['thumb_500'] }}"
+                                            lp-cart-add
+                                            disabled>
+                                                AGREGAR AL CARRO <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn add-to-cart btn-success car-2"
+                                            id="open-cart"
+                                            data-toggle="modal"
+                                            data-target="#myModal"
+                                            product-upp="{{! upp }}"
+                                            product-name="{{! name }}"
+                                            product-price="{{! main_price }}"
+                                            product-sku="{{! sku }}"
+                                            product-id="{{! id }}"
+                                            product-img="{{! images[1]['thumb_500'] }}"
+                                            lp-cart-add
+                                            disabled>
+                                                COMPRAR AHORA <i class="fa fa-angle-right lis" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                 </div>
                             </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="linea-separacion-3 hidden-xs"> </div>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12 visible-xs-xs hidden-sm hidden-lg hidden-md">
-                            <div class="resis hidden-lg hidden-md hidden-sm visible-xs">
-                            <button
-                                type="button"
-                                class="btn add-to-cart btn-success car"
-                                id="open-cart"
-                                data-toggle="modal"
-                                data-target="#myModal"
-                                product-upp="{{! upp }}"
-                                product-name="{{! name }}"
-                                product-price="{{! main_price }}"
-                                product-sku="{{! sku }}"
-                                product-id="{{! id }}"
-                                product-img="{{! images[1]['thumb_500'] }}"
-                                lp-cart-add
-                                disabled>
-                                    AGREGAR AL CARRO <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="btn add-to-cart btn-success car-2"
-                                id="open-cart"
-                                data-toggle="modal"
-                                data-target="#myModal"
-                                product-upp="{{! upp }}"
-                                product-name="{{! name }}"
-                                product-price="{{! main_price }}"
-                                product-sku="{{! sku }}"
-                                product-id="{{! id }}"
-                                product-img="{{! images[1]['thumb_500'] }}"
-                                lp-cart-add
-                                disabled>
-                                    COMPRAR AHORA <i class="fa fa-angle-right lis" aria-hidden="true"></i>
-                            </button>
-                            </div>
-                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-
 </script>
 
 
