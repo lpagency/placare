@@ -560,9 +560,6 @@ hr.len {
 
 .sku-detalle {
     text-align: left;
-    position: absolute;
-    bottom: -36px;
-    left: 19%;
     color: #696b79;
     font-weight: 500;
     text-rendering: optimizeLegibility;
