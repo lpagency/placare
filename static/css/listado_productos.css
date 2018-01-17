@@ -305,15 +305,11 @@ hr.len {
     float: left;
     text-align: left;
     width: 100%;
-    position: relative;
-    top: -32px;
-    margin-bottom: -6px;
     font-size: 13px;
     font-weight: 500;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    left: 9px;
     color: #282c3f;
 }
 
@@ -1874,15 +1870,11 @@ a.text {
     }
 
     .inf {
-        position: relative;
-        bottom: 38px;
         width: 100%;
         text-align: left;
-        left: 0px;
         color: #4A4949;
         font-size: 15px;
         font-weight: 300;
-        margin-bottom: -15px;
         float: left;
         height: 37px;
     }
