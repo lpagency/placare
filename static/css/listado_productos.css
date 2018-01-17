@@ -1362,13 +1362,13 @@ input.check[type=radio], input.check[type=checkbox] {
     border: 1px solid white;
 }
 
-/*.conti-de:hover {
+.conti-de:hover {
     position: relative;
     width: 109%;
     border: 1px solid #E9E9ED;
     height: 270px;
     margin-bottom: 20px;
-}*/
+}
 
 .filtro-talla.c-variable_1 {
     height: 23px;
