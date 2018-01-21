@@ -400,7 +400,6 @@ hr.len {
     background-color: white;
     border-color: rgba(128, 128, 128, 0.4);
     float: right;
-    margin-top: -39px;
     border-radius: 0px;
     width: 30%;
     text-align:left;
@@ -408,22 +407,6 @@ hr.len {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
-    left: 2%;
-    position: relative;
-}
-
-.btn-primary:hover {
-    color: #7e818c;
-    background-color: white;
-    border-color: rgba(128, 128, 128, 0.4);
-    float: right;
-    margin-top: -39px;
-    border-radius: 0px;
-    width: 30%;
-    text-align:left;
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     left: 2%;
     position: relative;
 }
