@@ -435,6 +435,7 @@ hr.len {
     top: 100%;
     left: 0;
     z-index: 1000;
+    width: 100%;
     display: none;
     padding: 5px 0;
     margin: 2px 0 0;
