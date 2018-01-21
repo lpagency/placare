@@ -1705,13 +1705,8 @@ a.text {
     }
 
     .img_prod_little {
+        float: none;
         width: 100%;
-        margin-bottom: 2px;
-        position: relative;
-        object-fit: contain;
-        top: 0px;
-        left: 0px;
-        height: 100px !important; 
     }
 
     .fin {
@@ -2225,10 +2220,11 @@ a.text {
     }
 
     .fixx {
-    width: 100%;
-    position: fixed;
-    top: 55px;
-    z-index: 111;
+        width: 100%;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        z-index: 111;
     }
 
     .btn-primary {
