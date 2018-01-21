@@ -46,6 +46,7 @@
 .filtro-color input, .filtro-talla input, .filtro-marca input, .filtro-filtros input{
     float: left;
 }
+.filtro-talla{ display: inline-block; }
 
 .categ {
     background: white;
