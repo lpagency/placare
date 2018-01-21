@@ -496,16 +496,9 @@ hr.len {
 
 .text-fil-2 {
     border-top: 1px solid transparent;
-    float: left;
-    width: 190px;
-    text-align: left;
-    position: relative;
-    left: 0%;
     color: #282c3f;
     font-weight: 600;
     font-size: 13px;
-    padding-top: 0px;
-    margin-top: -3px;
 }
 
 .fa-plus{
