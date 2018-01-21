@@ -3495,27 +3495,6 @@ hr.lon {
     padding-right: 0px;
     }  
 
-    .btn-mo {
-        width: 49%;
-        z-index: 20;
-    }
-
-    .btn-mo-2 {
-    width: 51%;
-    float: right;
-    margin-top: -19px;
-    left: -15px;
-    position: relative;
-    }
-
-    .btn-mo-2:hover {
-     width: 51%;
-    float: right;
-    margin-top: -19px;
-    left: -15px;
-    position: relative;
-    }
-
     .palito{
         border-right: 1px solid rgba(128, 128, 128, 0.46);
         width: 46%;
