@@ -74,12 +74,12 @@ body {
 
 .fa-angle-right {
     float: right;
-    position: relative;
+    position: absolute;
     right: 16px;
     font-size: 25px !important;
     margin-top: 0px;
     color: rgba(128, 128, 128, 0.37);
-    bottom: 4px;
+    top: 4px;
 }
 
 
