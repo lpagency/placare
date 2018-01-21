@@ -151,6 +151,7 @@ a.a-footer{
     background-color: rgba(245, 248, 250, 0.59);
     overflow: hidden;
     padding-bottom: 30px;
+    margin-top: 45px;
 }
 
 #footer .row .col-xs-12{ padding-bottom: 20px; }
