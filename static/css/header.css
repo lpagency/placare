@@ -3,6 +3,10 @@
     right: 15px; 
 }
 
+#navbar{
+    position: relative;
+}
+
 .logo {
     height: 51px;
     width: 200px;
@@ -97,10 +101,6 @@ li.icon {
     border-left: 2px solid #eaeaec;
     margin-top: 13px;
     height: 37px;
-}
-
-#navbar{
-    position: relative;
 }
 
 .navbar-default {
