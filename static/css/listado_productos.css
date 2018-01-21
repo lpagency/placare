@@ -1655,6 +1655,8 @@ a.text {
         left: 0px;
     }
 
+    .container.min.dos .col-md-3.col-sm-3.col-xs-12+section{ display: none; }
+
     .btn-primary {
         float: none;
         width: 100%;
