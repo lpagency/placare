@@ -1535,15 +1535,6 @@ hr.lon {
         position: relative;
     }
 
-
-    .container.min.dos {
-        padding-left: 0px;
-        padding-right: 3px;
-        width: 100%;
-        margin-bottom: 45px;
-        overflow-x: hidden;
-    }
-
     .mini {
         width: 100%;
         height: 200px;
@@ -1750,14 +1741,6 @@ a.text {
         float: left;
         left: 0px;
         position: relative;
-    }
-
-    .container.min.dos {
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 101%;
-    margin-bottom: 75px;
-    overflow-x: inherit;
     }
 
     .inf {
