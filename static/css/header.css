@@ -99,6 +99,10 @@ li.icon {
     height: 37px;
 }
 
+#navbar{
+    position: relative;
+}
+
 .navbar-default {
     background-color: white;
     border-color: white;
