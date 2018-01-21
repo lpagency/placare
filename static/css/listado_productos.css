@@ -44,8 +44,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.filtro-color{
-    height: 2em;
+.filtro-color, .filtro-talla, .filtro-marca{
+    /*height: 2em;*/
+    overflow: auto;
+}
+.filtro-color input{
+    float: left;
 }
 
 .categ {
@@ -1183,7 +1187,6 @@ a.text.detalle {
     font-weight: 400; 
 }
 
-
 .vari{
     width: 100%;
     margin-top: 20px;
@@ -1239,11 +1242,10 @@ a.text.detalle {
 
 .fil {
     position: relative;
-    top: -20px;
-    right: -20px;
     font-size: 13px;
     color: #282c3f;
     font-weight: 300;
+    float: left;
 }
 
 .fa-check-square.other {
@@ -2458,10 +2460,6 @@ hr.listado {
     width: 100%;
     float: left;
     margin-top: -24px;
-}
-
-.filtro-color {
-    height: 3em;
 }
 
 .filtro-filtros {
