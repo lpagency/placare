@@ -1518,14 +1518,6 @@ hr.lon {
         left: 0px;
     }
 
-    .chek {
-        margin-top: 65px;
-        text-align: left;
-        position: relative;
-        left: 0px;
-        margin-bottom: 21px;
-    }
-
     .background-color-producto {
         background-color: pink;
         height: 30px;
@@ -1770,7 +1762,7 @@ a.text {
     }
 
     .chek {
-        margin-top: 46px;
+        margin-top: 30px;
         text-align: left;
         position: relative;
         left: 0px;
@@ -2304,30 +2296,6 @@ a.text {
     left: 108%;
     position: relative;
     cursor: pointer;
-}
-
-.texto-header-pro-3 {
-    position: relative;
-    left: 4%;
-    font-size: 15px;
-    color: gray;
-    width: 100%;
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-}
-
-.texto-header-pro-2 {
-    margin-bottom: 0px;
-    position: relative;
-    left: -39px;
-    float: left;
-    font-size: 15px;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.72);
-    width: 100%;
-    text-align: center;
 }
 
 hr.listado {
