@@ -375,18 +375,14 @@ hr.len {
 }
 
 .texto-header-pro-3 {
-    height: 74px;
-    margin-bottom: -21px;
     position: relative;
     left: 5px;
-    top: 10px;
     font-size: 16px;
     color: #878b94;
     /* width: 15%; */
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    float: left;
 }
 
 .mii{
@@ -2437,11 +2433,8 @@ a.text {
 }
 
 .texto-header-pro-3 {
-    height: 74px;
-    margin-bottom: -21px;
     position: relative;
     left: 4%;
-    top: -21px;
     font-size: 15px;
     color: gray;
     width: 100%;
@@ -2958,11 +2951,8 @@ hr.lon {
     }
 
     .texto-header-pro-3 {
-        height: 74px;
-        margin-bottom: -21px;
         position: relative;
         left: 5%;
-        top: -21px;
         font-size: 15px;
         color: gray;
         width: 100%;
@@ -2977,11 +2967,8 @@ hr.lon {
 
 @media (max-width: 500px){
     .texto-header-pro-3 {
-        height: 74px;
-        margin-bottom: -21px;
         position: relative;
         left: 17%;
-        top: -21px;
         font-size: 15px;
         color: gray;
         width: 100%;
@@ -3389,11 +3376,8 @@ hr.lon {
     }
 
     .texto-header-pro-3 {
-        height: 17px;
-        margin-bottom: 0px;
         position: relative;
         left: 5px;
-        top: 39px;
         font-size: 15px;
         color: gray;
         width: 50%;
@@ -4084,11 +4068,9 @@ hr.lon {
         left: 0px;
     }
   .texto-header-pro-3 {
-        height: 17px;
         margin-bottom: 0px;
         position: relative;
         left: 5px;
-        top: 39px;
         font-size: 15px;
         color: gray;
         width: 50%;
@@ -4573,11 +4555,8 @@ hr.lon {
     }
 
     .texto-header-pro-3 {
-        height: 17px;
-        margin-bottom: 0px;
         position: relative;
         left: 5px;
-        top: 39px;
         font-size: 15px;
         color: gray;
         width: 50%;
