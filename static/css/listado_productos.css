@@ -1239,12 +1239,11 @@ a.text.detalle {
 
 .fil {
     position: relative;
-    top: -22px;
-    right: -13.5%;
+    top: -20px;
+    right: -20px;
     font-size: 13px;
     color: #282c3f;
     font-weight: 300;
-    margin-bottom: -17px;
 }
 
 .fa-check-square.other {
@@ -1723,20 +1722,6 @@ a.text {
 }
 
 }
-
-@media (max-width: 768px){
-    .fil {
-        position: relative;
-        top: -22px;
-        right: -25.5%;
-        font-size: 13px;
-        color: #282c3f;
-        font-weight: 600;
-        margin-bottom: -17px;
-    }
-
-}
-
 
 
 @media (max-width: 767px){
@@ -2464,13 +2449,6 @@ hr.listado {
   border: 1px solid rgba(128, 128, 128, 0.14);
 }
 
-.fil {
-    position: relative;
-    top: -22px;
-    right: -4.5%;
-    margin-bottom: -14px;
-}
-
 .fa-check-square {
     right: -3px;
     position: relative;
@@ -2894,13 +2872,6 @@ hr.lon {
         margin-bottom: 34px;
         text-align: left;
         width: 18%;
-    }
-
-    .fil {
-        position: relative;
-        top: -17px;
-        right: -6.5%;
-        margin-bottom: -14px;
     }
 
     .texto-header-pro-3 {
@@ -3434,13 +3405,6 @@ hr.lon {
         top: 9px;
         margin-top: 33px;
         margin-bottom: 10px;
-    }
-    .fil {
-        position: relative;
-        top: -24px;
-        right: -9.5%;
-        margin-bottom: -14px;
-        font-size: 15px;
     }
 
     .linea-separacion-2 {
@@ -4079,13 +4043,6 @@ hr.lon {
         top: 6px;
     }
 
-    .fil {
-    position: relative;
-    top: -27px;
-    right: -12.5%;
-    margin-bottom: -14px;
-    font-size: 15px;
-   }
 
    .original {
     color: #282c3f;
@@ -4607,14 +4564,6 @@ hr.lon {
         right: 15px;
         position: relative;
     }
-
-    .fil {
-    position: relative;
-    top: -27px;
-    right: -15.5%;
-    margin-bottom: -14px;
-    font-size: 15px;
-   }
 
    .original {
     color: #282c3f;
