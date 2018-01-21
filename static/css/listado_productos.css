@@ -1698,14 +1698,8 @@ a.text {
     }
 
     .btn-primary {
-        color: rgba(128, 128, 128, 0.65);
-        background-color: white;
-        border-color: rgba(128, 128, 128, 0.4);
-        margin-top: 0px;
-        border-radius: 0px;
-        text-align: left;
-        margin-bottom: 0px;
-        position: relative;
+        float: none;
+        width: 100%;
     }
 
     .img_prod_little {
@@ -3526,12 +3520,12 @@ hr.lon {
     }
 
     .palito{
-    border-right: 1px solid rgba(128, 128, 128, 0.46);
-    width: 46%;
-    height: 19px;
-    top: 8px;
-    position: absolute;
-    z-index: 10;
+        border-right: 1px solid rgba(128, 128, 128, 0.46);
+        width: 46%;
+        height: 19px;
+        top: 8px;
+        position: absolute;
+        z-index: 10;
     }
 
     .precio-oferta-movil{
