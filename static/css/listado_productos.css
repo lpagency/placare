@@ -419,7 +419,7 @@ hr.len {
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: rgba(128, 128, 128, 0.65);
-    background-color: transparent;
+    background-color: #fff;
     border-color:rgba(128, 128, 128, 0.4);
 }
 
@@ -1321,29 +1321,6 @@ input.check[type=radio], input.check[type=checkbox] {
     margin-bottom:20px;
     border: 1px solid #E9E9ED;
    
-}
-
-
-.filtro-talla.c-variable_1 {
-    height: 23px;
-    width: 9%;
-}
-
-.filtro-talla.c-variable_2 {
-    height: 23px;
-    width: 16%;
-    display: inline-block;
-}
-
-.filtro-talla.c-variable_3 {
-    height: 23px;
-    width: 15%;
-}
-
-.filtro-talla.c-variable_4 {
-    height: 23px;
-    width: 16%;
-    display: inline-block;
 }
 
 .desi{
@@ -3497,36 +3474,6 @@ hr.lon {
     padding-left: 0px;
     padding-right: 0px;
     }  
-
-    .btn-mo {
-        width: 49%;
-        z-index: 20;
-    }
-
-    .btn-mo-2 {
-    width: 51%;
-    float: right;
-    margin-top: -19px;
-    left: -15px;
-    position: relative;
-    }
-
-    .btn-mo-2:hover {
-     width: 51%;
-    float: right;
-    margin-top: -19px;
-    left: -15px;
-    position: relative;
-    }
-
-    .palito{
-        border-right: 1px solid rgba(128, 128, 128, 0.46);
-        width: 46%;
-        height: 19px;
-        top: 8px;
-        position: absolute;
-        z-index: 10;
-    }
 
     .precio-oferta-movil{
         position: absolute;
