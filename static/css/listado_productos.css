@@ -147,7 +147,7 @@ div.image-upload.part1 {
 }
 
 .inf {
-    width: 100%;
+    width:100%;
     text-align: left;
     color: #3e4152;
     font-size: 13px;
@@ -1408,11 +1408,11 @@ a.variables3:hover, a.variables3:focus, a.variables3:active{
 }
 
 hr.lon {
-    margin-top: -8px;
+   /* margin-top: -8px;
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #E9E9ED;
-    width: 99%;
+    width: 99%;*/
 }
 
 .texto-com{
