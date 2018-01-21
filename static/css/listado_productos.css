@@ -3099,6 +3099,7 @@ hr.lon {
         border-bottom: 1px solid #ebedef;
         border-right: 1px solid #ebedef;
         border-top: 1px solid #ebedef;
+        padding: 0px 5px;
     }
 
     a.text {
