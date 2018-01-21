@@ -1,6 +1,10 @@
 #searchform{
     position: absolute;
-    right: 15px;
+    right: 15px; 
+}
+
+#navbar{
+    position: relative;
 }
 
 .logo {
