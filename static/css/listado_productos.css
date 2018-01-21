@@ -1323,29 +1323,6 @@ input.check[type=radio], input.check[type=checkbox] {
    
 }
 
-
-.filtro-talla.c-variable_1 {
-    height: 23px;
-    width: 9%;
-}
-
-.filtro-talla.c-variable_2 {
-    height: 23px;
-    width: 16%;
-    display: inline-block;
-}
-
-.filtro-talla.c-variable_3 {
-    height: 23px;
-    width: 15%;
-}
-
-.filtro-talla.c-variable_4 {
-    height: 23px;
-    width: 16%;
-    display: inline-block;
-}
-
 .desi{
     float: left;
     font-size: 14px;
@@ -3497,15 +3474,6 @@ hr.lon {
     padding-left: 0px;
     padding-right: 0px;
     }  
-
-    .palito{
-        border-right: 1px solid rgba(128, 128, 128, 0.46);
-        width: 46%;
-        height: 19px;
-        top: 8px;
-        position: absolute;
-        z-index: 10;
-    }
 
     .precio-oferta-movil{
         position: absolute;
