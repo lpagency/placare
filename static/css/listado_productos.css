@@ -155,7 +155,7 @@ div.image-upload.part1 {
     line-height: 13px;
     min-height: 26px;
     margin-bottom: 10px;
-    padding: 0 5px;
+  
    
 }
 
@@ -308,7 +308,7 @@ hr.len {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #282c3f;
-    padding: 0 5px;
+  
 }
 
 .up-ex-detalle {
@@ -343,7 +343,7 @@ hr.len {
     font-size: 13px;
     font-weight: 500;
     margin-bottom: 5px;
-    padding: 0 5px;
+   
 }
 
 .original-tachado {
