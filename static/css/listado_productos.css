@@ -46,6 +46,7 @@
 .filtro-color input, .filtro-talla input, .filtro-marca input, .filtro-filtros input{
     float: left;
 }
+.filtro-talla{ display: inline-block; }
 
 .categ {
     background: white;
@@ -1187,21 +1188,7 @@ a.text.detalle {
 }
 
 .vari{
-    width: 100%;
-    margin-top: 20px;
-    font-size: 12px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-inline-box;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
-    margin: 16px -11px -114px;
-    height: 100%;
+
 }
 
 .variables1{
@@ -1378,8 +1365,7 @@ a.variables3:hover, a.variables3:focus, a.variables3:active{
 }
 
 .kinti{
-    position: relative;
-    right: 13px;
+    padding-bottom: 30px;
 }
 
 .variables4{
