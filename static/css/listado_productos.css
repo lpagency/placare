@@ -44,7 +44,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.filtro-color, .filtro-talla, .filtro-marca{
+.filtro-color, .filtro-talla, .filtro-marca, .filtro-filtros{
     /*height: 2em;*/
     overflow: auto;
 }
@@ -1167,7 +1167,6 @@ a.text.detalle {
 }*/
 
 .filtro-filtros{
-    height: 23px;
     font-size: 15px;
     color: #282c3f;
 }
@@ -2463,7 +2462,6 @@ hr.listado {
 }
 
 .filtro-filtros {
-    height: 33px;
     font-size: 15px;
     color: #282c3f;
 }
