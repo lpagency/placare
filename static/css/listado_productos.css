@@ -472,8 +472,9 @@ hr.len {
 
 .btn .caret {
     margin-left: 0;
-    float: right;
-    margin-top: 8px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
 }
 
 .text-fil {
