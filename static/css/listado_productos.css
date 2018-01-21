@@ -48,7 +48,7 @@
     /*height: 2em;*/
     overflow: auto;
 }
-.filtro-color input{
+.filtro-color input, .filtro-talla input, .filtro-marca input, .filtro-filtros input{
     float: left;
 }
 
