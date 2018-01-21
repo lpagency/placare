@@ -196,7 +196,6 @@ li.slogan a {
     display: inline-block;
 }
 .dropdown.col-md-4{
-    margin-right: 20px;
 }
 .dropdown.col-md-4 + .dropdown.col-md-4{
     margin-right: 0;
