@@ -27,13 +27,6 @@ body {
     padding-left: 19px;
 }
 
-.compi{
-    font-size: 13px;
-    font-weight: 200;
-    position: relative;
-    left: 7%;
-}
-
 .sidebar-nav li a.den {
     display: block;
     text-decoration: none;
