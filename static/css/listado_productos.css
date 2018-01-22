@@ -154,10 +154,7 @@ div.image-upload.part1 {
     font-size: 13px;
     font-weight: 400;
     line-height: 13px;
-    min-height: 26px;
-    margin-bottom: 10px;
-  
-   
+    margin-bottom: 10px;   
 }
 
 .inf-rel {
@@ -907,17 +904,16 @@ hr.listado_hombres {
 }
 
 .letrero-sale {
-    float: right;
     background-color: #FF9D36;
     color: white;
     width: 52%;
     text-align: right;
     padding-left: 6px;
-    left: 48%;
+    right: 0;
     position: absolute;
-    top: -1px;
+    top: 0;
     z-index: 1;
-    padding-right: 8px;
+    padding-right: 0;
 }
 
 .limpiar {
@@ -1074,7 +1070,7 @@ a.variables:active{
     margin-bottom: 40px;
     border: 1px solid white;
 }
-.conti > a{ position: relative; }
+.conti > a{ position: relative; display: block; overflow: auto; }
 
 .conti:hover {
     border: 1px solid #E9E9ED;
@@ -1086,13 +1082,10 @@ a.variables:active{
     transition: .5s ease;
     backface-visibility: hidden;
     width: 100%;
-    height: 200px;
-    object-fit: scale-down;
     margin-bottom: 13px;
     padding-left: 0px;
-    left: 0%;
     position: relative;
-    padding: 7px;
+    padding: 5px;
 }
 
 .middle {
