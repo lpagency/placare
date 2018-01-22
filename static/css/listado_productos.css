@@ -1301,8 +1301,12 @@ input.check[type=radio], input.check[type=checkbox] {
     position: relative;  
 }
 .conti-de > a{ 
-    border: 1px solid #E9E9ED;
+    border: 1px solid rgba(0,0,0,0);
     display: block;
+    padding: 5px;
+}
+.conti-de:hover > a{ 
+    border: 1px solid #E9E9ED;
 }
 
 .desi{
