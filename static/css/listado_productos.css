@@ -533,6 +533,9 @@ hr.len {
     /* text-transform: uppercase; */
     font-size: 11px;
     width: 100%;
+    display: inline-block;
+    position: relative;
+    top: 40px;
 }
 
 .btn-success.car {
