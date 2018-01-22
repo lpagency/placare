@@ -1949,18 +1949,13 @@ a.text {
     a.talla {
         float: left;
         /* width: 100%; */
-        position: relative;
-        top: 70px;
         color: #526cd0;
-        left: 55%;
+       
     }
 
     .nombre-talla {
         float: left;
-        position: relative;
-        left: -13px;
         text-align: left;
-        margin-top: 73px;
         font-size: 13px;
         width: 100%;
         font-weight: 600;
