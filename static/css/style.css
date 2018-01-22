@@ -4,6 +4,10 @@ html * {
 
 }
 
+a, a:hover, a:focus{
+    outline: 0;
+}
+
 html, body {
 font-family: 'Fira Sans', sans-serif;
 }
