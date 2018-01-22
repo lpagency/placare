@@ -1108,15 +1108,15 @@ a.variables:active{
     padding: 7px;
 }
 
-/*.middle {
+.middle {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}*/
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%)
+}
 
 
 .conti:hover .middle {
@@ -1302,7 +1302,7 @@ input.check[type=radio], input.check[type=checkbox] {
     height: auto;
     margin-bottom:20px;
     border: 1px solid #E9E9ED;
-   
+    position: relative;  
 }
 
 .desi{
