@@ -1074,6 +1074,7 @@ a.variables:active{
     margin-bottom: 40px;
     border: 1px solid white;
 }
+.conti > a{ position: relative; }
 
 .conti:hover {
     border: 1px solid #E9E9ED;
