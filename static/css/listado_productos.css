@@ -1454,7 +1454,7 @@ hr.lon {
         object-fit: scale-down;
         top: 9px;
         /* border: 1px solid rgba(128, 128, 128, 0.25); */
-        left: -30px;
+      
         margin-left: 0px;
         float: left;
     }
@@ -3339,6 +3339,7 @@ hr.lon {
 
     .img-container{
         margin-left: 10px;
+        display: inline;
     }
 
     .img-container img {
