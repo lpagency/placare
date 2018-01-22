@@ -331,9 +331,6 @@ hr.len {
 .oferta {
  color: #282c3f;
  float: left;
- left: 10px;
- position: relative;
- bottom: 18px;
  font-size: 13px;
  width: 43%;
  font-weight: 600;
@@ -350,9 +347,6 @@ hr.len {
 .original-tachado {
     color: #696b79;
     float: left;
-    left: 0px;
-    position: relative;
-    bottom: 18px;
     font-size: 13px;
     text-decoration: line-through;
     width: 34%;
@@ -895,11 +889,7 @@ hr.listado_hombres {
 .descuento-lis {
     font-size: 13px;
     float: right;
-    position: relative;
     color: #FF5722;
-    left: -3px;
-    margin-bottom: 20px;
-    margin-top: -19px;
 }
 
 .letrero-nuevo {
@@ -1081,7 +1071,7 @@ a.variables:active{
 .conti {
     position: relative;
     width: 100%;
-    margin-bottom:20px;
+    margin-bottom: 40px;
     border: 1px solid white;
 }
 
