@@ -1076,6 +1076,8 @@ a.variables:active{
     border: 1px solid #E9E9ED;
 }
 
+.conti a.text{ border-top: none; }
+
 .image {
     opacity: 1;
     display: block;
