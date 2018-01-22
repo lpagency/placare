@@ -995,10 +995,8 @@ a.variables:active{
     color: #526cd0;
     font-weight: 600;
     font-size: 13px;
-    top:0px;
-    position: relative;
     border-color: #526cd0;
-    left:0;
+    margin-top: 45px;
 }
 
 .btn-default.more-products:hover, .btn-default.more-products:focus, .btn-default.more-products:active, .btn-default.more-products.active, .open>.dropdown-toggle.btn-default.more-products {
@@ -1082,7 +1080,7 @@ a.variables:active{
 
 .conti {
     position: relative;
-    width: 100;
+    width: 100%;
     margin-bottom:20px;
     border: 1px solid white;
 }
@@ -1619,7 +1617,7 @@ hr.lon {
 }
 
 .dir{
-   margin-top: 60px;
+   margin-top: 30px;
 }
 
 a.text {
@@ -1664,7 +1662,7 @@ a.text {
     }
 
     .img_prod_little {
-      
+        float: none;
         width: 100%;
     }
 
@@ -1951,9 +1949,10 @@ a.text {
     a.talla {
         float: left;
         /* width: 100%; */
-      
+        position: relative;
+        top: 70px;
         color: #526cd0;
-        
+        left: 55%;
     }
 
     .nombre-talla {
@@ -1961,7 +1960,7 @@ a.text {
         position: relative;
         left: -13px;
         text-align: left;
-       /* margin-top: 73px;*/
+        margin-top: 73px;
         font-size: 13px;
         width: 100%;
         font-weight: 600;
@@ -2068,22 +2067,6 @@ a.text {
         width: 100%;
         position: relative;
         top: 0px;
-    }
-
-    .conti:hover {
-        position: relative;
-        width: 100%;
-        border: 0px solid #E9E9ED;
-        height: 412px;
-        margin-bottom: 0px;
-    }
-
-    .conti {
-        position: relative;
-        width: 100%;
-        border: 0px solid #E9E9ED;
-        height: 412px;
-        margin-bottom: 13px;
     }
 
     a.text {
@@ -2923,28 +2906,6 @@ hr.lon {
         top: 15px;
     }
 
-    .conti {
-        position: relative;
-        width: 100%;
-        border: 1px solid transparent;
-        height: 358px;
-        margin-bottom: 0px;
-        border-bottom: 1px solid #E9E9ED;
-        border-right: 1px solid #E9E9ED;
-        left: -3px;
-    }
-
-    .conti:hover {
-        position: relative;
-        width: 100%;
-        border: 1px solid transparent;
-        height: 358px;
-        margin-bottom: 0px;
-        border-bottom: 1px solid #E9E9ED;
-        border-right: 1px solid #E9E9ED;
-        left: -3px;
-    }
-
     /*.conti-de:hover {
         position: relative;
         width: 100%;
@@ -3527,28 +3488,6 @@ hr.lon {
     font-size: 13px;
     font-weight: 500;
     }
-    .conti {
-        position: relative;
-        width: 100%;
-        border: 1px solid transparent;
-        height: 350px;
-        margin-bottom: 0px;
-        border-bottom: 1px solid #E9E9ED;
-        border-right: 1px solid #E9E9ED;
-        border-top: 1px solid #E9E9ED;
-        left: -3px;
-    }
-    .conti:hover {
-        position: relative;
-        width: 100%;
-        border: 1px solid transparent;
-        height: 350px;
-        margin-bottom: 0px;
-        border-bottom: 1px solid #E9E9ED;
-        border-right: 1px solid #E9E9ED;
-        border-top: 1px solid #E9E9ED;
-        left: -3px;
-    }   
 
 
 }
@@ -3977,28 +3916,6 @@ hr.lon {
 
 
 @media (max-width: 320px){
-    .conti {
-        position: relative;
-        width: 100%;
-        border: 1px solid transparent;
-        height: 315px;
-        margin-bottom: 0px;
-        border-bottom: 1px solid #E9E9ED;
-        border-right: 1px solid #E9E9ED;
-        left: -3px;
-    }
-
-    .conti:hover {
-        position: relative;
-        width: 100%;
-        border: 1px solid transparent;
-        height: 315px;
-        margin-bottom: 0px;
-        border-bottom: 1px solid #E9E9ED;
-        border-right: 1px solid #E9E9ED;
-        left: -3px;
-    }
-
 
     .descuento-detalle {
         position: relative;
