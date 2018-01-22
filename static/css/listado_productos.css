@@ -1114,6 +1114,7 @@ a.variables:active{
   position: absolute;
   top: 100%;
   left: 0%;
+  width: 100%;
 }
 
 
@@ -1301,6 +1302,7 @@ input.check[type=radio], input.check[type=checkbox] {
 }
 .conti-de > a{ 
     border: 1px solid #E9E9ED;
+    display: block;
 }
 
 .desi{
