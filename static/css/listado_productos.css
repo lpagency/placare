@@ -1082,18 +1082,13 @@ a.variables:active{
 
 .conti {
     position: relative;
-    width: 109%;
-    height: 275px;
+    width: 100;
     margin-bottom:20px;
     border: 1px solid white;
 }
 
 .conti:hover {
-    position: relative;
-    width: 109%;
     border: 1px solid #E9E9ED;
-    height: 275px;
-    margin-bottom:20px;
 }
 
 .image {
