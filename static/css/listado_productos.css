@@ -1956,8 +1956,7 @@ a.text {
     a.talla {
         float: left;
         /* width: 100%; */
-        position: relative;
-        top: 70px;
+      
         color: #526cd0;
         
     }
