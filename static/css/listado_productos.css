@@ -1841,7 +1841,7 @@ a.text {
 
     #product-detail-id {
         margin-top: 35px;
-        margin-bottom: -420px;
+        
     }
 
 
@@ -2320,7 +2320,7 @@ hr.lon {
 .conti-de {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: auto;
     margin-bottom: 10px;
     border: 1px solid white;
 }
