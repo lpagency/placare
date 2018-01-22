@@ -1621,7 +1621,7 @@ hr.lon {
 }
 
 .dir{
-   margin-top: 30px;
+   margin-top: 60px;
 }
 
 a.text {
@@ -1666,7 +1666,7 @@ a.text {
     }
 
     .img_prod_little {
-        float: none;
+      
         width: 100%;
     }
 
