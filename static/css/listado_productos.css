@@ -1515,61 +1515,8 @@ hr.lon {
         color: #FF9D36;
     }
 
-    .btn-success.car {
-        color: white;
-        background-color: #FF9D36;
-        border-color: #FF9D36;
-        border-radius: 0px;
-        width: 44%;
-        height: 40px;
-        float: left;
-        top: 20px;
-        position: relative;
-        right: 15px;
-        font-size: 10px;
-    }
 
-    .btn-success.car:hover {
-        color: #FF9D36;
-        background-color: white;
-        border-color: #FF9D36;
-        border-radius: 0px;
-        width: 44%;
-        height: 40px;
-        float: left;
-        top: 20px;
-        position: relative;
-        right: 15px;
-        font-size: 10px;
-    }
-
-    .btn-success.car-2 {
-        color: white;
-        background-color: #D1667A;
-        border-color: #D1667A;
-        border-radius: 0px;
-        width: 44%;
-        height: 41px;
-        float: right;
-        top: 19px;
-        position: relative;
-        right: 15px;
-        font-size: 10px;
-    }
-
-    .btn-success.car-2:hover {
-        color: #D1667A;
-        background-color: white;
-        border-color: #D1667A;
-        border-radius: 0px;
-        width: 44%;
-        height: 41px;
-        float: right;
-        top: 19px;
-        position: relative;
-        right: 15px;
-        font-size: 10px;
-    }
+  
 
     .mtl{
       padding-top: 0px !important;
@@ -1927,61 +1874,8 @@ hr.lon {
         outline-offset: 0px;
     }
 
-    .btn-success.car {
-        color: white;
-        background-color: #74E2C7;
-        border-color: #74E2C7;
-        border-radius: 0px;
-        width: 47%;
-        height: 50px;
-        float: left;
-        top: 0px;
-        position: relative;
-        right: 75px;
-        font-size: 10px;
-    }
+   
 
-    .btn-success.car:hover {
-        color: #74E2C7;
-        background-color: white;
-        border-color: #74E2C7;
-        border-radius: 0px;
-        width: 47%;
-        height: 50px;
-        float: left;
-        top: 0px;
-        position: relative;
-        right: 75px;
-        font-size: 10px;
-    }
-
-    .btn-success.car-2 {
-        color: white;
-        background-color: #FA913A;
-        border-color: #FA913A;
-        border-radius: 0px;
-        width: 48%;
-        height: 50px;
-        float: right;
-        top: 0px;
-        position: relative;
-        right: 116px;
-        font-size: 10px;
-    }
-
-    .btn-success.car-2:hover {
-        color: #FA913A;
-        background-color: white;
-        border-color: #FA913A;
-        border-radius: 0px;
-        width: 48%;
-        height: 50px;
-        float: right;
-        top: 0px;
-        position: relative;
-        right: 116px;
-        font-size: 10px;
-    }
 
     .resis{
         width: 100%;
@@ -2580,35 +2474,6 @@ hr.lon {
         margin-bottom: 26px;
     }
 
-    .btn-success.car-2 {
-        color: white;
-        background-color: #FA913A;
-        border-color: #FA913A;
-        border-radius: 0px;
-        width: 50%;
-        height: 50px;
-        float: right;
-        top: 0px;
-        position: relative;
-        right: 19px;
-        font-size: 13px;
-        padding-right: 31px;
-    }
-
-    .btn-success.car-2:hover {
-        color: #FA913A;
-        background-color: white;
-        border-color: #FA913A;
-        border-radius: 0px;
-        width: 50%;
-        height: 50px;
-        float: right;
-        top: 0px;
-        position: relative;
-        right: 19px;
-        font-size: 13px;
-        padding-right: 31px;
-    }
 
     .nombre-talla {
         float: left;
