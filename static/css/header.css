@@ -65,6 +65,16 @@ a.desktop-submit {
     display: inline-block;
 }
 
+.container.min.dos .col-md-3.col-sm-3.col-xs-12:after{
+    position: absolute;
+    content: '';
+    right: 15px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #E9E9ED;
+}
+
 .desktop-query {
     width: 246px;
     float: left;
