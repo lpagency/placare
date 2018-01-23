@@ -2417,17 +2417,6 @@ hr.lon {
         top: 270px;
     }
 
-    .conti-de {
-        position: relative;
-        width: 100%;
-        height: 328px;
-        margin-bottom: 0px;
-        border: 1px solid transparent;
-        border-bottom: 1px solid #ebedef;
-        border-right: 1px solid #ebedef;
-        border-top: 1px solid #ebedef;
-
-    }
 
     .product-box.two {
         padding: 0px 0px;
@@ -2883,14 +2872,6 @@ hr.lon {
         color: #7177F7;
         font-size: 11px;
         left: 25%;
-    }
-
-    .conti-de {
-        position: relative;
-        width: 100%;
-        height: 115px;
-        margin-bottom: 10px;
-        border: 1px solid transparent;
     }
 
     .texto-header-pro-3 {
