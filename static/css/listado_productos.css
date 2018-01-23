@@ -2129,13 +2129,7 @@ hr.lon {
     margin-bottom: 10px;
     border: 1px solid white;
 }
-.conti-de:hover {
-    position: relative;
-    width: 109%;
-    border: 1px solid #E9E9ED;
-    height: 275px;
-    margin-bottom: 10px;
-}
+
 .detail-prod-img{
     opacity: 1;
     display: block;
@@ -2499,16 +2493,6 @@ hr.lon {
         margin-left: -10px;
         top: 270px;
     }
-
-    /*.conti-de:hover {
-        position: relative;
-        width: 100%;
-        border: 1px solid transparent;
-        height: 358px;
-        margin-bottom: 0px;
-        border-bottom: 1px solid #ebedef;
-        border-right: 1px solid #ebedef;
-    }*/
 
     .conti-de {
         position: relative;
@@ -3041,14 +3025,6 @@ hr.lon {
         color: #7177F7;
         font-size: 11px;
         left: 25%;
-    }
-
-    .conti-de:hover {
-        position: relative;
-        width: 100%;
-        border: 1px solid transparent;
-        height: 315px;
-        margin-bottom: 10px;
     }
 
     .conti-de {
