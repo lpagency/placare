@@ -2835,7 +2835,7 @@ hr.lon {
     }
 
     .resis {
-        width: 106%;
+        width: 100%;
         position: fixed;
         bottom: 0px;
         z-index: 100;
