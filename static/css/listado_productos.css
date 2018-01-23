@@ -584,21 +584,15 @@ hr.len {
 
 .nombre-talla {
     text-align: left;
-    margin-top: 40px;
     font-size: 13px;
     width: 100%;
     font-weight: 600;
     color: #282c3f;
-    margin-bottom: -15px;
 }
 
 
 a.talla {
-    float: left;
-    position: relative;
-    top: 40px;
     color: #526cd0;
-    left: 27%;
     z-index: 100;
 }
 
