@@ -1,8 +1,4 @@
-* {box-shadow: inset 0 0 1px 0 rgba(0,0,0,.3); background-color: rgba(0,0,0,.03);}
-
-
-
-
+/* {box-shadow: inset 0 0 1px 0 rgba(0,0,0,.3); background-color: rgba(0,0,0,.03);}*/
 
 
 .fa-angle-right.lis {
@@ -1372,11 +1368,9 @@ a.variables3:hover, a.variables3:focus, a.variables3:active{
 }
 
 hr.lon {
-   /*margin-top: -8px;
-    margin-bottom: 20px;
-    border: 0;*/
     border-top: 1px solid #E9E9ED;
     width: 99%;
+    margin: 40px 0;
 }
 
 .texto-com{
