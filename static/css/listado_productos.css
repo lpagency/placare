@@ -1565,6 +1565,8 @@ hr.lon {
 
 @media (max-width: 767px){
 
+
+
     .text-fil {
         border-bottom: 1px solid transparent;
         float: left;
@@ -2905,6 +2907,75 @@ hr.lon {
 
 
 @media (max-width: 320px){
+    .btn-success.car-2 {
+    color: white;
+    background-color:#5A5751;
+    border-color: #5A5751;
+    border-radius: 5px;
+    width: 0%;
+    height: 45px;
+    float: none;
+    top: 0px;
+    position: none;
+    right: 0px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btn-success.car-2:hover {
+    color: #5A5751;
+    background-color:white;
+    border-color: #5A5751;
+    border-radius: 5px;
+    width: 0%;
+    height: 0px;
+    float: none;
+    top: 0px;
+    position: none;
+    right: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-size: 13px;
+    font-weight:500;
+    
+}
+    .btn-success.car {
+    color: white;
+    background-color: #FF9D36 ;
+    border-color:#FF9D36 ;
+    border-radius: 5px;
+    width: 0;
+    height: 45px;
+    float: none;
+    top: 0;
+    position: none;
+    right: 0px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btn-success.car:hover {
+    color: #FF9D36;
+    background-color: white;
+    border-color:#FF9D36;
+    border-radius: 5px;
+    width: 0%;
+    height: 45px;
+    float: none;
+    top: 0px;
+    position: none;
+    right: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-size: 13px;
+    font-weight:500;
+}
 
     .descuento-detalle {
         position: relative;
