@@ -17,7 +17,7 @@
 
 .caja-logo {
     width: 154px;
-    margin-top: 11px;
+    margin-top: 7px;
     margin-bottom: 0px;
 }
 .caja-logo a{
@@ -186,6 +186,7 @@ li.slogan a {
     -moz-osx-font-smoothing: grayscale;
     width: 100%;
     font-size: 15px;
+    line-height: 1;
     font-weight: 500;
 }
 
