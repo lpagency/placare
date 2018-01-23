@@ -397,6 +397,10 @@ a.desktop-submit {
     width: 100%;
 }
 
+.container.min.dos .col-md-3.col-sm-3.col-xs-12:after{
+    display: none;
+}
+
 .caja-logo {
     height: 51px;
     width: 154px;
