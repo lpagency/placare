@@ -2698,74 +2698,7 @@ hr.lon {
 
 }
 
-@media (max-width: 480px){
-    .texto-oferta {
-        position: relative;
-        text-align: left;
-        float: left;
-        width: 100%;
-        margin-top: 3px;
-        margin-bottom: -19px;
-        font-size: 11px;
-    }
 
-    .nombre-talla {
-        float: left;
-        position: relative;
-        left: -13px;
-        text-align: left;
-        margin-top: 26px;
-        font-size: 11px;
-        width: 100%;
-        font-weight: 600;
-    }
-
-    a.talla {
-        float: left;
-        /* width: 100%; */
-        position: relative;
-        top: 22px;
-        color: #526cd0;
-        left: 13%;
-    }
-
-
-    a.text {
-        background-color: transparent;
-        font-size: 16px;
-        padding: 7px 83px;
-        top: 230px;
-        position: relative;
-        border: 1px solid transparent;
-        border-top: 1px solid #E9E9ED;
-    }
-
-    .ordenar-precio {
-        text-transform: capitalize;
-        border: 1px solid rgba(128, 128, 128, 0.35);
-        margin-top: 10px;
-        padding-left: 9px;
-        height: 22px;
-        position: relative;
-        padding-top: 4px;
-        font-size: 9px;
-        width: 90%;
-    }
-
-    .limpiar {
-        color: #5265D1;
-        font-size: 10px;
-        font-weight: 600;
-        margin-top: 12px;
-        margin-bottom: 20px;
-        float: right;
-        left: 65%;
-        position: relative;
-        cursor: pointer;
-    }
-
-
-}
 
 @media (max-width: 459px){
     .ver-oferta {
