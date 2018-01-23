@@ -1113,12 +1113,14 @@ a.text {
     background-color: transparent;
     color: #526CD0;
     font-size: 13px;
-    padding: 3px 47px;
+    padding: 3px 5px;
    /* top: 124px;
     position: relative;*/
     border: 1px solid transparent;
     border-top: 1px solid #E9E9ED;
     font-weight: 600;
+    width: 100%;
+    display: block;
 }
 
 a.text.detalle {
@@ -1415,6 +1417,7 @@ hr.lon {
        padding-right: 5px;
        font-size: 13px;
     }
+    .descuento-lis{ float: none; }
 
 }
 
@@ -1592,14 +1595,6 @@ hr.lon {
 
 .dir{
    margin-top: 30px;
-}
-
-a.text {
-    background-color: transparent;
-    font-size: 16px;
-    padding: 7px 26px;
-    top: 129px;
-    position: relative;
 }
 
 .op {
