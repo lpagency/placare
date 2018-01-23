@@ -2473,7 +2473,6 @@ hr.lon {
 
     .fa-angle-right.lis {
         float: right;
-        position: relative;
         right: 34px;
         font-size: 20px !important;
         margin-top: -8px;
