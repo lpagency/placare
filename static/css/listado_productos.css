@@ -1670,11 +1670,7 @@ hr.lon {
         margin-bottom: 0px;
     }
 
-    .mover {
-        margin-top: 25px;
-        position: relative;
-        left: -10px;
-    }
+
 
     .img-pro {
         width: 100%;
@@ -2664,12 +2660,6 @@ hr.lon {
         left: 0px;
     }
 
-   .mover {
-    margin-top: 25px;
-    position: relative;
-    left: -23px;
-    width: 107%;
-    }  
 
     .size-item:hover {
         color: rgb(91, 81, 83);
@@ -2883,13 +2873,7 @@ hr.lon {
         font-size: 13px;
         margin-left: 2px;
     }
-    
-    .mover {
-    margin-top: 25px;
-    position: relative;
-    left: -23px;
-    width: 112%;
-    }
+
 
 }
 
@@ -3009,13 +2993,7 @@ hr.lon {
         font-weight: 600;
     }
 
-    .mover {
-    margin-top: 25px;
-    position: relative;
-    left: -5px;
-    width: 121%;
-    padding: 0px;
-    }
+
 
     a.talla {
         float: left;
