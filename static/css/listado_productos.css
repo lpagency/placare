@@ -1398,6 +1398,13 @@ hr.lon {
     background-color: #d5d6d9;
 }
 
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+    display: none;
+}
+
 
 /*-------------------------------------------------------------------Responsive--------------------------------------*/
 
@@ -2037,12 +2044,7 @@ hr.listado {
     margin: 0px;
 }
 
-.swiper-container {
-    width: 100%;
-    height: 300px;
-    margin: 20px auto;
-    display: none;
-}
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
