@@ -1121,6 +1121,7 @@ a.text {
     font-weight: 600;
     width: 100%;
     display: block;
+    text-align: center;
 }
 
 a.text.detalle {
