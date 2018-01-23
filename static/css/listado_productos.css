@@ -2782,10 +2782,10 @@ hr.lon {
       font-size: 12px;
     }
 
-    .container.min.dip {
+   /* .container.min.dip {
     padding-left: 0px;
     padding-right: 0px;
-    }  
+    }  */
 
     .precio-oferta-movil{
         position: absolute;
