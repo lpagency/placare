@@ -538,13 +538,9 @@ hr.len {
     color: white;
     background-color: #FF9D36 ;
     border-color:#FF9D36 ;
-    border-radius: 5px;
     width: 50%;
     height: 45px;
     float: left;
-    top: 20px;
-    position: relative;
-    right: 15px;
     font-size: 13px;
     font-weight: 500;
 }
@@ -553,20 +549,14 @@ hr.len {
     color: #FF9D36;
     background-color: white;
     border-color:#FF9D36;
-    border-radius: 5px;
     width: 50%;
     height: 45px;
     float: left;
-    top: 20px;
-    position: relative;
-    right: 15px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    font-size: 13px;
-    font-weight:500;
 }
 
 
@@ -722,13 +712,11 @@ a.talla {
     color: white;
     background-color:#5A5751;
     border-color: #5A5751;
-    border-radius: 5px;
-    width: 46%;
+    border-radius: 0px;
+    width: 50%;
     height: 45px;
     float: right;
-    top: 20px;
     position: relative;
-    right: 15px;
     font-size: 13px;
     font-weight: 500;
 }
@@ -737,13 +725,7 @@ a.talla {
     color: #5A5751;
     background-color:white;
     border-color: #5A5751;
-    border-radius: 5px;
-    width: 46%;
     height: 45px;
-    float: right;
-    top: 20px;
-    position: relative;
-    right: 15px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -2197,15 +2179,7 @@ hr.lon {
         display: inline;
      
     }
-    a.text {
-        background-color: transparent;
-        font-size: 16px;
-        padding: 7px 115px;
-        top: 230px;
-        position: relative;
-        border: 1px solid #E9E9ED;
-        display: none;
-    }
+
 
    .text-relac {
     font-size: 14px;
@@ -2214,9 +2188,6 @@ hr.lon {
     left: 0px;
     }
 
-    .descuento-lis {
-     left: -140px;
- }
      .separacion-movil{
         margin-top: 32px;
         margin-bottom: 34px;
@@ -2253,14 +2224,6 @@ hr.lon {
         top: 200px;
     }
 
-    .ver-oferta {
-        position: relative;
-        right: 94px;
-        top: 39px;
-        font-size: 12px;
-        color: #526cd0;
-        font-weight: 600;
-    }
 
     .linea-separacion {
         border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -2438,7 +2401,6 @@ hr.lon {
     }
     .texto-header-pro {
         margin-top: 33px;
-        margin-bottom: -50px;
         position: relative;
         left: 0px;
         float: left;
