@@ -315,18 +315,12 @@ hr.len {
 }
 
 .up-ex-detalle {
-    float: left;
     text-align: left;
-    width: 100%;
-    position: relative;
-    top: -43px;
-    margin-bottom: 0px;
     font-size: 14px;
     font-weight: 500;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    left: -1px;
     color: #696e79;
 }
 
@@ -507,8 +501,6 @@ hr.len {
 
 .texto-detalle {
     text-align: left;
-    position: relative;
-    top: -22px;
     margin-bottom: 22px;
     font-size: 16px;
     color: #696e79;
@@ -572,8 +564,6 @@ hr.len {
 
 .oferta-de{
     text-align: left;
-    position: absolute;
-    top: 55px;
     font-size: 17px;
     color: #282c3f !important;
     font-weight: 600;
@@ -593,9 +583,6 @@ hr.len {
 }
 
 .nombre-talla {
-    float: left;
-    position: relative;
-    left: -11px;
     text-align: left;
     margin-top: 40px;
     font-size: 13px;
@@ -2535,21 +2522,7 @@ hr.lon {
         color: #696e79;
     }
 
-    .texto-detalle {
-        text-align: left;
-        position: relative;
-        top: -28px;
-        margin-bottom: 22px;
-        font-size: 16px;
-        /* border-top-color: black; */
-        color: #696e79;
-        font-weight: 800;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-transform: uppercase;
-        left: -3px;
-    }
+
 
     .descuento-detalle {
     position: relative;
