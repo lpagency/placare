@@ -2765,7 +2765,6 @@ hr.lon {
         top: 6px;
     }
 
-
     .texto-header-pro-2 {
         margin-bottom: 10px;
         position: relative;
@@ -3138,20 +3137,6 @@ hr.lon {
         font-size: 13px;
     }
 
-    .image {
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        width: 100%;
-        height: 267px;
-        object-fit: cover;
-        margin-bottom: -17px;
-        padding-left: 0px;
-        left: 0%;
-        position: relative;
-    }
-
     .btn-success.car {
         color: white;
         background-color:#74E2C7;
@@ -3204,82 +3189,9 @@ hr.lon {
     width: 112%;
     }
 
-    .original {
-    color: #282c3f;
-    float: left;
-    left: 14px;
-    position: relative;
-    margin-bottom: 0px;
-    margin-top: -20px;
-    text-align: left;
-    width: 100%;
-    font-size: 13px;
-    font-weight: 500;
-    }
-
-
 }
 
 @media (max-width: 375px){
-    .image {
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        width: 100%;
-        height: 270px;
-        object-fit: contain;
-        margin-bottom: -21px;
-        padding-left: 0px;
-        left: 0%;
-        position: relative;
-    }
-
-    .inf {
-    position: relative;
-    bottom: 36px;
-    width: 90%;
-    text-align: left;
-    left: 13px;
-    color: #4A4949;
-    font-size: 13px;
-    font-weight: 300;
-    margin-bottom: -15px;
-    float: left;
-    height: 37px;
-    }
-
-    a.text {
-        background-color: transparent;
-        font-size: 16px;
-        padding: 7px 56px;
-        top: 11px;
-        position: relative;
-        display: none;
-    }
-
-    .original-tachado {
-        color: #4A4949;
-        float: left;
-        left: 22px;
-        position: relative;
-        bottom: 36px;
-        font-size: 13px;
-        text-decoration: line-through;
-        text-align: center;
-        width: 24%;
-    }
-
-    .descuento-lis {
-        font-size: 13px;
-        float: right;
-        position: relative;
-        left: -17px;
-        margin-bottom: 19px;
-        text-align: left;
-        width: 18%;
-    }
-
 
     .descr_prod_detail {
         position: relative;
@@ -3443,20 +3355,6 @@ hr.lon {
         top: 6px;
     }
 
-
-   .original {
-    color: #282c3f;
-    float: left;
-    left: 13px;
-    position: relative;
-    margin-bottom: 20px;
-    margin-top: -20px;
-    text-align: left;
-    width: 90%;
-    font-size: 13px;
-    font-weight: 500;
-    }
-
     .mover {
     margin-top: 25px;
     position: relative;
@@ -3475,24 +3373,6 @@ hr.lon {
 }
 
 @media (max-width: 360px){
-    a.text {
-        background-color: transparent;
-        font-size: 16px;
-        padding: 7px 53px;
-        position: relative;
-        display: none;
-    }
-
-    .descuento-lis {
-        font-size: 13px;
-        float: right;
-        position: relative;
-        top: -18px;
-        left: -17px;
-        margin-bottom: 19px;
-        text-align: left;
-        width: 18%;
-    }
 
     .size-item:hover {
         color: rgb(91, 81, 83);
@@ -3654,65 +3534,6 @@ hr.lon {
         color: #FF4F66;
     }
 
-    .image {
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        width: 100%;
-        height: 225px;
-        object-fit: contain;
-        margin-bottom: 8px;
-        padding-left: 0px;
-        left: 0%;
-        position: relative;
-    }
-
-    a.text {
-        background-color: transparent;
-        font-size: 14px;
-        padding: 7px 47px;
-        top: -9px;
-        position: relative;
-        display: none;
-    }
-
-   .inf {
-    position: relative;
-    bottom: 36px;
-    width: 100%;
-    text-align: left;
-    left: 13px;
-    color: #4A4949;
-    font-size: 13px;
-    font-weight: 300;
-    margin-bottom: -15px;
-    float: left;
-    height: 37px;
-    }
-
-    .original-tachado {
-        color: #4A4949;
-        float: left;
-        left: 33px;
-        position: relative;
-        bottom: 36px;
-        font-size: 13px;
-        text-decoration: line-through;
-        text-align: center;
-        width: 24%;
-    }
-
-    .descuento-lis {
-        font-size: 11px;
-        float: right;
-        position: relative;
-        top: -16px;
-        left: -1px;
-        margin-bottom: 19px;
-        text-align: left;
-        width: 18%;
-    }
 
     .carousel {
         position: relative;
@@ -3918,19 +3739,6 @@ hr.lon {
         right: 15px;
         position: relative;
     }
-
-   .original {
-    color: #282c3f;
-    float: left;
-    left: 13px;
-    position: relative;
-   /* margin-bottom: 0px;*/
-    margin-top: -20px;
-    text-align: left;
-    width: 100%;
-    font-size: 13px;
-    font-weight: 500;
-}
 
 
 }
