@@ -1070,13 +1070,13 @@ a.variables:active{
 }
 .conti > a{ 
     display: block; overflow: auto; 
-    border: 1px solid white;
+    border: 1px solid rgba(0,0,0,0);
     padding: 5px;
 }
-
-.conti:hover {
+.conti:hover > a{ 
     border: 1px solid #E9E9ED;
 }
+
 .conti:hover .middle{ border: 1px solid #E9E9ED; border-top: none; }
 
 .conti a.text{ border-top: none; }
