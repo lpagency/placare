@@ -1069,12 +1069,14 @@ a.variables:active{
     width: 100%;
     margin-bottom: 40px;
     border: 1px solid white;
+    padding: 5px;
 }
 .conti > a{ position: relative; display: block; overflow: auto; }
 
 .conti:hover {
     border: 1px solid #E9E9ED;
 }
+.conti:hover .middle{ border: 1px solid #E9E9ED; border-top: none; }
 
 .conti a.text{ border-top: none; }
 
@@ -1087,7 +1089,6 @@ a.variables:active{
     margin-bottom: 13px;
     padding-left: 0px;
     position: relative;
-    padding: 5px;
 }
 
 .middle {
