@@ -1407,27 +1407,13 @@ hr.lon {
     }
 
     .inf {
-        position: relative;
-        bottom: 29px;
-        width: 81%;
-        text-align: left;
-        left: 9px;
-        color: #3e4152;
-        font-size: 13px;
-        font-weight: 400;
-        margin-bottom: -15px;
-        float: left;
-        height: 25px;
     }
 
-    .original {
-        color: #282c3f;
-        float: left;
-        left: 10px;
-        position: relative;
-        bottom: 10px;
-        font-size: 13px;
-        font-weight: 500;
+    .original, .original-tachado {
+       width: auto;
+       display: inline-block;
+       padding-right: 5px;
+       font-size: 13px;
     }
 
 }
