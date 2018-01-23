@@ -48,6 +48,8 @@
 }
 .filtro-talla{ display: inline-block; }
 
+.container.min.dos .col-md-3.col-sm-3.col-xs-12 .filtro-talla{ display: block; }
+
 .categ {
     background: white;
     border: 1px solid rgba(128, 128, 128, 0.6);
