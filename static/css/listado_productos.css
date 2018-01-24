@@ -53,6 +53,8 @@
 
 .col-md-12.col-sm-12.col-xs-12.variants-container > .col-md-12{ padding: 0; }
 
+.variants-container{ margin-top: 20px; }
+
 .categ {
     background: white;
     border: 1px solid rgba(128, 128, 128, 0.6);
@@ -569,7 +571,7 @@ hr.len {
     font-size: 17px;
     color: #282c3f !important;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
 }
 
@@ -2311,15 +2313,6 @@ hr.lon {
         text-align: left;
         float: left;
     }
-    .oferta-de {
-    text-align: left;
-    position: absolute;
-    top: 55px;
-    font-size: 17px;
-    color: #282c3f !important;
-    font-weight: 600;
-    left: 3.4%;
-}
 
 }
 
