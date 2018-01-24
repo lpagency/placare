@@ -53,7 +53,7 @@
 
 .col-md-12.col-sm-12.col-xs-12.variants-container > .col-md-12{ padding: 0; }
 
-.variants-container{ margin-top: 20px; }
+.variants-container{ margin-top: 20px; margin-bottom: 10px; }
 
 .categ {
     background: white;
@@ -533,9 +533,8 @@ hr.len {
     color: white;
     background-color: #FF9D36 ;
     border-color:#FF9D36 ;
-    width: 50%;
+    width: 45%;
     height: 45px;
-    float: left;
     font-size: 13px;
     font-weight: 500;
     border-radius: 5px;
@@ -545,7 +544,7 @@ hr.len {
     color: #FF9D36;
     background-color: white;
     border-color:#FF9D36;
-    width: 50%;
+    width: 45%;
     height: 45px;
     float: left;
     -webkit-transition: all 0.5s ease;
@@ -679,7 +678,7 @@ a.talla {
     color: white;
     background-color:#5A5751;
     border-color: #5A5751;
-    width: 50%;
+    width: 45%;
     height: 45px;
     float: right;
     position: relative;
@@ -692,7 +691,6 @@ a.talla {
     color: #5A5751;
     background-color:white;
     border-color: #5A5751;
-    height: 45px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
