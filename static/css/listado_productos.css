@@ -2192,10 +2192,6 @@ hr.lon {
         top: 0px;
     }
 
-    .product-box {
-        padding: 0px 0px;
-    }
-
     .col-xs-12.pinki{
         padding: 0px;
         left: 0px;
@@ -2349,13 +2345,6 @@ hr.lon {
         left: 24%;
         margin-left: -10px;
         top: 270px;
-    }
-
-
-    .product-box.two {
-        padding: 0px 0px;
-        margin-bottom: -23px;
-        background-color: white;
     }
 
     .texto-header-pro-2 {
