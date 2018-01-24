@@ -1439,29 +1439,6 @@ hr.lon {
     }
 
 
-
-    .nombre-talla {
-        float: left;
-        position: relative;
-        left: -13px;
-        text-align: left;
-        margin-top: 30px;
-        font-size: 10px;
-        width: 100%;
-        font-weight: 600;
-    }
-
-    a.talla {
-        float: left;
-        /* width: 100%; */
-        position: relative;
-        top: 30px;
-        color: #FF9D36;
-    }
-
-
-
-
     .mtl{
       padding-top: 0px !important;
   }
@@ -1507,7 +1484,7 @@ hr.lon {
 
 @media (max-width: 767px){
 
-
+    a.text.detalle{ display: none; opacity: 0; z-index: -1; }
 
     .text-fil {
         border-bottom: 1px solid transparent;
@@ -1750,10 +1727,10 @@ hr.lon {
         float: left;
         margin-top: 40px;
         margin-bottom: 30px;
-        right: 11px;
         position: relative;
         width: 100%;
         text-align: left;
+        padding: 0;
     }
 
     .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open>.dropdown-toggle.btn-info {
