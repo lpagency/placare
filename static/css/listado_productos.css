@@ -569,6 +569,7 @@ hr.len {
     font-size: 17px;
     color: #282c3f !important;
     font-weight: 600;
+    margin-bottom: 45px;
 
 }
 
@@ -578,10 +579,6 @@ hr.len {
 
 .linea-separacion {
     border-bottom: 1px solid #E9E9ED;
-    position: relative;
-    left: -13px;
-    width: 100%;
-    top:25px;
 }
 
 .nombre-talla {
