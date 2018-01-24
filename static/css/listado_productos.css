@@ -696,6 +696,7 @@ a.talla {
 .linea-separacion-2 {
     border-bottom: 1px solid #E9E9ED;
     width: 100%;
+    margin-top: 20px;
 }
 
 .text-relac {
