@@ -53,6 +53,8 @@
 
 .container.min.dos .col-md-3.col-sm-3.col-xs-12 .filtro-talla{ display: block; }
 
+.col-md-12.col-sm-12.col-xs-12.variants-container > .col-md-12{ padding: 0; }
+
 .categ {
     background: white;
     border: 1px solid rgba(128, 128, 128, 0.6);
