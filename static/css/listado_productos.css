@@ -3,12 +3,10 @@
 
 .fa-angle-right.lis {
     float: right;
-    position: relative;
     right: 11px;
     font-size: 22px !important;
-    margin-top: -8px;
     color: white;
-    top: 5px;
+    top: 10px;
 }
 
 
@@ -538,6 +536,7 @@ hr.len {
     float: left;
     font-size: 13px;
     font-weight: 500;
+    border-radius: 5px;
 }
 
 .btn-success.car:hover {
@@ -680,13 +679,13 @@ a.talla {
     color: white;
     background-color:#5A5751;
     border-color: #5A5751;
-    border-radius: 0px;
     width: 50%;
     height: 45px;
     float: right;
     position: relative;
     font-size: 13px;
     font-weight: 500;
+    border-radius: 5px;
 }
 
 .btn-success.car-2:hover {
@@ -2427,16 +2426,6 @@ hr.lon {
         background-color: white;
     }
 
-
-    .fa-angle-right.lis {
-        float: right;
-        right: 34px;
-        font-size: 20px !important;
-        margin-top: -8px;
-        color: white;
-        top: 6px;
-    }
-
     .texto-header-pro-2 {
         margin-bottom: 10px;
         position: relative;
@@ -2897,18 +2886,6 @@ hr.lon {
         height: 85px;
         height: 61px !important;
     }
-
-    .fa-angle-right.lis {
-        float: right;
-        position: relative;
-        right: 8px;
-        font-size: 20px !important;
-        margin-top: -8px;
-        color: white;
-        top: 6px;
-    }
-
-
 
     .nombre-talla {
         float: left;
