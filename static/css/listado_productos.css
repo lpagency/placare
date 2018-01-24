@@ -533,8 +533,9 @@ hr.len {
     color: white;
     background-color: #FF9D36 ;
     border-color:#FF9D36 ;
-    width: 45%;
+    width: 48%;
     height: 45px;
+    float: left;
     font-size: 13px;
     font-weight: 500;
     border-radius: 5px;
@@ -544,9 +545,6 @@ hr.len {
     color: #FF9D36;
     background-color: white;
     border-color:#FF9D36;
-    width: 45%;
-    height: 45px;
-    float: left;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -678,7 +676,7 @@ a.talla {
     color: white;
     background-color:#5A5751;
     border-color: #5A5751;
-    width: 45%;
+    width: 48%;
     height: 45px;
     float: right;
     position: relative;
