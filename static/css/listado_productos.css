@@ -2178,10 +2178,6 @@ hr.lon {
     a.talla {
         float: left;
         /* width: 100%; */
-        position: relative;
-        top: 22px;
-        color:#526cd0;
-        left: 23%;
     }
 
 
@@ -2300,15 +2296,6 @@ hr.lon {
         font-size: 13px;
         width: 100%;
         font-weight: 600;
-    }
-
-    a.talla {
-       float: left;
-       position: relative;
-       top: 25px;
-       color: #7177F7 ;
-       font-size: 11px;
-       left: -11%;
     }
 
     .img_prod_detail {
@@ -2666,15 +2653,6 @@ hr.lon {
 
 @media (max-width: 400px){
 
-    a.talla {
-        float: left;
-        position: relative;
-        top: 23px;
-        color: #7177F7;
-        font-size: 11px;
-        left: 48%;
-    }
-
     a.text {
         background-color: transparent;
         /* color: gray; */
@@ -2812,11 +2790,8 @@ hr.lon {
     a.talla {
         float: left;
         /* width: 100%; */
-        position: relative;
-        top: 23px;
         color: #7177F7;
         font-size: 11px;
-        left: 25%;
     }
 
     .texto-header-pro-3 {
@@ -2849,16 +2824,6 @@ hr.lon {
         font-size: 11px;
         width: 100%;
         font-weight: 600;
-    }
-
-    a.talla {
-        float: left;
-        /* width: 100%; */
-        position: relative;
-        top: 23px;
-        color: #7177F7;
-        font-size: 11px;
-        left: 29%;
     }
     hr.lon {
         margin-top: 32px;
