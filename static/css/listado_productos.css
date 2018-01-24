@@ -2029,14 +2029,6 @@ hr.lon {
     margin-top: 54px;
 }
 
-.conti-de {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border: 1px solid white;
-}
-
 .detail-prod-img{
     opacity: 1;
     display: block;
@@ -2545,8 +2537,7 @@ hr.lon {
         border-color: transparent;
         float: left;
         margin-top: 40px;
-        margin-bottom: 15px;
-        right: 28px;
+        right: 15px;
         position: relative;
         width: 100%;
         text-align: left;
