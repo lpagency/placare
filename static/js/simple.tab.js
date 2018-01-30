@@ -8,3 +8,11 @@ $(document).ready(function() {
         $(tab).fadeIn();
     });
 });
+
+/* fixed menu */
+$(document).ready(function(){
+	$("#menu-fixed").pin({
+	      containerSelector: ".container.min"
+	})
+
+});
