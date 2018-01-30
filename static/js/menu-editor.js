@@ -25,11 +25,4 @@ $(document).ready(function(){
 
 
 
-/* fixed menu */
-$(document).ready(function(){
-	$("#menu-fixed").pin({
-	      containerSelector: ".container.min"
-	})
-
-});
 

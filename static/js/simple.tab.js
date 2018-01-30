@@ -12,6 +12,7 @@ $(document).ready(function() {
 /* fixed menu */
 $(document).ready(function(){
 	$("#menu-fixed").pin({
+			alert("hola");
 	      containerSelector: ".container.min"
 	})
 
