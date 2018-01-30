@@ -3,12 +3,10 @@
 
 .fa-angle-right.lis {
     float: right;
-    position: relative;
     right: 11px;
     font-size: 22px !important;
-    margin-top: -8px;
     color: white;
-    top: 5px;
+    top: 10px;
 }
 
 
@@ -52,6 +50,10 @@
 .filtro-talla{ display: inline-block; }
 
 .container.min.dos .col-md-3.col-sm-3.col-xs-12 .filtro-talla{ display: block; }
+
+.col-md-12.col-sm-12.col-xs-12.variants-container > .col-md-12{ padding: 0; }
+
+.variants-container{ margin-top: 20px; margin-bottom: 10px; }
 
 .categ {
     background: white;
@@ -158,7 +160,7 @@ div.image-upload.part1 {
     color: #3e4152;
     font-size: 13px;
     font-weight: 400;
-    line-height: 13px;
+    line-height: 1.1;
     margin-bottom: 10px;   
 }
 
@@ -509,6 +511,7 @@ hr.len {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-transform: uppercase;
+    margin-top: 0;
 }
 
 .sku-detalle {
@@ -530,20 +533,18 @@ hr.len {
     color: white;
     background-color: #FF9D36 ;
     border-color:#FF9D36 ;
-    width: 50%;
+    width: 48%;
     height: 45px;
     float: left;
     font-size: 13px;
     font-weight: 500;
+    border-radius: 5px;
 }
 
 .btn-success.car:hover {
     color: #FF9D36;
     background-color: white;
     border-color:#FF9D36;
-    width: 50%;
-    height: 45px;
-    float: left;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -567,6 +568,7 @@ hr.len {
     font-size: 17px;
     color: #282c3f !important;
     font-weight: 600;
+    margin-bottom: 40px;
 
 }
 
@@ -576,10 +578,7 @@ hr.len {
 
 .linea-separacion {
     border-bottom: 1px solid #E9E9ED;
-    position: relative;
-    left: -13px;
-    width: 100%;
-    top:25px;
+    margin-bottom: 15px;
 }
 
 .nombre-talla {
@@ -594,6 +593,7 @@ hr.len {
 a.talla {
     color: #526cd0;
     z-index: 100;
+    float: right;
 }
 
 .size-item.active{
@@ -665,72 +665,44 @@ a.talla {
     font-weight: 600;
 }
 
-.size-item:hover {
-    color: white;
-    left: 0px;
-    position: relative;
-    float: left;
-    border-radius: 48px!important;
-    border: 2px solid rgba(91, 81, 83, 0.37);
-    padding: 15px 0px;
-    margin-bottom: 11px;
-    width: 50px;
-    height: 50px;
-    margin-left: 9px;
-    font-size: 13px;
-    font-weight: 600;
-    background-color: #000;
-}
 
 .mover {
-    margin-top: 34px;
-    position: relative;
-    left: -38px;
-    margin-bottom: -5px;
 }
 
 .btn-success.car-2 {
     color: white;
     background-color:#5A5751;
     border-color: #5A5751;
-    border-radius: 0px;
-    width: 50%;
+    width: 48%;
     height: 45px;
     float: right;
     position: relative;
     font-size: 13px;
     font-weight: 500;
+    border-radius: 5px;
 }
 
 .btn-success.car-2:hover {
     color: #5A5751;
     background-color:white;
     border-color: #5A5751;
-    height: 45px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    font-size: 13px;
-    font-weight:500;
 }
 
 .linea-separacion-2 {
     border-bottom: 1px solid #E9E9ED;
-    position: relative;
-    left: -13px;
     width: 100%;
-    position: relative;
-    top: 36px;
+    margin-top: 20px;
 }
 
 .text-relac {
     font-size: 14px;
     margin-bottom: 30px;
     text-align: left;
-    left: 5px;
-    position: relative;
     font-weight: 600;
     text-transform: uppercase;
     color: #696e79;
@@ -1332,7 +1304,6 @@ a.variables3:hover, a.variables3:focus, a.variables3:active{
 
 hr.lon {
     border-top: 1px solid #E9E9ED;
-    width: 99%;
     margin: 40px 0;
 }
 
@@ -1468,29 +1439,6 @@ hr.lon {
     }
 
 
-
-    .nombre-talla {
-        float: left;
-        position: relative;
-        left: -13px;
-        text-align: left;
-        margin-top: 30px;
-        font-size: 10px;
-        width: 100%;
-        font-weight: 600;
-    }
-
-    a.talla {
-        float: left;
-        /* width: 100%; */
-        position: relative;
-        top: 30px;
-        color: #FF9D36;
-    }
-
-
-
-
     .mtl{
       padding-top: 0px !important;
   }
@@ -1536,7 +1484,7 @@ hr.lon {
 
 @media (max-width: 767px){
 
-
+    a.text.detalle{ display: none; opacity: 0; z-index: -1; }
 
     .text-fil {
         border-bottom: 1px solid transparent;
@@ -1779,10 +1727,10 @@ hr.lon {
         float: left;
         margin-top: 40px;
         margin-bottom: 30px;
-        right: 11px;
         position: relative;
         width: 100%;
         text-align: left;
+        padding: 0;
     }
 
     .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open>.dropdown-toggle.btn-info {
@@ -2081,14 +2029,6 @@ hr.lon {
     margin-top: 54px;
 }
 
-.conti-de {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border: 1px solid white;
-}
-
 .detail-prod-img{
     opacity: 1;
     display: block;
@@ -2230,10 +2170,6 @@ hr.lon {
     a.talla {
         float: left;
         /* width: 100%; */
-        position: relative;
-        top: 22px;
-        color:#526cd0;
-        left: 23%;
     }
 
 
@@ -2254,10 +2190,6 @@ hr.lon {
         width: 100%;
         position: relative;
         top: 0px;
-    }
-
-    .product-box {
-        padding: 0px 0px;
     }
 
     .col-xs-12.pinki{
@@ -2327,15 +2259,6 @@ hr.lon {
         text-align: left;
         float: left;
     }
-    .oferta-de {
-    text-align: left;
-    position: absolute;
-    top: 55px;
-    font-size: 17px;
-    color: #282c3f !important;
-    font-weight: 600;
-    left: 3.4%;
-}
 
 }
 
@@ -2361,15 +2284,6 @@ hr.lon {
         font-size: 13px;
         width: 100%;
         font-weight: 600;
-    }
-
-    a.talla {
-       float: left;
-       position: relative;
-       top: 25px;
-       color: #7177F7 ;
-       font-size: 11px;
-       left: -11%;
     }
 
     .img_prod_detail {
@@ -2431,34 +2345,6 @@ hr.lon {
         left: 24%;
         margin-left: -10px;
         top: 270px;
-    }
-
-    .conti-de {
-        position: relative;
-        width: 100%;
-        height: 328px;
-        margin-bottom: 0px;
-        border: 1px solid transparent;
-        border-bottom: 1px solid #ebedef;
-        border-right: 1px solid #ebedef;
-        border-top: 1px solid #ebedef;
-
-    }
-
-    .product-box.two {
-        padding: 0px 0px;
-        margin-bottom: -23px;
-        background-color: white;
-    }
-
-
-    .fa-angle-right.lis {
-        float: right;
-        right: 34px;
-        font-size: 20px !important;
-        margin-top: -8px;
-        color: white;
-        top: 6px;
     }
 
     .texto-header-pro-2 {
@@ -2589,22 +2475,6 @@ hr.lon {
     }
 
 
-    .size-item:hover {
-        color: rgb(91, 81, 83);
-        left: 0px;
-        position: relative;
-        float: left;
-        border-radius: 48px!important;
-        border: 2px solid rgba(91, 81, 83, 0.37);
-        padding: 15px 0px;
-        margin-bottom: 11px;
-        width: 50px;
-        height: 50px;
-        margin-left: 10px;
-        font-size: 10px;
-        font-weight: 600;
-    }
-
     .size-item {
         padding: 15px 0px;
         margin-bottom: 11px;
@@ -2656,8 +2526,7 @@ hr.lon {
         border-color: transparent;
         float: left;
         margin-top: 40px;
-        margin-bottom: 15px;
-        right: 28px;
+        right: 15px;
         position: relative;
         width: 100%;
         text-align: left;
@@ -2763,15 +2632,6 @@ hr.lon {
 }
 
 @media (max-width: 400px){
-
-    a.talla {
-        float: left;
-        position: relative;
-        top: 23px;
-        color: #7177F7;
-        font-size: 11px;
-        left: 48%;
-    }
 
     a.text {
         background-color: transparent;
@@ -2892,22 +2752,6 @@ hr.lon {
         font-weight: 600;
     }
 
-    .size-item:hover {
-        color: rgb(91, 81, 83);
-        left: 0px;
-        position: relative;
-        float: left;
-        border-radius: 48px!important;
-        border: 2px solid rgba(91, 81, 83, 0.37);
-        padding: 13px 0px;
-        margin-bottom: 11px;
-        width: 46px;
-        height: 46px;
-        margin-left: 5px;
-        font-size: 10px;
-        font-weight: 600;
-    }
-
     .num-tal {
         color: rgb(91, 81, 83);
         left: -2px;
@@ -2926,19 +2770,8 @@ hr.lon {
     a.talla {
         float: left;
         /* width: 100%; */
-        position: relative;
-        top: 23px;
         color: #7177F7;
         font-size: 11px;
-        left: 25%;
-    }
-
-    .conti-de {
-        position: relative;
-        width: 100%;
-        height: 115px;
-        margin-bottom: 10px;
-        border: 1px solid transparent;
     }
 
     .texto-header-pro-3 {
@@ -2962,18 +2795,6 @@ hr.lon {
         height: 61px !important;
     }
 
-    .fa-angle-right.lis {
-        float: right;
-        position: relative;
-        right: 8px;
-        font-size: 20px !important;
-        margin-top: -8px;
-        color: white;
-        top: 6px;
-    }
-
-
-
     .nombre-talla {
         float: left;
         position: relative;
@@ -2983,16 +2804,6 @@ hr.lon {
         font-size: 11px;
         width: 100%;
         font-weight: 600;
-    }
-
-    a.talla {
-        float: left;
-        /* width: 100%; */
-        position: relative;
-        top: 23px;
-        color: #7177F7;
-        font-size: 11px;
-        left: 29%;
     }
     hr.lon {
         margin-top: 32px;
