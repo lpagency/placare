@@ -2144,9 +2144,8 @@ hr.lon {
     .nombre-talla {
         float: left;
         position: relative;
-        left: -13px;
+        left: -15px;
         text-align: left;
-        margin-top: 26px;
         font-size: 13px;
         width: 100%;
         font-weight: 600;
@@ -2263,9 +2262,8 @@ hr.lon {
     .nombre-talla {
         float: left;
         position: relative;
-        left: -16px;
+        left: -15px;
         text-align: left;
-        margin-top: 26px;
         font-size: 13px;
         width: 100%;
         font-weight: 600;
