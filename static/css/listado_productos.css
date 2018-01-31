@@ -531,9 +531,9 @@ hr.len {
 
 .btn-success.car {
     color: white;
-    background-color: #FF9D36 ;
-    border-color:#FF9D36 ;
-    width: 48%;
+    background-color: #74E2C7;
+    border-color:#74E2C7 ;
+    width: 50%;
     height: 45px;
     float: left;
     font-size: 13px;
@@ -670,9 +670,9 @@ a.talla {
 
 .btn-success.car-2 {
     color: white;
-    background-color:#5A5751;
-    border-color: #5A5751;
-    width: 48%;
+    background-color:#FA913A;
+    border-color: #FA913A;
+    width: 50%;
     height: 45px;
     float: right;
     position: relative;
