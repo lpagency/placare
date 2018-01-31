@@ -511,6 +511,7 @@ hr.len {
     -moz-osx-font-smoothing: grayscale;
     text-transform: uppercase;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .sku-detalle {
@@ -566,7 +567,8 @@ hr.len {
     color: #282c3f !important;
     font-weight: 600;
     margin-bottom: 40px;
-
+    position: relative;
+    top: -10px;
 }
 
 .fondo-detalle-producto{
@@ -936,7 +938,7 @@ a.variables:active{
     position: relative;
     font-size: 15px;
     color: #FF4F66;
-    top: -20px;
+    top: -22px;
 }
 
 .texto-oferta{
@@ -2586,16 +2588,6 @@ hr.lon {
     margin-top: -61px;
     margin-bottom: 41px;
     }  
-    
-    .oferta-de {
-    text-align: left;
-    position: relative;
-    top: -39px;
-    font-size: 17px;
-    color: #282c3f !important;
-    font-weight: 600;
-    left: -1%;
-    }
 
     .link-recargar {
     top: 20px !important;
