@@ -538,7 +538,7 @@ hr.len {
     float: left;
     font-size: 13px;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 .btn-success.car:hover {
@@ -678,7 +678,7 @@ a.talla {
     position: relative;
     font-size: 13px;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 .btn-success.car-2:hover {
