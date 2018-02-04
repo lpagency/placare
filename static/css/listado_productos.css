@@ -521,7 +521,6 @@ hr.len {
     width: 100%;
     display: inline-block;
     position: relative;
-    top: 40px;
 }
 
 .btn-success.car {
@@ -564,6 +563,7 @@ hr.len {
     margin-bottom: 30px;
     position: relative;
     top: 0px;
+    padding-top: 20px;
 }
 
 .fondo-detalle-producto{
