@@ -521,6 +521,7 @@ hr.len {
     width: 100%;
     display: inline-block;
     position: relative;
+    margin-top: 0;
 }
 
 .btn-success.car {
@@ -695,7 +696,7 @@ a.talla {
 
 .text-relac {
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     text-align: left;
     font-weight: 600;
     text-transform: uppercase;
@@ -1216,7 +1217,7 @@ input.check[type=radio], input.check[type=checkbox] {
 .conti-de {
     width: 100%;
     height: auto;
-    margin-bottom:20px;
+    margin-bottom:40px;
     position: relative;  
 }
 .conti-de > a{ 
@@ -1980,16 +1981,6 @@ hr.listado {
    height: 100%; 
 }
 
-hr.lon {
-    margin-top: 32px;
-    margin-bottom: 34px;
-    border: 0;
-    border-top: 1px solid #edebef;
-    width: 107%;
-    right: 15px;
-    position: relative;
-}
-
 .op {
     text-align: left;
     float: left;
@@ -2678,15 +2669,6 @@ hr.lon {
         font-size: 11px;
         width: 100%;
         font-weight: 600;
-    }
-    hr.lon {
-        margin-top: 32px;
-        margin-bottom: 34px;
-        border: 0;
-        border-top: 1px solid #edebef;
-        width: 111%;
-        right: 15px;
-        position: relative;
     }
 
 
