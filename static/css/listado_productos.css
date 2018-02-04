@@ -205,10 +205,7 @@ div.image-upload.part1 {
 
 #mainImage{
     position: relative;
-    top: -4px;
-    width: 100%;
-    height: 100%;
-    max-width: 342px;
+    max-width: 100%;
     float: left;
     -webkit-transition:all 0.5s linear;
     transition:all 0.5s linear;
@@ -238,12 +235,10 @@ div.image-upload.part1 {
 }
 
 .descr_prod_detail {
-    position: relative;
     font-size: 14px;
     width: 100%;
     text-align: left;
     /* height: 343px; */
-    top: 36px;
     float: left;
     color: #696b79;
     font-weight: 300;
@@ -566,9 +561,9 @@ hr.len {
     font-size: 17px;
     color: #282c3f !important;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     position: relative;
-    top: -10px;
+    top: 0px;
 }
 
 .fondo-detalle-producto{
@@ -1238,8 +1233,8 @@ input.check[type=radio], input.check[type=checkbox] {
     font-size: 14px;
     color: #696b79;
     position: relative;
-    top: 40px;
-    margin-bottom: -5px;
+    padding-top: 20px;
+    margin-bottom: 0px;
     font-weight: 600;
 }
 
@@ -1441,12 +1436,6 @@ hr.lon {
   }
 
 #mainImage {
-    position: relative;
-    top: 8px;
-    width: 74%;
-    height: 100%;
-    max-width: 342px;
-    float: left;
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
@@ -2028,12 +2017,7 @@ hr.lon {
     position: relative;*/
    }
 #mainImage {
-    position: relative;
-    top: -20px;
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    float: initial;
+    float: none;
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
@@ -2057,10 +2041,7 @@ hr.lon {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin-top: -16px;
-    margin-bottom: 22px;
     font-size: 13px;
-    margin-left: 13px;
 }
 
 .more-products {
@@ -2611,8 +2592,8 @@ hr.lon {
 }
     .btn-success.car {
     color: white;
-    background-color: #FF9D36 ;
-    border-color:#FF9D36 ;
+    background-color: #74E2C7 ;
+    border-color:#74E2C7 ;
     border-radius: 5px;
     height: 45px;
     float: none;
