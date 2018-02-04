@@ -1725,21 +1725,7 @@ hr.lon {
     }
 
     .descr_prod_detail {
-        position: relative;
-        font-size: 13px;
-        width: 100%;
-        text-align: left;
-        /* height: 343px; */
-        top: -19px;
-        float: left;
-        color: gray;
-        font-weight: 200;
-        line-height: 19px;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        margin-bottom: 20px;
-        font-style: inherit;
+        margin-top: 0;
     }
 
     :focus {
@@ -2308,15 +2294,6 @@ hr.listado {
         margin-bottom: 10px;
     }
 
-    .linea-separacion-2 {
-        border-bottom: 1px solid #ebedef;
-        position: relative;
-        left: -10px;
-        width: 105%;
-        position: relative;
-        top: 20px;
-    }
-
     .resis {
         width: 100%;
         position: fixed;
@@ -2479,17 +2456,6 @@ hr.listado {
         width: 61px;
         height: 85px;
         height: 61px !important;
-    }
-
-    .nombre-talla {
-        float: left;
-        position: relative;
-        /* left: 0px; */
-        text-align: left;
-        margin-top: 26px;
-        font-size: 11px;
-        width: 100%;
-        font-weight: 600;
     }
 
 
