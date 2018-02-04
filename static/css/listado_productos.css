@@ -2369,9 +2369,7 @@ hr.listado {
 @media (max-width: 320px){
     .btn-success.car-2 {
     color: white;
-    background-color:#5A5751;
-    border-color: #5A5751;
-    border-radius: 5px;
+    border-radius: 0px;
     height: 45px;
     float: none;
     top: 0px;
@@ -2383,9 +2381,7 @@ hr.listado {
 }
     .btn-success.car {
     color: white;
-    background-color: #74E2C7 ;
-    border-color:#74E2C7 ;
-    border-radius: 5px;
+    border-radius: 0px;
     height: 45px;
     float: none;
     top: 0;
