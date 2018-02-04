@@ -281,7 +281,7 @@ li.slogan a {
 @media (max-width: 1199px){
 .text-slogan {
     text-align: left;
-    top: 8px;
+    top: 4px;
     font-size: 12px;
 }
 .hed {
@@ -386,9 +386,6 @@ a.desktop-submit {
     margin-top: 12px;
 }
 
-.text-slogan {
-    font-size: 9px;
-}
 
 }
 
