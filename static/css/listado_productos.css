@@ -1678,21 +1678,7 @@ hr.lon {
 
     .linea-solin {
         border-bottom: 1px solid #edebef;
-        position: relative;
-        left: -15px;
-        width: 107%;
-        top: 54px;
-        margin-top: -45px;
-        margin-bottom: 10px;
-    }
-
-    .linea-separacion-2 {
-        border-bottom: 1px solid solid #edebef;
-        position: relative;
-        left: -13px;
-        width: 100%;
-        position: relative;
-        top: 0px;
+        margin-bottom: 20px;
     }
 
     .btn-info {
@@ -2016,9 +2002,7 @@ hr.listado {
 .opciones-compra{
     color: #7177F7;
     text-align: left;
-    left: 11px;
     position: relative;
-    bottom: 32px;
 }
 
 .texto-com {
