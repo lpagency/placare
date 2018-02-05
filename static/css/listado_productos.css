@@ -628,6 +628,10 @@ a.talla {
     border: 2px solid #282c3f;
     font-weight: 600;
 }
+.size-item:hover{
+    color: #fff;
+    background-color: #000;
+}
 
 .size-item strike
 {
