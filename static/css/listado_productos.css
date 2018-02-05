@@ -920,7 +920,6 @@ a.variables:active{
     font-weight: 600;
     font-size: 13px;
     border-color: #526cd0;
-    margin-top: 45px;
 }
 
 .btn-default.more-products:hover, .btn-default.more-products:focus, .btn-default.more-products:active, .btn-default.more-products.active, .open>.dropdown-toggle.btn-default.more-products {
@@ -1427,10 +1426,8 @@ hr.lon {
     }
 
     .img_prod_detail {
-        position: relative;
         width: 250px;
         max-width: 100%;
-        float: left;
     }
 
 
@@ -2029,7 +2026,6 @@ hr.listado {
     color: #526cd0;
     font-weight: 600;
     font-size: 13px;
-    top: 35px;
     position: relative;
     border-color: #526cd0;
 }
