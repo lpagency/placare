@@ -422,7 +422,7 @@ a.desktop-submit {
     width: 4%;
     margin-top: 14px;
     float: right;
-    left: -22px;
+    left: 0px;
     position: relative;
 }
 
@@ -570,7 +570,7 @@ input:focus, textarea:focus, select:focus {
     width: 5%;
     margin-top: 17px;
     float: right;
-    left: 3px;
+    left: 0px;
     position: relative;
 }
 
@@ -589,7 +589,7 @@ input:focus, textarea:focus, select:focus {
     width: 7%;
     margin-top: 14px;
     float: right;
-    left: 14px;
+    left: 10px;
     position: relative;
 }
 
