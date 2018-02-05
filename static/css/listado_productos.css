@@ -203,10 +203,10 @@ div.image-upload.part1 {
     float: left;
 }
 
+.main-img-container{ text-align: center; }
+
 #mainImage{
-    position: relative;
     max-width: 100%;
-    float: left;
     -webkit-transition:all 0.5s linear;
     transition:all 0.5s linear;
 }
