@@ -457,7 +457,7 @@ hr.len {
 .text-fil {
     border-top: 1px solid #E9E9ED;
     float: left;
-    width: 190px;
+    width: 100%;
     text-align: left;
     position: relative;
     left: 0%;
