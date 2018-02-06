@@ -281,7 +281,7 @@ li.slogan a {
 @media (max-width: 1199px){
 .text-slogan {
     text-align: left;
-    top: 8px;
+    top: 4px;
     font-size: 12px;
 }
 .hed {
@@ -381,7 +381,7 @@ a.desktop-submit {
     float: left;
     line-height: 0;
     margin: 0px 0px 0px 0;
-    left: 119px;
+    left: 100px;
     position: relative;
     margin-top: 12px;
 }
@@ -422,7 +422,7 @@ a.desktop-submit {
     width: 4%;
     margin-top: 14px;
     float: right;
-    left: -22px;
+    left: 0px;
     position: relative;
 }
 
@@ -570,7 +570,7 @@ input:focus, textarea:focus, select:focus {
     width: 5%;
     margin-top: 17px;
     float: right;
-    left: 3px;
+    left: 0px;
     position: relative;
 }
 
@@ -589,7 +589,7 @@ input:focus, textarea:focus, select:focus {
     width: 7%;
     margin-top: 14px;
     float: right;
-    left: 14px;
+    left: 10px;
     position: relative;
 }
 
@@ -714,7 +714,7 @@ li.icon {
     width: 8%;
     margin-top: 14px;
     float: right;
-    left: 12px;
+    left: 10px;
     position: relative;
 }
 
@@ -741,7 +741,7 @@ li.icon {
     width: 8%;
     margin-top: 12px;
     float: right;
-    left: 11px;
+    left: 10px;
     position: relative;
 }
 

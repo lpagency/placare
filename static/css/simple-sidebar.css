@@ -12,8 +12,8 @@ body {
     background-color: transparent;
     border-color: transparent;
     float: left;
-    margin-top: -2px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     right: 0px;
     position: relative;
     text-align: left;
@@ -24,6 +24,7 @@ body {
     width: 100%;
     margin-left: 0px;
     font-weight: 600;
+    padding: 15px 0;
     padding-left: 19px;
 }
 
@@ -72,7 +73,7 @@ body {
     font-size: 25px !important;
     margin-top: 0px;
     color: rgba(128, 128, 128, 0.37);
-    top: 2px;
+    top: 10px;
 }
 
 
@@ -276,27 +277,8 @@ body {
 
 
 @media (max-width: 414px){
-    .btn-info.edu {
-    background-color: transparent;
-    border-color: transparent;
-    float: left;
-    margin-top: -2px;
-    margin-bottom: 0px;
-    right: 0px;
-    position: relative;
-    text-align: left;
-    display: block;
-    text-decoration: none;
-    color: #000000;
-    border-bottom: 1px solid #ebedef;
-    border-top: 1px solid #ebedef;
-    width: 102%;
-    margin-left: -3px;
-    font-weight: 600;
-    padding-left: 22px;
-    text-transform: uppercase;
-    z-index: 11111;
-    padding-top: 12px;
+.btn-info.edu {
+    
 }
 
 
