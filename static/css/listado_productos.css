@@ -670,9 +670,6 @@ a.talla {
 }
 
 
-.mover {
-}
-
 .btn-success.car-2 {
     color: white;
     background-color:#FA913A;
@@ -1393,14 +1390,14 @@ hr.lon {
         margin-top: 72px;
     }
 
-    .text-fil {
+   /* .text-fil {
         border-bottom: 1px solid rgba(128, 128, 128, 0.38);
         float: left;
         width: 100%;
         text-align: left;
         position: relative;
         left: 0px;
-    }
+    }*/
 
     .background-color-producto {
         background-color: pink;
@@ -1468,14 +1465,14 @@ hr.lon {
 
     a.text.detalle{ display: none; opacity: 0; z-index: -1; }
 
-    .text-fil {
+   /* .text-fil {
         border-bottom: 1px solid transparent;
         float: left;
         width: 100%;
         text-align: left;
         position: relative;
         left: 0px;
-    }
+    }*/
 
     .container.min.dos .col-md-3.col-sm-3.col-xs-12+section{ display: none; }
 
