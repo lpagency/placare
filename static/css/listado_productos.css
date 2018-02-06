@@ -1390,10 +1390,6 @@ hr.lon {
         margin-top: 72px;
     }
 
-    .text-fil {
-        width: 70%;
-       
-    }
 
     .background-color-producto {
         background-color: pink;
@@ -1455,6 +1451,10 @@ hr.lon {
 }
 
 }
+
+
+
+
 
 
 @media (max-width: 767px){
