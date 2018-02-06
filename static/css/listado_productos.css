@@ -457,7 +457,7 @@ hr.len {
 .text-fil {
     border-top: 1px solid #E9E9ED;
     float: left;
-    width: 90%;
+    width: 100%;
     text-align: left;
     position: relative;
     left: 0%;
@@ -1352,8 +1352,7 @@ hr.lon {
         margin-top: -24px;
     }
 
-    .inf {
-    }
+
 
     .oferta, .original-tachado {
        width: auto;
@@ -1451,9 +1450,6 @@ hr.lon {
 }
 
 }
-
-
-
 
 
 
