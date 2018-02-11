@@ -1009,6 +1009,7 @@ a.variables:active{
     display: block; overflow: auto; 
     border: 1px solid rgba(0,0,0,0);
     padding: 5px;
+    min-height: 320px;
 }
 .conti:hover > a{ 
     border: 1px solid #E9E9ED;
