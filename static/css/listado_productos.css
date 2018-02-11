@@ -2170,6 +2170,10 @@ hr.listado {
 
 @media (max-width: 414px){
 
+    .conti > a{
+        min-height: 350px; 
+    }
+
     .texto-header-pro {
         margin-top: 33px;
         position: relative;
