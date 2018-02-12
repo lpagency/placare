@@ -1009,7 +1009,9 @@ a.variables:active{
     display: block; overflow: auto; 
     border: 1px solid rgba(0,0,0,0);
     padding: 5px;
-    min-height: 320px;
+}
+.conti > a:first-child{ 
+    min-height: 340px;
 }
 .conti:hover > a{ 
     border: 1px solid #E9E9ED;
@@ -2170,8 +2172,8 @@ hr.listado {
 
 @media (max-width: 414px){
 
-    .conti > a{
-        min-height: 350px; 
+    .conti > a:first-child{ 
+        min-height: 340px;
     }
 
     .texto-header-pro {
