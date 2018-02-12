@@ -2173,7 +2173,7 @@ hr.listado {
 @media (max-width: 414px){
 
     .conti > a:first-child{ 
-        min-height: 340px;
+        min-height: 340px; 
     }
 
     .texto-header-pro {
