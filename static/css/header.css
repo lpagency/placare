@@ -27,6 +27,9 @@
 .container.min{
  max-width: 980px;
 }
+.container.min.dos{
+    padding-bottom: 30px;
+}
 
 .desktop-query>input.desktop-searchBar {
     display: inline-block;
