@@ -53,7 +53,7 @@
 
 .col-md-12.col-sm-12.col-xs-12.variants-container > .col-md-12{ padding: 0; }
 
-.variants-container{ margin-top: 20px; margin-bottom: 10px; }
+.variants-container{ margin-top: 20px; margin-bottom: 10px; text-align: center;}
 
 .categ {
     background: white;
