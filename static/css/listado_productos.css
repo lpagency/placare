@@ -546,6 +546,7 @@ hr.len {
     font-size: 13px;
     font-weight: 500;
     border-radius: 0px;
+    opacity: 1;
 }
 
 .btn-success.car:hover {
@@ -690,6 +691,7 @@ a.talla {
     font-size: 13px;
     font-weight: 500;
     border-radius: 0px;
+    opacity: 1;
 }
 
 .btn-success.car-2:hover {
@@ -2394,6 +2396,7 @@ hr.listado {
     font-size: 13px;
     font-weight: 500;
     width: 100%;
+    opacity: 1;
 }
     .btn-success.car {
     color: white;
@@ -2406,6 +2409,7 @@ hr.listado {
     font-size: 13px;
     font-weight: 500;
     width: 100%;
+    opacity: 1;
 }
 
     .carousel {
