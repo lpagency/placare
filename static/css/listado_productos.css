@@ -558,6 +558,8 @@ hr.len {
     color: #696e79;
     font-weight: 400;
     text-decoration: line-through;
+    display: inline-block;
+    padding-right: 15px;
 }
 
 .oferta-de{
@@ -568,7 +570,7 @@ hr.len {
     margin-bottom: 30px;
     position: relative;
     top: 0px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .fondo-detalle-producto{
@@ -938,7 +940,7 @@ a.variables:active{
     position: relative;
     font-size: 15px;
     color: #FF4F66;
-    top: -22px;
+    display: inline-block;
 }
 
 .texto-oferta{
