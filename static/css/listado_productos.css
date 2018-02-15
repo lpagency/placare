@@ -1407,6 +1407,10 @@ hr.lon {
         margin-top: 72px;
     }
 
+    .btn.btn-primary.btn-mo {
+        border-right: 1px solid #ccc;
+    }
+
 
     .background-color-producto {
         background-color: pink;
