@@ -14,6 +14,14 @@
  margin-bottom: 36px;
 }
 
+.products.row{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.products.row .col-md-3{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .img-talla{
     width: 100%;
@@ -923,6 +931,7 @@ a.variables:active{
     font-weight: 600;
     font-size: 13px;
     border-color: #526cd0;
+    margin-top: 30px;
 }
 
 .btn-default.more-products:hover, .btn-default.more-products:focus, .btn-default.more-products:active, .btn-default.more-products.active, .open>.dropdown-toggle.btn-default.more-products {
