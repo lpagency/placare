@@ -24,6 +24,8 @@
     padding-right: 1px;
 }*/
 
+
+
 .img-talla{
     width: 100%;
     height: 100%;
@@ -48,6 +50,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.main-banner{ margin-bottom: 20px; }
+.main-banner img{ max-width: 100%; }
 
 .filtro-color, .filtro-talla, .filtro-marca, .filtro-filtros{
     /*height: 2em;*/
