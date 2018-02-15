@@ -1840,16 +1840,8 @@ hr.lon {
         width: 50%;
         float: left;
     }
-    .fixx .palito{
-        position: absolute;
-        left: 50%;
-        top: 0;
-        height: 100%;
-        width: 1px;
-        background-color: grey;
-        z-index: 2;
-        opacity: 0.3;
-    }
+
+    
 
     .modal-content.filtros {
         position: relative;
