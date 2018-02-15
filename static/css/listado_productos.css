@@ -212,7 +212,7 @@ div.image-upload.part1 {
     /* border: 1px solid rgba(128, 128, 128, 0.25); */
     /*left: -59px;*/
     margin-left: 0px;
-    float: left;
+    float: none;
 }
 
 .main-img-container{ text-align: center; }
