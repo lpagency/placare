@@ -14,11 +14,11 @@
  margin-bottom: 36px;
 }
 
-.products.row{
+.products.row, .product-related.row, .product-random.row{
     margin-left: -10px;
     margin-right: -10px;
 }
-.products.row .col-md-3{
+.products.row .col-md-3, .product-related.row .col-md-2, .product-random.row .col-md-2{
     padding-left: 10px;
     padding-right: 10px;
 }
