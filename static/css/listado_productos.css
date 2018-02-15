@@ -15,12 +15,12 @@
 }
 
 .products.row, .product-related.row, .product-random.row{
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -1px;
+    margin-right: -1px;
 }
 .products.row .col-md-3, .product-related.row .col-md-2, .product-random.row .col-md-2{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 .img-talla{
@@ -334,8 +334,9 @@ hr.len {
  color: #282c3f;
  float: left;
  font-size: 13px;
- width: 43%;
+ display: inline-block;
  font-weight: 600;
+ padding-right: 10px;
 }
 
 .original {
@@ -351,7 +352,8 @@ hr.len {
     float: left;
     font-size: 13px;
     text-decoration: line-through;
-    width: 34%;
+    display: inline-block;
+    padding-right: 5px;
 }
 
 .pri-rel{
@@ -1015,7 +1017,7 @@ a.variables:active{
 .conti {
     position: relative;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 .conti > a{ 
     display: block; overflow: auto; 
@@ -1374,7 +1376,6 @@ hr.lon {
        padding-right: 5px;
        font-size: 13px;
     }
-    .descuento-lis{ float: none; }
 
 }
 
@@ -1531,11 +1532,11 @@ hr.lon {
     }
 
     .chek {
-        margin-top: 30px;
+        margin-top: 25px;
         text-align: left;
         position: relative;
         left: 0px;
-        margin-bottom: 21px;
+        margin-bottom: 30px;
         font-size: 11px;
     }
 
