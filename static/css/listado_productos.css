@@ -1,5 +1,5 @@
 /* {box-shadow: inset 0 0 1px 0 rgba(0,0,0,.3); background-color: rgba(0,0,0,.03);}*/
-
+/**/
 
 .fa-angle-right.lis {
     float: right;
@@ -53,7 +53,7 @@
 
 .col-md-12.col-sm-12.col-xs-12.variants-container > .col-md-12{ padding: 0; }
 
-.variants-container{ margin-top: 20px; margin-bottom: 10px; }
+.variants-container{ margin-top: 20px; margin-bottom: 10px; text-align: center;}
 
 .categ {
     background: white;
@@ -558,6 +558,8 @@ hr.len {
     color: #696e79;
     font-weight: 400;
     text-decoration: line-through;
+    display: inline-block;
+    padding-right: 15px;
 }
 
 .oferta-de{
@@ -568,7 +570,7 @@ hr.len {
     margin-bottom: 30px;
     position: relative;
     top: 0px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .fondo-detalle-producto{
@@ -938,7 +940,7 @@ a.variables:active{
     position: relative;
     font-size: 15px;
     color: #FF4F66;
-    top: -22px;
+    display: inline-block;
 }
 
 .texto-oferta{
@@ -1009,6 +1011,9 @@ a.variables:active{
     display: block; overflow: auto; 
     border: 1px solid rgba(0,0,0,0);
     padding: 5px;
+}
+.conti > a:first-child{ 
+    min-height: 340px;
 }
 .conti:hover > a{ 
     border: 1px solid #E9E9ED;
@@ -2168,6 +2173,10 @@ hr.listado {
 
 
 @media (max-width: 414px){
+
+    .conti > a:first-child{ 
+        min-height: 340px; 
+    }
 
     .texto-header-pro {
         margin-top: 33px;
