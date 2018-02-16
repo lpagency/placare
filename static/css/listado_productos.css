@@ -212,7 +212,7 @@ div.image-upload.part1 {
     /* border: 1px solid rgba(128, 128, 128, 0.25); */
     /*left: -59px;*/
     margin-left: 0px;
-    float: left;
+    float: none;
 }
 
 .main-img-container{ text-align: center; }
@@ -543,14 +543,14 @@ hr.len {
 
 .btn-success.car {
     color: white;
-    background-color: #74E2C7;
-    border-color:#74E2C7 ;
-    width: 50%;
+    background-color: #FF9D36;
+    border-color:#FF9D36 ;
+    width: 45%;
     height: 45px;
     float: left;
     font-size: 13px;
     font-weight: 500;
-    border-radius: 0px;
+    border-radius: 5px;
     opacity: 1;
 }
 
@@ -687,15 +687,15 @@ a.talla {
 
 .btn-success.car-2 {
     color: white;
-    background-color:#FA913A;
-    border-color: #FA913A;
-    width: 50%;
+    background-color:#5A5751;
+    border-color: #5A5751;
+    width: 45%;
     height: 45px;
     float: right;
     position: relative;
     font-size: 13px;
     font-weight: 500;
-    border-radius: 0px;
+    border-radius: 5px;
     opacity: 1;
 }
 
@@ -1025,10 +1025,10 @@ a.variables:active{
 .conti > a{ 
     display: block; overflow: auto; 
     border: 1px solid rgba(0,0,0,0);
-    padding: 5px;
+    padding: 0 5px;
 }
 .conti > a:first-child{ 
-    min-height: 340px;
+    min-height: 300px;
 }
 .conti:hover > a{ 
     border: 1px solid #E9E9ED;
@@ -1043,8 +1043,8 @@ a.variables:active{
     display: block;
     transition: .5s ease;
     backface-visibility: hidden;
-    width: 100%;
-    margin-bottom: 13px;
+    width: 120px;
+    max-width: 100%;
     padding-left: 0px;
     position: relative;
 }
