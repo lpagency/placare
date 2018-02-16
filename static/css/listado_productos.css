@@ -1028,7 +1028,7 @@ a.variables:active{
     padding: 0 5px;
 }
 .conti > a:first-child{ 
-    min-height: 330px;
+    min-height: 300px;
 }
 .conti:hover > a{ 
     border: 1px solid #E9E9ED;
