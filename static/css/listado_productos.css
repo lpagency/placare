@@ -60,6 +60,7 @@
 }
 .filtro-talla{ display: inline-block; }
 
+.container.min.dos .col-md-3.col-sm-3.col-xs-12{ padding-bottom: 30px; }
 .container.min.dos .col-md-3.col-sm-3.col-xs-12 .filtro-talla{ display: block; }
 
 .col-md-12.col-sm-12.col-xs-12.variants-container > .col-md-12{ padding: 0; }
@@ -1383,6 +1384,11 @@ hr.lon {
 }
 
 @media (max-width: 991px){
+    
+    .container.min.dos .col-md-3.col-sm-3.col-xs-12::after{
+        right: 0;
+    }
+
     .img_prod_little {
         width: 160%;
         /* height: 100px; */
