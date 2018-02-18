@@ -60,7 +60,7 @@
 }
 .filtro-talla{ display: inline-block; }
 
-.container.min.dos .col-md-3.col-sm-3.col-xs-12{ padding-bottom: 30px; min-height: 900px;}
+.container.min.dos .col-md-3.col-sm-3.col-xs-12{ padding-bottom: 30px; min-height: 1200px;}
 .container.min.dos .col-md-3.col-sm-3.col-xs-12 .filtro-talla{ display: block; }
 
 .col-md-12.col-sm-12.col-xs-12.variants-container > .col-md-12{ padding: 0; }
