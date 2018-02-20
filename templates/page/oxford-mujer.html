@@ -1,7 +1,7 @@
 {% extends "../base.html" %}
 
 {% block title %}
-  {{ site.name }}
+	{{ site.name }}
 {% end %}
 
 {% block header %}
@@ -31,11 +31,10 @@
 
         $(document).ready(function()
         {
-
             // EXCLUSIVO PARA PLACARE
             $("title").html("Placare - Listado de productos");
             $("meta[name=description]").attr("content", "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.");
-       
+
 
             $(document).on("click", ".background-color-producto", function()
             {
@@ -78,13 +77,6 @@
               $(".tag-header").html("Oferta");
             }
 
-            setTimeout(function(){
-              if(scroll > 794)
-              {
-                $(".more-products").click();
-              }
-            },2000);
-
         });
     </script>
     <script type="text/javascript">
@@ -102,39 +94,6 @@
       });
     </script>
 
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-
-            $(document).on("click", ".boton-news", function()
-            {
-                console.log("aaaa");
-                $(this).html("ESPERE");
-                if($(this).hasClass("sus"))
-                {
-                    $("input[name=SingleLine]").val("Mujer");
-                }
-                if($(this).hasClass("sus-h"))
-                {
-                    $("input[name=SingleLine]").val("Hombre");
-                }
-            });
-        });
-    </script>
-
-    <script type="text/javascript">
-      $(document).ready(function()
-      {
-        $('#formid').on('keyup keypress', function(e) {
-          var keyCode = e.keyCode || e.which;
-          if (keyCode === 13)
-          {
-            e.preventDefault();
-            return false;
-          }
-        });
-      });
-    </script>
 
 {% end %}
 
@@ -168,56 +127,8 @@
           <div class="text-fil-2"> TIPO DE CALZADO </div>
           <form action="/action_page.php" class="chek">
               <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Ballerinas" name="vehicle" tag="Categoria3_Ballerinas" value="Bike" value2="Ballerinas">
-                <div class="fil h-Categoria3_Ballerinas" onclick="checkNombre('Categoria3_Ballerinas','Ballerinas')">Ballerinas</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Botas" name="vehicle" tag="Categoria3_Botas" value="Car" value2="Botas"> 
-                <div class="fil h-Categoria3_Botines" onclick="checkNombre('Categoria3_Botas','Botas')">Botas</div> 
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines"> 
-                <div class="fil h-Categoria3_Botines" onclick="checkNombre('Categoria3_Botines','Botines')">Botines</div> 
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Mocasines" name="vehicle" tag="Categoria3_Mocasines" value="Boat" value2="Mocasines"> 
-                <div class="fil h-Categoria3_Mocasines" onclick="checkNombre('Categoria3_Mocasines','Mocasines')">Mocasines</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Mules" name="vehicle" tag="Categoria3_Mules" value="Boat" value="Mules" value2="Slippers"> 
-                <div class="fil h-Categoria3_Mules" onclick="checkNombre('Categoria3_Mules','Slippers')">Mules / Slippers</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Oxford" name="vehicle" tag="Categoria3_Oxford" value="Boat" value="Oxford" value2="Slippers"> 
-                <div class="fil h-Categoria3_Oxford" onclick="checkNombre('Categoria3_Oxford','Slippers')">Oxford</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Plataformas" name="vehicle" tag="Categoria3_Plataformas" value="Boat" value2="Plataformas"> 
-                <div class="fil h-Categoria3_Plataformas" onclick="checkNombre('Categoria3_Plataformas','Plataforma')">Plataformas</div> 
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Playeras" name="vehicle" tag="Categoria3_Playeras" value="Boat" value2="Playeras"> 
-                <div class="fil h-Categoria3_Playeras" onclick="checkNombre('Categoria3_Playeras','Playeras')">Playeras</div>
-              </div>  
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias"> 
-                <div class="fil h-Categoria3_Sandalias" onclick="checkNombre('Categoria3_Sandalias','Sandalias')">Sandalias</div> 
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Urbanas" name="vehicle" tag="Categoria3_Urbanas" value="Boat" value2="Urbanas"> 
-                <div class="fil h-Categoria3_Urbanas" onclick="checkNombre('Categoria3_Urbanas','Urbanas')">Urbanas</div> 
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Vestir" name="vehicle" tag="Categoria3_Vestir" value="Boat" value2="Vestir"> 
-                <div class="fil h-Categoria3_Vestir" onclick="checkNombre('Categoria3_Vestir','Vestir')">Vestir / Fiesta</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Zapatillas" name="vehicle" tag="Categoria3_Zapatillas" value="Boat" value2="Zapatillas"> 
-                <div class="fil h-Categoria3_Zapatillas" onclick="checkNombre('Categoria3_Zapatillas','Zapatillas')">Zapatillas</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos"> 
-                <div class="fil h-Categoria3_Zapatos" onclick="checkNombre('Categoria3_Zapatos','Zapatos')">Zapatos</div>
+                <input type="checkbox" class="categ desk-filter c-Categoria3_Oxford" name="vehicle" tag="Categoria3_Oxford" value="Car" value2="Oxford" disabled="true" checked="true"> 
+                <div class="fil h-Categoria3_Oxford" onclick="checkNombre('Categoria3_Oxford','Oxford')">Oxford</div> 
               </div>
           </form>
 
@@ -312,8 +223,8 @@
                 <div class="fil h-Categoria4_Confort" onclick="checkNombre('Categoria4_Confort','Confort')">Confort </div>
               </div>
               <div class="filtro-categorias">
-                <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4" value2="Fiesta" tag="Categoria4" value="Boat"> 
-                <div class="fil h-Categoria4" onclick="checkNombre('Categoria4','Fiesta')">Fiesta</div>
+                <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Fiesta" value2="Fiesta" tag="Categoria4_Fiesta" value="Boat"> 
+                <div class="fil h-Categoria4_Fiesta" onclick="checkNombre('Categoria4_Fiesta','Fiesta')">Fiesta</div>
               </div>
                <div class="filtro-categorias">
                 <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Vestir" value2="Vestir" tag="Categoria4_Vestir" value="Boat">
@@ -372,7 +283,7 @@
     <section> 
         <div class="col-md-8 col-sm-8 col-xs-12 muu">
           <div class="col-md-12 col-sm-12 col-xs-12 mii">
-            <div class="texto-header-pro-2 tag-header">Mujeres</div><div class="texto-header-pro-3 tag-header2"></div>
+            <div class="texto-header-pro-2 tag-header">oxford</div><div class="texto-header-pro-3 tag-header2"></div>
           </div>
         <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-md visible-sm visible-lg">
             <div class="dropdown">
@@ -386,8 +297,12 @@
                 </ul>
             </div>
         </div>
-            <div class="filtrosRec hidden-xs">
+          <div class="">
+            <div class=" filtrosRec hidden-xs">
+
+                <!-- <div class="ordenar-precio"> Menos de $50.000 <i class="fa fa-times" aria-hidden="true" onclick="uncheck('billeteras')"></i></div> -->
             </div>
+          </div>
           <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="limpiar  hidden-xs hidden-sm">LIMPIAR TODO </div>
           </div>
@@ -670,11 +585,11 @@
     <!-- ******principio filtros MOVIL**** -->
 
     <div class="col-xs-12 hidden-md hidden-lg hidden-sm visible-xs">
-       <div class="fixx"> 
-          <button class="btn btn-primary btn-mo dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-orde">Ordenar por:
+       <div class="fixx">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-orde">Ordenar por:
           <span class="caret"></span></button>
           <div class="palito"> </div>
-          <button class="btn btn-primary  dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-fil">Filtrar por:
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-fil">Filtrar por:
           <span class="caret"></span></button>
        </div>
     </div>
@@ -700,7 +615,7 @@
 <div class="pre-footer">
 	<div class="col-md-12 col-sm-12 col-xs-12 alme">
 		<div class="col-md-2 col-sm-2 col-xs-12">
-			<div class="kop {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_1110' }}"> {{ read_text(site.name +  '_pre_footer_ex_1110') }} </div>
+			<div class="kop {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_1116' }}"> {{ read_text(site.name +  '_pre_footer_ex_1116') }} </div>
 		</div>
 
 		<div class="col-md-10 col-sm-10 col-xs-12 linea-pre-footer">
@@ -708,7 +623,7 @@
 		</div>
 
 		<div class="col-md-12 col-sm-12 col-xs-12 alme pre-footer-text">
-			<div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber9' }}"> {{ read_text(site.name +  '_pre_footer_ber9') }} </div>
+			<div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber15' }}"> {{ read_text(site.name +  '_pre_footer_ber15') }} </div>
 		</div>
 	</div>
 </div>
