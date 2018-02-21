@@ -2405,7 +2405,7 @@ hr.listado {
 }
 
 
-@media (max-width: 320px){
+@media (max-width: 350px){
     .btn-success.car-2 {
     color: white;
     border-radius: 0px;
