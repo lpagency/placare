@@ -1485,6 +1485,7 @@ hr.lon {
 @media (max-width: 767px){
 
     a.text.detalle{ display: none; opacity: 0; z-index: -1; }
+    a.text{ display: none; }
 
 
     .container.min.dos .col-md-3.col-sm-3.col-xs-12+section{ display: none; }
