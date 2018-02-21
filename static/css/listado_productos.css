@@ -2196,6 +2196,11 @@ hr.listado {
 
 @media (max-width: 414px){
 
+    .related-c12{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .conti > a:first-child{ 
         min-height: 320px; 
     }
