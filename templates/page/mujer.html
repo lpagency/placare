@@ -12,7 +12,7 @@
 
     {% if is_admin %}
     {% end %}
-    <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
+    <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?15">
     <style type="text/css">
         body , html
         {
@@ -23,9 +23,9 @@
 
 
 {% block javascript %}
-    <script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js"></script>
-    <script type="text/javascript" src="{{ site_base }}/static/js/filter.js"></script>
-    <script type="text/javascript" src="{{ site_base }}/static/js/spec_filter.js"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js?15"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/filter.js?15"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/spec_filter.js?15"></script>
 
     <script type="text/javascript">
 
@@ -415,6 +415,11 @@
 
             <div class="filtro-talla c-variable_2">
               <label class="hidden c-variable_2">
+                <input class="hidden categ desk-filter c-variable_2 c-Platform_0" type="checkbox" name="alt_plat" tag="Platform_0" value2="0">0cms
+              </label>
+            </div>
+            <div class="filtro-talla c-variable_2">
+              <label class="hidden c-variable_2">
                 <input class="hidden categ desk-filter c-variable_2 c-Platform_0_3" type="checkbox" name="alt_plat" tag="Platform_0_3" value2="0.3">0.3cms
               </label>
             </div>
@@ -496,7 +501,7 @@
             </div>
             <div class="filtro-talla c-variable_3">
               <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Plano" type="checkbox" name="taco" value2="Plano" tag="Forma_Taco_Plano">Plano
+                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Plano" type="checkbox" name="taco" value2="Plano" tag="Forma_Taco_Plana">Plano
               </label>
             </div>
             <div class="filtro-talla c-variable_3">
@@ -510,6 +515,11 @@
               </label>
             </div>
 
+            <div class="filtro-talla c-variable_4">
+              <label class="hidden c-variable_4">
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_0" type="checkbox" name="alt_taco" tag="Taco_0" value2="0" >0cms
+              </label> 
+            </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
                 <input class="hidden categ desk-filter c-variable_4 c-Taco_1_5" type="checkbox" name="alt_taco" tag="Taco_1_5" value2="1.5" >1.5cms
@@ -594,49 +604,41 @@
               <label class="hidden c-variable_4">
                 <input class="hidden categ desk-filter c-variable_4 c-Taco_9_5" type="checkbox" name="alt_taco" tag="Taco_9_5" value2="9.5">9.5cms
               </label>
-            </div>
-           <!-- <div class="filtro-talla c-variable_4">
+            </div>           <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_10" type="checkbox" tag="Taco_10" value="10" onclick="checkNombre('Taco_10','10')">10cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_10" type="checkbox" name="alt_taco" tag="Taco_10_0" value2="10_0">10cms
               </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_10 other hidden" aria-hidden="true" onclick="uncheck('Taco_10','10')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_105" type="checkbox" tag="Taco_105" value="10.5" onclick="checkNombre('Taco_105','10.5')">10.5cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_105" type="checkbox" name="alt_taco" tag="Taco_10_5" value2="10_5">10.5cms
               </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_105 other hidden" aria-hidden="true" onclick="uncheck('Taco_105','10.5')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_11" type="checkbox" tag="Taco_11" value="11" onclick="checkNombre('Taco_11','11')">11cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_11" name="alt_taco" tag="Taco_11_0" value2="11_0">11cms
               </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_11 other hidden" aria-hidden="true" onclick="uncheck('Taco_11','11')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_115" type="checkbox" tag="Taco_115" value="11.5" onclick="checkNombre('Taco_115','11.5')">11.5cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_115" type="checkbox" name="alt_taco" tag="Taco_11_5" value2="11_5">11.5cms
               </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_115 other hidden" aria-hidden="true" onclick="uncheck('Taco_115','11.5')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_12" type="checkbox" tag="Taco_12" value="12" onclick="checkNombre('Taco_12','12')">12cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_12" type="checkbox" name="alt_taco" tag="Taco_12_0" value2="12_0">12cms
               </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_12 other hidden" aria-hidden="true" onclick="uncheck('Taco_12','12')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_125" type="checkbox" tag="Taco_125" value="12.5" onclick="checkNombre('Taco_125','12.5')">12.5cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_125" type="checkbox" name="alt_taco" tag="Taco_12_5" value2="12_5">12.5cms
               </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_125 other hidden" aria-hidden="true" onclick="uncheck('Taco_125','12.5')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_13" type="checkbox" tag="Taco_13" value="13" onclick="checkNombre('Taco_13','13')">13cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_13" type="checkbox" name="alt_taco" tag="Taco_13_0" value2="13_0">13cms
               </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_13 other hidden" aria-hidden="true" onclick="uncheck('Taco_13','13')"></i>
--->
+          </div>
           </div>
         </form>
         </div>
