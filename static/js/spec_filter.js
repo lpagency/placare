@@ -925,7 +925,7 @@ function getCurrentUrl(){
 
     var urlPart = "mujer"; //Default value
 
-    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","vestir","zapatillas","zapatos"];
+    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta","zapatos"];
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i))
@@ -947,7 +947,7 @@ function getDefaultFilter(){
 
     var defaultTag = "";
 
-    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","vestir","zapatillas","zapatos"];
+    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta","zapatos"];
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i))
@@ -964,7 +964,7 @@ function getClassDefaultTag()
 
     var static_tag = "Categoria2_Calzado_Mujer,-Categoria2_Calzado_Hombre";
 
-    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","vestir","zapatillas","zapatos"];
+    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta","zapatos"];
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i))
