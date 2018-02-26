@@ -12,7 +12,7 @@
 
     {% if is_admin %}
     {% end %}
-    <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?15">
+    <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
     <style type="text/css">
         body , html
         {
@@ -23,9 +23,9 @@
 
 
 {% block javascript %}
-    <script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js?15"></script>
-    <script type="text/javascript" src="{{ site_base }}/static/js/filter.js?15"></script>
-    <script type="text/javascript" src="{{ site_base }}/static/js/spec_filter.js?15"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/filter.js"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/spec_filter.js"></script>
 
     <script type="text/javascript">
 
@@ -49,6 +49,33 @@
             });
 
             var hyper2 = Utils.getUrlParameter('search_query');
+
+            if(hyper2 != undefined)
+            {
+              $(".tag-header").html("Resultados");
+            }
+
+            var hyper = Utils.getUrlParameter('tag').split(',');
+
+            if(hyper[0] == "Categoria2_Calzado_Mujer")
+            {
+              $(".tag-header").html("Mujeres");
+            }
+
+            if(hyper[0] == "Categoria2_Calzado_Hombre")
+            {
+              $(".tag-header").html("Hombres");
+            }
+
+            if(hyper[0] == "nino")
+            {
+              $(".tag-header").html("Niños");
+            }
+
+            if(hyper[0] == "oferta")
+            {
+              $(".tag-header").html("Oferta");
+            }
 
         });
     </script>
@@ -100,8 +127,8 @@
           <div class="text-fil-2"> TIPO DE CALZADO </div>
           <form action="/action_page.php" class="chek">
               <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Mules" name="vehicle" tag="Categoria3_Mules" value="Boat" value="Mules" value2="Slippers" disabled="true" checked="true"> 
-                <div class="fil h-Categoria3_Mules" onclick="checkNombre('Categoria3_Mules','Slippers')">Mules / Slippers</div>
+                <input type="checkbox" class="categ desk-filter c-Categoria3_Casuales" name="vehicle" tag="Categoria3_Casuales" value="Car" value2="Casuales" disabled="true" checked="true"> 
+                <div class="fil h-Categoria3_Casuales" onclick="checkNombre('Categoria3_Casuales','Casuales')">Casuales</div> 
               </div>
           </form>
 
@@ -199,6 +226,7 @@
                 <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Fiesta_Vestir" value2="Vestir / Fiesta" tag="Categoria4_Fiesta_Vestir" value="Boat"> 
                 <div class="fil h-Categoria4_Fiesta_Vestir" onclick="checkNombre('Categoria4_Fiesta_Vestir','Vestir / Fiesta')">Vestir / Fiesta</div>
               </div>
+
           </form> -->
 
           <div class="clearfix"></div>
@@ -252,7 +280,7 @@
     <section> 
         <div class="col-md-8 col-sm-8 col-xs-12 muu">
           <div class="col-md-12 col-sm-12 col-xs-12 mii">
-            <div class="texto-header-pro-2 tag-header">Mules / Slippers</div><div class="texto-header-pro-3 tag-header2"></div>
+            <div class="texto-header-pro-2 tag-header">casuales</div><div class="texto-header-pro-3 tag-header2"></div>
           </div>
         <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-md visible-sm visible-lg">
             <div class="dropdown">
@@ -317,11 +345,6 @@
               </label>
             </div>
 
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Platform_0" type="checkbox" name="alt_plat" tag="Platform_0" value2="0">0cms
-              </label>
-            </div>
             <div class="filtro-talla c-variable_2">
               <label class="hidden c-variable_2">
                 <input class="hidden categ desk-filter c-variable_2 c-Platform_0_3" type="checkbox" name="alt_plat" tag="Platform_0_3" value2="0.3">0.3cms
@@ -405,7 +428,7 @@
             </div>
             <div class="filtro-talla c-variable_3">
               <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Plano" type="checkbox" name="taco" value2="Plano" tag="Forma_Taco_Plana">Plano
+                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Plano" type="checkbox" name="taco" value2="Plano" tag="Forma_Taco_Plano">Plano
               </label>
             </div>
             <div class="filtro-talla c-variable_3">
@@ -419,11 +442,6 @@
               </label>
             </div>
 
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_0" type="checkbox" name="alt_taco" tag="Taco_0" value2="0" >0cms
-              </label> 
-            </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
                 <input class="hidden categ desk-filter c-variable_4 c-Taco_1_5" type="checkbox" name="alt_taco" tag="Taco_1_5" value2="1.5" >1.5cms
@@ -508,41 +526,49 @@
               <label class="hidden c-variable_4">
                 <input class="hidden categ desk-filter c-variable_4 c-Taco_9_5" type="checkbox" name="alt_taco" tag="Taco_9_5" value2="9.5">9.5cms
               </label>
-            </div>           <div class="filtro-talla c-variable_4">
+            </div>
+           <!-- <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_10" type="checkbox" name="alt_taco" tag="Taco_10_0" value2="10_0">10cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_10" type="checkbox" tag="Taco_10" value="10" onclick="checkNombre('Taco_10','10')">10cms
               </label> 
+              <i class="fa fa-check-square c-variable_cuatro ch-Taco_10 other hidden" aria-hidden="true" onclick="uncheck('Taco_10','10')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_105" type="checkbox" name="alt_taco" tag="Taco_10_5" value2="10_5">10.5cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_105" type="checkbox" tag="Taco_105" value="10.5" onclick="checkNombre('Taco_105','10.5')">10.5cms
               </label> 
+              <i class="fa fa-check-square c-variable_cuatro ch-Taco_105 other hidden" aria-hidden="true" onclick="uncheck('Taco_105','10.5')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_11" name="alt_taco" tag="Taco_11_0" value2="11_0">11cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_11" type="checkbox" tag="Taco_11" value="11" onclick="checkNombre('Taco_11','11')">11cms
               </label> 
+              <i class="fa fa-check-square c-variable_cuatro ch-Taco_11 other hidden" aria-hidden="true" onclick="uncheck('Taco_11','11')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_115" type="checkbox" name="alt_taco" tag="Taco_11_5" value2="11_5">11.5cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_115" type="checkbox" tag="Taco_115" value="11.5" onclick="checkNombre('Taco_115','11.5')">11.5cms
               </label> 
+              <i class="fa fa-check-square c-variable_cuatro ch-Taco_115 other hidden" aria-hidden="true" onclick="uncheck('Taco_115','11.5')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_12" type="checkbox" name="alt_taco" tag="Taco_12_0" value2="12_0">12cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_12" type="checkbox" tag="Taco_12" value="12" onclick="checkNombre('Taco_12','12')">12cms
               </label> 
+              <i class="fa fa-check-square c-variable_cuatro ch-Taco_12 other hidden" aria-hidden="true" onclick="uncheck('Taco_12','12')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_125" type="checkbox" name="alt_taco" tag="Taco_12_5" value2="12_5">12.5cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_125" type="checkbox" tag="Taco_125" value="12.5" onclick="checkNombre('Taco_125','12.5')">12.5cms
               </label> 
+              <i class="fa fa-check-square c-variable_cuatro ch-Taco_125 other hidden" aria-hidden="true" onclick="uncheck('Taco_125','12.5')"></i>
             </div>
             <div class="filtro-talla c-variable_4">
               <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_13" type="checkbox" name="alt_taco" tag="Taco_13_0" value2="13_0">13cms
+                <input class="hidden categ desk-filter c-variable_4 c-Taco_13" type="checkbox" tag="Taco_13" value="13" onclick="checkNombre('Taco_13','13')">13cms
               </label> 
-          </div>
+              <i class="fa fa-check-square c-variable_cuatro ch-Taco_13 other hidden" aria-hidden="true" onclick="uncheck('Taco_13','13')"></i>
+-->
           </div>
         </form>
         </div>
@@ -586,7 +612,7 @@
 <div class="pre-footer">
 	<div class="col-md-12 col-sm-12 col-xs-12 alme">
 		<div class="col-md-2 col-sm-2 col-xs-12">
-			<div class="kop {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_118' }}"> {{ read_text(site.name +  '_pre_footer_ex_118') }} </div>
+			<div class="kop {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_1116' }}"> {{ read_text(site.name +  '_pre_footer_ex_1116') }} </div>
 		</div>
 
 		<div class="col-md-10 col-sm-10 col-xs-12 linea-pre-footer">
@@ -594,7 +620,7 @@
 		</div>
 
 		<div class="col-md-12 col-sm-12 col-xs-12 alme pre-footer-text">
-			<div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber7' }}"> {{ read_text(site.name +  '_pre_footer_ber7') }} </div>
+			<div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber15' }}"> {{ read_text(site.name +  '_pre_footer_ber15') }} </div>
 		</div>
 	</div>
 </div>
