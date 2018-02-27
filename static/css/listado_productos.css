@@ -59,6 +59,7 @@
     float: left;
 }
 .filtro-talla{ display: inline-block; }
+.filtro-talla input.desk-filter{ margin-top: 0; }
 
 .container.min.dos{ min-height: 1200px; }
 .container.min.dos .col-md-3.col-sm-3.col-xs-12{ padding-bottom: 30px;}
