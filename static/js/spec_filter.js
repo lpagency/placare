@@ -951,7 +951,9 @@ function getDefaultFilter(){
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i))
+        {
             defaultTag = "c-Categoria3_" + i.charAt(0).toUpperCase() + i.slice(1);
+        }
     });
 
     return defaultTag;
@@ -967,8 +969,16 @@ function getClassDefaultTag()
     var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta","zapatos"];
 
     friendlyurls.forEach(function(i){
-        if(loc.includes(i))
-            defaultTag = ",Categoria3_"+ i.charAt(0).toUpperCase()+i.slice(1);
+        if(loc.includes(i)){
+            if(i == "zapatos")
+            {
+                defaultTag = ",Categoria3_Zapatos_Formal";
+            }
+            else
+            {
+                defaultTag = ",Categoria3_"+ i.charAt(0).toUpperCase()+i.slice(1);
+            }
+        }
     }); 
 
     return static_tag+defaultTag;
