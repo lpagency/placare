@@ -502,6 +502,7 @@ hr.len {
     font-size: 12px;
     text-align: left;
 }
+.chek input.desk-filter{ margin-top: 0; }
 
 .background-color-producto {
     height: 30px;
