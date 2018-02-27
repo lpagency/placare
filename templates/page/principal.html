@@ -23,11 +23,7 @@
 
 
 {% block javascript %}
-    <script type="text/javascript">
-        $(document).ecommerce({
-            tags: ''
-        })
-    </script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js"></script>
     <script type="text/javascript" src="{{ site_base }}/static/js/filter.js"></script>
     <script type="text/javascript" src="{{ site_base }}/static/js/spec_filter.js"></script>
 
@@ -44,7 +40,7 @@
             // EXCLUSIVO PARA PLACARE
             $("title").html("Placare - Listado de productos");
             $("meta[name=description]").attr("content", "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.");
-
+       
 
             $(document).on("click", ".background-color-producto", function()
             {
@@ -178,7 +174,7 @@
             <section class="h_submenu hidden-xs visible-md visible-sm visible-lg" id="menu-fixed">
               <div class="">
                 <div class="text-fil-2">
-                  TIPO DE CALZADO
+                  TIPO DE CALZADO 
                 </div>
                 <form action="/action_page.php" class="chek">
                     <div class="filtro-filtros">
@@ -186,31 +182,31 @@
                       <div class="fil h-Categoria3_Ballerinas" >Ballerinas</div>
                     </div>
                     <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines">
-                      <div class="fil h-Categoria3_Botines" >Botines</div>
+                      <input type="checkbox" class="categ desk-filter c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines"> 
+                      <div class="fil h-Categoria3_Botines" >Botines</div> 
                     </div>
                     <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Mocasines" name="vehicle" tag="Categoria3_Mocasines" value="Boat" value2="Mocasines">
+                      <input type="checkbox" class="categ desk-filter c-Categoria3_Mocasines" name="vehicle" tag="Categoria3_Mocasines" value="Boat" value2="Mocasines"> 
                       <div class="fil h-Categoria3_Mocasines" >Mocasines</div>
                     </div>
                     <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Mules" name="vehicle" tag="Categoria3_Mules" value="Boat" value="Mules" value2="Slippers">
+                      <input type="checkbox" class="categ desk-filter c-Categoria3_Mules" name="vehicle" tag="Categoria3_Mules" value="Boat" value="Mules" value2="Slippers"> 
                       <div class="fil h-Categoria3_Mules" >Mules / Slippers</div>
                     </div>
                     <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Plataformas" name="vehicle" tag="Categoria3_Plataformas" value="Boat" value2="Plataformas">
-                      <div class="fil h-Categoria3_Plataformas" >Plataformas</div>
+                      <input type="checkbox" class="categ desk-filter c-Categoria3_Plataformas" name="vehicle" tag="Categoria3_Plataformas" value="Boat" value2="Plataformas"> 
+                      <div class="fil h-Categoria3_Plataformas" >Plataformas</div> 
                     </div>
                     <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Playeras" name="vehicle" tag="Categoria3_Playeras" value="Boat" value2="Playeras">
+                      <input type="checkbox" class="categ desk-filter c-Categoria3_Playeras" name="vehicle" tag="Categoria3_Playeras" value="Boat" value2="Playeras"> 
                       <div class="fil h-Categoria3_Playeras" >Playeras</div>
+                    </div>  
+                    <div class="filtro-filtros">
+                      <input type="checkbox" class="categ desk-filter c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias"> 
+                      <div class="fil h-Categoria3_Sandalias" >Sandalias</div> 
                     </div>
                     <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias">
-                      <div class="fil h-Categoria3_Sandalias" >Sandalias</div>
-                    </div>
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos">
+                      <input type="checkbox" class="categ desk-filter c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos"> 
                       <div class="fil h-Categoria3_Zapatos" >Zapatos</div>
                     </div>
                 </form>
@@ -219,8 +215,56 @@
 
                 <div class="text-fil"> COLOR PRINCIPAL  </div>
                   <div>
-                      {% block color %}
-                      {% end %}
+                  <form action="/action_page.php" class="chek">
+                  <div class="filtro-color">
+                    <input type="checkbox" name="color" class="categ desk-filter c-Color_Azul" tag="Color_Azul" value2="Azul">
+                    <div class="fil h-Color_Azul" >Azul</div>
+                  </div>
+                  <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Beige" tag="Color_Beige" value2="Beige">
+                     <div class="fil h-Color_Beige" >Beige</div>
+                  </div>
+                  <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Blanco" tag="Color_Blanco" value2="Blanco">
+                     <div class="fil h-Color_Blanco" >Blanco</div>
+                  </div>
+                   <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
+                     <div class="fil h-Color_Burdeo" >Burdeo</div>
+                  </div>
+                  <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Cafe" value2="Café" tag="Color_Cafe">
+                     <div class="fil h-Color_Cafe" >Cafe</div>
+                  </div>
+                  <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Dorado" tag="Color_Dorado" value2="Dorado">
+                     <div class="fil h-Color_Dorado" >Dorado</div>
+                   </div>
+                  <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Gris" tag="Color_Gris" value2="Gris">
+                     <div class="fil h-Color_Gris" >Gris</div>
+                  </div>
+                  <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Metalico" tag="Color_Metalico" value2="Metálico">
+                     <div class="fil h-Color_Metalico" >Metalico</div>
+                  </div>
+                  <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Negro" tag="Color_Negro" value2="Negro">
+                     <div class="fil h-Color_Negro" >Negro</div>
+                  </div>
+                    <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Rojo" tag="Color_Rojo" value2="Rojo">
+                     <div class="fil h-Color_Rojo" >Rojo</div>
+                  </div>
+                    <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Verde" tag="Color_Verde" value2="Verde">
+                     <div class="fil h-Color_Verde" >Verde</div>
+                  </div>
+                    <div class="filtro-color">
+                     <input type="checkbox" name="color" class="categ desk-filter c-Color_Violeta" tag="Color_Violeta" value2="Violeta">
+                     <div class="fil h-Color_Violeta" >Violeta</div>
+                  </div>
+                  </form>
 
                 <div class="clearfix"></div>
                <div class="text-fil"> MATERIAL DEL ZAPATO </div>
@@ -240,13 +284,13 @@
                 <div class="text-fil"> MARCA </div>
                 <form action="/action_page.php" class="chek">
                      <div class="filtro-marca">
-                      <input type="checkbox" name="marca" class="categ desk-filter c-Marca_Degas" tag="Marca_Degas" value2="Degas">
+                      <input type="checkbox" name="marca" class="categ desk-filter c-Marca_Degas" tag="Marca_Degas" value2="Degas"> 
                       <div class="fil h-Marca_Degas" >Degas </div>
                     </div>
                     <div class="filtro-marca">
                       <input type="checkbox" name="marca" class="categ desk-filter c-Marca_Eda_Manzini" tag="Marca_Eda_Manzini" value2="Eda Manzini">
                       <div class="fil h-Marca_Eda_Manzini" >Eda Manzini</div>
-                     </div>
+                     </div> 
                      <div class="filtro-marca">
                       <input type="checkbox" name="marca" class="categ desk-filter c-Marca_Lola_Canales" tag="Marca_Lola_Canales" value2="Lola Canales">
                       <div class="fil h-Lola_Canales" >Lola Canales</div>
@@ -258,7 +302,7 @@
          <!--         <div class="text-fil"> OCASIÓN</div>
                 <form action="/action_page.php" class="chek">
                     <div class="filtro-categorias">
-                      <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Casuales" tag="Categoria4_Casuales" value2="Casuales" value="Bike">
+                      <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Casuales" tag="Categoria4_Casuales" value2="Casuales" value="Bike"> 
                       <div class="fil h-Categoria4_Casuales" >Casuales</div>
                     </div>
                     <div class="filtro-categorias">
@@ -266,7 +310,7 @@
                       <div class="fil h-Categoria4_Confort" >Confort </div>
                     </div>
                     <div class="filtro-categorias">
-                      <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Fiesta" value2="Fiesta" tag="Categoria4_Fiesta" value="Boat">
+                      <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Fiesta" value2="Fiesta" tag="Categoria4_Fiesta" value="Boat"> 
                       <div class="fil h-Categoria4_Fiesta" >Fiesta</div>
                     </div>
                      <div class="filtro-categorias">
@@ -284,7 +328,7 @@
                     </div>
                     <div class="filtro-talla">
                       <input type="checkbox" name="cierre" class="categ desk-filter c-Cierre_Cerrado" value2="Cerrado" tag="Cierre_Cerrado" value="Cara">
-                      <div class="fil h-Cierre_Cerrado" > Cerrado </div>
+                      <div class="fil h-Cierre_Cerrado" > Cerrado </div> 
                     </div>
                 </form> -->
 
@@ -323,7 +367,7 @@
 
             </section>
         </div>
-        <section>
+        <section> 
           <div class="col-md-9 col-sm-9 col-xs-12">
             <div class="">
               <div class="texto-header-pro-2 tag-header">Mujeres</div>
@@ -344,7 +388,7 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="limpiar  hidden-xs hidden-sm">
-                  LIMPIAR TODO
+                  LIMPIAR TODO 
                 </div>
               </div>
               <div class="col-md-12 col-sm-12 col-xs-12 kinti">
@@ -435,7 +479,7 @@
                 <div class="filtro-talla c-variable_2">
                   <label class="hidden c-variable_2">
                     <input class="hidden categ desk-filter c-variable_2 c-Platform_3_0" type="checkbox" name="alt_plat" tag="Platform_3_0" value2="3">3cms
-                  </label>
+                  </label> 
                 </div>
                 <div class="filtro-talla c-variable_2">
                   <label class="hidden c-variable_2">
@@ -455,7 +499,7 @@
                 <div class="filtro-talla c-variable_3">
                   <label class="hidden c-variable_3">
                     <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Alto" type="checkbox" name="taco" value2="alto" tag="Forma_Taco_Alto">Alto
-                  </label>
+                  </label> 
                 </div>
                 <div class="filtro-talla c-variable_3">
                   <label class="hidden c-variable_3">
@@ -490,7 +534,7 @@
                 <div class="filtro-talla c-variable_4">
                   <label class="hidden c-variable_4">
                     <input class="hidden categ desk-filter c-variable_4 c-Taco_1_5" type="checkbox" name="alt_taco" tag="Taco_1_5" value2="1.5" >1.5cms
-                  </label>
+                  </label> 
                 </div>
                 <div class="filtro-talla c-variable_4">
                   <label class="hidden c-variable_4">
@@ -525,7 +569,7 @@
                 <div class="filtro-talla c-variable_4">
                   <label class="hidden c-variable_4">
                     <input class="hidden categ desk-filter c-variable_4 c-Taco_5_0" type="checkbox" name="alt_taco" tag="Taco_5_0" value2="5">5cms
-                  </label>
+                  </label> 
                 </div>
                 <div class="filtro-talla c-variable_4">
                   <label class="hidden c-variable_4">
@@ -581,7 +625,7 @@
           <!-- ******principio filtros MOVIL**** -->
 
           <div class="col-xs-12 hidden-md hidden-lg hidden-sm visible-xs">
-             <div class="fixx">
+             <div class="fixx"> 
                 <button class="btn btn-primary btn-mo dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-orde">Ordenar por:
                 <span class="caret"></span></button>
                 <div class="palito"> </div>
@@ -609,15 +653,15 @@
 </section>
 
 <div class="container min">
-	<div class="row">
+  <div class="row">
    <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_1110' }}">
-      {{ read_text(site.name +  '_pre_footer_ex_1110') }}
+    <div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_1110' }}"> 
+      {{ read_text(site.name +  '_pre_footer_ex_1110') }} 
     </div>
-    <div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber9' }}">
-      {{ read_text(site.name +  '_pre_footer_ber9') }}
+    <div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber9' }}"> 
+      {{ read_text(site.name +  '_pre_footer_ber9') }} 
     </div>
-   </div>
+   </div> 
   </div>
 </div>
 
