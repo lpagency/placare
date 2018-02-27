@@ -12,6 +12,7 @@ $(document).ready(function()
 
     window.tagGroups = { // Groups of tags for 
         'Categoria3' : [], // Tipo calzado
+        'Categoria4' : [],
         'Color' : [],  // Color calzado
         'Mat' : [], // Material calzado
         'Marca' : [], // Marca calzado
@@ -357,6 +358,48 @@ $(document).ready(function()
 
     });
 
+    $("input:checkbox[name=ocasion]").change(function(ev,shouldLoad){
+
+        var $box = $(this);
+        var nombre = $(this).attr("tag");
+        var va = $(this).attr("value2");
+
+        window.z = 0;
+
+        updateBlockFilters('#categoria4', nombre, va);
+
+        updateTextRoute(va, "categoria2");
+
+        if($(".limpiar").hasClass("hidden"))
+        {
+            $(".limpiar").removeClass("hidden");
+        }
+
+        // New filter logic
+
+        var groups = window.tagGroups.Categoria4;
+
+        window.tagGroups.Categoria4 = updateGroupTag(groups, nombre);
+
+        window.config.tag = prepareTags(tagGroups);
+
+        var tags = window.url_tags;
+
+        window.url_tags = updateURLTags(tags,nombre);
+
+        var url = getCurrentUrl();
+
+        history.pushState('', 'Placare', url+'?tag='+url_tags.join(','));
+
+        if(shouldLoad!==false)
+        {
+            $('.products').html("");
+            $('.products').ecommerce('destroy');
+            $('.products').ecommerce(window.config);
+        }
+
+    });
+
     $("input:checkbox[name=material]").change(function(ev,shouldLoad)
     {
         var $box = $(this);
@@ -635,6 +678,7 @@ $(document).ready(function()
 function onLoadInit(tagGroups, tag_url){
     //Append filters categories
     $('.filtrosRec').append('<li class="fil-ul" id="categoria3"></li>'+
+        '<li class="fil-ul" id="categoria4"></li>'+
         '<li class="fil-ul" id="color"></li>'+
         '<li class="fil-ul" id="mat"></li>'+
         '<li class="fil-ul" id="marca"></li>'+
