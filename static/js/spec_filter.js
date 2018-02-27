@@ -972,7 +972,7 @@ function getClassDefaultTag()
         if(loc.includes(i)){
             if(i == "zapatos")
             {
-                defaultTag = ",Categoria3_Zapatos_M";
+                defaultTag = ",Categoria3_Zapatos_Formal";
             }
             else
             {
