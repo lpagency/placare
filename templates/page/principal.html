@@ -40,7 +40,7 @@
             // EXCLUSIVO PARA PLACARE
             $("title").html("Placare - Listado de productos");
             $("meta[name=description]").attr("content", "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.");
-       
+
 
             $(document).on("click", ".background-color-producto", function()
             {
@@ -173,154 +173,13 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <section class="h_submenu hidden-xs visible-md visible-sm visible-lg" id="menu-fixed">
               <div class="">
-                <div class="text-fil-2">
-                  TIPO DE CALZADO 
-                </div>
-                <form action="/action_page.php" class="chek">
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Ballerinas" name="vehicle" tag="Categoria3_Ballerinas" value="Bike" value2="Ballerinas">
-                      <div class="fil h-Categoria3_Ballerinas" >Ballerinas</div>
-                    </div>
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines"> 
-                      <div class="fil h-Categoria3_Botines" >Botines</div> 
-                    </div>
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Mocasines" name="vehicle" tag="Categoria3_Mocasines" value="Boat" value2="Mocasines"> 
-                      <div class="fil h-Categoria3_Mocasines" >Mocasines</div>
-                    </div>
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Mules" name="vehicle" tag="Categoria3_Mules" value="Boat" value="Mules" value2="Slippers"> 
-                      <div class="fil h-Categoria3_Mules" >Mules / Slippers</div>
-                    </div>
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Plataformas" name="vehicle" tag="Categoria3_Plataformas" value="Boat" value2="Plataformas"> 
-                      <div class="fil h-Categoria3_Plataformas" >Plataformas</div> 
-                    </div>
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Playeras" name="vehicle" tag="Categoria3_Playeras" value="Boat" value2="Playeras"> 
-                      <div class="fil h-Categoria3_Playeras" >Playeras</div>
-                    </div>  
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias"> 
-                      <div class="fil h-Categoria3_Sandalias" >Sandalias</div> 
-                    </div>
-                    <div class="filtro-filtros">
-                      <input type="checkbox" class="categ desk-filter c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos"> 
-                      <div class="fil h-Categoria3_Zapatos" >Zapatos</div>
-                    </div>
-                </form>
-
-                <div class="clearfix"></div>
-
-                <div class="text-fil"> COLOR PRINCIPAL  </div>
-                  <div>
-                  <form action="/action_page.php" class="chek">
-                    {% block color %}{% end %}
-                  </form>
-
-                <div class="clearfix"></div>
-               <div class="text-fil"> MATERIAL DEL ZAPATO </div>
-                <form action="/action_page.php" class="chek">
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="material" class="categ desk-filter c-Mat_Capellada_Cuero" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
-                      <div class="fil h-Mat_Capellada_Cuero" > Cuero </div>
-                    </div>
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="material" class="categ desk-filter c-Mat_Capellada_Eco_Cuero" tag="Mat_Capellada_Eco_Cuero" value2="Eco Cuero" value="Cara">
-                      <div class="fil h-Mat_Capellada_Eco_Cuero" > Eco Cuero </div>
-                    </div>
-                </form>
-
-                <div class="clearfix"></div>
-
-                <div class="text-fil"> MARCA </div>
-                <form action="/action_page.php" class="chek">
-                     <div class="filtro-marca">
-                      <input type="checkbox" name="marca" class="categ desk-filter c-Marca_Degas" tag="Marca_Degas" value2="Degas"> 
-                      <div class="fil h-Marca_Degas" >Degas </div>
-                    </div>
-                    <div class="filtro-marca">
-                      <input type="checkbox" name="marca" class="categ desk-filter c-Marca_Eda_Manzini" tag="Marca_Eda_Manzini" value2="Eda Manzini">
-                      <div class="fil h-Marca_Eda_Manzini" >Eda Manzini</div>
-                     </div> 
-                     <div class="filtro-marca">
-                      <input type="checkbox" name="marca" class="categ desk-filter c-Marca_Lola_Canales" tag="Marca_Lola_Canales" value2="Lola Canales">
-                      <div class="fil h-Lola_Canales" >Lola Canales</div>
-                     </div>
-                </form>
-
-                <div class="clearfix"></div>
-
-         <!--         <div class="text-fil"> OCASIÓN</div>
-                <form action="/action_page.php" class="chek">
-                    <div class="filtro-categorias">
-                      <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Casuales" tag="Categoria4_Casuales" value2="Casuales" value="Bike"> 
-                      <div class="fil h-Categoria4_Casuales" >Casuales</div>
-                    </div>
-                    <div class="filtro-categorias">
-                      <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Confort" value2="Confort" tag="Categoria4_Confort" value="Car">
-                      <div class="fil h-Categoria4_Confort" >Confort </div>
-                    </div>
-                    <div class="filtro-categorias">
-                      <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Fiesta" value2="Fiesta" tag="Categoria4_Fiesta" value="Boat"> 
-                      <div class="fil h-Categoria4_Fiesta" >Fiesta</div>
-                    </div>
-                     <div class="filtro-categorias">
-                      <input type="checkbox" name="ocasion" class="categ desk-filter c-Categoria4_Vestir" value2="Vestir" tag="Categoria4_Vestir" value="Boat">
-                      <div class="fil h-Categoria4_Vestir" >Vestir</div>
-                    </div>
-                </form> -->
-
-                <div class="clearfix"></div>
-      <!--          <div class="text-fil"> TIPO DE CIERRE </div>
-                <form action="/action_page.php" class="chek">
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="cierre" class="categ desk-filter c-Cierre_Abierto" value2="Abierto" tag="Cierre_Abierto" value="Bike">
-                      <div class="fil h-Cierre_Abierto" > Abierto </div>
-                    </div>
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="cierre" class="categ desk-filter c-Cierre_Cerrado" value2="Cerrado" tag="Cierre_Cerrado" value="Cara">
-                      <div class="fil h-Cierre_Cerrado" > Cerrado </div> 
-                    </div>
-                </form> -->
-
-                <div class="clearfix"></div>
-      <!--          <div class="text-fil"> MATERIAL SUELA </div>
-                <form action="/action_page.php" class="chek">
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="suela" class="categ desk-filter c-Mat_Suela_Goma_Eva" value2="Eva" tag="Mat_Suela_Goma_Eva" value="Bike">
-                      <div class="fil h-Mat_Suela_Goma_Eva" > Eva </div>
-                    </div>
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="suela" class="categ desk-filter c-Mat_Suela_Kratón" value2="Kratón" tag="Mat_Suela_Kratón" value="Cara">
-                      <div class="fil h-Mat_Suela_Kratón" > Kratón </div>
-                    </div>
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="suela" class="categ desk-filter c-Mat_Suela_Poliuretano" value2="Poliuretano" tag="Mat_Suela_Poliuretano" value="Cara">
-                      <div class="fil h-Mat_Suela_Poliuretano" > Poliuretano </div>
-                    </div>
-                </form> -->
-
-                <div class="clearfix"></div>
-      <!--          <div class="text-fil"> MATERIAL FORRO </div>
-                <form action="/action_page.php" class="chek">
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="forro" class="categ desk-filter c-Mat_Forro_Cuero" tag="Mat_Forro_Cuero" value2="Cuero" value="Bike">
-                      <div class="fil h-Mat_Forro_Cuero" > Cuero </div>
-                    </div>
-                    <div class="filtro-talla">
-                      <input type="checkbox" name="forro" class="categ desk-filter c-Mat_Forro_Eco_Cuero" tag="Mat_Forro_Eco_Cuero" value2="Eco Cuero" value="Cara">
-                      <div class="fil h-Mat_Forro_Eco_Cuero" > Eco Cuero </div>
-                    </div>
-                </form> -->
-
-                  </div>
+                  {% block categories %}
+                  {% end %}
               </div>
 
             </section>
         </div>
-        <section> 
+        <section>
           <div class="col-md-9 col-sm-9 col-xs-12">
             <div class="">
               <div class="texto-header-pro-2 tag-header">Mujeres</div>
@@ -341,7 +200,7 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="limpiar  hidden-xs hidden-sm">
-                  LIMPIAR TODO 
+                  LIMPIAR TODO
                 </div>
               </div>
               <div class="col-md-12 col-sm-12 col-xs-12 kinti">
@@ -432,7 +291,7 @@
                 <div class="filtro-talla c-variable_2">
                   <label class="hidden c-variable_2">
                     <input class="hidden categ desk-filter c-variable_2 c-Platform_3_0" type="checkbox" name="alt_plat" tag="Platform_3_0" value2="3">3cms
-                  </label> 
+                  </label>
                 </div>
                 <div class="filtro-talla c-variable_2">
                   <label class="hidden c-variable_2">
@@ -452,7 +311,7 @@
                 <div class="filtro-talla c-variable_3">
                   <label class="hidden c-variable_3">
                     <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Alto" type="checkbox" name="taco" value2="alto" tag="Forma_Taco_Alto">Alto
-                  </label> 
+                  </label>
                 </div>
                 <div class="filtro-talla c-variable_3">
                   <label class="hidden c-variable_3">
@@ -487,7 +346,7 @@
                 <div class="filtro-talla c-variable_4">
                   <label class="hidden c-variable_4">
                     <input class="hidden categ desk-filter c-variable_4 c-Taco_1_5" type="checkbox" name="alt_taco" tag="Taco_1_5" value2="1.5" >1.5cms
-                  </label> 
+                  </label>
                 </div>
                 <div class="filtro-talla c-variable_4">
                   <label class="hidden c-variable_4">
@@ -522,7 +381,7 @@
                 <div class="filtro-talla c-variable_4">
                   <label class="hidden c-variable_4">
                     <input class="hidden categ desk-filter c-variable_4 c-Taco_5_0" type="checkbox" name="alt_taco" tag="Taco_5_0" value2="5">5cms
-                  </label> 
+                  </label>
                 </div>
                 <div class="filtro-talla c-variable_4">
                   <label class="hidden c-variable_4">
@@ -578,7 +437,7 @@
           <!-- ******principio filtros MOVIL**** -->
 
           <div class="col-xs-12 hidden-md hidden-lg hidden-sm visible-xs">
-             <div class="fixx"> 
+             <div class="fixx">
                 <button class="btn btn-primary btn-mo dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-orde">Ordenar por:
                 <span class="caret"></span></button>
                 <div class="palito"> </div>
@@ -608,13 +467,13 @@
 <div class="container min">
   <div class="row">
    <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_1110' }}"> 
-      {{ read_text(site.name +  '_pre_footer_ex_1110') }} 
+    <div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_1110' }}">
+      {{ read_text(site.name +  '_pre_footer_ex_1110') }}
     </div>
-    <div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber9' }}"> 
-      {{ read_text(site.name +  '_pre_footer_ber9') }} 
+    <div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber9' }}">
+      {{ read_text(site.name +  '_pre_footer_ber9') }}
     </div>
-   </div> 
+   </div>
   </div>
 </div>
 
