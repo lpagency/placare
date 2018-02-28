@@ -2232,6 +2232,8 @@ hr.listado {
         border-color: #74E2C7;
     }    
 
+    .conti > a { border: 1px solid #E9E9ED;}
+
     .related-c12{
         padding-left: 0;
         padding-right: 0;
