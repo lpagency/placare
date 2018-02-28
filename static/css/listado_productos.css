@@ -2089,6 +2089,15 @@ hr.listado {
 }
 
 @media (max-width: 530px){
+    .products.row, .product-related.row, .product-random.row{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .products.row .col-md-3, .product-related.row .col-md-2, .product-random.row .col-md-2, .col-md-3.col-sm-3.col-xs-6.product-box.two.hidden-md{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .carousel-control .glyphicon-circle-arrow-left {
         left: 24%;
         margin-left: -10px;
