@@ -2233,7 +2233,8 @@ hr.listado {
         border-color: #74E2C7;
     }    
 
-    .conti > a { border: 1px solid #E9E9ED;}
+    .conti > a, .conti-de { border: 1px solid #E9E9ED;}
+    .conti-de{ margin-bottom: 0; }
     .conti{ margin-bottom: 0; }
 
     .related-c12{
