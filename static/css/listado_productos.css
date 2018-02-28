@@ -2200,6 +2200,38 @@ hr.listado {
 
 @media (max-width: 414px){
 
+    .btn-success.car-2 {
+        color: white;
+        border-radius: 0px;
+        height: 45px;
+        float: none;
+        top: 0px;
+        position: none;
+        right: 0px;
+        font-size: 13px;
+        font-weight: 500;
+        width: 100%;
+        opacity: 1;
+        background-color: #FA913A;
+        border-color: #FA913A;
+
+    }
+    .btn-success.car {
+        color: white;
+        border-radius: 0px;
+        height: 45px;
+        float: none;
+        top: 0;
+        position: none;
+        right: 0px;
+        font-size: 13px;
+        font-weight: 500;
+        width: 100%;
+        opacity: 1;
+        background-color: #74E2C7;
+        border-color: #74E2C7;
+    }    
+
     .related-c12{
         padding-left: 0;
         padding-right: 0;
@@ -2410,37 +2442,6 @@ hr.listado {
 
 
 @media (max-width: 350px){
-    .btn-success.car-2 {
-    color: white;
-    border-radius: 0px;
-    height: 45px;
-    float: none;
-    top: 0px;
-    position: none;
-    right: 0px;
-    font-size: 13px;
-    font-weight: 500;
-    width: 100%;
-    opacity: 1;
-    background-color: #FA913A;
-    border-color: #FA913A;
-
-}
-    .btn-success.car {
-    color: white;
-    border-radius: 0px;
-    height: 45px;
-    float: none;
-    top: 0;
-    position: none;
-    right: 0px;
-    font-size: 13px;
-    font-weight: 500;
-    width: 100%;
-    opacity: 1;
-    background-color: #74E2C7;
-    border-color: #74E2C7;
-}
 
     .carousel {
         position: relative;
