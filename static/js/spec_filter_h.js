@@ -779,7 +779,14 @@ function getClassDefaultTag()
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i))
-            defaultTag = ",Categoria3_" + i.charAt(0).toUpperCase() + i.slice(1);
+            if(i == "zapatos")
+            {
+                defaultTag = ",Categoria3_Zapatos_Formal";
+            }
+            else
+            {
+                defaultTag = ",Categoria3_"+ i.charAt(0).toUpperCase()+i.slice(1);
+            }
     });
 
     return static_tag+defaultTag;
