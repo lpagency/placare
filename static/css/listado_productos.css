@@ -2031,6 +2031,7 @@ hr.listado {
 
 .more-products {
     margin: auto;
+    margin-top: 30px;
     width: 320px;
     max-width: 100%;
     border-radius: 1px;
@@ -2233,6 +2234,7 @@ hr.listado {
     }    
 
     .conti > a { border: 1px solid #E9E9ED;}
+    .conti{ margin-bottom: 0; }
 
     .related-c12{
         padding-left: 0;
