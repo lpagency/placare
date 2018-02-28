@@ -315,9 +315,6 @@ li.slogan a {
 }
 @media (max-width: 991px){
 
-.navbar-header + .row .col-md-2{ width: 24%; float: left; }
-.navbar-header + .row .col-md-10{ width: 76%; float: left; }
-
 .container{ width: 100%; }
 
 .dropdown.col-md-4{
