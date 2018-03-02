@@ -26,11 +26,11 @@ $(document).ready(function()
     window.url_tags = []; // list of tags that go in the url
 
     var base_url = $.environmentVar(
-        'https://apibodegas.loadingplay.com/',
+        'http://localhost:8520/',
         'https://apibodegas.loadingplay.com/',
         'https://apibodegas.loadingplay.com/');
     var checkout_url = $.environmentVar(
-        'https://lpcheckout.ondev.today',
+        'http://localhost:8522/',
         'https://lpcheckout.ondev.today',
         'https://pay.loadingplay.com');
     var app_public = $.environmentVar(53,53,53);
