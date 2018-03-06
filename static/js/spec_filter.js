@@ -1023,8 +1023,7 @@ function getClassDefaultTag()
                 defaultTag = ",Categoria3_"+ i.charAt(0).toUpperCase()+i.slice(1);
             }
         }
-    }); 
-    console.log(defaultTag);
+    });
     return static_tag+defaultTag;
 }
 
