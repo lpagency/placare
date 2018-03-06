@@ -26,7 +26,7 @@ $(document).ready(function()
     window.url_tags = []; // list of tags that go in the url
 
     var base_url = $.environmentVar(
-        'http://localhost:8520/',
+        'https://apibodegas.loadingplay.com/',
         'https://apibodegas.loadingplay.com/',
         'https://apibodegas.loadingplay.com/');
     var checkout_url = $.environmentVar(
@@ -991,7 +991,7 @@ function getDefaultFilter(){
 
     var defaultTag = "";
 
-    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta","zapatos"];
+    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta"];
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i))
@@ -1010,21 +1010,20 @@ function getClassDefaultTag()
 
     var static_tag = "Categoria2_Calzado_Mujer,-Categoria2_Calzado_Hombre";
 
-    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta","zapatos"];
+    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta"];
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i)){
-            if(i == "zapatos")
+            if(i == "zapatos-de-vestir-fiesta")
             {
-                defaultTag = ",Categoria3_Zapatos_Formal";
+                defaultTag = ",Categoria3_Zapatos_de_Vestir_Fiesta";
             }
             else
             {
                 defaultTag = ",Categoria3_"+ i.charAt(0).toUpperCase()+i.slice(1);
             }
         }
-    }); 
-
+    });
     return static_tag+defaultTag;
 }
 
