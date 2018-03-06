@@ -991,7 +991,7 @@ function getDefaultFilter(){
 
     var defaultTag = "";
 
-    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta","zapatos"];
+    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta"];
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i))
@@ -1010,13 +1010,13 @@ function getClassDefaultTag()
 
     var static_tag = "Categoria2_Calzado_Mujer,-Categoria2_Calzado_Hombre";
 
-    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta","zapatos"];
+    var friendlyurls = ["ballerinas","botas","botines","casuales","mocasines","mules","oxford","plataformas","playeras","sandalias","urbanas","zapatillas","zapatos-de-vestir-fiesta"];
 
     friendlyurls.forEach(function(i){
         if(loc.includes(i)){
-            if(i == "zapatos")
+            if(i == "zapatos-de-vestir-fiesta")
             {
-                defaultTag = ",Categoria3_Zapatos_Formal";
+                defaultTag = ",Categoria3_Zapatos_de_Vestir_Fiesta";
             }
             else
             {
@@ -1024,7 +1024,7 @@ function getClassDefaultTag()
             }
         }
     }); 
-
+    console.log(defaultTag);
     return static_tag+defaultTag;
 }
 
