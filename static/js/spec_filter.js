@@ -26,7 +26,7 @@ $(document).ready(function()
     window.url_tags = []; // list of tags that go in the url
 
     var base_url = $.environmentVar(
-        'http://localhost:8520/',
+        'https://apibodegas.loadingplay.com/',
         'https://apibodegas.loadingplay.com/',
         'https://apibodegas.loadingplay.com/');
     var checkout_url = $.environmentVar(
