@@ -10,7 +10,7 @@ $(document).ready(function()
 
     window.listaTag = [];
 
-    window.tagGroups = { // Groups of tags for 
+    window.tagGroups = { // Groups of tags for
         'Categoria3' : [], // Tipo calzado
         'Color' : [],  // Color calzado
         'Mat' : [], // Material calzado
@@ -304,7 +304,7 @@ $(document).ready(function()
         window.url_tags = updateURLTags(tags,nombre);
 
         var url = getCurrentUrl();
-        
+
         history.replaceState('', 'Placare', url+'?tag='+url_tags.join(','));
 
         if(shouldLoad!==false)
@@ -724,10 +724,10 @@ function limpiar()
 
 
 
-    window.tagGroups = { 
-        'Categoria3' : [], 
-        'Color' : [], 
-        'Mat' : [], 
+    window.tagGroups = {
+        'Categoria3' : [],
+        'Color' : [],
+        'Mat' : [],
         'Marca' : [],
         'Talla' : [],
         'Taco' : [],
@@ -894,7 +894,7 @@ function updateBlockFilters(category, tagName, value){
         $(category).append('<ul class="fil-ul '+tagName+'"><li class="ca li-fil"><div class="ordenar-precio '+tagName+'">'+value+'</div></li></ul>');
     }
 
-        
+
 }
 
 function retrieveLocation(){
@@ -952,22 +952,15 @@ function getDefaultFilter(){
 
     return defaultTag;
 }
+
+/**
+ * get tags by url, you can setup in variable called window.url_tags
+ * @example:
+ *          <script>window.url_tags = "Mujer,Categoria2_Calzado_Mujer,-..."
+ */
 function getClassDefaultTag()
 {
-    var loc = retrieveLocation();
-
-    var defaultTag = "";
-
-    var static_tag = "Categoria2_Calzado_Mujer,-Categoria2_Calzado_Hombre";
-
-    var friendlyurls = ["ballerinas","botines","mocasines","mules","plataformas","playeras","sandalias","zapatos"];
-
-    friendlyurls.forEach(function(i){
-        if(loc.includes(i))
-            defaultTag = ",Categoria3_"+ i.charAt(0).toUpperCase()+i.slice(1);
-    }); 
-
-    return static_tag+defaultTag;
+    return window.url_tags;
 }
 
 function updateTextRoute(name, category){
