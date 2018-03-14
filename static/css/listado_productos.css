@@ -1050,6 +1050,8 @@ a.variables:active{
     max-width: 100%;
     padding-left: 0px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .middle {
