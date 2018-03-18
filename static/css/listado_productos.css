@@ -1487,6 +1487,11 @@ hr.lon {
 
 @media (max-width: 767px){
 
+    .products.row .col-md-3, .product-related.row .col-md-2, .product-random.row .col-md-2, .col-md-3.col-sm-3.col-xs-6.product-box.two.hidden-md{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     a.text.detalle{ display: none; opacity: 0; z-index: -1; }
     a.text{ display: none; }
     .img-responsive.image{ width: 140px; max-width: 100%; }
