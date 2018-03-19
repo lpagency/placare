@@ -316,6 +316,8 @@ li.slogan a {
 @media (max-width: 991px){
 
 .container{ width: 100%; }
+.bor{ border-left: none; position: relative; }
+.bor:after{ position: absolute; content: ''; left: 0; top: 0; display: inline-block; width: 1px; height: 100%; background-color: #eaeaec;}
 
 .dropdown.col-md-4{
     display: inline-block;
