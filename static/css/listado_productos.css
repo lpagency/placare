@@ -2220,6 +2220,7 @@ hr.listado {
 
 @media (max-width: 414px){
 
+    .resis{ font-size: 0; line-height: 1; }
     .btn-success.car-2 {
         color: white;
         border-radius: 0px;
@@ -2230,7 +2231,7 @@ hr.listado {
         right: 0px;
         font-size: 13px;
         font-weight: 500;
-        width: 100%;
+        width: 50%;
         opacity: 1;
         background-color: #FA913A;
         border-color: #FA913A;
@@ -2246,7 +2247,7 @@ hr.listado {
         right: 0px;
         font-size: 13px;
         font-weight: 500;
-        width: 100%;
+        width: 50%;
         opacity: 1;
         background-color: #74E2C7;
         border-color: #74E2C7;
