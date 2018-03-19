@@ -317,7 +317,7 @@ li.slogan a {
 
 .container{ width: 100%; }
 .bor{ border-left: none; position: relative; }
-.bor:after{ position: absolute; content: ''; left: 0; top: 0; display: inline-block; width: 1px; height: 100%; background-color: #eaeaec;}
+.bor:after{ position: absolute; content: ''; left: -5px; top: 0; display: inline-block; width: 2px; height: 100%; background-color: #eaeaec;}
 
 .dropdown.col-md-4{
     display: inline-block;
