@@ -1498,7 +1498,7 @@ hr.lon {
 
 
     .container.min.dos .col-md-3.col-sm-3.col-xs-12+section .row, .container.min.dos .col-md-3.col-sm-3.col-xs-12+section .dropdown{ display: none; }
-    .container.min.dos .col-md-3.col-sm-3.col-xs-12 + section { padding-top: 30px; text-align: center;}
+    .container.min.dos .col-md-3.col-sm-3.col-xs-12{ padding-top: 30px; }
     .texto-header-pro-2{ display: inline-block; float: none; }
 
     .btn-primary {
