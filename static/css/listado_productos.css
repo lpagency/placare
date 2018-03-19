@@ -1497,7 +1497,7 @@ hr.lon {
     .img-responsive.image{ width: 140px; max-width: 100%; }
 
 
-    .container.min.dos .col-md-3.col-sm-3.col-xs-12+section .row{ display: none; }
+    .container.min.dos .col-md-3.col-sm-3.col-xs-12+section .row, .container.min.dos .col-md-3.col-sm-3.col-xs-12+section .dropdown{ display: none; }
 
     .btn-primary {
         float: none;
@@ -1920,6 +1920,7 @@ hr.lon {
 hr.listado {
     border: 0;
     border-top: 1px solid transparent;
+    margin-bottom: 0;
 }
 
 .modal-dialog.filtrosmovil {
