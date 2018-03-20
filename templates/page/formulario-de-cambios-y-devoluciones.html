@@ -24,6 +24,8 @@
                 var nombre = $("#itNombre").val();
                 var correo = $("#itMail").val();
                 var pedido = $("#itPedido").val();
+                var cambio = $("#itCambio").val();
+                var motivo = $("#itMotivo").val();
                 var productos = $("#itProductos").val();
                 var asunto = $("#itComentario").val();
 
@@ -33,6 +35,28 @@
                 //Si nombre está vacío
                 //Muestra el mensaje
                 //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
+                if(cambio == "nada"){
+                    $("#itCambio").parents(".form-group").addClass("has-error");
+                    $(".help-cambio").removeClass('hidden');
+                    error_count += 1;
+                }
+                //en otro caso, el mensaje no se muestra
+                else{
+                    $("#itCambio").parents(".form-group").removeClass("has-error");
+                    $(".help-cambio").addClass('hidden');
+                }
+
+                if(motivo == "nada"){
+                    $("#itMotivo").parents(".form-group").addClass("has-error");
+                    $(".help-motivo").removeClass('hidden');
+                    error_count += 1;
+                }
+                //en otro caso, el mensaje no se muestra
+                else{
+                    $("#itMotivo").parents(".form-group").removeClass("has-error");
+                    $(".help-motivo").addClass('hidden');
+                }
+
                 if(nombre == ""){
                     $("#itNombre").parents(".form-group").addClass("has-error");
                     $(".help-nombre").removeClass('hidden');
@@ -45,7 +69,7 @@
                 }
 
                 if(pedido == ""){
-                    $("#itpedido").parents(".form-group").addClass("has-error");
+                    $("#itPedido").parents(".form-group").addClass("has-error");
                     $(".help-pedido").removeClass('hidden');
                     error_count += 1;
                 }
@@ -246,24 +270,26 @@
                                    <div class="form-group con">
                                     <label for="nationality" class="control-label">Elija una opcion</label> 
                                     <div class="controls"> <i class="fa fa-angle-down for" aria-hidden="true"></i>
-                                        <select class="form-control nuevo input-lg requiredField" name="Dropdown" id="cambio"  placeholder="Please select your Nationality" style="padding: 0 20px;">
-                                            <option>Cambio o Devolución</option>
+                                        <select class="form-control nuevo input-lg requiredField" name="Dropdown" id="itCambio"  placeholder="Please select your Nationality" style="padding: 0 20px;">
+                                            <option value="nada">Cambio o Devolución</option>
                                             <option value="Cambio">Cambio</option>
                                             <option value="Devolución">Devolución</option>
                                         </select>
+                                        <span id="helpBlock3" class="hidden help-block help-cambio">Seleccione opción</span>
                                     </div>
                                 </div>
                                 <div class="form-group con">
                                     <label for="nationality" class="control-label">¿Cuál es el motivo de la devolución?</label> 
                                     <div class="controls"> <i class="fa fa-angle-down for" aria-hidden="true"></i>
-                                        <select class="form-control nuevo input-lg requiredField" name="Dropdown1" id="motivos"  placeholder="Please select your Nationality" style="padding: 0 20px;">
-                                            <option>Seleccionar motivo</option>
+                                        <select class="form-control nuevo input-lg requiredField" name="Dropdown1" id="itMotivo"  placeholder="Please select your Nationality" style="padding: 0 20px;">
+                                            <option value="nada">Seleccionar motivo</option>
                                             <option value="Queda grande / chico">Queda grande/ chico </option>
                                             <option value="No calza bien">No calza bien</option>
                                             <option value="No gustÃģ">No gustó</option>
                                             <option value="Color diferente a foto original">Color diferente a foto original</option>
                                             <option class="otro_motivo" value="Otro motivo">Otro Motivo</option>
                                         </select>
+                                        <span id="helpBlock3" class="hidden help-block help-motivo">Seleccione motivo</span>
                                     </div>
                                 </div>
                                 <div class="selec-motivo form-group hidden"> <!-- ****Solo aparece si se selecciona otro motivo*** -->
