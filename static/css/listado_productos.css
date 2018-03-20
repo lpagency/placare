@@ -1502,6 +1502,10 @@ hr.lon {
     .texto-header-pro-2{ display: inline-block; float: none; padding-top: 20px;}
     .texto-header-pro-3{ padding-top: 20px; }
 
+    .img-container{
+        display: inline;     
+    }
+
     .btn-primary {
         float: none;
         width: 100%;
@@ -2430,10 +2434,6 @@ hr.listado {
         height: 50px;
         font-size: 13px;
         font-weight: 600;
-    }
-
-    .img-container{
-        display: inline;     
     }
 
     .img-container img {
