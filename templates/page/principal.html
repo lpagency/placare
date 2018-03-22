@@ -38,7 +38,8 @@
                  minWidth: 1000
              });
 
-            $('.btn.btn-primary').click(function(){
+            $('.btn-primary.header').click(function(event){
+              event.preventDefault();
               $('body').addClass('red');
               return false;
             });
