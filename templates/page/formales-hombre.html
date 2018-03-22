@@ -1,724 +1,84 @@
-{% extends "../base.html" %}
+{% extends "./principal.html" %}
 
-{% block title %}
-    {{ site.name }}
+{% block section_name %}
+Formales Hombre
 {% end %}
 
-{% block header %}
-    {% include '../home/header.html' %}
-{% end %}
+{% block tags %}Categoria2_Calzado_Hombre,-Categoria2_Calzado_Mujer{% end %}
 
-{% block css %}
+{% block categories %}
 
-    {% if is_admin %}
-    {% end %}
-    <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
-    <style type="text/css">
-        body , html
-        {
-            overflow-x:hidden;
-        }
+<div>
+   <div class="text-fil-2"> TIPO DE CALZADO </div>
+     <form action="/action_page.php" class="chek">
+         <div class="filtro-filtros">
+           <input type="checkbox" class="categ desk-filter c-Categoria3_Formales" name="vehicle" tag="Categoria3_Formales" value="Boat" value2="Formales" disabled="true" checked="true"> 
+           <div class="fil h-Categoria3_Formales" >Formales</div>
+         </div>
+     </form>
 
-    </style>
-{% end %}
+     <div class="clearfix"></div>
 
-
-{% block javascript %}
-    <script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js"></script>
-    <script type="text/javascript" src="{{ site_base }}/static/js/filter.js"></script>
-    <script type="text/javascript" src="{{ site_base }}/static/js/spec_filter_h.js"></script>
-<!-- 
-    <script type="text/javascript">
-      $(document).ready(function()
-      {
-
-        $(".mobile2").css("display", "none");
-
-        $(document).on("click", ".bars", function()
-        {
-
-          $(".mobile2").toggle("slow");
-
-        });
-      });
-
-    </script> -->
-
-    <script type="text/javascript">
-
-        $(window).load(function () {
-            // Una vez se cargue al completo la página desaparecerá el div "cargando"
-            $('#cargando').hide();
-          });
-        1
-        2
-        3
-        4
-        5
-        6
-        7
-        $(window).load(function () {
-          // Una vez se cargue al completo la página desaparecerá el div "cargando"
-          $('#cargando').hide();
-        });
-        $(document).ready(function()
-        {
-            // EXCLUSIVO PARA PLACARE
-            $("title").html("Placare - Listado de productos");
-            $("meta[name=description]").attr("content", "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.");
-       
-
-            $(document).on("click", ".background-color-producto", function()
-            {
-                $(this).css("border", "black solid 2px");
-            });
-
-            $(document).on("click", ".categ", function(ev)
-            {
-
-                $(".subcateg").removeClass('active');
-                $(this).addClass('active');
-            });
-
-            var hyper2 = Utils.getUrlParameter('search_query');
-
-            if(hyper2 != undefined)
-            {
-              $(".tag-header").html("Resultados");
-            }
-
-            var hyper = Utils.getUrlParameter('tag').split(',');
-
-            if(hyper[0] == "Categoria2_Calzado_Mujer")
-            {
-              $(".tag-header").html("Mujeres");
-            }
-
-            if(hyper[0] == "Categoria2_Calzado_Hombre")
-            {
-              $(".tag-header").html("Hombres");
-            }
-
-            if(hyper[0] == "nino")
-            {
-              $(".tag-header").html("Niños");
-            }
-
-            if(hyper[0] == "oferta")
-            {
-              $(".tag-header").html("Oferta");
-            }
-
-        });
-    </script>
-
-    <script type="text/javascript">
-        $("#testButton").live("touchstart", function()
-        {
-            $(this).addClass("active");
-        }).live("touchend", function() {
-            $(this).removeClass("active");
-        });
-    </script>
-    <script>
-      $("#menu-toggle").click(function(e) {
-          e.preventDefault();
-          $("#wrapper").toggleClass("toggled");
-      });
-    </script>
-
-
-{% end %}
-
-
-{% block body %}
-
-{% if is_admin %}
-{% set editabletext = 'editabletext' %}
-{% else %}
-{% set editabletext = '' %}
-{% end %}
-
-
-<!-- *contenido* -->
-<body id="lapimport">
-
-    <section>
-      <div class="container min">
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="texto-header-pro hidden-xs texto-ruta"> Home </div>
-        </div>
-      </div>
-    </section>
-
-
-<section>
-   <div class="container min dos">
-    <div class="col-md-3 col-sm-3 col-xs-12">
-      <section class="h_submenu hidden-xs visible-md visible-sm visible-lg">
-        <div class="col-md-12 col-sm-12 col-xs-12 mtl text-center" style="margin-bottom: 50px;border-right: 1px solid #E9E9ED; width: 92%;left: 8%;  margin-top: 13px;">
-          <div class="text-fil-2"> TIPO DE CALZADO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ desk-filter c-Categoria3_Formales" name="vehicle" tag="Categoria3_Formales" value="Boat" value2="Formales" disabled="true" checked="true"> 
-                <div class="fil h-Categoria3_Formales" >Formales</div>
-              </div>
-          </form>
-
-          <div class="clearfix"></div>
-
-          <div class="text-fil"> COLOR PRINCIPAL  </div>
-            <div>
-            <form action="/action_page.php" class="chek">
-            <div class="filtro-color">
-              <input type="checkbox" name="color" class="categ desk-filter c-Color_Azul" tag="Color_Azul" value2="Azul">
-              <div class="fil h-Color_Azul" >Azul</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ desk-filter c-Color_Beige" tag="Color_Beige" value2="Beige">
-               <div class="fil h-Color_Beige" >Beige</div>
-               
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ desk-filter c-Color_Cafe" value2="Café" tag="Color_Cafe">
-               <div class="fil h-Color_Cafe" >Cafe</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ desk-filter c-Color_Negro" tag="Color_Negro" value2="Negro">
-               <div class="fil h-Color_Negro" >Negro</div>
-            </div>
-             <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ desk-filter c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
-               <div class="fil h-Color_Burdeo" >Burdeo</div>
-            </div>
-
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ desk-filter c-Color_Verde" tag="Color_Verde" value2="Verde">
-               <div class="fil h-Color_Verde" >Verde</div>
-             </div>
-            </form>
-
-          <div class="clearfix"></div>
-         <div class="text-fil"> MATERIAL DEL ZAPATO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Mat_Capellada_Cuero" name="material" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
-                <div class="fil h-Mat_Capellada_Cuero" > Cuero </div>
-              </div>
-             <!-- <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Mat_Capellada_Eco_Cuero" name="vehicle2" tag="Mat_Capellada_Eco_Cuero" value="Eco Cuero" value="Cara" >
-                <div class="fil h-Mat_Capellada_Eco_Cuero" > Eco Cuero </div> 
-                <i class="fa fa-check-square ch-Mat_Capellada_Eco_Cuero hidden" aria-hidden="true" onclick="uncheck('Mat_Capellada_Eco_Cuero','Eco')"></i>
-              </div>-->
-          </form>
-
-          <div class="clearfix"></div>
-
-          <div class="text-fil"> MARCA </div>
-          <form action="/action_page.php" class="chek">
-           <!--  <div class="filtro-marca">
-                <input type="checkbox" class="categ desk-filter c-Belle" name="vehicle2" tag="Belle" value="Car" >
-                <div class="fil h-Belle" >Belle</div>
-               <i class="fa fa-check-square ch-Belle hidden" aria-hidden="true" onclick="uncheck('Belle')"></i>
-               </div> -->
-              <div class="filtro-marca">
-                <input type="checkbox" class="categ desk-filter c-Marca_Caffeine" name="marca" tag="Marca_Caffeine" value2="Caffeine">
-                <div class="fil h-Caffeine" >Caffeine</div>
-               <i class="fa fa-check-square ch-Caffeine hidden" aria-hidden="true" onclick="uncheck('Caffeine')"></i>
-               </div> 
-              <div class="filtro-marca">
-                <input type="checkbox" class="categ desk-filter c-Marca_Cocomate" name="marca" tag="Marca_Cocomate" value2="Cocomate">
-                <div class="fil h-Cocomate" >Cocomate</div>
-               </div> 
-              <!--<div class="filtro-marca">
-                <input type="checkbox" class="categ desk-filter c-Degas" name="vehicle1" tag="Degas" value="Bike" > 
-                <div class="fil h-Degas" >Degas </div>
-                <i class="fa fa-check-square ch-Degas hidden" aria-hidden="true" onclick="uncheck('Degas')"></i>
-              </div>-->
-              <div class="filtro-marca">
-                <input type="checkbox" class="categ desk-filter c-Marca_Manzini" name="marca" tag="Marca_Manzini" value2="Manzini">
-                <div class="fil h-Manzini" >Manzini</div>
-               </div> 
-               <!--<div class="filtro-marca">
-                <input type="checkbox" class="categ desk-filter c-Lola_Canales" name="marca" tag="Lola_Canales" value="Car" >
-                <div class="fil h-Lola_Canales" >Lola Canales</div>
-               <i class="fa fa-check-square ch-Lola_Canales hidden" aria-hidden="true" onclick="uncheck('Lola_Canales', 'Lola Canales')"></i>
-               </div>
-                <div class="filtro-marca">
-                <input type="checkbox" class="categ desk-filter c-Pasoli" name="marca" tag="Pasoli" value="Car" >
-                <div class="fil h-Pasoli" >Pasoli</div>
-               <i class="fa fa-check-square ch-Pasoli hidden" aria-hidden="true" onclick="uncheck('Pasoli')"></i>
-               </div> -->
-                <div class="filtro-marca">
-                <input type="checkbox" class="categ desk-filter c-Marca_Tarragona" name="marca" tag="Marca_Tarragona" value2="Tarragona">
-                <div class="fil h-Tarragona" >Tarragona</div>
-               </div> 
-          </form>
-
-          <div class="clearfix"></div>
-
-  <!--          <div class="text-fil"> OCASIÓN</div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-categorias">
-                <input type="checkbox" class="categ desk-filter c-Categoria4_Casuales" name="ocasion" tag="Categoria4_Casuales" value2="Casuales"> 
-                <div class="fil h-Categoria4_Casuales" >Casuales</div>
-              </div>
-               <div class="filtro-categorias">
-                <input type="checkbox" class="categ desk-filter c-Categoria4_Vestir" value2="Vestir" name="ocasion" tag="Categoria4_Vestir"> 
-                <div class="fil h-Categoria4_Vestir" >Vestir</div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> TIPO DE CIERRE </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Cierre_Abierto" name="cierre" value2="Abierto" tag="Cierre_Abierto">
-                <div class="fil h-Cierre_Abierto" > Abierto </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Cierre-Cerrado" name="cierre" value2="Cerrado" tag="Cierre_Cerrado">
-                <div class="fil h-Cierre_Cerrado" > Cerrado </div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> MATERIAL SUELA </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Mat_Suela_Goma_Eva" name="vehicle1" value="Eva" tag="Mat_Suela_Goma_Eva" value="Bike" >
-                <div class="fil h-Mat_Suela_Goma_Eva" > Eva </div>
-                <i class="fa fa-check-square ch-Mat_Suela_Goma_Eva hidden" aria-hidden="true" onclick="uncheck('Mat_Suela_Goma_Eva','Goma_Eva')"></i>
-              </div> 
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Mat_Suela_Kratón" name="suela" value2="Kratón" tag="Mat_Suela_Kratón">
-                <div class="fil h-Mat_Suela_Kratón" > Kratón </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Mat_Suela_Crepe" value2="Crepe" name="suela" tag="Mat_Suela_Crepe">
-                <div class="fil h-Mat_Suela_Crepe" > Crepe </div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> MATERIAL FORRO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Mat_Forro_Eco_Cuero" name="forro" tag="Mat_Forro_Eco_Cuero" value2="Eco Cuero">
-                <div class="fil h-Mat_Forro_Eco_Cuero" > Eco Cuero </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ desk-filter c-Mat_Forro_Textil" name="forro" tag="Mat_Forro_Textil" value2="Textil">
-                <div class="fil h-Mat_Forro_Textil" > Textil </div>
-              </div>
-          </form> -->
-
-            </div>
-        </div>
-
-  </section>
-</div>
-    <section>
-        <div class="col-md-8 col-sm-8 col-xs-12 muu">
-          <div class="col-md-12 col-sm-12 col-xs-12 mii">
-            <div class="texto-header-pro-2 tag-header">formales</div><div class="texto-header-pro-3 tag-header2"></div>
-          </div>
-        <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-md visible-sm visible-lg">
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ordenar por:
-                  <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
-                    <li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
-                    <li><a href="#!" class="nombre">Nombre</a></li>
-                    <li><a href="#!" class="aleatorio">Aleatorio</a></li>
-                </ul>
-            </div>
-        </div>
-          <div class="">
-            <div class=" filtrosRec hidden-xs">
-            
-                <!-- <div class="ordenar-precio"> Menos de $50.000 <i class="fa fa-times" aria-hidden="true" onclick="uncheck('billeteras')"></i></div> -->
-            </div>
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="limpiar hidden-xs hidden-sm">LIMPIAR TODO </div>
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12 kinti">
-              <a href="#!" class="variables1" tag="variable_1">Tallas Disponibles </a>
-              <a class=""> &nbsp &nbsp &nbsp</a>
-              <!--<a href="#!" class="variables3" tag="variable_3">Tipo de Taco</a>
-              <a class=""> &nbsp &nbsp &nbsp</a>
-              <a href="#!" class="variables4" tag="variable_4">Altura Taco</a>
-              <a class=""> &nbsp &nbsp &nbsp</a>
-              <a href="#!" class="variables2" tag="variable_2">Altura Plataforma </a>-->
-          </div>
-          <form action="/action_page.php" class="chek">
-           <div class="col-md-3 col-sm-3 col-xs-12 vari" style="margin-bottom: 0%;">
-            <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_38" type="checkbox" name="talla" tag="Talla_38" value2="38">38
-              </label>
-            </div>
-            <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_39" type="checkbox" name="talla" tag="Talla_39" value2="39">39
-              </label>
-            </div>
-            <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_40" type="checkbox" name="talla" tag="Talla_40" value2="40">40
-              </label>
-            </div>
-              <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_41" type="checkbox" name="talla" tag="Talla_41" value2="41">41
-              </label>
-            </div>
-              <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_42" type="checkbox" name="talla" tag="Talla_42" value2="42">42
-              </label>
-            </div>
-              <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_43" type="checkbox" name="talla" tag="Talla_43" value2="43">43
-              </label>
-            </div>
-            <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_44" type="checkbox" name="talla" tag="Talla_44" value2="44">44
-              </label>
-            </div>
-
-             <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_45" type="checkbox" name="talla" tag="Talla_45" value2="45">45
-              </label>
-            </div>
-
-             <div class="filtro-talla c-variable_1">
-              <label class="hidden c-variable_1">
-                <input class="hidden categ desk-filter c-variable_1 c-Talla_46" type="checkbox" name="talla" tag="Talla_46" value2="46">46
-              </label>
-            </div>
-
-            <!--<div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_03" type="checkbox" name="talla" tag="Platform03" value="0.3" >0.3cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_03 other hidden" aria-hidden="true" onclick="uncheck('Plataform_03','0.3')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_05" type="checkbox" name="talla" tag="Platform05" value="0.5" >0.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_05 other hidden" aria-hidden="true" onclick="uncheck('Plataform_05','0.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_07" type="checkbox" name="talla" tag="Platform07" value="0.7" >0.7cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_07 other hidden" aria-hidden="true" onclick="uncheck('Plataform_07','0.7')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_1" type="checkbox" name="talla" tag="Platform1" value="1" >1cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_1 other hidden" aria-hidden="true" onclick="uncheck('Plataform_1','1')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_12" type="checkbox" name="talla" tag="Platform12" value="1.2" >1.2cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_12 other hidden" aria-hidden="true" onclick="uncheck('Plataform_12','1.2')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_15" type="checkbox" name="talla" tag="Platform15" value="1.5" >1.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_15 other hidden" aria-hidden="true" onclick="uncheck('Plataform_15','1.5')"></i>
-            </div>
-             <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_2" type="checkbox" name="talla" tag="Platform2" value="2" >2cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_2 other hidden" aria-hidden="true" onclick="uncheck('Plataform_2','2')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_25" type="checkbox" name="talla" tag="Platform25" value="2.5" >2.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_25 other hidden" aria-hidden="true" onclick="uncheck('Plataform_2.5','2.5')"></i>
-            </div>
-             <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_3" type="checkbox" name="talla" tag="Platform3" value="3" >3cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_3 other hidden" aria-hidden="true" onclick="uncheck('Plataform_3','3')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_35" type="checkbox" name="talla" tag="Platform_3_5" value="3.5" >3.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_35 other hidden" aria-hidden="true" onclick="uncheck('Plataform_35','3.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_4" type="checkbox" name="talla" tag="Platform4" value="4" >4cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_4 other hidden" aria-hidden="true" onclick="uncheck('Plataform_4','4')"></i>
-            </div>
-            <div class="filtro-talla c-variable_2">
-              <label class="hidden c-variable_2">
-                <input class="hidden categ desk-filter c-variable_2 c-Plataform_45" type="checkbox" name="talla" tag="Platform4.5" value="4.5" >4.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_dos ch-Plataform_45 other hidden" aria-hidden="true" onclick="uncheck('Plataform_45','4.5')"></i>
-            </div>
-
-            <div class="filtro-talla c-variable_3">
-              <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Alto" value="alto" type="checkbox" name="talla" tag="Forma_Taco_Alto" value="Forma_Taco_Alto" >Alto
-              </label> 
-              <i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Alto other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Alto','Alto')"></i>
-            </div>
-            <div class="filtro-talla c-variable_3">
-              <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Bajo" value="bajo" type="checkbox" name="talla" tag="Forma_Taco_Bajo" value="Forma_Taco_Bajo" >Bajo
-              </label> 
-              <i class="fa fa-check-square c-variable_tres other ch-Forma_Taco_Bajo hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Bajo','Bajo')"></i>
-            </div>
-            <div class="filtro-talla c-variable_3">
-              <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Chino" value="Chino" type="checkbox" name="talla" tag="Forma_Taco_Chino" value="Forma_Taco_Chino" >Chino
-              </label>
-              <i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Chino other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Chino','Chino')"></i>
-            </div>
-            <div class="filtro-talla c-variable_3">
-              <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Medio" value="Medio" type="checkbox" name="talla" tag="Forma_Taco_Medio" value="Forma_Taco_Medio" >Medio
-              </label>
-              <i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Medio other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Medio','Medio')"></i>
-            </div>
-            <div class="filtro-talla c-variable_3">
-              <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Plano" value="Plano" type="checkbox" name="talla" tag="Forma_Taco_Plano" value="Forma_Taco_Plano" >Plano
-              </label>
-              <i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Plano other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Plano','Plano')"></i>
-            </div>
-            <div class="filtro-talla c-variable_3">
-              <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Tacon" value="Tacon" type="checkbox" name="talla" tag="Forma_Taco_Tacon" value="Forma_Taco_Tacon" >Tacón
-              </label>
-              <i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Tacon other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Tacon','Tacon')"></i>
-            </div>
-            <div class="filtro-talla c-variable_3">
-              <label class="hidden c-variable_3">
-                <input class="hidden categ desk-filter c-variable_3 c-Forma_Taco_Terraplen" type="checkbox" name="talla" tag="Forma_Taco_Terraplen" value="Forma_Taco_Terraplen" value="Terraplen" >Terraplén
-              </label>
-              <i class="fa fa-check-square c-variable_tres ch-Forma_Taco_Terraplen other hidden" aria-hidden="true" onclick="uncheck('Forma_Taco_Terraplen','Terraplen')"></i>
-            </div>
-
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_15" type="checkbox" tag="Taco_15" value="1.5" >1.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_15 other hidden" aria-hidden="true" onclick="uncheck('Taco_15','1.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_2" type="checkbox" tag="Taco_2" value="2" >2cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_2 other hidden" aria-hidden="true" onclick="uncheck('Taco_2','2')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_25" type="checkbox" tag="Taco_25" value="2.5" >2.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_25 other hidden" aria-hidden="true" onclick="uncheck('Taco_25','2.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_3" type="checkbox" tag="Taco_3" value="3" >3cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_3 other hidden" aria-hidden="true" onclick="uncheck('Taco_3','3')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_35" type="checkbox" tag="Taco_35" value="3.5" >3.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_35 other hidden" aria-hidden="true" onclick="uncheck('Taco_35','3.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_4" type="checkbox" tag="Taco_4" value="4" >4cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_4 other hidden" aria-hidden="true" onclick="uncheck('Taco_4','4')"></i>
-            </div>
-             <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_45" type="checkbox" tag="Taco_45" value="4.5" >4.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_45 other hidden" aria-hidden="true" onclick="uncheck('Taco_45','4.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_5" type="checkbox" tag="Taco_5" value="5" >5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_5 other hidden" aria-hidden="true" onclick="uncheck('Taco_5','5')"></i>
-            </div>
-             <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_55" type="checkbox" tag="Taco_55" value="5.5" >5.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_55 other hidden" aria-hidden="true" onclick="uncheck('Taco_55','5.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_6" type="checkbox" tag="Taco_6" value="6" >6cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_6 other hidden" aria-hidden="true" onclick="uncheck('Taco_6','6')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_65" type="checkbox" tag="Taco_65" value="6.5" >6.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_65 other hidden" aria-hidden="true" onclick="uncheck('Taco_65','6.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_7" type="checkbox" tag="taco_7" value="7" >7cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_7 other hidden" aria-hidden="true" onclick="uncheck('Taco_7','7')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_75" type="checkbox" tag="Taco_75" value="7.5" >7.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_75 other hidden" aria-hidden="true" onclick="uncheck('Taco_75','7.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_8" type="checkbox" tag="Taco_8" value="8" >8cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_8 other hidden" aria-hidden="true" onclick="uncheck('Taco_8','8')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_85" type="checkbox" tag="Taco_8.5" value="8.5" >8.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_85 other hidden" aria-hidden="true" onclick="uncheck('Taco_85','8.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_9" type="checkbox" tag="Taco_9" value="9" >9cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_9 other hidden" aria-hidden="true" onclick="uncheck('Taco_9','9')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_9.5" type="checkbox" tag="Taco_95" value="9.5" >9.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_9.5 other hidden" aria-hidden="true" onclick="uncheck('Taco_9.5','9.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_10" type="checkbox" tag="Taco_10" value="10" >10cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_10 other hidden" aria-hidden="true" onclick="uncheck('Taco_10','10')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_105" type="checkbox" tag="Taco_105" value="10.5" >10.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_105 other hidden" aria-hidden="true" onclick="uncheck('Taco_105','10.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_11" type="checkbox" tag="Taco_11" value="11" >11cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_11 other hidden" aria-hidden="true" onclick="uncheck('Taco_11','11')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_115" type="checkbox" tag="Taco_115" value="11.5" >11.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_115 other hidden" aria-hidden="true" onclick="uncheck('Taco_115','11.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_12" type="checkbox" tag="Taco_12" value="12" >12cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_12 other hidden" aria-hidden="true" onclick="uncheck('Taco_12','12')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_125" type="checkbox" tag="Taco_125" value="12.5" >12.5cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_125 other hidden" aria-hidden="true" onclick="uncheck('Taco_125','12.5')"></i>
-            </div>
-            <div class="filtro-talla c-variable_4">
-              <label class="hidden c-variable_4">
-                <input class="hidden categ desk-filter c-variable_4 c-Taco_13" type="checkbox" tag="Taco_13" value="13" >13cms
-              </label> 
-              <i class="fa fa-check-square c-variable_cuatro ch-Taco_13 other hidden" aria-hidden="true" onclick="uncheck('Taco_13','13')"></i>
-            </div>
--->
-          </div>
-        </form>
-        </div>
-
-    </section>
-
-    <!-- *****fin filtros DESKTOP**** -->
-
-
-
-    <!-- ******principio filtros MOVIL**** -->
-
-    <div class="col-xs-12 hidden-md hidden-lg hidden-sm visible-xs">
-       <div class="fixx"> 
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-orde">Ordenar por:
-          <span class="caret"></span></button>
-          <div class="palito"> </div>
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="modal" data-target="#myModal-fil-men">Filtrar por:
-          <span class="caret"></span></button>
+     <div class="text-fil"> COLOR PRINCIPAL  </div>
+       <div>
+     <form action="/action_page.php" class="chek">
+       <div class="filtro-color">
+         <input type="checkbox" name="color" class="categ desk-filter c-Color_Azul" tag="Color_Azul" value2="Azul">
+         <div class="fil h-Color_Azul" >Azul</div>
        </div>
-    </div>
+       <div class="filtro-color">
+          <input type="checkbox" name="color" class="categ desk-filter c-Color_Beige" tag="Color_Beige" value2="Beige">
+          <div class="fil h-Color_Beige" >Beige</div>
+       </div>
+       <div class="filtro-color">
+          <input type="checkbox" name="color" class="categ desk-filter c-Color_Cafe" value2="Café" tag="Color_Cafe">
+          <div class="fil h-Color_Cafe" >Cafe</div>
+       </div>
+       <div class="filtro-color">
+          <input type="checkbox" name="color" class="categ desk-filter c-Color_Negro" tag="Color_Negro" value2="Negro">
+          <div class="fil h-Color_Negro" >Negro</div>
+       </div>
+        <div class="filtro-color">
+          <input type="checkbox" name="color" class="categ desk-filter c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
+          <div class="fil h-Color_Burdeo" >Burdeo</div>
+       </div>
+       <div class="filtro-color">
+          <input type="checkbox" name="color" class="categ desk-filter c-Color_Verde" tag="Color_Verde" value2="Verde">
+          <div class="fil h-Color_Verde" >Verde</div>
+        </div>
+     </form>
+     <div class="clearfix"></div>
+    <div class="text-fil"> MATERIAL DEL ZAPATO </div>
+     <form action="/action_page.php" class="chek">
+         <div class="filtro-talla">
+           <input type="checkbox" class="categ desk-filter c-Mat_Capellada_Cuero" name="material" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
+           <div class="fil h-Mat_Capellada_Cuero" > Cuero </div>
+         </div>
+     </form>
 
-    <div class="col-md-8 col-sm-8 col-xs-12">
-        <div class="" style=""></div>
-        <hr class="listado">
-    </div>
+     <div class="clearfix"></div>
 
-<div class="visible-xs hidden-md hidden-sm hidden-lg" style="height:450px;display:block;margin:auto auto 0 auto;"></div>
-<div class="col-md-8 col-sm-8 col-xs-12  pinki">
-	<div class="products" style="min-height: 130px"></div>
-	<div class="col-xs-12">
-		<div align="center">
-			<a class="link-recargar hidden limpiar">Reanudar Busqueda</a>
-			<button type="button" class="btn btn-default more-products" style="display: none">CARGAR MÁS PRODUCTOS</button>
-		</div>
-	</div>
+     <div class="text-fil"> MARCA </div>
+     <form action="/action_page.php" class="chek">
+         <div class="filtro-marca">
+           <input type="checkbox" class="categ desk-filter c-Marca_Caffeine" name="marca" tag="Marca_Caffeine" value2="Caffeine">
+           <div class="fil h-Caffeine" >Caffeine</div>
+          <i class="fa fa-check-square ch-Caffeine hidden" aria-hidden="true" onclick="uncheck('Caffeine')"></i>
+          </div>
+         <div class="filtro-marca">
+           <input type="checkbox" class="categ desk-filter c-Marca_Cocomate" name="marca" tag="Marca_Cocomate" value2="Cocomate">
+           <div class="fil h-Cocomate" >Cocomate</div>
+          </div>
+
+         <div class="filtro-marca">
+           <input type="checkbox" class="categ desk-filter c-Marca_Manzini" name="marca" tag="Marca_Manzini" value2="Manzini">
+           <div class="fil h-Manzini" >Manzini</div>
+          </div>
+           <div class="filtro-marca">
+           <input type="checkbox" class="categ desk-filter c-Marca_Tarragona" name="marca" tag="Marca_Tarragona" value2="Tarragona">
+           <div class="fil h-Tarragona" >Tarragona</div>
+          </div>
+     </form>
 </div>
-</section>
-<hr class="linea-prefooter">
-<div class="pre-footer">
-	<div class="col-md-12 col-sm-12 col-xs-12 alme">
-		<div class="col-md-2 col-sm-2 col-xs-12">
-			<div class="kop {{editabletext}}" text-id="{{ site.name + '_pre_footer_ex_1115' }}"> {{ read_text(site.name +  '_pre_footer_ex_1115') }} </div>
-		</div>
 
-		<div class="col-md-10 col-sm-10 col-xs-12 linea-pre-footer">
-			<hr class="new-f">
-		</div>
-
-		<div class="col-md-12 col-sm-12 col-xs-12 alme pre-footer-text">
-			<div class="bre {{editabletext}}" text-id="{{ site.name + '_pre_footer_ber14' }}"> {{ read_text(site.name +  '_pre_footer_ber14') }} </div>
-		</div>
-	</div>
-</div>
-
-</body>
-{% include '../home/footer.html' %}
 {% end %}
