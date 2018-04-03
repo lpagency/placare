@@ -335,14 +335,12 @@ div.image-upload.fo {
     font-size: 15px;
     color: #282c3f;
     font-weight:400;
-    width: 131%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     top: 9px;
     position: relative;
     margin-bottom: 22px;
-    right: 26px;
     text-align: left;
     margin-top: 13px;
     text-transform: uppercase;
@@ -353,8 +351,7 @@ hr.new-f {
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #E9E9ED;
-    width: 96%;
-    right: 30px;
+    width: 100%;
     position: relative;
 }
 
@@ -423,6 +420,7 @@ hr.f-min-2 {
     font-size: 14px;
     color: #696b79;
     font-weight: 300;
+    width: 100%;
 }
 
 .container.min-2{
@@ -452,7 +450,6 @@ hr.f-min-2 {
 }
 
 .alme {
-    margin-left: -10px;
     padding: 0px;
     padding-right: 9px;
 }
@@ -1027,6 +1024,10 @@ hr.new-f {
     margin-bottom: 0px;
     position: relative;
     left: -17px;
+}
+
+.kop{
+    right: 0px;
 }
 
 .alme {
