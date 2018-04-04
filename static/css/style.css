@@ -25,6 +25,10 @@ li{
 	list-style: none;
 }
 
+.alme-2{
+    padding-left: 0px;
+}
+
 .table>thead>tr>th {
     vertical-align: bottom;
     border-bottom: 1px solid #ddd;
