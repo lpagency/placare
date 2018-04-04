@@ -351,7 +351,8 @@ hr.new-f {
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #E9E9ED;
-    width: 100%;
+    width: 125%;
+    left: -67px;
     position: relative;
 }
 
@@ -451,7 +452,7 @@ hr.f-min-2 {
 
 .alme {
     padding: 0px;
-    padding-right: 9px;
+    width: 101%;
 }
 
 .alme-2 {

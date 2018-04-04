@@ -95,7 +95,7 @@
 
 <section class="hidden-xs">
     <div class="container min">
-            <div class="mobile" style="background:url('{{ read_image(site.name + '_home',500) }}');height: 350px;background-size: cover;margin-top: 0px;filter: grayscale(0%) brightness(95%);-webkit-filter: grayscale(0%) brightness(95%);-moz-filter: grayscale(0%) brightness(95%);-ms-filter: grayscale(0%) brightness(95%);-o-filter: grayscale(0%) brightness(95%);background-position: center;margin-bottom: 20px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+            <div class="mobile" style="background:url('{{ read_image(site.name + '_home',500) }}');height: 525px;background-size: cover;margin-top: 0px;filter: grayscale(0%) brightness(95%);-webkit-filter: grayscale(0%) brightness(95%);-moz-filter: grayscale(0%) brightness(95%);-ms-filter: grayscale(0%) brightness(95%);-o-filter: grayscale(0%) brightness(95%);background-position: center;margin-bottom: 20px;" data-img-width="1600" data-img-height="1064" data-diff="100">
         {% if is_admin %}
         <div class="image-upload part1 lapiz visible-movil">
             <label for="img_home">
@@ -159,7 +159,7 @@
           {% end %}
         </div>
         <div class="col-md-8 col-sm-8 col-xs-12 article-ho">
-          <div style="position:relative;">
+          <div class="hidden-xs" style="position:relative;">
             {% if is_admin %}
               <div class="image-upload lapiz visible-movil">
                 <label for="img_box_4">
@@ -170,6 +170,20 @@
             {% end %}
             <a id="{{ site.name + '_box_4' }}" href="{{ read_link(site.name + '_box_4') }}">
               <img id="{{ site.name }}_box_4" src="{{ read_image(site.name + '_box_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_4',) }}'" class="box-med" alt="item">
+            </a>
+          </div>
+
+          <div class="visible-xs" style="position:relative;">
+            {% if is_admin %}
+              <div class="image-upload lapiz visible-movil">
+                <label for="img_box_4_1">
+                  <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_box_4_1" name="image" id="img_box_4_1" >
+              </div>
+            {% end %}
+            <a id="{{ site.name + '_box_4' }}" href="{{ read_link(site.name + '_box_4') }}">
+              <img id="{{ site.name }}_box_4_1" src="{{ read_image(site.name + '_box_4_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_4_1',) }}'" class="box-med" alt="item">
             </a>
           </div>
 
@@ -215,7 +229,7 @@
           {% end %}
         </div>
         <div class="col-md-8 col-sm-8 col-xs-12 article-ho">
-          <div style="position:relative;">
+          <div class="hidden-xs" style="position:relative;">
             {% if is_admin %}
               <div class="image-upload lapiz visible-movil">
                 <label for="img_box_77">
@@ -226,6 +240,20 @@
             {% end %}
             <a id="{{ site.name + '_box_77' }}" href="{{ read_link(site.name + '_box_77') }}">
               <img id="{{ site.name }}_box_77" src="{{ read_image(site.name + '_box_77', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_77',) }}'" class="box-med" alt="item">
+            </a>
+          </div>
+
+          <div class="visible-xs" style="position:relative;">
+            {% if is_admin %}
+              <div class="image-upload lapiz visible-movil">
+                <label for="img_box_77_1">
+                  <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_box_77_1" name="image" id="img_box_77_1" >
+              </div>
+            {% end %}
+            <a id="{{ site.name + '_box_77' }}" href="{{ read_link(site.name + '_box_77') }}">
+              <img id="{{ site.name }}_box_77_1" src="{{ read_image(site.name + '_box_77_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_77_1',) }}'" class="box-med" alt="item">
             </a>
           </div>
           {% if is_admin %}
@@ -261,7 +289,7 @@
               </div>
             {% end %}
             <a id="{{ site.name + '_box_99' }}" href="{{ read_link(site.name + '_box_99') }}">
-              <img id="{{ site.name }}_box_99" src="{{ read_image(site.name + '_box_99', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_99',) }}'" class="box-med" alt="item">¡
+              <img id="{{ site.name }}_box_99" src="{{ read_image(site.name + '_box_99', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_box_99',) }}'" class="box-med" alt="item">
             </a>
           </div>
           {% if is_admin %}
