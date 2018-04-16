@@ -672,7 +672,7 @@ input.cup{
     .cli
     {
         margin-bottom: 11px !important;
-        margin-top: -8px;
+        margin-top: 10px;
     }
 
     .article-ho
@@ -704,26 +704,10 @@ input.cup{
        margin-bottom: 0px !important;
     }
 
-    .cli
-    {
-        margin-bottom: 11px !important;
-        margin-top: -20px;
-    }
-
     .box-med-2
     {
         height: auto;
         margin-bottom: 10px !important;
-    }
-
-}
-
-@media (max-width: 360px)
-{
-    .cli
-    {
-        margin-bottom: 11px !important;
-        margin-top: -27px;
     }
 
 }
@@ -747,7 +731,6 @@ input.cup{
     .cli
     {
         margin-bottom: -61px !important;
-        margin-top: -47px;
     }
 
     .box-med-2
