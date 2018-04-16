@@ -40,25 +40,34 @@ li{
     margin-left: -3px;
 }
 
-img.editablelink {
+img.editablelink
+{
     position: absolute;
     left: 20px;
     bottom: 20px;
     z-index: 1030 !important;
 }
 
-div.image-upload {
+div.image-upload
+{
     position: absolute;
     right: 20px;
     top: 20px;
     z-index: 1030 !important;
 }
 
-.linea-prefooter{
-    width: 75%;
+.linea-prefooter
+{
+    width: 100%;
 }
 
-div.upload input, div.image-upload input {
+.banner-principal-index
+{
+    height: 525px;
+}
+
+div.upload input, div.image-upload input
+{
     position: absolute;
     left: auto;
     right: 0px;
@@ -73,17 +82,20 @@ div.upload input, div.image-upload input {
     overflow: hidden;
 }
 
-.pre-footer{
+.pre-footer
+{
     width: 80% !important;
     height: 200px;
-    margin-left: 15.2%;
+    margin-left: 12%;
 }
 
-.linea-pre-footer{
-    width: 82%;
+.linea-pre-footer
+{
+    width: 37.5%;
 }
 
-.pre-footer-text{
+.pre-footer-text
+{
     width: 92%;
     text-align: justify;
 }
@@ -461,64 +473,95 @@ input.cup{
 }
 /*-----------------------------------------------------Responsive---------------------------------------*/
 
-@media (max-width: 991px){
-	.article-ho-2 {
-    overflow: hidden;
-    padding: 0px 5px;
-    margin-bottom: 17px;
-    margin-top: 0px;
+@media (max-width: 1024px)
+{
+    .pre-footer
+    {
+        width: 96%!important;
+        margin-left: 1%;
+    }
+
+    .linea-pre-footer
+    {
+        width: 41.5%;
+    }
 }
 
-.align-form-contact {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-top: 55px;
-    width: 100%;
-}
+@media (max-width: 991px)
+{
+    .article-ho-2
+    {
+        overflow: hidden;
+        padding: 0px 5px;
+        margin-bottom: 17px;
+        margin-top: 0px;
+    }
 
-.coli {
-    margin-top: 50px;
-    position: relative;
-    right: 14px;
-}
+    .banner-principal-index
+    {
+        height: 400px;
+    }
 
-.form-group.con {
-    margin-bottom: 19px;
-    margin-left: -8px;
-}
+    .box-med-2
+    {
+        height: 230px;
+    }
 
-.btn-block {
-    display: block;
-    width: 100%;
-    border-radius: 0px;
-    float: left;
-    position: relative;
-    right: 6px;
-}
+    .align-form-contact
+    {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 55px;
+        width: 100%;
+    }
 
-.btn-block:hover {
-    display: block;
-    width: 100%;
-    border-radius: 0px;
-    background-color: white;
-    color: gray;
-    border: 1px solid gray;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    float: left;
-    position: relative;
-    right:0px;
-}
+    .coli
+    {
+        margin-top: 50px;
+        position: relative;
+        right: 14px;
+    }
 
-.img-tiempo {
-    object-fit: scale-down;
-    width: 100%;
-    margin-top: 0px;
-}
+    .form-group.con
+    {
+        margin-bottom: 19px;
+        margin-left: -8px;
+    }
 
+    .btn-block
+    {
+        display: block;
+        width: 100%;
+        border-radius: 0px;
+        float: left;
+        position: relative;
+        right: 6px;
+    }
+
+    .btn-block:hover
+    {
+        display: block;
+        width: 100%;
+        border-radius: 0px;
+        background-color: white;
+        color: gray;
+        border: 1px solid gray;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        float: left;
+        position: relative;
+        right:0px;
+    }
+
+    .img-tiempo
+    {
+        object-fit: scale-down;
+        width: 100%;
+        margin-top: 0px;
+    }
 }
 
 
