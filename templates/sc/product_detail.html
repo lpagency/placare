@@ -35,17 +35,6 @@
   });
 </script>
 
-<script type="text/javascript">
-    $(document).ready(function()
-    {
-
-        // $(document).on("click", "#open-cart", function()
-        // {
-        //     console.log($("#total").html());
-        // });
-    });
-</script>
-
 <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -64,8 +53,6 @@
 
     $(document).ready(function()
     {
-
-        console.log("asdfasdf");
 
         $(document).on("click", ".main-1", function()
         {
@@ -248,7 +235,6 @@
                         $("[value="+ last +"]").removeClass("btn-disabled");
                         $("[value="+ last +"]").children("span").remove();
 
-                        console.log(p+" = "+d[p]);
                     }
                 }
             });
@@ -326,7 +312,6 @@
 
         $(document).on("click", ".boton-news", function()
         {
-            console.log("aaaa");
             $(this).html("ESPERE");
             if($(this).hasClass("sus"))
             {
