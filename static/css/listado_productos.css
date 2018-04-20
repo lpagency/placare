@@ -22,8 +22,9 @@
 
 .cargando-variantes
 {
-    width: 25%;
+    width: 15%;
     position: relative;
+    left: 8%;
 }
 
 .img-talla
@@ -1701,6 +1702,12 @@ hr.lon
         left: -30px;
         margin-left: 0px;
         float: left;
+    }
+
+    .cargando-variantes
+    {
+        width: 25%;
+        left: 0%;
     }
 
     .fin

@@ -75,11 +75,6 @@
             var site_name = $.environmentVar('placare', 'placare', 'placare');
             var variants_loaded = false;
 
-            // setTimeout(function()
-            // {
-            //     $(".variants-loading").html('<img class="cargando-filtros" src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif" style="position: relative; left: 250px;">');
-            // },100);
-
             var options = {
                 'app_public' : app_public,
                 'base_url' : base_url,
@@ -118,6 +113,7 @@
                     // check if variants were triggered
                     if (variants_loaded)
                     {
+                        $('.variants-loading').addClass('hidden');
                         return;
                     }
                     // add some settings
@@ -427,7 +423,7 @@
                         <div class="col-md-12 col-sm-12 col-xs-12 cre">
                             <div class="col-md-12 mover variants-container"></div>
                             <div class="col-md-12 mover variants-loading">
-                                <img class="cargando-filtros" src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif" style="position: relative; left: 250px;">
+                                <img class="cargando-variantes" src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif">
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs visible-sm visible-lg visible-md">
