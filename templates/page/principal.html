@@ -17,7 +17,7 @@ window.url_tags = "{% block tags %}{% end %}";
 </script>
 <script type="text/javascript" src="{{ site_base }}/static/js/spec_filter.js"></script>
 <script type="text/javascript">
-$(document).ready(function() 
+$(document).ready(function()
 {
     $("#menu-fixed").pin(
     {
@@ -25,7 +25,7 @@ $(document).ready(function()
         minWidth: 769
     });
 
-    $('.btn-primary.header').click(function(event) 
+    $('.btn-primary.header').click(function(event)
     {
         $(this).next().stop().slideToggle();
         return false;
@@ -35,12 +35,12 @@ $(document).ready(function()
     $("title").html("Placare - Listado de productos");
     $("meta[name=description]").attr("content", "");
 
-    $(document).on("click", ".background-color-producto", function() 
+    $(document).on("click", ".background-color-producto", function()
     {
         $(this).css("border", "black solid 2px");
     });
 
-    $(document).on("click", ".categ", function(ev) 
+    $(document).on("click", ".categ", function(ev)
     {
         $(".subcateg").removeClass('active');
         $(this).addClass('active');
@@ -48,36 +48,35 @@ $(document).ready(function()
 
     var hyper2 = Utils.getUrlParameter('search_query');
 
-    if (hyper2 != undefined) 
+    if (hyper2 != undefined)
     {
         $(".tag-header").html("Resultados");
     }
 
     var hyper = Utils.getUrlParameter('tag').split(',');
 
-    if (hyper[0] == "Categoria2_Calzado_Mujer") 
+    if (hyper[0] == "Categoria2_Calzado_Mujer")
     {
         $(".tag-header").html("Mujeres");
     }
 
-    if (hyper[0] == "Categoria2_Calzado_Hombre") 
+    if (hyper[0] == "Categoria2_Calzado_Hombre")
     {
         $(".tag-header").html("Hombres");
     }
 
-    if (hyper[0] == "nino") 
+    if (hyper[0] == "nino")
     {
         $(".tag-header").html("Niños");
     }
 
-    if (hyper[0] == "oferta") 
-    {
+    if (hyper[0] == "oferta") {
         $(".tag-header").html("Oferta");
     }
 
-    setTimeout(function() 
+    setTimeout(function()
     {
-        if (scroll > 794) 
+        if (scroll > 794)
         {
             $(".more-products").click();
         }
@@ -109,23 +108,23 @@ $(document).ready(function()
 
 });
 
-$("#testButton").live("touchstart", function() 
+$("#testButton").live("touchstart", function()
 {
     $(this).addClass("active");
-}).live("touchend", function() 
+}).live("touchend", function()
 {
     $(this).removeClass("active");
 });
 
-$("#menu-toggle").click(function(e) {
+$("#menu-toggle").click(function(e)
+{
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
 });
-
-</script>
-{% end %} 
+</script>{% end %}
 
 {% block body %}
+
 {% if is_admin %}
     {% set editabletext = 'editabletext' %}
 {% else %}
@@ -447,4 +446,5 @@ $("#menu-toggle").click(function(e) {
         </div>
     </div>
 </body>
-{% include '../home/footer.html' %} {% end %}
+{% include '../home/footer.html' %}
+{% end %}

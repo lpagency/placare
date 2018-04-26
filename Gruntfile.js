@@ -8,16 +8,6 @@
         require('load-grunt-tasks')(grunt);  //jshint ignore: line
 
         grunt.initConfig({
-
-            // uglify: {
-            //     my_target: {
-            //         files: {
-            //             'static/css/style.min.css': ['static/css/style.es5.css'],
-            //             'static/css/header.min.css': ['static/css/header.es5.css']
-            //         }
-            //     }
-            // },
-
             cssmin: {
               options: {
                 mergeIntoShorthands: false,
