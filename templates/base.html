@@ -1,45 +1,41 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104850079-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
 
-          gtag('config', 'UA-104850079-1');
-        </script>
-        <!-- head bt inicio -->
-        <title>Placare</title>
-        <base href="{{ site_base }}/">
-        <meta charset="utf-8">
-        <meta name="title" content="">
-        <meta name="description" content="">
-        <meta name="author" content="loadingplay.com">
-        <meta name="google-site-verification" content="TCWFh3WZyUCgzF1hc2WmC56Y0rffAXS4zflVfZju26Y" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="jquery, vertical, scrolling, scroll, smooth"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% include 'product/product_box.html' %}
-        {% include 'product/product_home.html' %}
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104850079-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
 
-        {% if is_admin %}
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-104850079-1');
+    </script>
+
+    <!-- head bt inicio -->
+    <title>Placare</title>
+    <base href="{{ site_base }}/">
+    <meta charset="utf-8">
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="author" content="loadingplay.com">
+    <meta name="google-site-verification" content="TCWFh3WZyUCgzF1hc2WmC56Y0rffAXS4zflVfZju26Y" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    {% include 'product/product_box.html' %}
+    {% include 'product/product_home.html' %}
+    {% if is_admin %}
         {% set editabletext = 'editabletext' %}
-        {% else %}
+    {% else %}
         {% set editabletext = '' %}
-        {% end %}
+    {% end %}
+</head>
 
-    </head>
+<body>
+    {% block header %}{% end %}
+    {% block body %}{% end %}
 
-
-
-    <body >
-        {% block header %}{% end %}
-        {% block body %}{% end %}
-
-         <!-- Modal -->
+    <!-- Modal -->
     <div align="center">
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
@@ -75,826 +71,519 @@
             </div>
         </div>
     </div>
-
-
     <!-- ********Modal filtros ordenar******** -->
-
-<!-- Modal -->
-<div id="myModal-orde" class="modal fade" role="dialog">
-  <div class="modal-dialog filtrosmovil">
-
-    <!-- Modal content-->
-    <div class="modal-content filtros">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title text-center"><br> ORDENAR POR:</h4>
-      </div>
-      <div class="modal-body text-center">
-         <ul class="">
-            <li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
-            <li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
-            <li><a href="#!" class="nombre">Nombre</a></li>
-            <li><a href="#!" class="aleatorio">Aleatorio</a></li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
+    <!-- Modal -->
+    <div id="myModal-orde" class="modal fade" role="dialog">
+        <div class="modal-dialog filtrosmovil">
+            <!-- Modal content-->
+            <div class="modal-content filtros">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center"><br> ORDENAR POR:</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <ul class="">
+                        <li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
+                        <li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
+                        <li><a href="#!" class="nombre">Nombre</a></li>
+                        <li><a href="#!" class="aleatorio">Aleatorio</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-  </div>
-</div>
-
-<div id="myModal-fil" class="modal fade" role="dialog">
-  <div class="modal-dialog filtrosmovil">
-
-    <!-- Modal content-->
-    <div class="modal-content filtros">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title text-center"><br> FILTRAR POR:</h4>
-      </div>
-      <div class="modal-body fili text-center">
-  <section class="h_submenu hidden-md hidden-lg hidden-sm visible-xs">
-        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-          <div class="text-fil-2"> TIPO DE CALZADO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Ballerinas" name="vehicle" tag="Categoria3_Ballerinas" value="Auto" value2="Ballerinas">
-                <div class="fil h-Categoria3_Ballerinas" >Ballerinas</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines">
-                <div class="fil h-Categoria3_Botines" >Botines</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Mocasines" name="vehicle" tag="Categoria3_Mocasines" value="Boat" value2="Mocasines">
-                <div class="fil h-Categoria3_Mocasines" >Mocasines</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Mules" name="vehicle" tag="Categoria3_Mules" value="Boat" value="Mules" value2="Mules">
-                <div class="fil h-Categoria3_Mules" >Mules</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Plataformas" name="vehicle" tag="Categoria3_Plataformas" value="Boat" value2="Plataformas">
-                <div class="fil h-Categoria3_Plataformas" >Plataformas</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Playeras" name="vehicle" tag="Categoria3_Playeras" value="Boat" value2="Playeras">
-                <div class="fil h-Categoria3_Playeras" >Playeras</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias">
-                <div class="fil h-Categoria3_Sandalias" >Sandalias</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos">
-                <div class="fil h-Categoria3_Zapatos" >Zapatos</div>
-              </div>
-          </form>
-
-          <div class="clearfix"></div>
-
-          <div class="text-fil"> COLOR PRINCIPAL  </div>
-            <div>
-            <form action="/action_page.php" class="chek">
-            <div class="filtro-color">
-              <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Azul" tag="Color_Azul" value2="Azul">
-              <div class="fil h-Color_Azul" >Azul</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Beige" tag="Color_Beige" value2="Beige">
-               <div class="fil h-Color_Beige" >Beige</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Blanco" tag="Color_Blanco" value2="Blanco">
-               <div class="fil h-Color_Blanco" >Blanco</div>
-            </div>
-             <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
-               <div class="fil h-Color_Burdeo" >Burdeo</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Cafe" value2="Café" tag="Color_Cafe">
-               <div class="fil h-Color_Cafe" >Cafe</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Dorado" tag="Color_Dorado" value2="Dorado">
-               <div class="fil h-Color_Dorado" >Dorado</div>
-             </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Gris" tag="Color_Gris" value2="Gris">
-               <div class="fil h-Color_Gris" >Gris</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Metalico" tag="Color_Metalico" value2="Metálico">
-               <div class="fil h-Color_Metalico" >Metalico</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Negro" tag="Color_Negro" value2="Negro">
-               <div class="fil h-Color_Negro" >Negro</div>
-            </div>
-              <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Rojo" tag="Color_Rojo" value2="Rojo">
-               <div class="fil h-Color_Rojo" >Rojo</div>
-            </div>
-              <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ desk-filter c-Color_Verde" tag="Color_Verde" value2="Verde">
-               <div class="fil h-Color_Verde" >Verde</div>
-            </div>
-              <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ desk-filter c-Color_Violeta" tag="Color_Violeta" value2="Violeta">
-               <div class="fil h-Color_Violeta" >Violeta</div>
-            </form>
-
-          <div class="clearfix"></div>
-         <div class="text-fil"> MATERIAL DEL ZAPATO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" name="material" class="categ female-filter mobile-filter c-Mat_Capellada_Cuero" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
-                <div class="fil h-Mat_Capellada_Cuero" > Cuero </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" name="material" class="categ female-filter mobile-filter c-Mat_Capellada_Eco_Cuero" tag="Mat_Capellada_Eco_Cuero" value2="Eco Cuero" value="Cara">
-                <div class="fil h-Mat_Capellada_Eco_Cuero" > Eco Cuero </div>
-              </div>
-          </form>
-
-          <div class="clearfix"></div>
-
-          <div class="text-fil"> MARCA </div>
-          <form action="/action_page.php" class="chek">
-               <div class="filtro-marca">
-                <input type="checkbox" name="marca" class="categ female-filter mobile-filter c-Marca_Degas" tag="Marca_Degas" value2="Degas">
-                <div class="fil h-Marca_Degas" >Degas </div>
-              </div>
-              <div class="filtro-marca">
-                <input type="checkbox" name="marca" class="categ female-filter mobile-filter c-Marca_Eda_Manzini" tag="Marca_Eda_Manzini" value2="Eda Manzini">
-                <div class="fil h-Marca_Eda_Manzini" >Eda Manzini</div>
-               </div>
-               <div class="filtro-marca">
-                <input type="checkbox" name="marca" class="categ female-filter mobile-filter c-Marca_Lola_Canales" tag="Marca_Lola_Canales" value2="Lola Canales">
-                <div class="fil h-Lola_Canales" >Lola Canales</div>
-               </div>
-          </form>
-
-          <div class="clearfix"></div>
-
-   <!--         <div class="text-fil"> OCASIÓN</div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-categomobile-filter rias">
-                <input type="checkbox" name="ocasion" class="categ mobile-filter c-Categoria4_Casuales" tag="Categoria4_Casuales" value2="Casuales" value="Bike">
-                <div class="fil h-Categoria4_Casuales" >Casuales</div>
-              </div>
-              <div class="filtro-categomobile-filter rias">
-                <input type="checkbox" name="ocasion" class="categ mobile-filter c-Categoria4_Confort" value2="Confort" tag="Categoria4_Confort" value="Car">
-                <div class="fil h-Categoria4_Confort" >Confort </div>
-              </div>
-              <div class="filtro-categomobile-filter rias">
-                <input type="checkbox" name="ocasion" class="categ mobile-filter c-Categoria4_Fiesta" value2="Fiesta" tag="Categoria4_Fiesta" value="Boat">
-                <div class="fil h-Categoria4_Fiesta" >Fiesta</div>
-              </div>
-               <div class="filtro-categomobile-filter rias">
-                <input type="checkbox" name="ocasion" class="categ mobile-filter c-Categoria4_Vestir" value2="Vestir" tag="Categoria4_Vestir" value="Boat">
-                <div class="fil h-Categoria4_Vestir" >Vestir</div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> TIPO DE CIERRE </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" name="cierre" class="categ mobile-filter c-Cierre_Abierto" value2="Abierto" tag="Cierre_Abierto" value="Bike">
-                <div class="fil h-Cierre_Abierto" > Abierto </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" name="cierre" class="categ mobile-filter c-Cierre_Cerrado" value2="Cerrado" tag="Cierre_Cerrado" value="Cara">
-                <div class="fil h-Cierre_Cerrado" > Cerrado </div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> MATERIAL SUELA </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" name="suela" class="categ mobile-filter c-Mat_Suela_Goma_Eva" value2="Eva" tag="Mat_Suela_Goma_Eva" value="Bike">
-                <div class="fil h-Mat_Suela_Goma_Eva" > Eva </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" name="suela" class="categ mobile-filter c-Mat_Suela_Kratón" value2="Kratón" tag="Mat_Suela_Kratón" value="Cara">
-                <div class="fil h-Mat_Suela_Kratón" > Kratón </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" name="suela" class="categ mobile-filter c-Mat_Suela_Poliuretano" value2="Poliuretano" tag="Mat_Suela_Poliuretano" value="Cara">
-                <div class="fil h-Mat_Suela_Poliuretano" > Poliuretano </div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> MATERIAL FORRO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" name="forro" class="categ mobile-filter c-Mat_Forro_Cuero" tag="Mat_Forro_Cuero" value2="Cuero" value="Bike">
-                <div class="fil h-Mat_Forro_Cuero" > Cuero </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" name="forro" class="categ mobile-filter c-Mat_Forro_Eco_Cuero" tag="Mat_Forro_Eco_Cuero" value2="Eco Cuero" value="Cara">
-                <div class="fil h-Mat_Forro_Eco_Cuero" > Eco Cuero </div>
-              </div>
-          </form> -->
-
+    <div id="myModal-fil" class="modal fade" role="dialog">
+        <div class="modal-dialog filtrosmovil">
+            <!-- Modal content-->
+            <div class="modal-content filtros">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center"><br> FILTRAR POR:</h4>
+                </div>
+                <div class="modal-body fili text-center">
+                    <section class="h_submenu hidden-md hidden-lg hidden-sm visible-xs">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <div class="text-fil-2"> TIPO DE CALZADO </div>
+                            <form action="/action_page.php" class="chek">
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Ballerinas" name="vehicle" tag="Categoria3_Ballerinas" value="Auto" value2="Ballerinas">
+                                    <div class="fil h-Categoria3_Ballerinas">Ballerinas</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines">
+                                    <div class="fil h-Categoria3_Botines">Botines</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Mocasines" name="vehicle" tag="Categoria3_Mocasines" value="Boat" value2="Mocasines">
+                                    <div class="fil h-Categoria3_Mocasines">Mocasines</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Mules" name="vehicle" tag="Categoria3_Mules" value="Boat" value="Mules" value2="Mules">
+                                    <div class="fil h-Categoria3_Mules">Mules</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Plataformas" name="vehicle" tag="Categoria3_Plataformas" value="Boat" value2="Plataformas">
+                                    <div class="fil h-Categoria3_Plataformas">Plataformas</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Playeras" name="vehicle" tag="Categoria3_Playeras" value="Boat" value2="Playeras">
+                                    <div class="fil h-Categoria3_Playeras">Playeras</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias">
+                                    <div class="fil h-Categoria3_Sandalias">Sandalias</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter female-filter c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos">
+                                    <div class="fil h-Categoria3_Zapatos">Zapatos</div>
+                                </div>
+                            </form>
+                            <div class="clearfix"></div>
+                            <div class="text-fil"> COLOR PRINCIPAL </div>
+                            <div>
+                                <form action="/action_page.php" class="chek">
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Azul" tag="Color_Azul" value2="Azul">
+                                        <div class="fil h-Color_Azul">Azul</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Beige" tag="Color_Beige" value2="Beige">
+                                        <div class="fil h-Color_Beige">Beige</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Blanco" tag="Color_Blanco" value2="Blanco">
+                                        <div class="fil h-Color_Blanco">Blanco</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
+                                        <div class="fil h-Color_Burdeo">Burdeo</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Cafe" value2="Café" tag="Color_Cafe">
+                                        <div class="fil h-Color_Cafe">Cafe</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Dorado" tag="Color_Dorado" value2="Dorado">
+                                        <div class="fil h-Color_Dorado">Dorado</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Gris" tag="Color_Gris" value2="Gris">
+                                        <div class="fil h-Color_Gris">Gris</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Metalico" tag="Color_Metalico" value2="Metálico">
+                                        <div class="fil h-Color_Metalico">Metalico</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Negro" tag="Color_Negro" value2="Negro">
+                                        <div class="fil h-Color_Negro">Negro</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ female-filter mobile-filter c-Color_Rojo" tag="Color_Rojo" value2="Rojo">
+                                        <div class="fil h-Color_Rojo">Rojo</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ desk-filter c-Color_Verde" tag="Color_Verde" value2="Verde">
+                                        <div class="fil h-Color_Verde">Verde</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ desk-filter c-Color_Violeta" tag="Color_Violeta" value2="Violeta">
+                                        <div class="fil h-Color_Violeta">Violeta</div>
+                                    </div>
+                                </form>
+                                <div class="clearfix"></div>
+                                <div class="text-fil"> MATERIAL DEL ZAPATO </div>
+                                <form action="/action_page.php" class="chek">
+                                    <div class="filtro-talla">
+                                        <input type="checkbox" name="material" class="categ female-filter mobile-filter c-Mat_Capellada_Cuero" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
+                                        <div class="fil h-Mat_Capellada_Cuero"> Cuero </div>
+                                    </div>
+                                    <div class="filtro-talla">
+                                        <input type="checkbox" name="material" class="categ female-filter mobile-filter c-Mat_Capellada_Eco_Cuero" tag="Mat_Capellada_Eco_Cuero" value2="Eco Cuero" value="Cara">
+                                        <div class="fil h-Mat_Capellada_Eco_Cuero"> Eco Cuero </div>
+                                    </div>
+                                </form>
+                                <div class="clearfix"></div>
+                                <div class="text-fil"> MARCA </div>
+                                <form action="/action_page.php" class="chek">
+                                    <div class="filtro-marca">
+                                        <input type="checkbox" name="marca" class="categ female-filter mobile-filter c-Marca_Degas" tag="Marca_Degas" value2="Degas">
+                                        <div class="fil h-Marca_Degas">Degas </div>
+                                    </div>
+                                    <div class="filtro-marca">
+                                        <input type="checkbox" name="marca" class="categ female-filter mobile-filter c-Marca_Eda_Manzini" tag="Marca_Eda_Manzini" value2="Eda Manzini">
+                                        <div class="fil h-Marca_Eda_Manzini">Eda Manzini</div>
+                                    </div>
+                                    <div class="filtro-marca">
+                                        <input type="checkbox" name="marca" class="categ female-filter mobile-filter c-Marca_Lola_Canales" tag="Marca_Lola_Canales" value2="Lola Canales">
+                                        <div class="fil h-Lola_Canales">Lola Canales</div>
+                                    </div>
+                                </form>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Aplicar Filtro</button>
+                    <button class="limpiar limpiar_modal">Limpiar Todo </button>
+                </div>
             </div>
         </div>
-
-  </section>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Aplicar Filtro</button>
-        <button class="limpiar limpiar_modal">Limpiar Todo </button>
-      </div>
     </div>
-
-  </div>
-</div>
-
-<!-- ******MODAL HOMBRES****** -->
-<div id="myModal-fil-men" class="modal fade" role="dialog">
-  <div class="modal-dialog filtrosmovil">
-
-    <!-- Modal content-->
-    <div class="modal-content filtros">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title text-center"><br> FILTRAR POR:</h>
-      </div>
-      <div class="modal-body fili text-center">
-        <section class="h_submenu visible-xs hidden-md hidden-sm hidden-lg">
-        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-          <div class="text-fil-2"> TIPO DE CALZADO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter male-filter c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines">
-                <div class="fil h-Categoria3_Botines" >Botines</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter male-filter c-Categoria3_Formales" name="vehicle" tag="Categoria3_Formales" value="Boat" value2="Formales">
-                <div class="fil h-Categoria3_Formales" >Formales</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter male-filter c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias">
-                <div class="fil h-Categoria3_Sandalias" >Sandalias</div>
-              </div>
-              <div class="filtro-filtros">
-                <input type="checkbox" class="categ mobile-filter male-filter c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos">
-                <div class="fil h-Categoria3_Zapatos" >Zapatos</div>
-              </div>
-          </form>
-
-          <div class="clearfix"></div>
-
-          <div class="text-fil"> COLOR PRINCIPAL  </div>
-            <div>
-            <form action="/action_page.php" class="chek">
-            <div class="filtro-color">
-              <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Azul" tag="Color_Azul" value2="Azul">
-              <div class="fil h-Color_Azul" >Azul</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Beige" tag="Color_Beige" value2="Beige">
-               <div class="fil h-Color_Beige" >Beige</div>
-
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Cafe" value2="Café" tag="Color_Cafe">
-               <div class="fil h-Color_Cafe" >Cafe</div>
-            </div>
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Negro" tag="Color_Negro" value2="Negro">
-               <div class="fil h-Color_Negro" >Negro</div>
-            </div>
-             <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
-               <div class="fil h-Color_Burdeo" >Burdeo</div>
-            </div>
-
-            <div class="filtro-color">
-               <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Verde" tag="Color_Verde" value2="Verde">
-               <div class="fil h-Color_Verde" >Verde</div>
-             </div>
-            </form>
-
-          <div class="clearfix"></div>
-         <div class="text-fil"> MATERIAL DEL ZAPATO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter male-filter c-Mat_Capellada_Cuero" name="material" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
-                <div class="fil h-Mat_Capellada_Cuero" > Cuero </div>
-              </div>
-             <!-- <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter c-Mat_Capellada_Eco_Cuero" name="vehicle2" tag="Mat_Capellada_Eco_Cuero" value="Eco Cuero" value="Cara" >
-                <div class="fil h-Mat_Capellada_Eco_Cuero" > Eco Cuero </div>
-                <i class="fa fa-check-square ch-Mat_Capellada_Eco_Cuero hidden" aria-hidden="true" onclick="uncheck('Mat_Capellada_Eco_Cuero','Eco')"></i>
-              </div>-->
-          </form>
-
-          <div class="clearfix"></div>
-
-          <div class="text-fil"> MARCA </div>
-          <form action="/action_page.php" class="chek">
-           <!--  <div class="filtro-marca">
-                <input type="checkbox" class="categ mobile-filter c-Belle" name="vehicle2" tag="Belle" value="Car" >
-                <div class="fil h-Belle" >Belle</div>
-               <i class="fa fa-check-square ch-Belle hidden" aria-hidden="true" onclick="uncheck('Belle')"></i>
-               </div> -->
-              <div class="filtro-marca">
-                <input type="checkbox" class="categ male-filter mobile-filter c-Marca_Caffeine" name="marca" tag="Marca_Caffeine" value2="Caffeine">
-                <div class="fil h-Caffeine" >Caffeine</div>
-               <i class="fa fa-check-square ch-Caffeine hidden" aria-hidden="true" onclick="uncheck('Caffeine')"></i>
-               </div>
-              <div class="filtro-marca">
-                <input type="checkbox" class="categ male-filter mobile-filter c-Marca_Cocomate" name="marca" tag="Marca_Cocomate" value2="Cocomate">
-                <div class="fil h-Cocomate" >Cocomate</div>
-               </div>
-              <!--<div class="filtro-marca">
-                <input type="checkbox" class="categ mobile-filter c-Degas" name="vehicle1" tag="Degas" value="Bike" >
-                <div class="fil h-Degas" >Degas </div>
-                <i class="fa fa-check-square ch-Degas hidden" aria-hidden="true" onclick="uncheck('Degas')"></i>
-              </div>-->
-              <div class="filtro-marca">
-                <input type="checkbox" class="categ male-filter mobile-filter c-Marca_Manzini" name="marca" tag="Marca_Manzini" value2="Manzini">
-                <div class="fil h-Manzini" >Manzini</div>
-               </div>
-               <!--<div class="filtro-marca">
-                <input type="checkbox" class="categ mobile-filter c-Lola_Canales" name="vehicle2" tag="Lola_Canales" value="Car" >
-                <div class="fil h-Lola_Canales" >Lola Canales</div>
-               <i class="fa fa-check-square ch-Lola_Canales hidden" aria-hidden="true" onclick="uncheck('Lola_Canales', 'Lola Canales')"></i>
-               </div>
-                <div class="filtro-marca">
-                <input type="checkbox" class="categ mobile-filter c-Pasoli" name="vehicle2" tag="Pasoli" value="Car" >
-                <div class="fil h-Pasoli" >Pasoli</div>
-               <i class="fa fa-check-square ch-Pasoli hidden" aria-hidden="true" onclick="uncheck('Pasoli')"></i>
-               </div> -->
-                <div class="filtro-marca">
-                <input type="checkbox" class="categ male-filter mobile-filter c-Marca_Tarragona" name="marca" tag="Marca_Tarragona" value2="Tarragona">
-                <div class="fil h-Tarragona" >Tarragona</div>
-               </div>
-          </form>
-
-          <div class="clearfix"></div>
-
-  <!--          <div class="text-fil"> OCASIÓN</div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-categomobile-filter rias">
-                <input type="checkbox" class="categ mobile-filter c-Categoria4_Casuales" name="ocasion" tag="Categoria4_Casuales" value2="Casuales">
-                <div class="fil h-Categoria4_Casuales" >Casuales</div>
-              </div>
-               <div class="filtro-categomobile-filter rias">
-                <input type="checkbox" class="categ mobile-filter c-Categoria4_Vestir" value2="Vestir" name="ocasion" tag="Categoria4_Vestir">
-                <div class="fil h-Categoria4_Vestir" >Vestir</div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> TIPO DE CIERRE </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter c-Cierre_Abierto" name="cierre" value2="Abierto" tag="Cierre_Abierto">
-                <div class="fil h-Cierre_Abierto" > Abierto </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter c-Cierre-Cerrado" name="cierre" value2="Cerrado" tag="Cierre_Cerrado">
-                <div class="fil h-Cierre_Cerrado" > Cerrado </div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> MATERIAL SUELA </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter c-Mat_Suela_Goma_Eva" name="vehicle1" value="Eva" tag="Mat_Suela_Goma_Eva" value="Bike" >
-                <div class="fil h-Mat_Suela_Goma_Eva" > Eva </div>
-                <i class="fa fa-check-square ch-Mat_Suela_Goma_Eva hidden" aria-hidden="true" onclick="uncheck('Mat_Suela_Goma_Eva','Goma_Eva')"></i>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter c-Mat_Suela_Kratón" name="suela" value2="Kratón" tag="Mat_Suela_Kratón">
-                <div class="fil h-Mat_Suela_Kratón" > Kratón </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter c-Mat_Suela_Crepe" value2="Crepe" name="suela" tag="Mat_Suela_Crepe">
-                <div class="fil h-Mat_Suela_Crepe" > Crepe </div>
-              </div>
-          </form> -->
-
-          <div class="clearfix"></div>
-<!--          <div class="text-fil"> MATERIAL FORRO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter c-Mat_Forro_Eco_Cuero" name="forro" tag="Mat_Forro_Eco_Cuero" value2="Eco Cuero">
-                <div class="fil h-Mat_Forro_Eco_Cuero" > Eco Cuero </div>
-              </div>
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ mobile-filter c-Mat_Forro_Textil" name="forro" tag="Mat_Forro_Textil" value2="Textil">
-                <div class="fil h-Mat_Forro_Textil" > Textil </div>
-              </div>
-          </form> -->
-
+    <!-- ******MODAL HOMBRES****** -->
+    <div id="myModal-fil-men" class="modal fade" role="dialog">
+        <div class="modal-dialog filtrosmovil">
+            <!-- Modal content-->
+            <div class="modal-content filtros">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center"><br> FILTRAR POR:</h4>
+                </div>
+                <div class="modal-body fili text-center">
+                    <section class="h_submenu visible-xs hidden-md hidden-sm hidden-lg">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <div class="text-fil-2"> TIPO DE CALZADO </div>
+                            <form action="/action_page.php" class="chek">
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter male-filter c-Categoria3_Botines" name="vehicle" tag="Categoria3_Botines" value="Car" value2="Botines">
+                                    <div class="fil h-Categoria3_Botines">Botines</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter male-filter c-Categoria3_Formales" name="vehicle" tag="Categoria3_Formales" value="Boat" value2="Formales">
+                                    <div class="fil h-Categoria3_Formales">Formales</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter male-filter c-Categoria3_Sandalias" name="vehicle" tag="Categoria3_Sandalias" value="Boat" value2="Sandalias">
+                                    <div class="fil h-Categoria3_Sandalias">Sandalias</div>
+                                </div>
+                                <div class="filtro-filtros">
+                                    <input type="checkbox" class="categ mobile-filter male-filter c-Categoria3_Zapatos" name="vehicle" tag="Categoria3_Zapatos" value="Boat" value2="Zapatos">
+                                    <div class="fil h-Categoria3_Zapatos">Zapatos</div>
+                                </div>
+                            </form>
+                            <div class="clearfix"></div>
+                            <div class="text-fil"> COLOR PRINCIPAL </div>
+                            <div>
+                                <form action="/action_page.php" class="chek">
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Azul" tag="Color_Azul" value2="Azul">
+                                        <div class="fil h-Color_Azul">Azul</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Beige" tag="Color_Beige" value2="Beige">
+                                        <div class="fil h-Color_Beige">Beige</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Cafe" value2="Café" tag="Color_Cafe">
+                                        <div class="fil h-Color_Cafe">Cafe</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Negro" tag="Color_Negro" value2="Negro">
+                                        <div class="fil h-Color_Negro">Negro</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Burdeo" tag="Color_Burdeo" value2="Burdeo">
+                                        <div class="fil h-Color_Burdeo">Burdeo</div>
+                                    </div>
+                                    <div class="filtro-color">
+                                        <input type="checkbox" name="color" class="categ male-filter mobile-filter c-Color_Verde" tag="Color_Verde" value2="Verde">
+                                        <div class="fil h-Color_Verde">Verde</div>
+                                    </div>
+                                </form>
+                                <div class="clearfix"></div>
+                                <div class="text-fil"> MATERIAL DEL ZAPATO </div>
+                                <form action="/action_page.php" class="chek">
+                                    <div class="filtro-talla">
+                                        <input type="checkbox" class="categ mobile-filter male-filter c-Mat_Capellada_Cuero" name="material" tag="Mat_Capellada_Cuero" value2="Cuero" value="Bike">
+                                        <div class="fil h-Mat_Capellada_Cuero"> Cuero </div>
+                                    </div>
+                                </form>
+                                <div class="clearfix"></div>
+                                <div class="text-fil"> MARCA </div>
+                                <form action="/action_page.php" class="chek">
+                                    <div class="filtro-marca">
+                                        <input type="checkbox" class="categ male-filter mobile-filter c-Marca_Caffeine" name="marca" tag="Marca_Caffeine" value2="Caffeine">
+                                        <div class="fil h-Caffeine">Caffeine</div>
+                                        <i class="fa fa-check-square ch-Caffeine hidden" aria-hidden="true" onclick="uncheck('Caffeine')"></i>
+                                    </div>
+                                    <div class="filtro-marca">
+                                        <input type="checkbox" class="categ male-filter mobile-filter c-Marca_Cocomate" name="marca" tag="Marca_Cocomate" value2="Cocomate">
+                                        <div class="fil h-Cocomate">Cocomate</div>
+                                    </div>
+                                    <div class="filtro-marca">
+                                        <input type="checkbox" class="categ male-filter mobile-filter c-Marca_Manzini" name="marca" tag="Marca_Manzini" value2="Manzini">
+                                        <div class="fil h-Manzini">Manzini</div>
+                                    </div>
+                                    <div class="filtro-marca">
+                                        <input type="checkbox" class="categ male-filter mobile-filter c-Marca_Tarragona" name="marca" tag="Marca_Tarragona" value2="Tarragona">
+                                        <div class="fil h-Tarragona">Tarragona</div>
+                                    </div>
+                                </form>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Aplicar Filtro</button>
+                    <button class="limpiar limpiar_modal">Limpiar Todo </button>
+                </div>
             </div>
         </div>
-
-  </section>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Aplicar Filtro</button>
-        <button class="limpiar limpiar_modal">Limpiar Todo </button>
-      </div>
     </div>
-
-  </div>
-</div>
-
-<!-- ******FIN MODAL HOMBRES****** -->
-
-<!-- ******modal imagen talla****** -->
-
-
-<!-- Modal -->
-<div id="myModal-talla" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title talla">TABLA DE TALLAS</h4>
-      </div>
-      <div class="modal-body">
-        <div align="center">
-          <img class="img-talla" src="https://7static.loadingplay.com/static/images/4513a39384b32d21aedf88ebbfb6fd92_TablaTallasPlacare.png">
+    <!-- ******FIN MODAL HOMBRES****** -->
+    <!-- ******modal imagen talla****** -->
+    <div id="myModal-talla" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title talla">TABLA DE TALLAS</h4>
+                </div>
+                <div class="modal-body">
+                    <div align="center">
+                        <img class="img-talla" src="https://7static.loadingplay.com/static/images/4513a39384b32d21aedf88ebbfb6fd92_TablaTallasPlacare.png">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-     <!--  <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div> -->
     </div>
-
-  </div>
-</div>
-
-<!-- ***fin modal talla**** -->
-
-
-<!-- *******************MODAL INGRESO CODIGO PRINCPAL******************* -->
-
-<div class="container min btb-warning-remove-me">
-  <button type="button" class="btn btn-info btn-lg co hidden" data-toggle="modal" data-target="#myModal-codigo">CÓDIGO</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal-codigo" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content co">
-        <div class="modal-header co">
-         <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-          <h4 class="modal-title co">LANZAMIENTO PLACARE.COM</h4>
+    <!-- ***fin modal talla**** -->
+    <!-- *******************MODAL INGRESO CODIGO PRINCPAL******************* -->
+    <div class="container min btb-warning-remove-me">
+        <button type="button" class="btn btn-info btn-lg co hidden" data-toggle="modal" data-target="#myModal-codigo">CÓDIGO</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal-codigo" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content co">
+                    <div class="modal-header co">
+                        <h4 class="modal-title co">LANZAMIENTO PLACARE.COM</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div align="center">
+                            <div class="lan">!MUCHAS GRACIAS POR VISITARNOS! ESTAMOS LANZANDO NUESTRA NUEVA TIENDA ONLINE ZAPATOS DE HOMBRE Y MUJER.</div>
+                            <div class="lan-2">Si ya tienes tu código de autorización ingrésalo a continuación y ya estarás dentro! Sino lo tienes, síguenos en facebook o instagram para obtenerlo</div>
+                            <div class="lan-3">¡Te invitamos a descubrir tus próximos zapatos!</div>
+                            <form id="welcome-form">
+                                <input type="text" name="fname" class="cup">
+                                <br>
+                                <button type="submit" class="btn btn-warning en">ENTRAR</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer co">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <div align="center">
-          <div class="lan">!MUCHAS GRACIAS POR VISITARNOS! ESTAMOS LANZANDO NUESTRA NUEVA TIENDA ONLINE ZAPATOS DE HOMBRE Y MUJER.</div>
-          <div class="lan-2">Si ya tienes tu código de autorización ingrésalo a continuación y ya estarás dentro! Sino lo tienes, síguenos en facebook o instagram para obtenerlo</div>
-          <div class="lan-3">¡Te invitamos a descubrir tus próximos zapatos!</div>
-          <form id="welcome-form">
-             <input type="text" name="fname" class="cup"><br>
-             <button type="submit" class="btn btn-warning en">ENTRAR</button>
-          </form>
-        </div>
-        </div>
-        <div class="modal-footer co">
-          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-        </div>
-      </div>
-
     </div>
-  </div>
+    <!-- ******************* FIN MODAL INGRESO CODIGO PRINCPAL******************* -->
+    <!-- gif loading editableimage -->
+    <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css?1">
+    <link rel="stylesheet" href="{{ site_base }}/static/css/style.min.css?1">
+    <link rel="stylesheet" href="{{ site_base }}/static/css/header.min.css?1">
+    {% block css %}{% end %}
+    <noscript id="deferred-styles">
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?1?v=2.1.5" media="screen" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css?1">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/gallery.ho.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/footer.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/listado_articulos.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/listado_productos.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/checkout.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/simple-sidebar.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css?1">
+    </noscript>
+    <script>
+    var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+    </script>
 
-</div>
-
-<!-- ******************* FIN MODAL INGRESO CODIGO PRINCPAL******************* -->
-
-
-
-
-        <!-- gif loading editableimage -->
-        <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
-
-        <!-- CSS -->
-
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css?1">
-
-
-        <link rel="stylesheet" href="{{ site_base }}/static/css/style.min.css?1">
-        <link rel="stylesheet" href="{{ site_base }}/static/css/header.min.css?1">
-
-        <!-- Start of placarehelp Zendesk Widget script -->
-        <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="placarehelp.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
-        /*]]>*/</script>
-        <!-- End of placarehelp Zendesk Widget script -->
-
-        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.css?1"/> -->
-
-        {% block css %}{% end %}
-
-
-        <noscript id="deferred-styles">
-          <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?1?v=2.1.5" media="screen" />
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css?1">
-          <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css?1">
-          <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-          <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?1" >
-
-          <link rel="stylesheet" href="{{ site_base }}/static/css/gallery.ho.css?1">
-          <link rel="stylesheet" href="{{ site_base }}/static/css/footer.css?1">
-
-          <link rel="stylesheet" href="{{ site_base }}/static/css/listado_articulos.css?1">
-          <link rel="stylesheet" href="{{ site_base }}/static/css/listado_productos.css?1">
-          <link rel="stylesheet" href="{{ site_base }}/static/css/checkout.css?1">
-          <link rel="stylesheet" href="{{ site_base }}/static/css/simple-sidebar.css?1">
-
-          <!-- <link rel="stylesheet" href="{{ site_base }}common/js/bower/file_uploader/dist/fileuploader.css?1"> -->
-          <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css?1">
-
-
-          <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css?1">
-          <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css?1">
-
-          <!--  <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet"> -->
-          <!-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7400796/8002792/css/fonts.css?1" /> -->
-        </noscript>
-        <script>
-          var loadDeferredStyles = function() {
-            var addStylesNode = document.getElementById("deferred-styles");
-            var replacement = document.createElement("div");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement)
-            addStylesNode.parentElement.removeChild(addStylesNode);
-          };
-          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-              webkitRequestAnimationFrame || msRequestAnimationFrame;
-          if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-          else window.addEventListener('load', loadDeferredStyles);
-        </script>
-
-
-        <!-- /CSS -->
-
-        <script type="text/javascript">
-        var site_base = "{{ site_base }}"
-        </script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?1"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js?1"></script>
-
-        <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js?1"></script>
-         <script type="text/javascript" src="../static/js/jquery.pin.min.js"></script>
-
-      
-
-        <script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.pack.js?1?v=2.1.5"></script>
-
-        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.min.js?1" ></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/editabletext.min.js?1"></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/editablelink.min.js?1"></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/page_editable.min.js?1"></script>
-
-        <script type="text/javascript" src="{{ site_base }}/common/js/editableimage.min.js?1"></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.min.js?1"></script>
-        <!-- <script type="text/javascript" src="{{ site_base }}common/js/bower/file_uploader/dist/fileuploader.min.js?1"></script> -->
-
-        <!-- carga de productos -->
-
-        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.cookie.min.js?1"></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.min.js?1"></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.min.js?13"></script>
-        <!-- <script type="text/javascript" src="{{ site_base }}common/js/bower/bodegas.client/dist/bodegas.client.js?13"></script> -->
-
-        <script type="text/javascript" src="{{ site_base }}/common/js/parallax.min.js?1"></script>
-     
-
-
-        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.ellipsis.min.js?1"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-
-                $(".fancybox").fancybox({
-                    'width':800,
-                    'height':630,
-                    'autoSize' : false,
-                    'autoScale': false,
-                    'padding': 0,
-                    'helpers': {
-                            overlay: {
-                                locked: false
-                            }
-                        }
-                });
-            });
-        </script>
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-
-                $(document).on("click", ".lupita", function(ev){
-                    $(".buscar-movil").toggle(1000);
-                });
-            });
-
-        </script>
-
-<!-- este es el script para unidades -->
-<!-- <script type="text/x-template" id="shopping-cart-product">
-<tr>
-    <td class="vert-align text-left">{{! name }}</td>
-    <td class="vert-align">{{! combination }}</td>
-    <td class="vert-align money">{{! price }}</td>
-    <td class="text-center vert-align" style="border-bottom: 1px solid #ddd;">
-        <a href="#!" class="remove-one" product-id="{{! id }}">-</a>
-        {{! quantity }}
-        <a href="#!" class="add-one" product-id="{{! id }}">+</a>
-    </td>
-    <td class="remove-from-cart text-center" style="border-bottom: 1px solid #ddd;" product-id="{{! id }}" aria-hidden="true"> X  </td>
-    <td class="text-center vert-align" style="border-bottom: 1px solid #ddd;"><a class="borrarproducto" cart-id=""><i class="icon-close"></i></a></td>
-</tr>
-</script> -->
-
-<script type="text/x-template" id="shopping-cart-product">
-    <tr>
-        <td class="vert-align text-left">{{! name }}</td>
-        <td class="vert-align">{{! combination }}</td>
-        <td class="text-center vert-align fri" style="border-bottom: 1px solid #ddd;">
-            <a href="#!" class="remove-one" lp-cart-remove-one="{{! id }}">-</a>
-            {{! quantity }}
-            <a href="#!" class="add-one" lp-cart-add-one="{{! id }}" >+</a>
-        </td>
-        <td class="text-center2 vert-align">{{! price|money }}</td>
-        <td class="remove-from-cart text-center fri" lp-cart-remove="{{! id }}" aria-hidden="true"> X  </td>
-        <td class="text-center vert-align fri">
-            <a class="borrarproducto" cart-id="">
-                <i class="icon-close"></i>
-            </a>
-        </td>
-    </tr>
-</script>
-
-<script type="text/x-template" id="shopping-cart-total" >
-    <tr>
-    </tr>
-    <tr>
-        <td style="font-weight: 600;">Total:</td>
-        <td id="total" colspan="3" class="text-left total-modal lib">{{! total|money }}</td>
-
-    </tr>
-</script>
-
-<script type="text/x-template" id="shopping-cart-units-total" >
-    <span> {{! units_total }}</span>
-</script>
-
-<script type="text/x-template" id="shopping-cart-checkout-form" >
-    <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
-        <input name="site_id" class="form-control required" type="hidden" value="53">
-        <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
-        <input name="origin" class="form-control required" type="hidden" value="{{ site.name }}">
-        <div class="form-group text-center">
-             <button type="submit" class="btn bn" style="background-color: #FF9D36;color: white;width: 31%;border-radius: 0px;height: 43px;float: right;">
-                PAGAR
-            </button>
-        </div>
-        <div class="">
-            <a class="modal-close pin" data-dismiss="modal" aria-hidden="true">VOLVER</a>
-        </div>
-    </form>
-</script>
-
-
-
-
-<!-- termino carrito de compra -->
-
-        {% block javascript %}{% end %}
-
-        <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '348231912006000',
-                xfbml: true,
-                version: 'v2.1'
-            });
-        };
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js?1";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        </script>
-
-        {% if is_admin %}
-        <script type="text/javascript">
-        var site_name="{{site.name}}";
-        </script>
-        <script type="text/javascript" src="{{ site_base }}/static/js/header.js?1" ></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js?1" ></script>
-
-        {% end %}
-
-        <script type="text/javascript" src"https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r">
-        </script>
-
-
+    <!-- Start of placarehelp Zendesk Widget script -->
+    <script>
+    /*<![CDATA[*/
+    window.zEmbed || function(e, t) {
+        var n, o, d, i, s, a = [],
+            r = document.createElement("iframe");
+        window.zEmbed = function() { a.push(arguments) }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+        try { o = s } catch (e) { n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s } o.open()._l = function() {
+            var e = this.createElement("script");
+            n && (this.domain = n), e.id = "js-iframe-async", e.src = "https://assets.zendesk.com/embeddable_framework/main.js", this.t = +new Date, this.zendeskHost = "placarehelp.zendesk.com", this.zEQueue = a, this.body.appendChild(e)
+        }, o.write('<body onload="document._l();">'), o.close()
+    }();
+    /*]]>*/
+    </script>
+    <!-- /CSS -->
     <script type="text/javascript">
-    $('ul.nav div.dropdown').hover(function()
+    var site_base = "{{ site_base }}"
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?1"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js?1"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js?1"></script>
+    <script type="text/javascript" src="../static/js/jquery.pin.min.js"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.pack.js?1?v=2.1.5"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.min.js?1"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/editabletext.min.js?1"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/editablelink.min.js?1"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/page_editable.min.js?1"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/editableimage.min.js?1"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.min.js?1"></script>
+    <!-- carga de productos -->
+    <script type="text/javascript" src="{{ site_base }}/common/js/jquery.cookie.min.js?1"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.min.js?1"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.min.js?13"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/parallax.min.js?1"></script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/jquery.ellipsis.min.js?1"></script>
+    <script type="text/x-template" id="shopping-cart-product">
+        <tr>
+            <td class="vert-align text-left">{{! name }}</td>
+            <td class="vert-align">{{! combination }}</td>
+            <td class="text-center vert-align fri" style="border-bottom: 1px solid #ddd;">
+                <a href="#!" class="remove-one" lp-cart-remove-one="{{! id }}">-</a> {{! quantity }}
+                <a href="#!" class="add-one" lp-cart-add-one="{{! id }}">+</a>
+            </td>
+            <td class="text-center2 vert-align">{{! price|money }}</td>
+            <td class="remove-from-cart text-center fri" lp-cart-remove="{{! id }}" aria-hidden="true"> X </td>
+            <td class="text-center vert-align fri">
+                <a class="borrarproducto" cart-id="">
+                    <i class="icon-close"></i>
+                </a>
+            </td>
+        </tr>
+    </script>
+    <script type="text/x-template" id="shopping-cart-total">
+        <tr>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Total:</td>
+            <td id="total" colspan="3" class="text-left total-modal lib">{{! total|money }}</td>
+        </tr>
+    </script>
+    <script type="text/x-template" id="shopping-cart-units-total">
+        <span> {{! units_total }}</span>
+    </script>
+    <script type="text/x-template" id="shopping-cart-checkout-form">
+        <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
+            <input name="site_id" class="form-control required" type="hidden" value="53">
+            <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
+            <input name="origin" class="form-control required" type="hidden" value="{{ site.name }}">
+            <div class="form-group text-center">
+                <button type="submit" class="btn bn" style="background-color: #FF9D36;color: white;width: 31%;border-radius: 0px;height: 43px;float: right;">
+                    PAGAR
+                </button>
+            </div>
+            <div class="">
+                <a class="modal-close pin" data-dismiss="modal" aria-hidden="true">VOLVER</a>
+            </div>
+        </form>
+    </script>
+    <!-- termino carrito de compra -->
+    {% block javascript %}{% end %}
+    <script>
+    window.fbAsyncInit = function() { FB.init({ appId: '348231912006000', xfbml: true, version: 'v2.1' }); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js?1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    {% if is_admin %}
+        <script type="text/javascript">
+        var site_name = "{{site.name}}";
+        </script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/header.js?1"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js?1"></script>
+    {% end %}
+
+    <script type="text/javascript" src "https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r">
+    </script>
+    <script type="text/javascript">
+    $('ul.nav div.dropdown').hover(function() 
     {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function()
+    }, function() 
     {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
-    </script>
 
-    <script type="text/javascript">
-        $(document).ready(function()
+    $(document).ready(function() 
+    {
+        $(document).on("click", ".boton-news", function() 
         {
-
-            // var submit = false;
-            // $("#formid").submit(function(e)
-            // {
-            //       setTimeout(function()
-            //       {
-            //           alert("me after 1000 mili seconds");
-            //           submit = true;
-            //           $("#formid").submit(); // if you want
-            //       }, 2000);
-
-            // });
-
-            $(document).on("click", ".boton-news", function()
+            $(this).html("ESPERE");
+            if ($(this).hasClass("sus")) 
             {
-                $(this).html("ESPERE");
-                if($(this).hasClass("sus"))
-                {
-                  $("input[name=SingleLine]").val("Mujer");
-                }
-                if($(this).hasClass("sus-h"))
-                {
-                  $("input[name=SingleLine]").val("Hombre");
-                }
-            });
+                $("input[name=SingleLine]").val("Mujer");
+            }
+            if ($(this).hasClass("sus-h")) 
+            {
+                $("input[name=SingleLine]").val("Hombre");
+            }
         });
-    </script>
 
-    <script type="text/javascript">
-      $(document).ready(function()
-      {
-        $('#formid').on('keyup keypress', function(e) {
-          var keyCode = e.keyCode || e.which;
-          if (keyCode === 13)
-          {
-            e.preventDefault();
-            return false;
-          }
+        $('#formid').on('keyup keypress', function(e) 
+        {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) 
+            {
+                e.preventDefault();
+                return false;
+            }
         });
-      });
-    </script>
 
-    <script type="text/javascript">
-      $(document).on('ready pageshow', function()
-      {
+        $(".fancybox").fancybox(
+        {
+            'width': 800,
+            'height': 630,
+            'autoSize': false,
+            'autoScale': false,
+            'padding': 0,
+            'helpers': 
+            {
+                overlay: 
+                {
+                    locked: false
+                }
+            }
+        });
+
+        $(document).on("click", ".lupita", function(ev) 
+        {
+            $(".buscar-movil").toggle(1000);
+        });
+    });
+    
+    $(document).on('ready pageshow', function() 
+    {
         $(".more-products").removeClass("hidden");
-      });
+    });
     </script>
-
     <!-- Facebook Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window,document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-       fbq('init', '1993876297507428');
-      fbq('track', 'PageView');
+    ! function(f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1993876297507428'); fbq('track', 'PageView');
     </script>
     <noscript>
-      <img height="1" width="1" src="https://www.facebook.com/tr?id=1993876297507428&ev=PageView&noscript=1"/>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=1993876297507428&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
+</body>
 
-    </body>
 </html>
