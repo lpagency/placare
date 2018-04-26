@@ -11,7 +11,7 @@ category: basics
 
 ```html_example
 <div class="container min">
-    <div class="mobile article-ho main-banner">
+    <div class="col-md-12 article-home main-banner">
         <img id="placare_home" src="https://cdn.loadingplay.com/static/images/500_7f1a0bf6b2f14094c8be14f129e28cc9_banner_principalpng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/500_7f1a0bf6b2f14094c8be14f129e28cc9_banner_principalpng.png'" class="banner_uno_list" alt="item">
     </div>
 </div>
@@ -22,13 +22,13 @@ category: basics
 
 ```html_example
 <div class="container min">
-    <div class="col-md-4 article-ho">
+    <div class="col-md-4 article-home">
         <a id="placare_box_3" href="https://www.placare.com/botas-mujer">
             <img id="placare_box_3" src="https://cdn.loadingplay.com/static/images/80cdd29ec92cc2596042ebbbb1873fd0_BANNERSDESKTOP_x_botaspng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/80cdd29ec92cc2596042ebbbb1873fd0_BANNERSDESKTOP_x_botaspng.png'" class="box-med" alt="item" />
         </a>
     </div>
 
-    <div class="col-md-8 article-ho">
+    <div class="col-md-8 article-home">
         <a id="placare_box_4" href="https://www.placare.com/zapatos-de-vestir-fiesta-mujer">
             <img id="placare_box_4" src="https://cdn.loadingplay.com/static/images/4c329231ccc39c708a013f86b91b48bc_bn_desk_x_fiestapng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/4c329231ccc39c708a013f86b91b48bc_bn_desk_x_fiestapng.png'" class="box-med" alt="item">
         </a>
@@ -42,46 +42,43 @@ category: basics
 ```html_example
 
 <div class="container min">
-    <div class="mobile article-ho main-banner">
+    <div class="col-md-12 article-home main-banner">
         <img id="placare_home" src="https://cdn.loadingplay.com/static/images/500_7f1a0bf6b2f14094c8be14f129e28cc9_banner_principalpng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/500_7f1a0bf6b2f14094c8be14f129e28cc9_banner_principalpng.png'" class="banner_uno_list" alt="item">
     </div>
-
-    <div>
-        <div class="col-md-4 article-ho">
-            <a id="placare_box_3" href="https://www.placare.com/botas-mujer">
-                <img id="placare_box_3" src="https://cdn.loadingplay.com/static/images/80cdd29ec92cc2596042ebbbb1873fd0_BANNERSDESKTOP_x_botaspng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/80cdd29ec92cc2596042ebbbb1873fd0_BANNERSDESKTOP_x_botaspng.png'" class="box-med" alt="item" />
-            </a>
-        </div>
-        <div class="col-md-8 article-ho">
-            <a id="placare_box_4" href="https://www.placare.com/zapatos-de-vestir-fiesta-mujer">
-                <img id="placare_box_4" src="https://cdn.loadingplay.com/static/images/4c329231ccc39c708a013f86b91b48bc_bn_desk_x_fiestapng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/4c329231ccc39c708a013f86b91b48bc_bn_desk_x_fiestapng.png'" class="box-med" alt="item">
-            </a>
-        </div>
-        <div class="col-md-8 article-ho">
-            <a id="placare_box_77" href="https://www.placare.com/botines-mujer?tag=">
-                <img id="placare_box_77" src="https://cdn.loadingplay.com/static/images/8a7939c48cebae0e7e0b63c13dd77626_bn_desk_x_botinespng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/8a7939c48cebae0e7e0b63c13dd77626_bn_desk_x_botinespng.png'" class="box-med" alt="item">
-            </a>
-        </div>
-        <div class="col-md-4 article-ho">
-            <a id="placare_box_88" href="https://www.placare.com/mujer?tag=Categoria3_Oxford,Categoria3_Botines,Categoria3_Botas,Categoria3_Casuales,Categoria3_Zapatos_de_Vestir_Fiesta,Marca_Degas">
-                <img id="placare_box_88" src="https://cdn.loadingplay.com/static/images/ceedc69793c2b319d4c357e640628144_BANNERSDESKTOP_x_degaspng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/ceedc69793c2b319d4c357e640628144_BANNERSDESKTOP_x_degaspng.png'" class="box-med" alt="item">
-            </a>
-        </div>
-        <div class="col-md-4 article-ho">
-            <a id="placare_box_99" href="https://www.placare.com/hombres">
-                <img id="placare_box_99" src="https://cdn.loadingplay.com/static/images/17bbcfefe2e27669d3373a57e8adc70c_BANNERSDESKTOP_x_hombrepng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/17bbcfefe2e27669d3373a57e8adc70c_BANNERSDESKTOP_x_hombrepng.png'" class="box-med" alt="item">
-            </a>
-        </div>
-        <div class="col-md-4 article-ho">
-            <a id="placare_box_100" href="https://www.placare.com/mujer?tag=Categoria3_Oxford,Categoria3_Botines,Categoria3_Botas,Categoria3_Casuales,Categoria3_Zapatos_de_Vestir_Fiesta,Marca_Eda_Manzini">
-                <img id="placare_box_100" src="https://cdn.loadingplay.com/static/images/1634ca8cfd663180b2e2510377866337_BANNERSDESKTOP_x_edamanzinipng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/1634ca8cfd663180b2e2510377866337_BANNERSDESKTOP_x_edamanzinipng.png'" class="box-med" alt="item">
-            </a>
-        </div>
-        <div class="col-md-4 article-ho">
-            <a id="placare_box_1000" href="https://www.placare.com/mujer?tag=Categoria3_Casuales,Categoria3_Oxford">
-                <img id="placare_box_1000" src="https://cdn.loadingplay.com/static/images/de2d325aa93d2ce7f4ec1c7ff76632ae_BANNERSDESKTOP_x_oxfordpng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/de2d325aa93d2ce7f4ec1c7ff76632ae_BANNERSDESKTOP_x_oxfordpng.png'" class="box-med" alt="item">
-            </a>
-        </div>
+    <div class="col-md-4 article-home">
+        <a id="placare_box_3" href="https://www.placare.com/botas-mujer">
+            <img id="placare_box_3" src="https://cdn.loadingplay.com/static/images/80cdd29ec92cc2596042ebbbb1873fd0_BANNERSDESKTOP_x_botaspng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/80cdd29ec92cc2596042ebbbb1873fd0_BANNERSDESKTOP_x_botaspng.png'" class="box-med" alt="item" />
+        </a>
+    </div>
+    <div class="col-md-8 article-home">
+        <a id="placare_box_4" href="https://www.placare.com/zapatos-de-vestir-fiesta-mujer">
+            <img id="placare_box_4" src="https://cdn.loadingplay.com/static/images/4c329231ccc39c708a013f86b91b48bc_bn_desk_x_fiestapng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/4c329231ccc39c708a013f86b91b48bc_bn_desk_x_fiestapng.png'" class="box-med" alt="item">
+        </a>
+    </div>
+    <div class="col-md-8 article-home">
+        <a id="placare_box_77" href="https://www.placare.com/botines-mujer?tag=">
+            <img id="placare_box_77" src="https://cdn.loadingplay.com/static/images/8a7939c48cebae0e7e0b63c13dd77626_bn_desk_x_botinespng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/8a7939c48cebae0e7e0b63c13dd77626_bn_desk_x_botinespng.png'" class="box-med" alt="item">
+        </a>
+    </div>
+    <div class="col-md-4 article-home">
+        <a id="placare_box_88" href="https://www.placare.com/mujer?tag=Categoria3_Oxford,Categoria3_Botines,Categoria3_Botas,Categoria3_Casuales,Categoria3_Zapatos_de_Vestir_Fiesta,Marca_Degas">
+            <img id="placare_box_88" src="https://cdn.loadingplay.com/static/images/ceedc69793c2b319d4c357e640628144_BANNERSDESKTOP_x_degaspng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/ceedc69793c2b319d4c357e640628144_BANNERSDESKTOP_x_degaspng.png'" class="box-med" alt="item">
+        </a>
+    </div>
+    <div class="col-md-4 article-home">
+        <a id="placare_box_99" href="https://www.placare.com/hombres">
+            <img id="placare_box_99" src="https://cdn.loadingplay.com/static/images/17bbcfefe2e27669d3373a57e8adc70c_BANNERSDESKTOP_x_hombrepng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/17bbcfefe2e27669d3373a57e8adc70c_BANNERSDESKTOP_x_hombrepng.png'" class="box-med" alt="item">
+        </a>
+    </div>
+    <div class="col-md-4 article-home">
+        <a id="placare_box_100" href="https://www.placare.com/mujer?tag=Categoria3_Oxford,Categoria3_Botines,Categoria3_Botas,Categoria3_Casuales,Categoria3_Zapatos_de_Vestir_Fiesta,Marca_Eda_Manzini">
+            <img id="placare_box_100" src="https://cdn.loadingplay.com/static/images/1634ca8cfd663180b2e2510377866337_BANNERSDESKTOP_x_edamanzinipng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/1634ca8cfd663180b2e2510377866337_BANNERSDESKTOP_x_edamanzinipng.png'" class="box-med" alt="item">
+        </a>
+    </div>
+    <div class="col-md-4 article-home">
+        <a id="placare_box_1000" href="https://www.placare.com/mujer?tag=Categoria3_Casuales,Categoria3_Oxford">
+            <img id="placare_box_1000" src="https://cdn.loadingplay.com/static/images/de2d325aa93d2ce7f4ec1c7ff76632ae_BANNERSDESKTOP_x_oxfordpng.png" onload="this.onload='';this.src='https://cdn.loadingplay.com/static/images/de2d325aa93d2ce7f4ec1c7ff76632ae_BANNERSDESKTOP_x_oxfordpng.png'" class="box-med" alt="item">
+        </a>
     </div>
     <div class="clearfix"></div>
 </div>
@@ -94,14 +91,14 @@ category: basics
     width: 100%;
 }
 
-.article-ho
+.article-home
 {
     height: 300px;
     overflow: hidden;
     padding: 5px;
 }
 
-.article-ho a
+.article-home a
 {
     display: block;
     width: 100%;
@@ -109,12 +106,12 @@ category: basics
     overflow: hidden;
 }
 
-.article-ho img
+.article-home img
 {
     width: 100%;
 }
 
-.article-ho.main-banner
+.article-home.main-banner
 {
     height: auto;
 }
