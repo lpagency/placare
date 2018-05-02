@@ -1576,24 +1576,27 @@ a:hover
     color: #333;
 }
 
-.col-side-padding
+@media (min-width: 991.98px)
 {
-    padding: 0px 5px 0px 5px;
-}
+    .col-side-padding
+    {
+        padding: 0px 5px 0px 5px;
+    }
 
-.no-padding
-{
-    padding: 0px;
-}
+    .no-padding
+    {
+        padding: 0px;
+    }
 
-.no-padding-left
-{
-    padding-left: 0px;
-}
+    .no-padding-left
+    {
+        padding-left: 0px;
+    }
 
-.no-padding-right
-{
-    padding-right: 0px;
+    .no-padding-right
+    {
+        padding-right: 0px;
+    }
 }
 
 /*doc

@@ -1,4 +1,7 @@
-{% extends "../base.html" %} {% block title %} {{ site.name }} {% end %} {% block css %}
+{% extends "../base.html" %}
+{% block title %} {{ site.name }} {% end %}
+
+{% block css %}
 <link href="https://fonts.googleapis.com/css?family=Lato" type="text/css" /> {% if is_admin %}
 <link rel="stylesheet" href="{{ site_base }}/static/css/textbox_io.css" type="text/css">
 <link rel="stylesheet" href="{{ site_base }}/static/css/detalle_articulos.css">
@@ -6,16 +9,20 @@
 {% end %}
 <style type="text/css">
 html,
-body {
+body
+{
     height: 100%;
 }
 
-@media screen and (max-width: 700px) {
-    .ol {
+@media screen and (max-width: 700px)
+{
+    .ol
+    {
         visibility: hidden;
     }
 
-    .franja-color {
+    .franja-color
+    {
         background: transparent;
     }
 }
@@ -27,7 +34,7 @@ body {
 <div class="container min">
     <div class="mobile-det" style="background:url('{{ article['thumb_500'] }}'); height:400px; background-size:cover; margin-top: 0px;  filter: grayscale(0%) brightness(65%);-webkit-filter: grayscale(0%) brightness(65%);
     -moz-filter: grayscale(0%) brightness(65%);-ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%);">
-        <img class="fondo-articulo hidden" src="{{ article[" thumb_500 "] }}" class="img-responsive lazy" data-original="{{ article[" url "] }}" alt="item">
+        <img class="fondo-articulo hidden" src="{{ article["thumb_500"] }}" class="img-responsive lazy" data-original="{{ article["url"] }}" alt="item">
     </div>
     <div class="col-md-12">
         <div align="center">
@@ -76,9 +83,7 @@ body {
             <div class="col-sm-12 especial p-art" style="text-align: right;">
             </div>
             <div class="col-sm-12 p-art ">
-                tags |
-                <a>{{ "</a> ,
-                <a>".join(article["tags"]) }}</a>
+                tags | <a>{{ "</a> ,<a>".join(article["tags"]) }}</a>
             </div>
         </div>
     </div>
