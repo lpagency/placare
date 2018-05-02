@@ -14,4 +14,4 @@
         'https://lpcheckout.ondev.today',
         'https://pay.loadingplay.com');
         var app_public = $.environmentVar(53,53,53);
-        var site_name = $.environmentVar('placare', 'placare', 'placare'); 
+        var site_name = $.environmentVar('placare', 'placare', 'placare');

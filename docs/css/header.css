@@ -1,13 +1,16 @@
-#searchform {
+#searchform
+{
     position: absolute;
     right: 15px;
 }
 
-#navbar {
+#navbar
+{
     position: relative;
 }
 
-.logo {
+.logo
+{
     height: 51px;
     width: 200px;
     margin-bottom: 0px;
@@ -15,25 +18,30 @@
     position: relative;
 }
 
-.caja-logo {
+.caja-logo
+{
     width: 154px;
     margin-top: 7px;
     margin-bottom: 0px;
 }
 
-.caja-logo a {
+.caja-logo a
+{
     display: inline-block;
 }
 
-.container.min {
+.container.min
+{
     max-width: 980px;
 }
 
-.container.min.dos {
+.container.min.dos
+{
     padding-bottom: 45px;
 }
 
-.desktop-query>input.desktop-searchBar {
+.desktop-query>input.desktop-searchBar
+{
     display: inline-block;
     float: left;
     font-size: 14px;
@@ -54,7 +62,8 @@
     font-weight: 300;
 }
 
-a.desktop-submit {
+a.desktop-submit
+{
     box-sizing: content-box;
     height: 28px;
     width: 40px;
@@ -67,11 +76,13 @@ a.desktop-submit {
 }
 
 .desktop-iconSearch,
-a.desktop-submit {
+a.desktop-submit
+{
     display: inline-block;
 }
 
-.container.min.dos .col-md-3.col-sm-3.col-xs-12:after {
+.container.min.dos .col-md-3.col-sm-3.col-xs-12:after
+{
     position: absolute;
     content: '';
     right: 15px;
@@ -81,7 +92,8 @@ a.desktop-submit {
     background-color: #E9E9ED;
 }
 
-.desktop-query {
+.desktop-query
+{
     width: 246px;
     float: left;
     line-height: 0;
@@ -91,18 +103,21 @@ a.desktop-submit {
     margin-top: 12px;
 }
 
-.img-bolsa {
+.img-bolsa
+{
     width: 16%;
     margin-top: 7px;
     margin-left: 1px;
     float: right;
 }
 
-#open-cart {
+#open-cart
+{
     cursor: pointer;
 }
 
-li.icon {
+li.icon
+{
     position: relative;
     left: 97px;
     margin-top: 22px;
@@ -113,23 +128,27 @@ li.icon {
     font-size: 14px;
 }
 
-.bor {
+.bor
+{
     border-left: 2px solid #eaeaec;
     margin-top: 13px;
     height: 37px;
 }
 
-.navbar-default {
+.navbar-default
+{
     background-color: white;
     border-color: white;
     width: 102%;
 }
 
-.fa-search {
+.fa-search
+{
     font-size: 22px !important;
 }
 
-.nav>li>a {
+.nav>li>a
+{
     position: relative;
     display: block;
     padding: 10px 15px;
@@ -141,7 +160,8 @@ li.icon {
     font-weight: 500;
 }
 
-.navbar-nav.navbar-right.dos:last-child {
+.navbar-nav.navbar-right.dos:last-child
+{
     margin-right: 80px;
     margin-bottom: -6px;
     margin-top: -10px;
@@ -149,23 +169,27 @@ li.icon {
     position: relative;
 }
 
-li.slogan a {
+li.slogan a
+{
     font-size: 10px;
     color: #999;
     font-weight: 400;
 }
 
-.navbar {
+.navbar
+{
     margin-bottom: 0px;
 }
 
 .nav>li>a:hover,
-.nav>li>a:focus {
+.nav>li>a:focus
+{
     text-decoration: none;
     background-color: transparent;
 }
 
-.text-slogan {
+.text-slogan
+{
     position: relative;
     padding: 10px 0;
     font-size: 12px;
@@ -174,27 +198,32 @@ li.slogan a {
     padding-bottom: 0;
 }
 
-.navbar-nav {
+.navbar-nav
+{
     float: right;
 }
 
-.navbar-nav.sa {
+.navbar-nav.sa
+{
     float: left;
     margin: 0;
     position: relative;
     left: 0%;
 }
 
-.navbar-nav.sa .drowpdown {
+.navbar-nav.sa .drowpdown
+{
     float: left;
     display: inline-block;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a
+{
     color: #999;
 }
 
-.btn-primary.header {
+.btn-primary.header
+{
     color: #999;
     background-color: transparent;
     border-color: transparent;
@@ -212,7 +241,8 @@ li.slogan a {
     padding-bottom: 0;
 }
 
-.btn-primary.header:hover {
+.btn-primary.header:hover
+{
     color: #999;
     background-color: transparent;
     border-color: transparent;
@@ -227,9 +257,11 @@ li.slogan a {
     display: inline-block;
 }
 
-.dropdown.col-md-4 {}
+.dropdown.col-md-4
+{}
 
-.dropdown.col-md-4+.dropdown.col-md-4 {
+.dropdown.col-md-4+.dropdown.col-md-4
+{
     margin-right: 0;
 }
 
@@ -237,7 +269,8 @@ li.slogan a {
 .btn-primary.header:focus,
 .btn-primary.header:active,
 .btn-primary.header.active,
-.open>.dropdown-toggle.btn-primary.header {
+.open>.dropdown-toggle.btn-primary.header
+{
     color: #db8800;
     background-color: transparent;
     border-color: transparent;
@@ -245,13 +278,15 @@ li.slogan a {
 }
 
 .navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {
+.navbar-default .navbar-nav>li>a:focus
+{
     color: #db8800;
     background-color: transparent;
     text-decoration: underline #db8800 !important;
 }
 
-.hed {
+.hed
+{
     position: absolute;
     top: 119% !important;
     left: 28% !important;
@@ -274,7 +309,8 @@ li.slogan a {
     box-shadow: 0 0px 0px rgba(0, 0, 0, .175);
 }
 
-.pal {
+.pal
+{
     position: relative;
     left: 17%;
     font-size: 35px;
@@ -286,14 +322,16 @@ li.slogan a {
 
 .btn:focus,
 .btn:active:focus,
-.btn.active:focus {
+.btn.active:focus
+{
     outline: thin dotted;
     outline: 0px auto transparent;
     outline-offset: 0px;
 }
 
 .btn:active,
-.btn.active {
+.btn.active
+{
     background-image: none;
     outline: 0;
     -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .125);
@@ -301,15 +339,19 @@ li.slogan a {
 }
 
 
+
 /*------------------------------------------Responsive--------------------------------*/
 
-@media (max-width: 1199px) {
-    .text-slogan {
+@media (max-width: 1199px)
+{
+    .text-slogan
+    {
         text-align: left;
         top: 4px;
         font-size: 12px;
     }
-    .hed {
+    .hed
+    {
         position: absolute;
         z-index: 1000;
         display: none;
@@ -329,21 +371,26 @@ li.slogan a {
         -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
         box-shadow: 0 0px 0px rgba(0, 0, 0, .175);
     }
-    .linea-prefooter {
+    .linea-prefooter
+    {
         width: 100%;
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991px)
+{
 
-    .container {
+    .container
+    {
         width: 100%;
     }
-    .bor {
+    .bor
+    {
         border-left: none;
         position: relative;
     }
-    .bor:after {
+    .bor:after
+    {
         position: absolute;
         content: '';
         left: -5px;
@@ -354,44 +401,53 @@ li.slogan a {
         background-color: #eaeaec;
     }
 
-    .dropdown.col-md-4 {
+    .dropdown.col-md-4
+    {
         display: inline-block;
         float: left;
         padding: 0;
         margin-right: 20px;
     }
-    .navbar-nav>li {
+    .navbar-nav>li
+    {
         margin-right: 15px;
     }
-    .nav>li>a {
+    .nav>li>a
+    {
         font-size: 10px;
         padding: 10px 0;
     }
-    .btn-primary.header {
+    .btn-primary.header
+    {
         padding: 10px 0;
     }
 
-    .navbar-collapse {
+    .navbar-collapse
+    {
         padding: 0;
     }
 
-    .col-md-6.col-sm-12.col-xs-12 .navbar-nav {
+    .col-md-6.col-sm-12.col-xs-12 .navbar-nav
+    {
         float: none;
     }
 
-    .navbar-nav.navbar-right.dos:last-child {
+    .navbar-nav.navbar-right.dos:last-child
+    {
         margin-right: 16px;
         margin-bottom: -6px;
         margin-top: -10px;
     }
 
-    .navbar-default {
+    .navbar-default
+    {
         background-color: white;
         border-color: white;
         width: 100%;
     }
 
-    a.desktop-submit {
+    a.desktop-submit
+    {
         box-sizing: content-box;
         height: 23px;
         width: 40px;
@@ -403,7 +459,8 @@ li.slogan a {
         border-radius: 0 12px 12px 0;
     }
 
-    .desktop-query>input.desktop-searchBar {
+    .desktop-query>input.desktop-searchBar
+    {
         display: inline-block;
         float: left;
         font-size: 16px;
@@ -421,7 +478,8 @@ li.slogan a {
         background: #f5f5f6;
     }
 
-    .desktop-query {
+    .desktop-query
+    {
         width: 206px;
         float: left;
         line-height: 0;
@@ -431,21 +489,26 @@ li.slogan a {
         margin-top: 12px;
     }
 
-    .text-slogan {
+    .text-slogan
+    {
         font-size: 9px;
     }
 }
 
-@media (max-width: 767px) {
-    .container.min {
+@media (max-width: 767px)
+{
+    .container.min
+    {
         width: 100%;
     }
 
-    .container.min.dos .col-md-3.col-sm-3.col-xs-12:after {
+    .container.min.dos .col-md-3.col-sm-3.col-xs-12:after
+    {
         display: none;
     }
 
-    .caja-logo {
+    .caja-logo
+    {
         height: 51px;
         width: 154px;
         float: left;
@@ -456,13 +519,15 @@ li.slogan a {
         position: relative;
     }
 
-    .background-header-movil {
+    .background-header-movil
+    {
         height: 45px;
         width: 100%;
         background-color: white;
     }
 
-    .img-bolsa {
+    .img-bolsa
+    {
         width: 4%;
         margin-top: 14px;
         float: right;
@@ -471,7 +536,8 @@ li.slogan a {
     }
 
 
-    .desktop-query {
+    .desktop-query
+    {
         width: 206px;
         float: right;
         line-height: 0;
@@ -482,7 +548,8 @@ li.slogan a {
         z-index: 1030;
     }
 
-    li.icon {
+    li.icon
+    {
         position: relative;
         left: -12px;
         margin-top: 16px;
@@ -491,7 +558,8 @@ li.slogan a {
         font-weight: 500;
     }
 
-    .fa-search {
+    .fa-search
+    {
         font-size: 22px !important;
         float: right;
         position: relative;
@@ -500,7 +568,8 @@ li.slogan a {
     }
 
 
-    .navbar-default .navbar-toggle {
+    .navbar-default .navbar-toggle
+    {
         border-color: transparent;
         float: left;
         left: 1%;
@@ -510,11 +579,13 @@ li.slogan a {
     }
 
     .navbar-default .navbar-toggle:hover,
-    .navbar-default .navbar-toggle:focus {
+    .navbar-default .navbar-toggle:focus
+    {
         background-color: transparent;
     }
 
-    .logo {
+    .logo
+    {
         height: 51px;
         width: 135px;
         float: left;
@@ -523,7 +594,8 @@ li.slogan a {
         object-fit: scale-down;
     }
 
-    .nav>li>a {
+    .nav>li>a
+    {
         position: relative;
         display: block;
         padding: 10px 28px;
@@ -533,22 +605,26 @@ li.slogan a {
         left: 0px;
     }
 
-    .navbar-collapse.in {
+    .navbar-collapse.in
+    {
         overflow-y: hidden;
     }
 
 
     input:focus,
     textarea:focus,
-    select:focus {
+    select:focus
+    {
         outline-offset: 0px;
     }
 
-    :focus {
+     :focus
+     {
         outline: none;
     }
 
-    .form-control.movil {
+    .form-control.movil
+    {
         display: block;
         width: 100%;
         height: 34px;
@@ -569,7 +645,8 @@ li.slogan a {
         width: 98%;
     }
 
-    .btn-default.movil {
+    .btn-default.movil
+    {
         color: #555;
         background-color: #fff;
         border-color: #ebedef;
@@ -578,7 +655,8 @@ li.slogan a {
         right: 16px;
     }
 
-    .input-group.movil {
+    .input-group.movil
+    {
         position: relative;
         display: table;
         border-collapse: separate;
@@ -591,7 +669,8 @@ li.slogan a {
         width: 100%;
     }
 
-    .lupita {
+    .lupita
+    {
         width: 3%;
         position: relative;
         float: right;
@@ -600,8 +679,10 @@ li.slogan a {
     }
 }
 
-@media (max-width: 700px) {
-    .fa-search {
+@media (max-width: 700px)
+{
+    .fa-search
+    {
         font-size: 22px !important;
         float: right;
         position: relative;
@@ -610,8 +691,10 @@ li.slogan a {
     }
 }
 
-@media (max-width: 500px) {
-    .img-bolsa {
+@media (max-width: 500px)
+{
+    .img-bolsa
+    {
         width: 5%;
         margin-top: 17px;
         float: right;
@@ -619,7 +702,8 @@ li.slogan a {
         position: relative;
     }
 
-    .fa-search {
+    .fa-search
+    {
         font-size: 22px !important;
         float: right;
         position: relative;
@@ -628,8 +712,10 @@ li.slogan a {
     }
 }
 
-@media (max-width: 414px) {
-    .img-bolsa {
+@media (max-width: 414px)
+{
+    .img-bolsa
+    {
         width: 7%;
         margin-top: 14px;
         float: right;
@@ -637,7 +723,8 @@ li.slogan a {
         position: relative;
     }
 
-    .lupita {
+    .lupita
+    {
         width: 6%;
         position: relative;
         float: right;
@@ -645,7 +732,8 @@ li.slogan a {
         top: 17px;
     }
 
-    .caja-logo {
+    .caja-logo
+    {
         height: 51px;
         width: 201px;
         float: left;
@@ -656,7 +744,8 @@ li.slogan a {
         position: relative;
     }
 
-    .logo {
+    .logo
+    {
         height: 51px;
         width: 214px;
         float: left;
@@ -666,7 +755,8 @@ li.slogan a {
         left: 0px;
     }
 
-    .btn-default.movil {
+    .btn-default.movil
+    {
         color: #555;
         background-color: #fff;
         border-color: #ebedef;
@@ -675,7 +765,8 @@ li.slogan a {
         right: 0px;
     }
 
-    .form-control.movil {
+    .form-control.movil
+    {
         display: block;
         width: 100%;
         height: 34px;
@@ -697,8 +788,10 @@ li.slogan a {
     }
 }
 
-@media (max-width: 400px) {
-    li.icon {
+@media (max-width: 400px)
+{
+    li.icon
+    {
         position: relative;
         left: -85px;
         margin-top: 19px;
@@ -707,7 +800,8 @@ li.slogan a {
     }
 
 
-    .desktop-query {
+    .desktop-query
+    {
         width: 182px;
         float: right;
         line-height: 0;
@@ -720,8 +814,10 @@ li.slogan a {
     }
 }
 
-@media (max-width: 375px) {
-    li.icon {
+@media (max-width: 375px)
+{
+    li.icon
+    {
         position: relative;
         left: -85px;
         margin-top: 19px;
@@ -729,7 +825,8 @@ li.slogan a {
         width: 224%;
     }
 
-    .caja-logo {
+    .caja-logo
+    {
         height: 51px;
         width: 201px;
         float: left;
@@ -741,9 +838,11 @@ li.slogan a {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 360px)
+{
 
-    li.icon {
+    li.icon
+    {
         position: relative;
         left: -85px;
         margin-top: 19px;
@@ -751,7 +850,8 @@ li.slogan a {
         width: 240%;
     }
 
-    .img-bolsa {
+    .img-bolsa
+    {
         width: 8%;
         margin-top: 14px;
         float: right;
@@ -759,7 +859,8 @@ li.slogan a {
         position: relative;
     }
 
-    .lupita {
+    .lupita
+    {
         width: 6%;
         position: relative;
         float: right;
@@ -768,8 +869,10 @@ li.slogan a {
     }
 }
 
-@media (max-width: 320px) {
-    li.icon {
+@media (max-width: 320px)
+{
+    li.icon
+    {
         position: relative;
         left: -85px;
         margin-top: 19px;
@@ -777,7 +880,8 @@ li.slogan a {
         width: 298%;
     }
 
-    .img-bolsa {
+    .img-bolsa
+    {
         width: 8%;
         margin-top: 12px;
         float: right;
@@ -785,7 +889,8 @@ li.slogan a {
         position: relative;
     }
 
-    .desktop-query>input.desktop-searchBar {
+    .desktop-query>input.desktop-searchBar
+    {
         display: inline-block;
         float: left;
         font-size: 16px;
@@ -803,7 +908,8 @@ li.slogan a {
         background: #f5f5f6;
     }
 
-    .desktop-query {
+    .desktop-query
+    {
         width: 182px;
         float: right;
         line-height: 0;
@@ -816,7 +922,8 @@ li.slogan a {
     }
 
 
-    .lupita {
+    .lupita
+    {
         width: 7%;
         position: relative;
         float: right;
@@ -824,7 +931,8 @@ li.slogan a {
         top: 16px;
     }
 
-    .logo {
+    .logo
+    {
         height: 51px;
         width: 165px;
         float: left;
@@ -833,7 +941,8 @@ li.slogan a {
         object-fit: scale-down;
     }
 
-    .caja-logo {
+    .caja-logo
+    {
         height: 51px;
         width: 201px;
         float: left;

@@ -10,12 +10,12 @@
         'static/css/home.css'
     ];
     var secondary_css_files = [
-        '/static/css/gallery.ho.css',
-        '/static/css/footer.css',
-        '/static/css/listado_articulos.css',
-        '/static/css/listado_productos.css',
-        '/static/css/checkout.css',
-        '/static/css/simple-sidebar.css',
+        'static/css/gallery.ho.css',
+        'static/css/footer.css',
+        'static/css/listado_articulos.css',
+        'static/css/listado_productos.css',
+        'static/css/checkout.css',
+        'static/css/simple-sidebar.css',
         'static/css/ligthbox-d.css'
     ];
 

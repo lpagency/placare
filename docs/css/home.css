@@ -84,6 +84,24 @@ category: basics
 </div>
 ```
 
+
+### Prefooter home
+
+```html_example
+<div class="col-md-12 col-sm-12 col-xs-12 col-side-padding">
+    <hr>
+    <div class="editabletext title-prefooter-home" text-id="placare_pre_footer_ex_1119">
+        <p>PLACARE.COM - UNA NUEVA EXPERIENCIA ONLINE EN COMPRA DE ZAPATOS<br></p>
+    </div>
+    <div class="editabletext text-justify" text-id="placare_pre_footer_ber18">
+        <p>Placare.com llega con una nueva propuesta cuyo fin es entregar una nueva y única experiencia en compra de zapatos por Internet de forma fácil, rápida y en cualquier momento. Placare.com se basa en el descubrimiento inteligente de productos nuevos, tendencias, texturas y colores a través de su plataforma que entrega respuestas rápidas y precisas a las consultas realizadas por nuestros clientes. La oferta de Placare abarca todo tipo de zapatos para mujer, hombre, y también accesorios, entregando una propuesta variada que se ajusta a todos nuestros clientes. Invitamos a todas y todos, a descubrir en Placare.com las colecciones de Eda Manzini, Lola Canales, Degas, Cocomate, Manzini entre otras, ya que “lo que te falta” puede estar solo a un par de clicks.<br></p>
+    </div>
+    <div class="clearfix" ></div>
+    <hr>
+</div>
+<div class="clearfix"></div>
+```
+
 */
 
 .main-banner img
@@ -96,6 +114,7 @@ category: basics
     height: 300px;
     overflow: hidden;
     padding: 5px;
+    position: relative;
 }
 
 .article-home a
@@ -114,4 +133,9 @@ category: basics
 .article-home.main-banner
 {
     height: auto;
+}
+
+.title-prefooter-home p
+{
+    font-weight: 400;
 }

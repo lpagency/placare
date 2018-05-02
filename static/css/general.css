@@ -2,3 +2,51 @@
 {
     max-width: 980px;
 }
+
+*
+{
+    color: #696b79;
+    -webkit-font-smoothing: antialiased;
+}
+
+p
+{
+    font-weight: 300;
+}
+
+a
+{
+    color: #666;
+}
+
+b,
+strong
+{
+    font-weight: 400;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: #333;
+}
+
+.col-side-padding
+{
+    padding: 0px 5px 0px 5px;
+}
+
+.no-padding
+{
+    padding: 0px;
+}
+
+.no-padding-left
+{
+    padding-left: 0px;
+}
+
+.no-padding-right
+{
+    padding-right: 0px;
+}
