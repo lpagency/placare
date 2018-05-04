@@ -1,152 +1,194 @@
-
 <!-- ********HEADER DESKTOP*********** -->
-
 <div class="hidden-xs visible-lg visible-md visible-sm" style="border-bottom:1px solid #E9E9ED;">
-  <div class="container min">
-    <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_productos' }}"> {{ read_text(site.name +  '_productos') }}</div>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-12">
-        <ul class="nav navbar-nav">
-          <li class="slogan"><a href="{{ site_base }}/cambios-y-devoluciones">CAMBIOS Y DEVOLUCIONES</a></li>
-          <li class=""><a href="#" style="color:#eaeaec;">|</a></li>
-          <li class="slogan"><a href="{{ site_base }}/tiempo-de-envios">TIEMPO DE ENVIOS</a></li>
-          <li class=""><a href="#" style="color:#eaeaec;">|</a></li>
-          <li class="slogan"><a href="{{ site_base }}/contact">CONTACTANOS</a></li>
-        </ul>
-      </div>
+    <div class="container min">
+        <div class="row col-side-padding">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_productos' }}"> {{ read_text(site.name + '_productos') }}</div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <ul class="nav navbar-nav">
+                    <li class="slogan">
+                        <a href="{{ site_base }}/cambios-y-devoluciones">CAMBIOS Y DEVOLUCIONES</a>
+                    </li>
+                    <li class="">
+                        <a href="#" style="color:#eaeaec;">|</a>
+                    </li>
+                    <li class="slogan">
+                        <a href="{{ site_base }}/tiempo-de-envios">TIEMPO DE ENVIOS</a>
+                    </li>
+                    <li class="">
+                        <a href="#" style="color:#eaeaec;">|</a>
+                    </li>
+                    <li class="slogan">
+                        <a href="{{ site_base }}/contact">CONTACTANOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <div class="container min">
-      <!-- Static navbar -->
-      <nav class="navbar navbar-default hidden-xs visible-md visible-lg visible-sm">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default hidden-xs visible-md visible-lg visible-sm">
         <div>
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-           <!-- <form id="searchForm" role="search" action="{{site_base}}/listado_productos" method="get" class="style-form2"> -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- <form action="{{site_base}}/listado_productos" method="get" > -->
             <div class="desktop-query hidden-lg hidden-md- hidden-sm visible-xs" data-reactid="457">
-              <input placeholder="Buscar" class="desktop-searchBar" value="" data-reactid="458">
-              <a class="desktop-submit" data-reactid="459"><span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span> <i class="fa fa-search" aria-hidden="true"></i></a>
+                <input placeholder="Buscar" class="desktop-searchBar" value="" data-reactid="458">
+                <a class="desktop-submit" data-reactid="459">
+                    <span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
             </div>
-           <!-- </form> -->
-          <div class="row">
-            <div class="col-md-2 col-sm-3">
-              <div class="caja-logo">
-                {% if is_admin %}
-                <div class="image-upload lapiz visible-movil">
-                  <label for="img_header_logo">
-                   <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-                  </label>
-                  <input type="file" class="editableimage" image-id="{{ site.name }}_header_logo" name="image" id="img_header_logo" >
-                </div>
-                {% end %}
-                 <a href="">
-                 <img id="{{ site.name }}_header_logo" src="{{ read_image(site.name + '_header_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_header_logo',) }}';this.onload=''" class="img-responsive logo" alt="item">
-                 </a>
-              </div>
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav sa">
-                  <!-- <li class="#"><a href="{{ site_base}}/listado_productos?tag=mujer,-hombre">MUJERES</a></li> -->
-                  <div class="dropdown col-md-4 col-sm-2">
-                    <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="">MUJERES
-                    </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="{{ site_base }}/ballerinas-mujer">BALLERINAS</a></li>
-                        <li><a href="{{ site_base }}/botines-mujer">BOTINES</a></li>
-                        <li><a href="{{ site_base }}/mocasines-mujer">MOCASINES</a></li>
-                        <li><a href="{{ site_base }}/mules-slippers-mujer">MULES / SLIPPERS</a></li>
-                        <li><a href="{{ site_base }}/plataformas-mujer">PLATAFORMAS</a></li>
-                        <li><a href="{{ site_base }}/playeras-mujer">PLAYERAS</a></li>
-                        <li><a href="{{ site_base }}/sandalias-mujer">SANDALIAS</a></li>
-                        <li><a href="{{ site_base }}/zapatos-mujer">ZAPATOS</a></li>
-                        <li><a href="{{ site_base }}/mujer">TODOS</a></li>
-                      </ul>
+            <!-- </form> -->
+            <div class="row col-side-padding">
+                <div class="col-md-2 col-sm-3">
+                    <div class="caja-logo">
+                        {% if is_admin %}
+                        <div class="image-upload lapiz visible-movil">
+                            <label for="img_header_logo">
+                                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                            </label>
+                            <input type="file" class="editableimage" image-id="{{ site.name }}_header_logo" name="image" id="img_header_logo">
+                        </div>
+                        {% end %}
+                        <a href="">
+                            <img id="{{ site.name }}_header_logo" src="{{ read_image(site.name + '_header_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_header_logo',) }}';this.onload=''" class="img-responsive logo" alt="item">
+                        </a>
                     </div>
-                    <div class="dropdown col-md-4 col-sm-2">
-                    <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="">HOMBRES
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="{{ site_base }}/botines-hombre">BOTINES</a></li>
-                        <li><a href="{{ site_base }}/formales-hombre">FORMALES</a></li>
-                        <li><a href="{{ site_base }}/sandalias-hombre">SANDALIAS</a></li>
-                        <li><a href="{{ site_base }}/zapatos-hombre">ZAPATOS</a></li>
-                        <li><a href="{{ site_base }}/hombres">TODOS</a></li>
-                      </ul>
-                    </div>
-                  <!-- <li><a href="{{ site_base}}/listado_productos?tag=hombre,-mujer">HOMBRES</a></li> -->
-                  <!-- <li><a href="{{ site_base}}/listado_productos?tag=oferta">OFERTA</a></li> -->
-                </ul>
-                <form id="searchform" role="search" action="{{ site_base }}/listado_productos" method="get" >
-                <ul class="nav navbar-nav">
-                  <div class="desktop-query" data-reactid="457">
-                  <input placeholder="Buscar" name="search_query" class="desktop-searchBar" data-reactid="458" value="{% try %}{{search_query}}{% except %}{% end %}">
-                  <a type="submit" class="desktop-submit" data-reactid="459"><span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span> <i class="fa fa-search" aria-hidden="true"></i></a>
                 </div>
-                <!-- <li class="pal">|</li> -->
-                  <li class="icon" id="open-cart" data-toggle="modal" data-target="#myModal">
-                    <span> Tu Compra </span> <span class="units-total">0</span>
-                  </li>
-                   <li class="bor" id="open-cart" data-toggle="modal" data-target="#myModal">
-                    <!-- <a href="" class="com"> Comprar </a> -->
-                    <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
-                  </li>
-                </ul>
-                </form>
-              </div>
+                <div class="col-md-10 col-sm-9">
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav sa">
+                            <!-- <li class="#"><a href="{{ site_base}}/listado_productos?tag=mujer,-hombre">MUJERES</a></li> -->
+                            <div class="dropdown col-md-4 col-sm-2">
+                                <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="">MUJERES
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ site_base }}/ballerinas-mujer">BALLERINAS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/botines-mujer">BOTINES</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/mocasines-mujer">MOCASINES</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/mules-slippers-mujer">MULES / SLIPPERS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/plataformas-mujer">PLATAFORMAS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/playeras-mujer">PLAYERAS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/sandalias-mujer">SANDALIAS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/zapatos-mujer">ZAPATOS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/mujer">TODOS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown col-md-4 col-sm-2">
+                                <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="">HOMBRES
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ site_base }}/botines-hombre">BOTINES</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/formales-hombre">FORMALES</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/sandalias-hombre">SANDALIAS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/zapatos-hombre">ZAPATOS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site_base }}/hombres">TODOS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <li><a href="{{ site_base}}/listado_productos?tag=hombre,-mujer">HOMBRES</a></li> -->
+                            <!-- <li><a href="{{ site_base}}/listado_productos?tag=oferta">OFERTA</a></li> -->
+                        </ul>
+                        <form id="searchform" role="search" action="{{ site_base }}/listado_productos" method="get" class="searchform-wrapper" >
+                            <ul class="nav navbar-nav">
+                                <div class="desktop-query" data-reactid="457">
+                                    <input placeholder="Buscar" name="search_query" class="desktop-searchBar" data-reactid="458" value="{% try %}{{search_query}}{% except %}{% end %}">
+                                    <a type="submit" class="desktop-submit" data-reactid="459">
+                                        <span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span>
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <!-- <li class="pal">|</li> -->
+                                <li class="icon" id="open-cart" data-toggle="modal" data-target="#myModal">
+                                    <span> Tu Compra </span>
+                                    <span class="units-total">0</span>
+                                </li>
+                                <li class="bor" id="open-cart" data-toggle="modal" data-target="#myModal">
+                                    <!-- <a href="" class="com"> Comprar </a> -->
+                                    <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
-    </div> <!-- /container -->
-    <div class="container-fluid" style="border-bottom:1px solid #E9E9ED;"></div>
-
-    <!-- ********HEADER DESKTOP*********** -->
-
-
-
-<!-- ********************************************MENUU MOVIL******************* -->
-
-<div class="back-menu navbar-fixed-top hidden-lg hidden-md hidden-sm visible-xs">
-  <div style="position:relative">
-   <div class="caja-logo">
-     {% if is_admin %}
-     <div class="image-upload lapiz visible-movil">
-      <label for="img_header_logo">
-       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-     </label>
-     <input type="file" class="editableimage" image-id="{{ site.name }}_header_logo" name="image" id="img_header_logo" >
-   </div>
-   {% end %}
-   <a href="">
-   <img id="{{ site.name }}_header_logo" src="{{ read_image(site.name + '_header_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_header_logo',) }}';this.onload=''" class="img-responsive logo" alt="item">
- </a>
- </div>
-</div> 
-<li> <img class="lupita" src="https://7static.loadingplay.com/static/images/00b8e08bfc6dc648c60d3fd4811a7b80_lupa.png">
-</li>
-<li class="" id="open-cart" data-toggle="modal" data-target="#myModal">
-  <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
-</li>
-<div align="center" class="hidden-lg hidden-md hidden-sm visible-xs">
-  <div class="col-xs-12"  style="margin-top: 0px;">
-    <div class="input-group movil buscar-movil" style="display: none">
-      <input type="text" class="form-control movil" placeholder="Busqueda por productos & marcas">
-      <span class="input-group-btn">
-        <button class="btn btn-default movil" type="button">Buscar</button>
-      </span>
-    </div>
-  </div>
+    </nav>
 </div>
+<!-- /container -->
+<div class="container-fluid" style="border-bottom:1px solid #E9E9ED;"></div>
+<!-- ********HEADER DESKTOP*********** -->
+<!-- ********************************************MENUU MOVIL******************* -->
+<div class="back-menu navbar-fixed-top hidden-lg hidden-md hidden-sm visible-xs">
+    <div style="position:relative">
+        <div class="caja-logo">
+            {% if is_admin %}
+            <div class="image-upload lapiz visible-movil">
+                <label for="img_header_logo">
+                    <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_header_logo" name="image" id="img_header_logo">
+            </div>
+            {% end %}
+            <a href="">
+                <img id="{{ site.name }}_header_logo" src="{{ read_image(site.name + '_header_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_header_logo',) }}';this.onload=''" class="img-responsive logo" alt="item">
+            </a>
+        </div>
+    </div>
+    <li>
+        <img class="lupita" src="https://7static.loadingplay.com/static/images/00b8e08bfc6dc648c60d3fd4811a7b80_lupa.png">
+    </li>
+    <li class="" id="open-cart" data-toggle="modal" data-target="#myModal">
+        <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
+    </li>
+    <div align="center" class="hidden-lg hidden-md hidden-sm visible-xs">
+        <div class="col-xs-12" style="margin-top: 0px;">
+            <form action="{{site_base}}/listado_productos" method="get" >
+                <div class="input-group movil buscar-movil" style="display: none">
+                    <input type="text" name="search_query" class="form-control movil" placeholder="Busqueda por productos & marcas">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default movil" type="button">Buscar</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 <div class="container hidden-lg hidden-md hidden-sm visible-xs">
     <div id="wrapper">
@@ -158,78 +200,82 @@
                     </div>
                 </li>
                 <li class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                  <li class="dropdown-submenu mobile2"> 
-                    <div class="">
-                     <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#demo2">Mujer <i class="fa fa-angle-right" aria-hidden="true"></i> </button>
-                    <div id="demo2" class="collapse" style="margin-top: 0px;">
-                      <a href="{{ site_base }}/ballerinas-mujer" class="den">
-                      <div class="">BALLERINAS</div>
-                      </a>
-                      <a href="{{ site_base }}/botines-mujer" class="den">
-                      <div class="">BOTINES</div>
-                      </a>
-                      <a href="{{ site_base }}/mocasines-mujer" class="den">
-                      <div class="s">MOCASINES</div>
-                      </a>
-                      <a href="{{ site_base }}/mules-slippers-mujer" class="den">
-                      <div class="">MULES / SLIPPERS</div>
-                      </a>
-                      <a href="{{ site_base }}/plataformas-mujer" class="den">
-                      <div class="">PLATAFORMAS</div>
-                      </a>
-                      <a href="{{ site_base }}/playeras-mujer" class="den">
-                      <div class="">PLAYERAS</div>
-                      </a>
-                      <a href="{{ site_base }}/sandalias-mujer" class="den">
-                      <div class="">SANDALIAS</div>
-                      </a>
-                      <a href="{{ site_base }}/zapatos-mujer" class="den">
-                      <div class="">ZAPATOS</div>
-                      </a>
-                      <a href="{{ site_base }}/mujer" class="den">
-                      <div class="">TODOS</div>
-                      </a>
-                    </div>
-                     </div>
-
-                    <div class="">
-                     <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#demo">Hombre <i class="fa fa-angle-right" aria-hidden="true"></i> </button>
-                     <div id="demo" class="collapse" style="margin-top: 0px;">
-                      <a href="{{ site_base }}/botines-hombre" class="den">
-                      <div class="">BOTINES</div>
-                      </a>
-                      <a href="{{ site_base }}/formales-hombre" class="den">
-                      <div class="s">FORMALES</div>
-                      </a>
-                      <a href="{{ site_base }}/sandalias-hombre" class="den">
-                      <div class="">SANDALIAS</div>
-                      </a>
-                      <a href="{{ site_base }}/sandalias-hombre" class="den">
-                      <div class="">ZAPATOS</div>
-                      </a>
-                      <a href="{{ site_base }}/hombres" class="den">
-                      <div class="">TODOS</div>
-                      </a>
-                      </div>
-                     </div>
-
-                     <!-- <li><a href="{{ site_base}}/listado_productos?tag=oferta" class="mobile2">Ofertas</a></li> -->
-                     <li>Envios Gratis a todo Chile</li>
-                     <li><a class="tri mobile2">Tiempo de envios</a></li>
-                     <li><a href="{{ site_base }}/cambios-y-devoluciones">Cambios y Devoluciones</a></li>
-                     <li><a href="{{ site_base }}/contact" class="fink mobile2">Preguntas? Contáctanos</a></li>
-                  </li>
-               </li>
+                    <li class="dropdown-submenu mobile2">
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#demo2">Mujer
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="demo2" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/ballerinas-mujer" class="den">
+                                    <div class="">BALLERINAS</div>
+                                </a>
+                                <a href="{{ site_base }}/botines-mujer" class="den">
+                                    <div class="">BOTINES</div>
+                                </a>
+                                <a href="{{ site_base }}/mocasines-mujer" class="den">
+                                    <div class="s">MOCASINES</div>
+                                </a>
+                                <a href="{{ site_base }}/mules-slippers-mujer" class="den">
+                                    <div class="">MULES / SLIPPERS</div>
+                                </a>
+                                <a href="{{ site_base }}/plataformas-mujer" class="den">
+                                    <div class="">PLATAFORMAS</div>
+                                </a>
+                                <a href="{{ site_base }}/playeras-mujer" class="den">
+                                    <div class="">PLAYERAS</div>
+                                </a>
+                                <a href="{{ site_base }}/sandalias-mujer" class="den">
+                                    <div class="">SANDALIAS</div>
+                                </a>
+                                <a href="{{ site_base }}/zapatos-mujer" class="den">
+                                    <div class="">ZAPATOS</div>
+                                </a>
+                                <a href="{{ site_base }}/mujer" class="den">
+                                    <div class="">TODOS</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#demo">Hombre
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="demo" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/botines-hombre" class="den">
+                                    <div class="">BOTINES</div>
+                                </a>
+                                <a href="{{ site_base }}/formales-hombre" class="den">
+                                    <div class="s">FORMALES</div>
+                                </a>
+                                <a href="{{ site_base }}/sandalias-hombre" class="den">
+                                    <div class="">SANDALIAS</div>
+                                </a>
+                                <a href="{{ site_base }}/sandalias-hombre" class="den">
+                                    <div class="">ZAPATOS</div>
+                                </a>
+                                <a href="{{ site_base }}/hombres" class="den">
+                                    <div class="">TODOS</div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <li><a href="{{ site_base}}/listado_productos?tag=oferta" class="mobile2">Ofertas</a></li> -->
+                        <li>Envios Gratis a todo Chile</li>
+                        <li>
+                            <a href="{{ site_base }}/tiempo-de-envios" class="tri mobile2">Tiempo de envios</a>
+                        </li>
+                        <li>
+                            <a href="{{ site_base }}/cambios-y-devoluciones">Cambios y Devoluciones</a>
+                        </li>
+                        <li>
+                            <a href="{{ site_base }}/contact" class="fink mobile2">Preguntas? Contáctanos</a>
+                        </li>
+                    </li>
+                </li>
             </ul>
         </div>
-
         <div id="page-content-wrapper">
-          <a href="#menu-toggle" id="menu-toggle" class="bars">
+            <a href="#menu-toggle" id="menu-toggle" class="bars">
                 <i class="fa fa-bars"></i>
-          </a>
+            </a>
         </div>
-        </div>
-
     </div>
- 
-
+</div>

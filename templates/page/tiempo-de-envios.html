@@ -15,59 +15,42 @@
 {% block javascript %}
 <script type="text/javascript" src="{{ site_base }}/static/js/frubik.js"></script>
 <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+$("#menu-toggle").click(function(e)
+{
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+
+$(document).ready(function()
+{
+    // EXCLUSIVO PARA PLACARE
+    $("title").html("Placare - Tiempo de envios");
+    $("meta[name=description]").attr("content", "https://cdn.loadingplay.com/js/connect/bodegas.client.css");
+
+    $("#OpenAlert").click();
+
+    var base_url = $.environmentVar(
+        'https://apibodegas.ondev.today/',
+        'https://apibodegas.ondev.today/',
+        'https://apibodegas.loadingplay.com/');
+    var checkout_url = $.environmentVar(
+        'https://lpcheckout.ondev.today',
+        'https://lpcheckout.ondev.today',
+        'https://pay.loadingplay.com');
+    var app_public = $.environmentVar(53, 53, 53);
+    var site_name = $.environmentVar('placare', 'placare', 'placare');
+    $(document).ecommerce({
+        'app_public': app_public,
+        'animation': 'simple',
+        'base_url': base_url,
+        'checkout_url': checkout_url,
+        'products_per_page': 9
     });
-</script>
-<script type="text/javascript">
 
-    $(document).ready(function()
-    {
-      // EXCLUSIVO PARA PLACARE
-      $("title").html("Placare - Tiempo de envios");
-      $("meta[name=description]").attr("content", "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.");
- 
-      $("#OpenAlert").click();
-
-        var base_url = $.environmentVar(
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.loadingplay.com/');
-        var checkout_url = $.environmentVar(
-            'https://lpcheckout.ondev.today',
-            'https://lpcheckout.ondev.today',
-            'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(53,53,53);
-        var site_name = $.environmentVar('placare', 'placare', 'placare');
-            'app_public' : app_public,
-            'base_url' : base_url,
-            'maxProducts' : 16,
-            'templateOrigin' : '#product_template',
-            'tag' : '',
-            'ignore_stock' : true,
-            'onLoad':function(){
-               // $('.ellipsis').ellipsis();
-               // $(".ellipsis").dotdotdot();
-             }
-        };
-         $(document).ecommerce({
-       'app_public' :  app_public,
-       'animation' : 'simple',
-       'base_url' : base_url,
-       'checkout_url' :  checkout_url,
-       'products_per_page' : 9
-     });
-
-        $('.product-list').ecommerce('product_box', config);
-
-        // destacado categoria 2
-        // config.tag = 'destacado_categoria2';
-        // $('.product-list2').ecommerce('product_box', config);
-    });
+    $('.product-list').ecommerce('product_box', config);
+});
 </script>
 {% end %}
-
 
 {% block body %}
 
@@ -77,33 +60,25 @@
 {% set editabletext = '' %}
 {% end %}
 
-
-
 <!-- *contenido* -->
+
 <body id="lapimport">
-
-<section>
-  <div class="container min">
-    <div class="row">
-      <div class="col-md-12 text-tiempo-envios" >
-             <div class="text-cont {{editabletext}}" text-id="{{ site.name + '_ter_tn' }}"> {{ read_text(site.name +  '_ter_tn') }} </div>
-
-             <div class="text-black {{editabletext}}" text-id="{{ site.name + '_ter_tiempo' }}"> {{ read_text(site.name +  '_ter_tiempo') }} </div>
-      </div>
-      <div class="col-md-12 col-xs-12 col-sm-12">
-       <div align="center">
-         <img class="img-tiempo" src="https://84static.loadingplay.com/static/images/c85a4c5e0d5e9686ef8f5af524c531e2_TiempoPlacare.png">
+    <section>
+        <div class="container min">
+            <div class="row col-side-padding">
+                <div class="col-md-12 text-tiempo-envios">
+                    <div class="text-cont {{editabletext}}" text-id="{{ site.name + '_ter_tn' }}"> {{ read_text(site.name + '_ter_tn') }} </div>
+                    <div class="text-black {{editabletext}}" text-id="{{ site.name + '_ter_tiempo' }}"> {{ read_text(site.name + '_ter_tiempo') }} </div>
+                </div>
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div align="center">
+                        <img class="img-tiempo" src="https://84static.loadingplay.com/static/images/c85a4c5e0d5e9686ef8f5af524c531e2_TiempoPlacare.png">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-
-
-
-<div style="margin-bottom:100px;"></div>
+    </section>
+    <div style="margin-bottom:100px;"></div>
 </body>
 
 

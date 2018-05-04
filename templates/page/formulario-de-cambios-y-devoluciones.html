@@ -9,143 +9,146 @@
 {% block javascript %}
 
 <script type="text/javascript">
+//Expresión para validar un correo electrónico
+var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+//Expresión para validar edad de 18 a 60 años
+var expr2 = /^1[8-9]|[2-5]\d|60$/;
 
-    //Expresión para validar un correo electrónico
-        var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-        //Expresión para validar edad de 18 a 60 años
-        var expr2 = /^1[8-9]|[2-5]\d|60$/;
-        $(document).ready(function(){
-            //función click
-            $("#bEnviar").click(function(){
+$(document).ready(function()
+{
+    //función click
+    $("#bEnviar").click(function()
+    {
 
-                //Guardar en variables el valor que tengan las cajas de texto
-                //Por medio de los id's
-                //Y tener mejor manipulación de dichos valores
-                var nombre = $("#itNombre").val();
-                var correo = $("#itMail").val();
-                var pedido = $("#itPedido").val();
-                var productos = $("#itProductos").val();
-                var asunto = $("#itComentario").val();
+        //Guardar en variables el valor que tengan las cajas de texto
+        //Por medio de los id's
+        //Y tener mejor manipulación de dichos valores
+        var nombre = $("#itNombre").val();
+        var correo = $("#itMail").val();
+        var pedido = $("#itPedido").val();
+        var productos = $("#itProductos").val();
+        var asunto = $("#itComentario").val();
 
-                var error_count = 0;
- 
-                //Condicionales anidados 
-                //Si nombre está vacío
-                //Muestra el mensaje
-                //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
-                if(nombre == ""){
-                    $("#itNombre").parents(".form-group").addClass("has-error");
-                    $(".help-nombre").removeClass('hidden');
-                    error_count += 1;
-                }
-                //en otro caso, el mensaje no se muestra
-                else{
-                    $("#itNombre").parents(".form-group").removeClass("has-error");
-                    $(".help-nombre").addClass('hidden');
-                }
+        var error_count = 0;
 
-                if(pedido == ""){
-                    $("#itpedido").parents(".form-group").addClass("has-error");
-                    $(".help-pedido").removeClass('hidden');
-                    error_count += 1;
-                }
-                //en otro caso, el mensaje no se muestra
-                else{
-                    $("#itPedido").parents(".form-group").removeClass("has-error");
-                    $(".help-pedido").addClass('hidden');
-                }
+        //Condicionales anidados
+        //Si nombre está vacío
+        //Muestra el mensaje
+        //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
+        if (nombre == "")
+        {
+            $("#itNombre").parents(".form-group").addClass("has-error");
+            $(".help-nombre").removeClass('hidden');
+            error_count += 1;
+        }
+        //en otro caso, el mensaje no se muestra
+        else
+        {
+            $("#itNombre").parents(".form-group").removeClass("has-error");
+            $(".help-nombre").addClass('hidden');
+        }
 
-                if(productos == ""){
-                    $("#itProductos").parents(".form-group").addClass("has-error");
-                    $(".help-productos").removeClass('hidden');
-                    error_count += 1;
-                }
-                //en otro caso, el mensaje no se muestra
-                else{
-                    $("#itproductos").parents(".form-group").removeClass("has-error");
-                    $(".help-productos").addClass('hidden');
-                }
+        if (pedido == "")
+        {
+            $("#itpedido").parents(".form-group").addClass("has-error");
+            $(".help-pedido").removeClass('hidden');
+            error_count += 1;
+        }
+        //en otro caso, el mensaje no se muestra
+        else
+        {
+            $("#itPedido").parents(".form-group").removeClass("has-error");
+            $(".help-pedido").addClass('hidden');
+        }
 
-                //Si correo está vacío y la expresión NO corresponde -test es función de JQuery
-                //Muestra el mensaje
-                //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
-                if(correo == "" || !expr.test(correo)){
-                    $("#itMail").parents(".form-group").addClass("has-error");
-                    $(".help-mail").removeClass('hidden');
-                    error_count += 1;
-                }
-                else
-                {
-                    $("#itMail").parents(".form-group").removeClass("has-error");
-                    $(".help-mail").addClass('hidden');
-                }
+        if (productos == "")
+        {
+            $("#itProductos").parents(".form-group").addClass("has-error");
+            $(".help-productos").removeClass('hidden');
+            error_count += 1;
+        }
+        //en otro caso, el mensaje no se muestra
+        else
+        {
+            $("#itproductos").parents(".form-group").removeClass("has-error");
+            $(".help-productos").addClass('hidden');
+        }
+
+        //Si correo está vacío y la expresión NO corresponde -test es función de JQuery
+        //Muestra el mensaje
+        //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
+        if (correo == "" || !expr.test(correo))
+        {
+            $("#itMail").parents(".form-group").addClass("has-error");
+            $(".help-mail").removeClass('hidden');
+            error_count += 1;
+        }
+        else
+        {
+            $("#itMail").parents(".form-group").removeClass("has-error");
+            $(".help-mail").addClass('hidden');
+        }
 
 
-                if(asunto == ""){
-                    $("#itComentario").parents(".form-group").addClass("has-error");
-                    $(".help-comentario").removeClass('hidden');
-                    error_count += 1;
-                }
-                else
-                {
-                    $("#itComentario").parents(".form-group").removeClass("has-error");
-                    $(".help-comentario").addClass('hidden');
-                }
+        if (asunto == "")
+        {
+            $("#itComentario").parents(".form-group").addClass("has-error");
+            $(".help-comentario").removeClass('hidden');
+            error_count += 1;
+        }
+        else
+        {
+            $("#itComentario").parents(".form-group").removeClass("has-error");
+            $(".help-comentario").addClass('hidden');
+        }
 
-                if (error_count > 0)
-                {
-                    return false;
-                }
- 
-            });//click
-        });//ready
+        if (error_count > 0)
+        {
+            return false;
+        }
+
+    }); //click
+}); //ready
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function()
+$(document).ready(function()
+{
+    // EXCLUSIVO PARA PLACARE
+    $("title").html("Placare - Formulario devoluciones");
+    $("meta[name=description]").attr("content", "https://cdn.loadingplay.com/js/connect/bodegas.client.css");
+
+    $("#OpenAlert").click();
+
+    var base_url = $.environmentVar(
+        'https://apibodegas.ondev.today/',
+        'https://apibodegas.ondev.today/',
+        'https://apibodegas.loadingplay.com/');
+    var checkout_url = $.environmentVar(
+        'https://lpcheckout.ondev.today',
+        'https://lpcheckout.ondev.today',
+        'https://pay.loadingplay.com');
+    var app_public = $.environmentVar(53, 53, 53);
+    var site_name = $.environmentVar('placare', 'placare', 'placare');
+    var config = {
+        'app_public': app_public,
+        'base_url': base_url,
+        'maxProducts': 16,
+        'templateOrigin': '#product_template',
+        'tag': '',
+        'ignore_stock': true
+    };
+    $(document).ecommerce(
     {
-      // EXCLUSIVO PARA PLACARE
-      $("title").html("Placare - Formulario devoluciones");
-      $("meta[name=description]").attr("content", "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.");
- 
-      $("#OpenAlert").click();
-
-        var base_url = $.environmentVar(
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.loadingplay.com/');
-        var checkout_url = $.environmentVar(
-            'https://lpcheckout.ondev.today',
-            'https://lpcheckout.ondev.today',
-            'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(53,53,53);
-        var site_name = $.environmentVar('placare', 'placare', 'placare');
-        var config = {
-            'app_public' : app_public,
-            'base_url' : base_url,
-            'maxProducts' : 16,
-            'templateOrigin' : '#product_template',
-            'tag' : '',
-            'ignore_stock' : true,
-            'onLoad':function(){
-               // $('.ellipsis').ellipsis();
-               // $(".ellipsis").dotdotdot();
-             }
-        };
-         $(document).ecommerce({
-       'app_public' :  app_public,
-       'animation' : 'simple',
-       'base_url' : base_url,
-       'checkout_url' :  checkout_url,
-       'products_per_page' : 9
-     });
-
-        $('.product-list').ecommerce('product_box', config);
-
-        // destacado categoria 2
-        // config.tag = 'destacado_categoria2';
-        // $('.product-list2').ecommerce('product_box', config);
+        'app_public': app_public,
+        'animation': 'simple',
+        'base_url': base_url,
+        'checkout_url': checkout_url,
+        'products_per_page': 9
     });
+
+    $('.product-list').ecommerce('product_box', config);
+});
 </script>
 
 <script type="text/javascript">
@@ -189,7 +192,8 @@
 {% block css %}
 <link type="text/css" rel='stylesheet' href="{{ site_base }}/static/css/page.edit.css" />
 <style type="text/css">
-    .controls input, .controls textarea
+    .controls input,
+    .controls textarea
     {
         padding: 10px 16px;
     }
@@ -203,130 +207,121 @@
 {% else %}
     {% set editabletext = '' %}
 {% end %}
+
 <div class="background-content">
-
-<div class="container min">
-<div class="" style="position: relative;">
-<!-- 	<img class="fondo-form"src="https://7static.loadingplay.com/static/images/a9638bcba8ce78ab5a8b3564617b6917_Banner_principal_2.png"> -->
-	<!-- editar imagen -->
-    {% if is_admin %}
-    <div class="image-upload con visible-movil">
-        <label for="img_banner_devo-loading">
-            <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-        </label>
-        <input type="file" class="editableimage" image-id="{{ site.name }}_banner_devo-loading" name="image" id="img_banner_devo-loading" >
+    <div class="container min">
+        <div class="" style="position: relative;">
+            <!-- editar imagen -->
+            {% if is_admin %}
+            <div class="image-upload con visible-movil">
+                <label for="img_banner_devo-loading">
+                    <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_banner_devo-loading" name="image" id="img_banner_devo-loading">
+            </div>
+            {% end %}
+            <img id="{{ site.name }}_banner_devo-loading" src="{{ read_image(site.name + '_banner_devo-loading', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_devo-loading',500) }}'" class="desaturada fondo-form" alt="item">
+        </div>
     </div>
-    {% end %}
-    <img id="{{ site.name }}_banner_devo-loading" src="{{ read_image(site.name + '_banner_devo-loading', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_devo-loading',500) }}'" class="desaturada fondo-form" alt="item">
-
 </div>
-</div>
-
-</div>
-
-  <div class="container min contact product text-left  fondo-contact" style="display: inherit;">
-                <div class="col-md-12 col-sm-12 col-xs-12">      
-                    <div class="col-xs-12 col-md-12 col-sm-12 coli">
-                        <div class="titulo-negrita {{editabletext}}" text-id="{{ site.name + '_h_formdev' }}"> {{ read_text(site.name +  '_h_formdev') }}
-                        </div>
-                         <div class="titulo-claro {{editabletext}}" text-id="{{ site.name + '_h_formdev_2' }}"> {{ read_text(site.name +  '_h_formdev_2') }}
-                        </div>
-
-                        <div class="titulo-negrita {{editabletext}}" text-id="{{ site.name + '_h_formdev_3' }}"> {{ read_text(site.name +  '_h_formdev_3') }}
-                        </div>
-
-                    </div>  
-                    <div class="col-xs-12 col-md-12 col-sm-12 align-form-contact fondo-contact" style="position: relative;left: 2%;">
-
-                    <div>
-
-                        <form action='https://forms.zohopublic.com/sytes/form/placareformulariodevoluciones/formperma/j5jC45m42J05A09KA55MCH60a/htmlRecords/submit' name='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
-                            <div class="row clearfix">
-                                <div class="col-xs-12 col-sm-12">
-                                   <div class="form-group con">
-                                    <label for="nationality" class="control-label">Elija una opcion</label> 
-                                    <div class="controls"> <i class="fa fa-angle-down for" aria-hidden="true"></i>
-                                        <select class="form-control nuevo input-lg requiredField" name="Dropdown" id="cambio"  placeholder="Please select your Nationality" style="padding: 0 20px;">
-                                            <option>Cambio o Devolución</option>
-                                            <option value="Cambio">Cambio</option>
-                                            <option value="Devolución">Devolución</option>
-                                        </select>
-                                    </div>
+<div class="container min contact product text-left  fondo-contact" style="display: inherit;">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-xs-12 col-md-12 col-sm-12 coli">
+            <div class="titulo-negrita {{editabletext}}" text-id="{{ site.name + '_h_formdev' }}"> {{ read_text(site.name + '_h_formdev') }}
+            </div>
+            <div class="titulo-claro {{editabletext}}" text-id="{{ site.name + '_h_formdev_2' }}"> {{ read_text(site.name + '_h_formdev_2') }}
+            </div>
+            <div class="titulo-negrita {{editabletext}}" text-id="{{ site.name + '_h_formdev_3' }}"> {{ read_text(site.name + '_h_formdev_3') }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-12 col-sm-12 align-form-contact fondo-contact" style="position: relative;left: 2%;">
+            <div>
+                <form action='https://forms.zohopublic.com/sytes/form/placareformulariodevoluciones/formperma/j5jC45m42J05A09KA55MCH60a/htmlRecords/submit' name='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="form-group con">
+                                <label for="nationality" class="control-label">Elija una opcion</label>
+                                <div class="controls"> <i class="fa fa-angle-down for" aria-hidden="true"></i>
+                                    <select class="form-control nuevo input-lg requiredField" name="Dropdown" id="cambio" placeholder="Please select your Nationality" style="padding: 0 20px;">
+                                        <option>Cambio o Devolución</option>
+                                        <option value="Cambio">Cambio</option>
+                                        <option value="Devolución">Devolución</option>
+                                    </select>
                                 </div>
-                                <div class="form-group con">
-                                    <label for="nationality" class="control-label">¿Cuál es el motivo de la devolución?</label> 
-                                    <div class="controls"> <i class="fa fa-angle-down for" aria-hidden="true"></i>
-                                        <select class="form-control nuevo input-lg requiredField" name="Dropdown1" id="motivos"  placeholder="Please select your Nationality" style="padding: 0 20px;">
-                                            <option>Seleccionar motivo</option>
-                                            <option value="Queda grande / chico">Queda grande/ chico </option>
-                                            <option value="No calza bien">No calza bien</option>
-                                            <option value="No gustÃģ">No gustó</option>
-                                            <option value="Color diferente a foto original">Color diferente a foto original</option>
-                                            <option class="otro_motivo" value="Otro motivo">Otro Motivo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="selec-motivo form-group hidden"> <!-- ****Solo aparece si se selecciona otro motivo*** -->
-                                    <label for="exampleTextarea">Otro motivo</label>
-                                    <textarea name="SingleLine1" class="form-control" id="exampleTextarea" rows="3"></textarea>
-                                </div>
-                                <div class="selec-cambio form-group hidden"> <!-- ****Solo aparece si se selecciona cambio*** -->
-                                    <label for="exampleTextarea">URL o Enlace del producto a cambiar</label>
-                                    <textarea name="SingleLine2" class="form-control" id="exampleTextarea" rows="3"></textarea>
-                                </div>
-                                <div class="selec-cambio form-group hidden"> <!-- ****Solo aparece si se selecciona cambio*** -->
-                                    <label for="exampleTextarea">Talla del producto a cambiar</label>
-                                    <textarea name="SingleLine3" class="form-control" id="exampleTextarea" rows="3"></textarea>
-                                </div>
-
-                                <div class="form-group con">
-                                        <label class="control-label">Nombre y Apellido</label>
-                                        <div class=" controls">
-                                            <input name="Name_First" placeholder="Nombre y Apellido" class="form-control input-lg requiredField" type="text" id="itNombre" data-error-invalid="Invalid email address" data-error-empty="Ingrese nombre">
-                                        </div>
-                                        <span id="helpBlock2" class="hidden help-block help-nombre">Escribe tu nombre y apellido</span>
-                                    </div>
-                                    <div class="form-group con">
-                                        <label class="control-label">Correo electronico</label>
-                                        <div class=" controls">
-                                            <input name="Email" placeholder="Correo electronico" class="form-control input-lg requiredField" type="email" id="itMail" data-error-invalid="Invalid email address" data-error-empty="Ingrese email">
-                                            <input type="hidden" name="subject" value="contactanos" />
-                                        </div>
-                                        <span id="helpBlock3" class="hidden help-block help-mail">Escribe un Email valido</span>
-                                    </div>
-                                    <div class="form-group con"> <!-- ****Solo aparece si se selecciona cambio*** -->
-                                        <label class="control-label">Numero de boleta</label>
-                                        <div class=" controls">
-                                            <input name="SingleLine" placeholder="Numero de boleta" class="form-control input-lg requiredField" type="text" id="itPedido" data-error-invalid="Invalid email address" data-error-empty="Ingrese numero de pedido">
-                                        </div>
-                                        <span id="helpBlock3" class="hidden help-block help-pedido">Escribe numero de boleta</span>
-                                    </div>
-
-                                    <div class="form-group form-ran"> <!-- ****Solo aparece si se selecciona cambio*** -->
-                                       <label class="control-label tra">Adjuntar Boleta</label>
-                                       <input type="file" name="FileUpload" class="imgup-add-input" placeholder="Adjuntar Boleta"/>
-                                    </div>
-                                </div>  
                             </div>
                             <div class="form-group con">
-                                <label class="control-label">Comentarios adicionales</label>
-                                <div class="controls">
-                                    <textarea name="MultiLine1" placeholder="Comentarios adicionales" class="form-control input-lg requiredField" id="itComentario" rows="5" data-error-empty="Ingrese mensaje"></textarea>
+                                <label for="nationality" class="control-label">¿Cuál es el motivo de la devolución?</label>
+                                <div class="controls"> <i class="fa fa-angle-down for" aria-hidden="true"></i>
+                                    <select class="form-control nuevo input-lg requiredField" name="Dropdown1" id="motivos" placeholder="Please select your Nationality" style="padding: 0 20px;">
+                                        <option>Seleccionar motivo</option>
+                                        <option value="Queda grande / chico">Queda grande/ chico </option>
+                                        <option value="No calza bien">No calza bien</option>
+                                        <option value="No gustÃģ">No gustó</option>
+                                        <option value="Color diferente a foto original">Color diferente a foto original</option>
+                                        <option class="otro_motivo" value="Otro motivo">Otro Motivo</option>
+                                    </select>
                                 </div>
-                                <span id="helpBlock4" class="hidden help-block help-comentario">Escribe tu Mensaje</span>
                             </div>
-                            <p><button name="submit" id="bEnviar" type="submit" class="btn btn-store btn-block contact" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Email Sent">Enviar mensaje </button></p>
-                            <input type="hidden" name="submitted" id="submitted3" value="true">
-                        </form> 
+                            <div class="selec-motivo form-group hidden">
+                                <!-- ****Solo aparece si se selecciona otro motivo*** -->
+                                <label for="exampleTextarea">Otro motivo</label>
+                                <textarea name="SingleLine1" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            </div>
+                            <div class="selec-cambio form-group hidden">
+                                <!-- ****Solo aparece si se selecciona cambio*** -->
+                                <label for="exampleTextarea">URL o Enlace del producto a cambiar</label>
+                                <textarea name="SingleLine2" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            </div>
+                            <div class="selec-cambio form-group hidden">
+                                <!-- ****Solo aparece si se selecciona cambio*** -->
+                                <label for="exampleTextarea">Talla del producto a cambiar</label>
+                                <textarea name="SingleLine3" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            </div>
+                            <div class="form-group con">
+                                <label class="control-label">Nombre y Apellido</label>
+                                <div class=" controls">
+                                    <input name="Name_First" placeholder="Nombre y Apellido" class="form-control input-lg requiredField" type="text" id="itNombre" data-error-invalid="Invalid email address" data-error-empty="Ingrese nombre">
+                                </div>
+                                <span id="helpBlock2" class="hidden help-block help-nombre">Escribe tu nombre y apellido</span>
+                            </div>
+                            <div class="form-group con">
+                                <label class="control-label">Correo electronico</label>
+                                <div class=" controls">
+                                    <input name="Email" placeholder="Correo electronico" class="form-control input-lg requiredField" type="email" id="itMail" data-error-invalid="Invalid email address" data-error-empty="Ingrese email">
+                                    <input type="hidden" name="subject" value="contactanos" />
+                                </div>
+                                <span id="helpBlock3" class="hidden help-block help-mail">Escribe un Email valido</span>
+                            </div>
+                            <div class="form-group con">
+                                <!-- ****Solo aparece si se selecciona cambio*** -->
+                                <label class="control-label">Numero de boleta</label>
+                                <div class=" controls">
+                                    <input name="SingleLine" placeholder="Numero de boleta" class="form-control input-lg requiredField" type="text" id="itPedido" data-error-invalid="Invalid email address" data-error-empty="Ingrese numero de pedido">
+                                </div>
+                                <span id="helpBlock3" class="hidden help-block help-pedido">Escribe numero de boleta</span>
+                            </div>
+                            <div class="form-group form-ran">
+                                <!-- ****Solo aparece si se selecciona cambio*** -->
+                                <label class="control-label tra">Adjuntar Boleta</label>
+                                <input type="file" name="FileUpload" class="imgup-add-input" placeholder="Adjuntar Boleta" />
+                            </div>
                         </div>
-                     </div>
-                          
+                    </div>
+                    <div class="form-group con">
+                        <label class="control-label">Comentarios adicionales</label>
+                        <div class="controls">
+                            <textarea name="MultiLine1" placeholder="Comentarios adicionales" class="form-control input-lg requiredField" id="itComentario" rows="5" data-error-empty="Ingrese mensaje"></textarea>
+                        </div>
+                        <span id="helpBlock4" class="hidden help-block help-comentario">Escribe tu Mensaje</span>
+                    </div>
+                    <p>
+                        <button name="submit" id="bEnviar" type="submit" class="btn btn-store btn-block contact" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Email Sent">Enviar mensaje </button>
+                    </p>
+                    <input type="hidden" name="submitted" id="submitted3" value="true">
+                </form>
             </div>
-            
-            
-			
-
-	</div>
-
-{% include '../home/footer.html' %}		
+        </div>
+    </div>
+</div>
+{% include '../home/footer.html' %}
 {% end %}

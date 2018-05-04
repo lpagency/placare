@@ -1,7 +1,7 @@
 {% extends "../base.html" %}
 
 {% block title %}
-{{ site.name }}
+{{ site.name }} - Condiciones de envío
 {% end %}
 
 {% block header %}
@@ -21,51 +21,42 @@
     });
 </script>
 <script type="text/javascript">
-    $(document).ready(function()
-    {
-      // EXCLUSIVO PARA PLACARE
-      $("title").html("Placare - Condiciones de envío");
-      $("meta[name=description]").attr("content", "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.");
- 
+$(document).ready(function() 
+{
+    // EXCLUSIVO PARA PLACARE
+    $("meta[name=description]").attr("content", "https://cdn.loadingplay.com/js/connect/bodegas.client.css");
 
-      $("#OpenAlert").click();
 
-        var base_url = $.environmentVar(
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.loadingplay.com/');
-        var checkout_url = $.environmentVar(
-            'https://lpcheckout.ondev.today',
-            'https://lpcheckout.ondev.today',
-            'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(53,53,53);
-        var site_name = $.environmentVar('placare', 'placare', 'placare');
-        var config = {
-            'app_public' : app_public,
-            'base_url' : base_url,
-            'maxProducts' : 16,
-            'templateOrigin' : '#product_template',
-            'tag' : '',
-            'ignore_stock' : true,
-            'onLoad':function(){
-               // $('.ellipsis').ellipsis();
-               // $(".ellipsis").dotdotdot();
-             }
-        };
-         $(document).ecommerce({
-       'app_public' :  app_public,
-       'animation' : 'simple',
-       'base_url' : base_url,
-       'checkout_url' :  checkout_url,
-       'products_per_page' : 9
-     });
+    $("#OpenAlert").click();
 
-        $('.product-list').ecommerce('product_box', config);
-
-        // destacado categoria 2
-        // config.tag = 'destacado_categoria2';
-        // $('.product-list2').ecommerce('product_box', config);
+    var base_url = $.environmentVar(
+        'https://apibodegas.ondev.today/',
+        'https://apibodegas.ondev.today/',
+        'https://apibodegas.loadingplay.com/');
+    var checkout_url = $.environmentVar(
+        'https://lpcheckout.ondev.today',
+        'https://lpcheckout.ondev.today',
+        'https://pay.loadingplay.com');
+    var app_public = $.environmentVar(53, 53, 53);
+    var site_name = $.environmentVar('placare', 'placare', 'placare');
+    var config = {
+        'app_public': app_public,
+        'base_url': base_url,
+        'maxProducts': 16,
+        'templateOrigin': '#product_template',
+        'tag': '',
+        'ignore_stock': true
+    };
+    $(document).ecommerce({
+        'app_public': app_public,
+        'animation': 'simple',
+        'base_url': base_url,
+        'checkout_url': checkout_url,
+        'products_per_page': 9
     });
+
+    $('.product-list').ecommerce('product_box', config);
+});
 </script>
 {% end %}
 
@@ -78,40 +69,28 @@
 {% set editabletext = '' %}
 {% end %}
 
-
-
 <!-- *contenido* -->
+
 <body id="lapimport">
-
-<section>
-  <div class="container min">
-    <div class="col-md-12">
-   <div style="position:relative;">
-    {% if is_admin %}
-    <div class="image-upload lapiz visible-movil">
-     <label for="img_costos">
-       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-     </label>
-     <input type="file" class="editableimage" image-id="{{ site.name }}_costos" name="image" id="img_costos" >
-   </div>
-   {% end %}
-   
-     <img id="{{ site.name }}_costos" src="{{ read_image(site.name + '_costos', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_costos',) }}'" class="box-costos" alt="item">
-</div>
-
-
-
-    </div>
-  </div>
-
-</section>
-
-
-
-
-<div style="margin-bottom:100px;"></div>
+    <section>
+        <div class="container min">
+            <div class="col-md-12">
+                <div style="position:relative;">
+                    {% if is_admin %}
+                    <div class="image-upload lapiz visible-movil">
+                        <label for="img_costos">
+                            <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                        </label>
+                        <input type="file" class="editableimage" image-id="{{ site.name }}_costos" name="image" id="img_costos">
+                    </div>
+                    {% end %}
+                    <img id="{{ site.name }}_costos" src="{{ read_image(site.name + '_costos', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_costos',) }}'" class="box-costos" alt="item">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="margin-bottom:100px;"></div>
 </body>
-
 
 {% include '../home/footer.html' %}
 {% end %}
