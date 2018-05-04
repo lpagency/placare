@@ -62,8 +62,8 @@
                 {
                     files:
                     {
-                        'static/css/main.min.css': ['static/css/main.min.css'],
-                        'static/css/extras.min.css': ['static/css/extras.min.css']
+                        'static/css/main.min.css': main_css_files,
+                        'static/css/extras.min.css': secondary_css_files
                     }
                 }
             }
