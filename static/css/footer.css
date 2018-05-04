@@ -6,7 +6,6 @@ name: footer
 category: footer
 ---
 
-
 ### listado footer
 
 ```html_example
@@ -36,7 +35,6 @@ category: footer
     </div>
 </div>
 ```
-
 
 ### subscribe
 
@@ -71,7 +69,6 @@ category: footer
 <div class="clearfix" ></div>
 ```
 
-
 ### email footer
 
 ```html_example
@@ -100,7 +97,6 @@ hr
     position: relative;
     border: 1px solid rgba(128, 128, 128, 0.5);
 }
-
 
 .footer .controls
 {
@@ -174,7 +170,6 @@ hr
     position: relative;
     margin-bottom: 32px;
 }
-
 
 .no-dot
 {
@@ -375,7 +370,6 @@ hr.new-f
     margin-top: 13px;
 }
 
-
 .vop-2
 {
     font-size: 12px;
@@ -475,7 +469,6 @@ hr.new-f
     padding: 0px;
 }
 
-
 div.image-upload.fe
 {
     position: absolute;
@@ -502,11 +495,7 @@ div.image-upload.fe
     max-width: 100%;
 }
 
-
-
-
 /*----------------------------------------------Responsive-----------------------------------*/
-
 @media (max-width: 991px)
 {
     .no-doti
@@ -534,7 +523,6 @@ div.image-upload.fe
         border-color: #ccc;
     }
 }
-
 
 @media (max-width: 767px)
 {
@@ -621,7 +609,6 @@ div.image-upload.fe
         margin-bottom: 20px;
         left: 0px;
     }
-
 
     .btn-default.sus-h:hover
     {
@@ -773,7 +760,6 @@ div.image-upload.fe
         font-weight: 500;
     }
 
-
     hr.new-f
     {
         margin-top: -9px;
@@ -785,7 +771,6 @@ div.image-upload.fe
         position: relative;
     }
 }
-
 
 @media (max-width: 500px)
 {
@@ -805,10 +790,8 @@ div.image-upload.fe
     }
 }
 
-
 @media (max-width: 414px)
 {
-
 
     .alme
     {
