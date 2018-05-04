@@ -587,7 +587,7 @@ input.cup {
     }
 }
 
-#searchform
+.searchform-wrapper
 {
     position: absolute;
     right: 15px;
@@ -687,14 +687,14 @@ a.desktop-submit
     float: left;
     line-height: 0;
     margin: 0px 0px 0px 0;
-    left: 65px;
     position: relative;
     margin-top: 12px;
+    margin-right: 5px;
 }
 
 .img-bolsa
 {
-    width: 16%;
+    width: 20px;
     margin-top: 7px;
     margin-left: 1px;
     float: right;
@@ -708,7 +708,6 @@ a.desktop-submit
 li.icon
 {
     position: relative;
-    left: 97px;
     margin-top: 22px;
     color: #999;
     -webkit-font-smoothing: antialiased;
@@ -719,9 +718,14 @@ li.icon
 
 .bor
 {
-    border-left: 2px solid #eaeaec;
     margin-top: 13px;
     height: 37px;
+}
+
+.icon
+{
+    border-left: 2px solid #eaeaec;
+    padding-left: 5px;
 }
 
 .navbar-default
@@ -785,11 +789,6 @@ li.slogan a
     color: #999;
     font-weight: 400;
     padding-bottom: 0;
-}
-
-.navbar-nav
-{
-    float: right;
 }
 
 .navbar-nav.sa
@@ -978,17 +977,6 @@ li.slogan a
         border-left: none;
         position: relative;
     }
-    .bor:after
-    {
-        position: absolute;
-        content: '';
-        left: -5px;
-        top: 0;
-        display: inline-block;
-        width: 2px;
-        height: 100%;
-        background-color: #eaeaec;
-    }
 
     .dropdown.col-md-4
     {
@@ -996,10 +984,6 @@ li.slogan a
         float: left;
         padding: 0;
         margin-right: 20px;
-    }
-    .navbar-nav>li
-    {
-        margin-right: 15px;
     }
     .nav>li>a
     {
@@ -1073,7 +1057,6 @@ li.slogan a
         float: left;
         line-height: 0;
         margin: 0px 0px 0px 0;
-        left: 100px;
         position: relative;
         margin-top: 12px;
     }
@@ -1543,6 +1526,50 @@ li.slogan a
     }
 }
 
+/*
+* @Author: Ricardo Silva
+* @Date:   2018-05-03 16:44:05
+* @Last Modified by:   Ricardo Silva
+* @Last Modified time: 2018-05-03 16:55:38
+*/
+
+/*doc
+
+---
+title: Search Bar
+name: search_bar
+category: header
+---
+
+```html_example
+<form id="searchform" role="search" action="/placare/listado_productos" method="get">
+    <ul class="nav navbar-nav">
+        <div class="desktop-query" data-reactid="457">
+            <input placeholder="Buscar" name="search_query" class="desktop-searchBar" data-reactid="458" value="">
+            <a type="submit" class="desktop-submit" data-reactid="459">
+                <span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span>
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <li class="icon" id="open-cart" data-toggle="modal" data-target="#myModal">
+            <span> Tu Compra </span>
+            <span class="units-total">
+            <span> 0</span>
+            </span>
+        </li>
+        <li class="bor" id="open-cart" data-toggle="modal" data-target="#myModal">
+            <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
+        </li>
+    </ul>
+</form>
+<div class="clearfix" ></div>
+```
+
+*/
+
+
+
 .container.min
 {
     max-width: 980px;
@@ -1576,24 +1603,27 @@ a:hover
     color: #333;
 }
 
-.col-side-padding
+@media (min-width: 991.98px)
 {
-    padding: 0px 5px 0px 5px;
-}
+    .col-side-padding
+    {
+        padding: 0px 5px 0px 5px;
+    }
 
-.no-padding
-{
-    padding: 0px;
-}
+    .no-padding
+    {
+        padding: 0px;
+    }
 
-.no-padding-left
-{
-    padding-left: 0px;
-}
+    .no-padding-left
+    {
+        padding-left: 0px;
+    }
 
-.no-padding-right
-{
-    padding-right: 0px;
+    .no-padding-right
+    {
+        padding-right: 0px;
+    }
 }
 
 /*doc

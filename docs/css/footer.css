@@ -334,12 +334,6 @@ div.image-upload.fo
     font-weight: 300;
 }
 
-.form-group.footer
-{
-    margin-bottom: 19px;
-    margin-left: 2px;
-}
-
 .kop
 {
     font-size: 15px;
@@ -533,27 +527,6 @@ div.image-upload.fe
 
 @media (max-width: 768px)
 {
-    .btn-default.sus
-    {
-        color: white;
-        background-color: #666465;
-        border-color: #666465;
-        border-radius: 0px;
-        width: auto;
-        margin-top: 24px;
-        font-weight: 600;
-        float: left;
-        height: auto;
-        left: 0px;
-        padding: 5 20px;
-        position: relative;
-        display: inline-block;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -ms-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
     .btn-default.sus:hover
     {
         color: #666465;
@@ -565,6 +538,11 @@ div.image-upload.fe
 
 @media (max-width: 767px)
 {
+
+    .footer .controls
+    {
+        width: 100%;
+    }
 
     #footer .row .col-xs-12
     {
@@ -598,12 +576,6 @@ div.image-upload.fe
         float: initial;
         margin-bottom: 0px;
         object-fit: scale-down;
-    }
-
-    .form-group.footer
-    {
-        margin-bottom: 15px;
-        margin-top: -101px;
     }
 
     .btn-default.sus
@@ -864,12 +836,6 @@ div.image-upload.fe
         width: 70%;
         right: -35px;
         position: relative;
-    }
-
-    .form-group.footer
-    {
-        margin-left: 0px;
-        margin-right: 0px;
     }
 
     .ul-22-0

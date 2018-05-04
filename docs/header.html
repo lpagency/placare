@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>a brand new styleguide:
+        header
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./docs-css/style.css">
+    <link rel="stylesheet" href="./docs-css/github.css">
+    <link rel="stylesheet" type="text/css" href="./css/general.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.search.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                
+                    <li>
+                        <a href="footer.html">
+                            footer
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="index.html">
+                            basics
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="header.html">
+                            header
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+        <h1>a brand new style guide, it's super effective</h1>
+        <section class="content">
+            <ul>
+                
+                    <li>
+                        <a href="#search_bar">
+                            Search Bar
+                        </a>
+                    </li>
+                
+            </ul>
+<h1 id="search_bar" class="styleguide">Search Bar</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <form id="searchform" role="search" action="/placare/listado_productos" method="get">
+    <ul class="nav navbar-nav">
+        <div class="desktop-query" data-reactid="457">
+            <input placeholder="Buscar" name="search_query" class="desktop-searchBar" data-reactid="458" value="">
+            <a type="submit" class="desktop-submit" data-reactid="459">
+                <span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span>
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <li class="icon" id="open-cart" data-toggle="modal" data-target="#myModal">
+            <span> Tu Compra </span>
+            <span class="units-total">
+            <span> 0</span>
+            </span>
+        </li>
+        <li class="bor" id="open-cart" data-toggle="modal" data-target="#myModal">
+            <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
+        </li>
+    </ul>
+</form>
+<div class="clearfix" ></div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">"searchform"</span> <span class="na">role=</span><span class="s">"search"</span> <span class="na">action=</span><span class="s">"/placare/listado_productos"</span> <span class="na">method=</span><span class="s">"get"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"desktop-query"</span> <span class="na">data-reactid=</span><span class="s">"457"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Buscar"</span> <span class="na">name=</span><span class="s">"search_query"</span> <span class="na">class=</span><span class="s">"desktop-searchBar"</span> <span class="na">data-reactid=</span><span class="s">"458"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"desktop-submit"</span> <span class="na">data-reactid=</span><span class="s">"459"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"myntraweb-sprite desktop-iconSearch sprites-search"</span> <span class="na">data-reactid=</span><span class="s">"460"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-search"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">id=</span><span class="s">"open-cart"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#myModal"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span&gt;</span> Tu Compra <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"units-total"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span&gt;</span> 0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"bor"</span> <span class="na">id=</span><span class="s">"open-cart"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#myModal"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-bolsa"</span> <span class="na">src=</span><span class="s">"https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span> <span class="nt">&gt;&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+</section>
+<footer>
+    <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+</footer>
+</div>
+</body>
+
+</html>

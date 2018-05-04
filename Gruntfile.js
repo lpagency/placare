@@ -6,6 +6,7 @@
     var main_css_files = [
         'static/css/style.css',
         'static/css/header.css',
+        'static/css/header.search.css',
         'static/css/general.css',
         'static/css/home.css'
     ];
