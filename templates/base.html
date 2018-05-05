@@ -389,7 +389,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css?1">
-    <link rel="stylesheet" href="{{ site_base }}/static/css/main.min.css?1">
+    <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/main.min.css?1">
 
     {% block css %}{% end %}
     <noscript id="deferred-styles">
@@ -401,7 +401,7 @@
         <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css?1">
         <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css?1">
 
-        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/extras.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/{{ nocache_static }}/css/extras.min.css">
     </noscript>
     <script>
     var loadDeferredStyles = function() {
@@ -504,7 +504,7 @@
         <script type="text/javascript">
         var site_name = "{{site.name}}";
         </script>
-        <script type="text/javascript" src="{{ site_base }}/static/js/header.js?1"></script>
+        <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/header.js?1"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js?1"></script>
     {% end %}
 
