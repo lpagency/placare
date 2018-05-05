@@ -111,10 +111,11 @@ $("#menu-toggle").click(function(e)
         <a id="{{ site.name + '_banner_mov' }}" href="{{ read_link(site.name + '_banner_mov') }}">
             <img id="{{ site.name }}_banner_mov" src="{{ read_image(site.name + '_banner_mov', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_mov',) }}'" class="box-med" alt="item">
         </a>
+
+        {% if is_admin %}
+        <img class="change-image editablelink" link-id="{{ site.name + '_banner_mov' }}" content="{{ read_link(site.name + '_banner_mov') }}" src="https://cdn.loadingplay.com/static/images/9c01ced4843be5cd42997db07c7944c9_link.png" >
+        {% end %}
     </div>
-    {% if is_admin %}
-    <img class="change-image editablelink" link-id="{{ site.name + '_banner_mov' }}" content="{{ read_link(site.name + '_banner_mov') }}" src="https://cdn.loadingplay.com/static/images/9c01ced4843be5cd42997db07c7944c9_link.png" >
-    {% end %}
     <!-- **section banner principal fin**** -->
 
     <!-- *****section varias cajas home ***** -->

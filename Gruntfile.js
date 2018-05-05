@@ -16,8 +16,7 @@
         'static/css/listado_articulos.css',
         'static/css/listado_productos.css',
         'static/css/checkout.css',
-        'static/css/simple-sidebar.css',
-        'static/css/ligthbox-d.css'
+        'static/css/simple-sidebar.css'
     ];
 
     module.exports = function(grunt)  //jshint ignore: line
