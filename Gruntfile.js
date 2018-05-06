@@ -15,7 +15,6 @@
         'static/css/footer.css',
         'static/css/listado_articulos.css',
         'static/css/listado_productos.css',
-        'static/css/checkout.css',
         'static/css/simple-sidebar.css'
     ];
 
