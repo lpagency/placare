@@ -86,6 +86,11 @@ hr
     border-top: 2px solid #E9E9ED;
 }
 
+.menu-item
+{
+    position: relative;
+}
+
 #footer input[type=email],
 .footer input[type=email]
 {
@@ -227,6 +232,7 @@ ul.social li
 {
     margin-right: 5px;
     display: inline-block;
+    position: relative;
 }
 
 .caja-fo-red
@@ -246,14 +252,6 @@ img.editablelink.fo
     position: absolute;
     left: 0px;
     bottom: 20px;
-    z-index: 100000;
-}
-
-div.image-upload.fo
-{
-    position: absolute;
-    right: 0px;
-    top: 20px;
     z-index: 100000;
 }
 
@@ -467,14 +465,6 @@ hr.new-f
     right: 0px;
     position: relative;
     padding: 0px;
-}
-
-div.image-upload.fe
-{
-    position: absolute;
-    left: 100px;
-    top: -48px;
-    z-index: 100000;
 }
 
 .opi

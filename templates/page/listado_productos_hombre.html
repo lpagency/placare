@@ -9,14 +9,6 @@
 {% end %}
 
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
-<style type="text/css">
-body,
-html
-{
-    overflow-x: hidden;
-}
-</style>
 {% end %}
 
 
@@ -40,7 +32,7 @@ $(document).ready(function()
 {
     // EXCLUSIVO PARA PLACARE
     $("title").html("Placare - Listado de productos");
-    $("meta[name=description]").attr("content", "https://cdn.loadingplay.com/js/connect/bodegas.client.css");
+    $("meta[name=description]").attr("content", "Listado de productos");
 
 
     $(document).on("click", ".background-color-producto", function()

@@ -384,8 +384,6 @@
         </div>
     </div>
     <!-- ******************* FIN MODAL INGRESO CODIGO PRINCPAL******************* -->
-    <!-- gif loading editableimage -->
-    <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css?1">
@@ -393,15 +391,14 @@
 
     {% block css %}{% end %}
     <noscript id="deferred-styles">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css?1">
-        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css?1">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?1">
-        <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css?1">
-        <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css?1">
-
         <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/extras.min.css">
+
+        {% if is_admin %}
+        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css?1">
+        <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css?1">
+        {% end %}
     </noscript>
     <script>
     var loadDeferredStyles = function() {
@@ -416,41 +413,32 @@
     if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
     else window.addEventListener('load', loadDeferredStyles);
     </script>
-
-    <!-- Start of placarehelp Zendesk Widget script -->
-    <script>
-    /*<![CDATA[*/
-    window.zEmbed || function(e, t) {
-        var n, o, d, i, s, a = [],
-            r = document.createElement("iframe");
-        window.zEmbed = function() { a.push(arguments) }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
-        try { o = s } catch (e) { n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s } o.open()._l = function() {
-            var e = this.createElement("script");
-            n && (this.domain = n), e.id = "js-iframe-async", e.src = "https://assets.zendesk.com/embeddable_framework/main.js", this.t = +new Date, this.zendeskHost = "placarehelp.zendesk.com", this.zEQueue = a, this.body.appendChild(e)
-        }, o.write('<body onload="document._l();">'), o.close()
-    }();
-    /*]]>*/
-    </script>
     <!-- /CSS -->
     <script type="text/javascript">
     var site_base = "{{ site_base }}"
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?1"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js?1"></script>
-    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js?1"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+    {% if is_admin %}
     <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.min.js?1"></script>
     <script type="text/javascript" src="{{ site_base }}/common/js/editabletext.min.js?1"></script>
     <script type="text/javascript" src="{{ site_base }}/common/js/editablelink.min.js?1"></script>
     <script type="text/javascript" src="{{ site_base }}/common/js/page_editable.min.js?1"></script>
     <script type="text/javascript" src="{{ site_base }}/common/js/editableimage.min.js?1"></script>
     <script type="text/javascript" src="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.min.js?1"></script>
+
+    <script type="text/javascript">
+    var site_name = "{{site.name}}";
+    </script>
+    <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js?1"></script>
+    {% end %}
+
     <!-- carga de productos -->
-    <script type="text/javascript" src="{{ site_base }}/common/js/jquery.cookie.min.js?1"></script>
     <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.min.js?1"></script>
-    <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.min.js?13"></script>
-    <script type="text/javascript" src="{{ site_base }}/common/js/parallax.min.js?1"></script>
-    <script type="text/javascript" src="{{ site_base }}/common/js/jquery.ellipsis.min.js?1"></script>
+    <script type="text/javascript" src="https://cdn.loadingplay.com/js/connect/bodegas.client.min.js"></script>
+
+    <!-- templates -->
     <script type="text/x-template" id="shopping-cart-product">
         <tr>
             <td class="vert-align text-left">{{! name }}</td>
@@ -494,46 +482,25 @@
             </div>
         </form>
     </script>
+
     <!-- termino carrito de compra -->
     {% block javascript %}{% end %}
-    <script>
-    window.fbAsyncInit = function() { FB.init({ appId: '348231912006000', xfbml: true, version: 'v2.1' }); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js?1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
-    </script>
 
-    {% if is_admin %}
-        <script type="text/javascript">
-        var site_name = "{{site.name}}";
-        </script>
-        <script type="text/javascript" src="{{ site_base }}/static/js/header.js?1"></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js?1"></script>
-    {% end %}
-
-    <script type="text/javascript" src "https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r">
-    </script>
     <script type="text/javascript">
-    $('ul.nav div.dropdown').hover(function()
+    $(document).on("ready", function()
     {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function()
-    {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-    });
-
-    $(document).ready(function()
-    {
-        $(document).on("click", ".boton-news", function()
+        /* dropdown menu */
+        $('ul.nav div.dropdown').hover(function()
         {
-            $(this).html("ESPERE");
-            if ($(this).hasClass("sus"))
-            {
-                $("input[name=SingleLine]").val("Mujer");
-            }
-            if ($(this).hasClass("sus-h"))
-            {
-                $("input[name=SingleLine]").val("Hombre");
-            }
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function()
+        {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
         });
+        /* /dropdown menu */
 
+        /* subscribe button */
+        // prevent default event in footer email
         $('#formid').on('keyup keypress', function(e)
         {
             var keyCode = e.keyCode || e.which;
@@ -544,26 +511,28 @@
             }
         });
 
-        $(".fancybox").fancybox(
+        // subscribe button
+        $(document).on("click", ".boton-news", function()
         {
-            'width': 800,
-            'height': 630,
-            'autoSize': false,
-            'autoScale': false,
-            'padding': 0,
-            'helpers':
+            $(this).html("espere");
+            if ($(this).hasClass("sus"))
             {
-                overlay:
-                {
-                    locked: false
-                }
+                $("input[name=SingleLine]").val("Mujer");
+            }
+            if ($(this).hasClass("sus-h"))
+            {
+                $("input[name=SingleLine]").val("Hombre");
             }
         });
+        /* /subscribe button */
 
+        /* search menu */
+        // show search menu
         $(document).on("click", ".lupita", function(ev)
         {
             $(".buscar-movil").toggle(1000);
         });
+        /* /search menu */
     });
 
     $(document).on('ready pageshow', function()
@@ -571,6 +540,22 @@
         $(".more-products").removeClass("hidden");
     });
     </script>
+
+    <!-- Start of placarehelp Zendesk Widget script -->
+    <script>
+    /*<![CDATA[*/
+    window.zEmbed || function(e, t) {
+        var n, o, d, i, s, a = [],
+            r = document.createElement("iframe");
+        window.zEmbed = function() { a.push(arguments) }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+        try { o = s } catch (e) { n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s } o.open()._l = function() {
+            var e = this.createElement("script");
+            n && (this.domain = n), e.id = "js-iframe-async", e.src = "https://assets.zendesk.com/embeddable_framework/main.js", this.t = +new Date, this.zendeskHost = "placarehelp.zendesk.com", this.zEQueue = a, this.body.appendChild(e)
+        }, o.write('<body onload="document._l();">'), o.close()
+    }();
+    /*]]>*/
+    </script>
+
     <!-- Facebook Pixel Code -->
     <script>
     ! function(f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1993876297507428'); fbq('track', 'PageView');
@@ -579,6 +564,10 @@
         <img height="1" width="1" src="https://www.facebook.com/tr?id=1993876297507428&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
+
+    <script>
+    window.fbAsyncInit = function() { FB.init({ appId: '348231912006000', xfbml: true, version: 'v2.1' }); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js?1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 
 </html>

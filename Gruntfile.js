@@ -15,9 +15,12 @@
         'static/css/footer.css',
         'static/css/listado_articulos.css',
         'static/css/listado_productos.css',
-        'static/css/checkout.css',
-        'static/css/simple-sidebar.css',
-        'static/css/ligthbox-d.css'
+        'static/css/simple-sidebar.css'
+    ];
+    var all_js_files = [
+        'static/js/cart.config.js',
+        'static/js/filter.js',
+        'static/js/spec_filter.js'
     ];
 
     module.exports = function(grunt)  //jshint ignore: line
@@ -28,15 +31,20 @@
         {
             concat:
             {
-                basic:
+                css_basic:
                 {
                     src: main_css_files,
                     dest: 'static/css/main.min.css',
                 },
-                extras:
+                css_extras:
                 {
                     src: secondary_css_files,
                     dest: 'static/css/extras.min.css'
+                },
+                js:
+                {
+                    src: all_js_files,
+                    dest: 'static/js/main.min.js'
                 }
             },
             watch:
@@ -44,7 +52,16 @@
                 css:
                 {
                     files: main_css_files.concat(secondary_css_files),
-                    tasks: ['concat'],
+                    tasks: ['concat:css_basic', 'concat:css_extras'],
+                    options:
+                    {
+                        spawn: false
+                    }
+                },
+                js:
+                {
+                    files: all_js_files,
+                    tasks: ['concat:js'],
                     options:
                     {
                         spawn: false
@@ -66,14 +83,25 @@
                         'static/css/extras.min.css': secondary_css_files
                     }
                 }
+            },
+            uglify:
+            {
+                my_target:
+                {
+                    files: {
+                        'static/js/main.min.js': all_js_files
+                    }
+                }
             }
+
         });
 
         grunt.loadNpmTasks('grunt-contrib-cssmin');
         grunt.loadNpmTasks('grunt-contrib-watch');
         grunt.loadNpmTasks('grunt-contrib-concat');
+        grunt.loadNpmTasks('grunt-contrib-uglify');
 
-        grunt.registerTask('build', ['cssmin']);
+        grunt.registerTask('build', ['cssmin', 'uglify']);
         grunt.registerTask('develop', ['watch']);
     };
 })();
