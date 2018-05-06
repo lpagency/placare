@@ -13,7 +13,7 @@
 {% end %}
 
 {% block javascript %}
-<script type="text/javascript" src="{{ site_base }}/static/js/frubik.js"></script>
+<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/frubik.js"></script>
 <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -26,7 +26,7 @@
       // EXCLUSIVO PARA PLACARE
       $("title").html("Placare - Condiciones de envío");
       $("meta[name=description]").attr("content", "https://cdn.loadingplay.com/js/connect/bodegas.client.css");
- 
+
 
       $("#OpenAlert").click();
 
