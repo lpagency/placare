@@ -1,0 +1,94 @@
+/*
+* @Author: Ricardo Silva
+* @Date:   2018-05-07 18:59:21
+* @Last Modified by:   Ricardo Silva
+* @Last Modified time: 2018-05-07 19:22:25
+*/
+
+/*doc
+
+---
+title: Filter
+name: filter
+category: filter
+---
+
+### Filter element
+
+```html_example
+<div class="filters-container">
+    <h4>Filter Name</h4>
+
+    <div class="filter">
+        <input id="Marca_A" class="checkbox-filter" type="checkbox" tag="Marca_A" label="A" >
+        <label for="Marca_A" >A</label>
+    </div>
+    <div class="filter">
+        <input id="Marca_B" class="checkbox-filter" type="checkbox" tag="Marca_B" label="B" >
+        <label for="Marca_B" >B</label>
+    </div>
+</div>
+<div class="filters-container">
+    <h4>Filter Name</h4>
+
+    <div class="filter">
+        <input id="Marca_A" class="checkbox-filter" type="checkbox" tag="Marca_A" label="A" >
+        <label for="Marca_A" >A</label>
+    </div>
+    <div class="filter">
+        <input id="Marca_B" class="checkbox-filter" type="checkbox" tag="Marca_B" label="B" >
+        <label for="Marca_B" >B</label>
+    </div>
+</div>
+<div class="filters-container">
+    <h4>Filter Name</h4>
+
+    <div class="filter">
+        <input id="Marca_A" class="checkbox-filter" type="checkbox" tag="Marca_A" label="A" >
+        <label for="Marca_A" >A</label>
+    </div>
+    <div class="filter">
+        <input id="Marca_B" class="checkbox-filter" type="checkbox" tag="Marca_B" label="B" >
+        <label for="Marca_B" >B</label>
+    </div>
+</div>
+<div class="clearfix"></div>
+```
+
+*/
+
+
+.filters-container
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #E9E9EF;
+}
+
+.filters-container:nth-child(1)
+{
+    border-top: none;
+}
+
+.filters-container input[type=checkbox]
+{
+    margin-top: 0px;
+    margin-right: 0px;
+    height: 15px;
+    width: 14px;
+}
+
+.filters-container label
+{
+    margin-bottom: 0px;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.filters-container h4
+{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #282c3f;
+}

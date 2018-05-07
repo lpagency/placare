@@ -5,6 +5,7 @@
 
     var main_css_files = [
         'static/css/style.css',
+        'static/css/filter.css',
         'static/css/header.css',
         'static/css/header.search.css',
         'static/css/general.css',
@@ -19,8 +20,10 @@
     ];
     var all_js_files = [
         'static/js/cart.config.js',
-        'static/js/filter.js',
         'static/js/spec_filter.js'
+    ];
+    var product_detail_js = [
+        'static/js/product_detail.js'
     ];
 
     module.exports = function(grunt)  //jshint ignore: line
@@ -45,6 +48,11 @@
                 {
                     src: all_js_files,
                     dest: 'static/js/main.min.js'
+                },
+                js_product_detail:
+                {
+                    src: product_detail_js,
+                    dest: 'static/js/product_detail.min.js'
                 }
             },
             watch:
@@ -60,8 +68,8 @@
                 },
                 js:
                 {
-                    files: all_js_files,
-                    tasks: ['concat:js'],
+                    files: all_js_files.concat(product_detail_js),
+                    tasks: ['concat:js', 'concat:js_product_detail'],
                     options:
                     {
                         spawn: false
@@ -88,8 +96,10 @@
             {
                 my_target:
                 {
-                    files: {
-                        'static/js/main.min.js': all_js_files
+                    files:
+                    {
+                        'static/js/main.min.js': all_js_files,
+                        'static/js/product_detail.min.js': product_detail_js
                     }
                 }
             }
