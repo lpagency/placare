@@ -15,6 +15,7 @@ $(document).ready(function()
         'Color': [], // Color calzado
         'Mat': [], // Material calzado
         'Marca': [], // Marca calzado
+        'Ocasion': [],
         'Talla': [],
         'Taco': [],
         'Alt_Taco': [],
@@ -447,7 +448,7 @@ $(document).ready(function()
     });
 
 
-    $("input:checkbox[name=marca]").change(function(ev, shouldLoad)
+    $("input:checkbox[name=ocasion]").change(function(ev, shouldLoad)
     {
         var $box = $(this);
         var nombre = $(this).attr("tag");
@@ -455,9 +456,9 @@ $(document).ready(function()
 
         window.z = 0;
 
-        updateBlockFilters('#ocacion', nombre, va);
+        updateBlockFilters('#ocasion', nombre, va);
 
-        updateTextRoute(va, "ocacion");
+        updateTextRoute(va, "ocasion");
 
         if ($(".limpiar").hasClass("hidden"))
         {
@@ -468,9 +469,9 @@ $(document).ready(function()
 
         // New filter logic
 
-        var groups = window.tagGroups.Ocacion;
+        var groups = window.tagGroups.Ocasion;
 
-        window.tagGroups.Ocacion = updateGroupTag(groups, nombre);
+        window.tagGroups.Ocasion = updateGroupTag(groups, nombre);
 
         window.config.tag = prepareTags(tagGroups);
 
@@ -685,7 +686,7 @@ function onLoadInit(tagGroups, tag_url)
         '<li class="fil-ul" id="color"></li>' +
         '<li class="fil-ul" id="mat"></li>' +
         '<li class="fil-ul" id="marca"></li>' +
-        '<li class="fil-ul" id="ocacion"></li>' +
+        '<li class="fil-ul" id="ocasion"></li>' +
         '<li class="fil-ul" id="talla"></li>' +
         '<li class="fil-ul" id="Forma_Taco"></li>' +
         '<li class="fil-ul" id="Taco"></li>' + // Altura de taco
@@ -780,7 +781,7 @@ function limpiar()
         'Color': [],
         'Mat': [],
         'Marca': [],
-        'Ocacion', [],
+        'Ocasion': [],
         'Talla': [],
         'Taco': [],
         'Alt_Taco': [],
