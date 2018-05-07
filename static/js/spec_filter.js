@@ -447,6 +447,51 @@ $(document).ready(function()
     });
 
 
+    $("input:checkbox[name=marca]").change(function(ev, shouldLoad)
+    {
+        var $box = $(this);
+        var nombre = $(this).attr("tag");
+        var va = $(this).attr("value2");
+
+        window.z = 0;
+
+        updateBlockFilters('#ocacion', nombre, va);
+
+        updateTextRoute(va, "ocacion");
+
+        if ($(".limpiar").hasClass("hidden"))
+        {
+            $(".limpiar").removeClass("hidden");
+        }
+
+        localStorage.setItem("subcategoriaProd", $(".texto-ruta").html());
+
+        // New filter logic
+
+        var groups = window.tagGroups.Ocacion;
+
+        window.tagGroups.Ocacion = updateGroupTag(groups, nombre);
+
+        window.config.tag = prepareTags(tagGroups);
+
+        var tags = window.url_tags;
+
+        window.url_tags = updateURLTags(tags, nombre);
+
+        var url = getCurrentUrl();
+
+        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
+
+        if (shouldLoad !== false)
+        {
+            $('.products').html("");
+            $('.products').ecommerce('destroy');
+            $('.products').ecommerce(window.config);
+        }
+
+    });
+
+
     $("input:checkbox[name=talla]").change(function(ev, shouldLoad)
     {
 
@@ -640,6 +685,7 @@ function onLoadInit(tagGroups, tag_url)
         '<li class="fil-ul" id="color"></li>' +
         '<li class="fil-ul" id="mat"></li>' +
         '<li class="fil-ul" id="marca"></li>' +
+        '<li class="fil-ul" id="ocacion"></li>' +
         '<li class="fil-ul" id="talla"></li>' +
         '<li class="fil-ul" id="Forma_Taco"></li>' +
         '<li class="fil-ul" id="Taco"></li>' + // Altura de taco
@@ -734,6 +780,7 @@ function limpiar()
         'Color': [],
         'Mat': [],
         'Marca': [],
+        'Ocacion', [],
         'Talla': [],
         'Taco': [],
         'Alt_Taco': [],

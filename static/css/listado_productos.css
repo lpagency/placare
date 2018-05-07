@@ -63,7 +63,8 @@
 .filtro-color,
 .filtro-talla,
 .filtro-marca,
-.filtro-filtros
+.filtro-filtros,
+.filtro-categorias
 {
     overflow: auto;
 }
@@ -71,7 +72,8 @@
 .filtro-color input,
 .filtro-talla input,
 .filtro-marca input,
-.filtro-filtros input
+.filtro-filtros input,
+.filtro-categorias input
 {
     float: left;
 }
