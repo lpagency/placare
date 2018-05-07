@@ -1,3 +1,9 @@
+div.upload input,
+div.image-upload input
+{
+    width: 35px;
+}
+
 .container.min
 {
     max-width: 980px;

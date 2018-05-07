@@ -1,13 +1,13 @@
 /*doc
 
 ---
-title: first hader desktop
+title: first header desktop
 name: first_header
 category: header
 ---
 
 ```html_example
-<div class="row col-side-padding first-header">
+<div class="row col-side-padding">
     <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="text-slogan " text-id="placare_productos">
             <p>Descubre y Elige! Despachos a todo Chile y Devoluciones GRATIS.
@@ -16,7 +16,7 @@ category: header
         </div>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12">
-        <ul class="nav navbar-nav pull-right">
+        <ul class="nav navbar-nav">
             <li class="slogan">
                 <a href="/placare/cambios-y-devoluciones">CAMBIOS Y DEVOLUCIONES</a>
             </li>
@@ -221,6 +221,11 @@ li.slogan a
     font-weight: 400;
 }
 
+li.slogan a:nth-last-child(1)
+{
+    padding-right: 0px;
+}
+
 .navbar
 {
     margin-bottom: 0px;
@@ -320,6 +325,44 @@ li.slogan a
     background-color: transparent;
     border-color: transparent;
     text-decoration: underline #db8800;
+}
+
+.dropdown-menu>li>a
+{
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 200;
+    line-height: 1.42857143;
+    color: #7e818c;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+}
+
+.dropdown-menu
+{
+    position: absolute;
+    top: 100%;
+    left: 6px;
+    z-index: 1000;
+    width: 100%;
+    display: none;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid #E9E9ED;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, .175);
+    opacity: 1 !important;
 }
 
 .navbar-default .navbar-nav>li>a:hover,
@@ -424,6 +467,16 @@ li.slogan a
 
 @media (max-width: 991px)
 {
+
+    .dropdown-menu
+    {
+        left: -21px;
+    }
+
+    .text-slogan
+    {
+        padding-top: 10px;
+    }
 
     .container
     {
