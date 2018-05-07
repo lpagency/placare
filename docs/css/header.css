@@ -1,3 +1,44 @@
+/*doc
+
+---
+title: first hader desktop
+name: first_header
+category: header
+---
+
+```html_example
+<div class="row col-side-padding first-header">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="text-slogan " text-id="placare_productos">
+            <p>Descubre y Elige! Despachos a todo Chile y Devoluciones GRATIS.
+                <br>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <ul class="nav navbar-nav pull-right">
+            <li class="slogan">
+                <a href="/placare/cambios-y-devoluciones">CAMBIOS Y DEVOLUCIONES</a>
+            </li>
+            <li class="">
+                <a href="#" style="color:#eaeaec;">|</a>
+            </li>
+            <li class="slogan">
+                <a href="/placare/tiempo-de-envios">TIEMPO DE ENVIOS</a>
+            </li>
+            <li class="">
+                <a href="#" style="color:#eaeaec;">|</a>
+            </li>
+            <li class="slogan">
+                <a href="/placare/contact">CONTACTANOS</a>
+            </li>
+        </ul>
+    </div>
+</div>
+```
+
+*/
+
 .searchform-wrapper
 {
     position: absolute;
@@ -155,7 +196,7 @@ li.icon
 {
     position: relative;
     display: block;
-    padding: 10px 15px;
+    padding: 5px 15px;
     font-size: 15px;
     float: left;
     left: 0px;
@@ -195,11 +236,16 @@ li.slogan a
 .text-slogan
 {
     position: relative;
-    padding: 10px 0;
+    padding: 6px 0;
     font-size: 12px;
     color: #999;
     font-weight: 400;
     padding-bottom: 0;
+}
+
+.text-slogan p
+{
+    margin-bottom: 0px;
 }
 
 .navbar-nav.sa
