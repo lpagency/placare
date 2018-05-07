@@ -31,4 +31,9 @@ $(document).ready(function()
         $(".filtro-color").css("overflow", "visible");
     });
 
+    $(document).on("click", ".botonMasOcasion", function(ev)
+    {
+        $(".filtro-ocasion").toggle(1000);
+        $(".filtro-ocasion").css("overflow", "visible");
+    });
 });

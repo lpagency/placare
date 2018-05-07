@@ -458,7 +458,7 @@ $(document).ready(function()
 
         updateBlockFilters('#ocasion', nombre, va);
 
-        updateTextRoute(va, "ocasion");
+        updateTextRoute(va, "ocasion2");
 
         if ($(".limpiar").hasClass("hidden"))
         {
