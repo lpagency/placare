@@ -111,10 +111,11 @@ $("#menu-toggle").click(function(e)
         <a id="{{ site.name + '_banner_mov' }}" href="{{ read_link(site.name + '_banner_mov') }}">
             <img id="{{ site.name }}_banner_mov" src="{{ read_image(site.name + '_banner_mov', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_mov',) }}'" class="box-med" alt="item">
         </a>
+
+        {% if is_admin %}
+        <img class="change-image editablelink" link-id="{{ site.name + '_banner_mov' }}" content="{{ read_link(site.name + '_banner_mov') }}" src="https://cdn.loadingplay.com/static/images/9c01ced4843be5cd42997db07c7944c9_link.png" >
+        {% end %}
     </div>
-    {% if is_admin %}
-    <img class="change-image editablelink" link-id="{{ site.name + '_banner_mov' }}" content="{{ read_link(site.name + '_banner_mov') }}" src="https://cdn.loadingplay.com/static/images/9c01ced4843be5cd42997db07c7944c9_link.png" >
-    {% end %}
     <!-- **section banner principal fin**** -->
 
     <!-- *****section varias cajas home ***** -->
@@ -157,10 +158,10 @@ $("#menu-toggle").click(function(e)
     <div class="col-md-8 col-sm-8 col-xs-12 article-home hidden-sm hidden-md hidden-lg visible-xs">
         {% if is_admin %}
         <div class="image-upload lapiz">
-            <label for="img_box_4">
+            <label for="img_box_4_1">
                 <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
             </label>
-            <input type="file" class="editableimage" image-id="{{ site.name }}_box_4" name="image" id="img_box_4">
+            <input type="file" class="editableimage" image-id="{{ site.name }}_box_4_1" name="image" id="img_box_4_1">
         </div>
         {% end %}
         <a id="{{ site.name + '_box_4' }}" href="{{ read_link(site.name + '_box_4') }}">
@@ -193,10 +194,10 @@ $("#menu-toggle").click(function(e)
     <div class="col-md-8 col-sm-8 col-xs-12 article-home hidden-sm hidden-md hidden-lg visible-xs">
         {% if is_admin %}
         <div class="image-upload lapiz">
-            <label for="img_box_77">
+            <label for="img_box_77_1">
                 <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
             </label>
-            <input type="file" class="editableimage" image-id="{{ site.name }}_box_77" name="image" id="img_box_77">
+            <input type="file" class="editableimage" image-id="{{ site.name }}_box_77_1" name="image" id="img_box_77_1">
         </div>
         {% end %}
         <a id="{{ site.name + '_box_77_1' }}" href="{{ read_link(site.name + '_box_77_1') }}">

@@ -9,7 +9,6 @@
 {% end %}
 
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
 <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/sc.css">
 {% end %}
@@ -230,8 +229,6 @@ $(document).on("ready", function()
 
                     $("[value=" + last + "]").removeClass("btn-disabled");
                     $("[value=" + last + "]").children("span").remove();
-
-                    console.log(p + " = " + d[p]);
                 }
             }
         });
@@ -290,7 +287,6 @@ $(document).ready(function()
 
     $(document).on("click", ".boton-news", function()
     {
-        console.log("aaaa");
         $(this).html("ESPERE");
         if ($(this).hasClass("sus"))
         {
