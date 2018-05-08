@@ -10,12 +10,11 @@ var modifyURL = function()
 var drawFiltersBread = function()
 {
     var html = [];
-    var t;
-    for (t in tags)
+    for (var t in tags)
     {
         html.push(
             "<div class='filter-crumb'>" +
-            $("input[tag=" + tags[t] + "]").attr("label") +
+            $("#" + tags[t]).attr("label") +
             "</div>");
     }
 
@@ -37,14 +36,12 @@ var toggleTag = function(tag, should_add)
 
 var getURLFilters = function()
 {
-    var groups = {};
-    var generated = [];
-    var group_name, t, g;
+    var groups =   {};
 
     // get tags groups
-    for (t in tags)
+    for (var t in tags)
     {
-        group_name = tags[t].split("_")[0];
+        var group_name = tags[t].split("_")[0];
         if (groups[group_name] === undefined)
             groups[group_name] = [];
 
@@ -52,7 +49,8 @@ var getURLFilters = function()
     }
 
     // generate url string
-    for (g in groups)
+    var generated = [];
+    for (var g in groups)
     {
         generated.push("+" + groups[g].join(",+"));
     }
@@ -60,10 +58,33 @@ var getURLFilters = function()
     return "(" + generated.join("),(") + ")";
 }
 
-$(document).on("change", ".checkbox-filter", function()
+var loadTags = function(tags)
 {
-    var tag = $(this).attr("tag");
-    toggleTag(tag, $(this).is(":checked"));
+    var t = tags.split(",");
+    for (var x in t)
+    {
+        toggleTag(t[x], true);
+        $("#" + t[x]).attr("checked", "checked");
+    }
 
     console.log(getURLFilters());
+}
+
+var loadTagsFromURL = function()
+{
+    var url = new URL(document.location.href);
+    loadTags(url.searchParams.get("tag"));
+}
+
+$(document).on("ready", function()
+{
+    $(document).on("change", ".checkbox-filter", function()
+    {
+        var tag = $(this).attr("id");
+        toggleTag(tag, $(this).is(":checked"));
+
+        console.log(getURLFilters());
+    });
+
+    loadTagsFromURL();
 });
