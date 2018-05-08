@@ -10,7 +10,7 @@
 
 {% block javascript %}
 <script type="text/javascript">
-window.url_tags = "{% block tags %}{% end %}";
+window.url_tags = "{% block tags %}{% end %}".split(",");
 </script>
 <script type="text/javascript" src="{{ site_base }}/static/js/main.min.js"></script>
 <script type="text/javascript">
@@ -309,10 +309,10 @@ $("#menu-toggle").click(function(e)
                                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ordenar por:
                                     <span class="caret"></span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
-                                    <li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
-                                    <li><a href="#!" class="nombre">Nombre</a></li>
-                                    <li><a href="#!" class="aleatorio">Aleatorio</a></li>
+                                    <li><a href="#!" class="sort-by" field="main_price" dir="desc" >Precio: Mayor a menor</a></li>
+                                    <li><a href="#!" class="sort-by" field="main_price" dir="asc" >Precio: Menor a mayor</a></li>
+                                    <li><a href="#!" class="sort-by" field="name" dir="toggle" >Nombre</a></li>
+                                    <li><a href="#!" class="sort-by" field="random" dir="asc">Aleatorio</a></li>
                                 </ul>
                             </div>
                             <div class="clearfix"></div>
