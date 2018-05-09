@@ -1159,6 +1159,13 @@ hr.lon
     display: none;
 }
 
+
+.sticky
+{
+    position: fixed;
+    top: 0px;
+}
+
 /*------------------------------------Responsive--------------------------------------*/
 @media (max-width: 1199px)
 {

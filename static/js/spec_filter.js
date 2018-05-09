@@ -313,4 +313,8 @@ $(document).on("ready", function()
     {
         $(".filter-desktop-wrapper").remove();
     }
+    else
+    {
+        // add sticky menu only for desktop
+    }
 });
