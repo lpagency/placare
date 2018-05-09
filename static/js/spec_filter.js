@@ -1,993 +1,301 @@
-$(document).ready(function()
+var tags = []; // copy defaults tags
+
+var modifyURL = function()
 {
-    window.z = 0;
+    var cleared_tags = [];
+    var t;
+    var should_modify = false;
 
-    window.default_tag = getClassDefaultTag();
+    for (t in tags)
+    {
+        // dont show default tags in url
+        if (window.default_tags.indexOf(tags[t]) === -1)
+        {
+            should_modify = true;
+            cleared_tags.push(tags[t]);
+        }
+    }
 
-    var random_seed = 'random(' + Math.random() + ')';
+    // only modify url if there is other than default tags
+    if (should_modify)
+        history.replaceState(
+            '', document.title, document.location.pathname + '?tag=' + cleared_tags.join(',')
+        );
+}
 
-    $(".limpiar").addClass("hidden");
+var drawFiltersBread = function()
+{
+    var html = [];
 
-    window.listaTag = [];
+    for (var t in tags)
+    {
+        if (window.default_tags.indexOf(tags[t]) === -1)
+        {
+            html.push(
+                "<div class='filter-crumb'>" +
+                $("#" + tags[t]).attr("label") +
+                "</div>");
+        }
+    }
 
-    window.tagGroups = { // Groups of tags for
-        'Categoria3': [], // Tipo calzado
-        'Color': [], // Color calzado
-        'Mat': [], // Material calzado
-        'Marca': [], // Marca calzado
-        'Talla': [],
-        'Taco': [],
-        'Alt_Taco': [],
-        'Alt_Plat': [],
-        'Otros': []
-    };
+    $(".filters-breadcrumb").html(html.join(""));
+}
 
-    window.url_tags = []; // list of tags that go in the url
+var toggleTag = function(tag, should_add)
+{
+    var index = tags.indexOf(tag);
+    if (index === -1)
+        tags.push(tag);
+    else
+        tags.splice(index, 1);
+}
 
+var clearTagName = function(t)
+{
+    return t.split("-").join("").split("+").join("");
+}
+
+var getURLFilters = function()
+{
+    var groups = {};
+
+    // get tags groups
+    for (var t in tags)
+    {
+        var group_name = clearTagName(tags[t]).split("_")[0];
+        if (groups[group_name] === undefined)
+            groups[group_name] = [];
+
+        groups[group_name].push(tags[t]);
+    }
+
+    // generate url string
+    var generated = [];
+    for (var g in groups)
+    {
+        var group = "+" + groups[g].join(",+");
+        group = group.split("+-").join("-");  // resolve double operator
+        generated.push(group);
+    }
+
+    if (generated.length === 0)
+        return "";
+    return "(" + generated.join("),(") + ")";
+}
+
+var reloadEcommerce = function()
+{
+    window.config.tag = [window.default_tags, getURLFilters()].join(",");
+
+    $('.products').html("");
+    $('.products').ecommerce("destroy");
+    $('.products').ecommerce(config);
+
+    modifyURL();
+}
+
+var loadTags = function(t)
+{
+    if (t === null || t === "")
+        t = [];
+    else
+        t = t.split(",");
+
+    for (var x in t)
+    {
+        tags.push(t[x]);
+        $("#" + t[x]).attr("checked", "checked");
+    }
+}
+
+var loadTagsFromURL = function()
+{
+    var url = new URL(document.location.href);
+    loadTags(url.searchParams.get("tag"));
+
+    drawFiltersBread();
+}
+
+var clearWhiteTags = function()
+{
+    while (tags.indexOf("") !== -1)
+    {
+        tags.splice(tags.indexOf(""), 1);
+    }
+}
+
+$(document).on("ready", function()
+{
+    var random_seed = 'random('+Math.random()+')';
     var base_url = $.environmentVar(
-        'https://apibodegas.ondev.today/',
-        'https://apibodegas.ondev.today/',
+        'https://apibodegas.loadingplay.com/',
+        'https://apibodegas.loadingplay.com/',
         'https://apibodegas.loadingplay.com/');
     var checkout_url = $.environmentVar(
-        'https://lpcheckout.ondev.today',
+        'http://localhost:8522/',
         'https://lpcheckout.ondev.today',
         'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(53, 53, 53);
+    var app_public = $.environmentVar(53,53,53);
     var site_name = $.environmentVar('placare', 'placare', 'placare');
 
+    // load tags from url before init the checkbox filter events
+    clearWhiteTags();  // clear bad formatted tags
+    loadTagsFromURL();  // load current tags from URL
+
+    // init config for ecommerce
+    var total_products = 0;
     window.config = {
         'app_public': app_public,
         'base_url': base_url,
-        'products_per_page': 12,
-        'tag': window.default_tag,
+        'products_per_page' : 12,
+        'tag': [window.default_tags, tags].join(","),
         'ignore_stock': false,
         'infinite_scroll': false,
-        'column': random_seed,
-        // 'maxProducts': 100,
+        'column' : random_seed,
         'checkout_url': checkout_url,
-        'operator': 'or',
+        'operator' :'or',
         'onLoad': function(products)
         {
-
-            //PARCHE ESTUPIDO!!!!!!!
-
+            // fix products titles
             $(".up-ex").each(function()
             {
-                var titulo = $(this).html().replace("_", " ");
-                $(this).html(titulo);
+                $(this).html($(this).html().replace("_"," "));
             });
 
-            if (products.length == 0)
-            {
+            // show - hidden reload button
+            if(products.length == 0)
                 $(".link-recargar").removeClass("hidden");
-            }
             else
-            {
                 $(".link-recargar").addClass("hidden");
-            }
 
+            // new arrival tag
             $(".letrero-nuevo").each(function()
             {
                 var tags = $(this).attr("nuevo");
-                if (tags.search("nuevo") != -1)
-                {
+                if(tags.search("nuevo") !== -1)
                     $(this).removeClass("hidden");
-                }
             });
 
-            window.z = products.length + z;
-            var h = " - " + z.toString() + " Items";
+            // total products
+            total_products += products.length;
+            var h = " - " + total_products + " Items";
+            $(".tag-header2").html(h);
 
+            // check discount
             $(".descuento-lis").each(function()
             {
                 var main = $(this).attr("main-price");
                 var promotion = $(this).attr("promotion-price");
 
-                if (promotion != 0)
+                if(promotion != 0)
                 {
-                    var resta = Math.trunc((main - promotion) * 100 / main);
+                    // calculate percentage
+                    var resta = Math.trunc((main - promotion)*100/main);
                     $(this).removeClass("hidden");
-                    $(this).html("(" + resta + "%)");
+                    $(this).html("("+resta+"%)");
                 }
-
             });
 
+            // show sale price
             $(".oferta").each(function()
             {
-                if ($(this).attr("promotion-price") != 0)
-                {
+                if($(this).attr("promotion-price") != 0)
                     $(this).removeClass("hidden");
-                }
             });
 
+            // show dashed price
             $(".original-tachado").each(function()
             {
-                if ($(this).attr("promotion-price") != 0)
+                if($(this).attr("promotion-price") != 0)
                 {
                     $(this).removeClass("hidden");
                 }
             });
 
+            // hide original price
             $(".original").each(function()
             {
-                if ($(this).attr("promotion-price") != 0)
+                if($(this).attr("promotion-price") != 0)
                 {
                     $(this).addClass("hidden");
                 }
             });
 
+            // show sale tag
             $(".letrero-sale").each(function()
             {
-                if ($(this).attr("promotion-price") != 0)
+                if($(this).attr("promotion-price") != 0)
                 {
                     $(this).removeClass("hidden");
                 }
             });
-
-            $(".tag-header2").html(h);
         }
     };
 
-    $(document).ready(function()
+    reloadEcommerce();  // load ecommerce for first time
+
+    $(document).on("change", ".checkbox-filter", function()
     {
-        var scroll = $(window).scrollTop();
-        if (scroll > 744)
-        {
+        var tag = $(this).attr("id");
+        toggleTag(tag, $(this).is(":checked"));
 
-            window.config.infinite_scroll = true;
-            $(".more-products").remove();
-            $(".products").ecommerce(config);
-            setTimeout(function()
-            {
-                $("html").scrollTop(scroll);
-            }, 3000);
-
-        }
+        // other tasks
+        total_products = 0;
+        clearWhiteTags();
+        drawFiltersBread();
+        reloadEcommerce();
     });
 
-    //<-------------ORDENAR MAYOR, MENOR, POR NOMBRE Y ORDEN ALEATORIO------------->
-
-    $(document).on("click", ".mayor", function(ev)
+    // logic for sort by
+    $(document).on("click", ".sort-by", function(e)
     {
-        ev.preventDefault();
-        config.column = "main_price";
-        config.direction = "desc";
+        e.preventDefault();
 
-        $('.products').html("");
-        $('.products').ecommerce("destroy");
+        var field = $(this).attr("field");
+        var dir = $(this).attr("dir");
 
-        $('.products').ecommerce(config);
+        if (field === "random")
+            field = random_seed;  // random seed created from the beggining
 
-        return false;
+        if (dir === "toggle" && window.config.direction === "asc")
+            dir = "desc";
+        else if (dir === "toggle" && window.config.direction === "desc")
+            dir = "asc";
 
+        window.config.column = field;
+        window.config.direction = dir;
+
+        reloadEcommerce();
     });
 
-
-    $(document).on("click", ".menor", function(ev)
+    // clear tags button
+    $(document).on("click", ".limpiar", function(e)
     {
-        ev.preventDefault();
-        config.column = "main_price";
-        config.direction = "asc";
+        e.preventDefault();
 
-        $('.products').html("");
-        $('.products').ecommerce("destroy");
-        $('.products').ecommerce(config);
+        // clear tags
+        tags = [];
+        total_products = 0;
+        $(".checkbox-filter:enabled").removeAttr("checked");
 
-        return false;
-
+        drawFiltersBread();
+        reloadEcommerce();
     });
 
-    $(document).on("click", ".nombre", function(ev)
+    // dropdown filter
+    $(document).on("click", ".dropdown-filter-header", function(e)
     {
-        ev.preventDefault();
-        config.column = "name";
-        config.direction = "asc";
-
-        $('.products').html("");
-        $('.products').ecommerce("destroy");
-        $('.products').ecommerce(config);
-
-        return false;
-
-    });
-
-    $(document).on("click", ".aleatorio", function(ev)
-    {
-        ev.preventDefault();
-        config.column = "random(" + Math.random() + ")";
-
-        $('.products').html("");
-        $('.products').ecommerce('destroy');
-        $('.products').ecommerce(config);
-
-        return false;
-    });
-
-    $(".limpiar").click(function()
-    {
-        limpiar();
-    });
-
-    $(document).on("click", ".variables1", function(ev)
-    {
-
-        ev.preventDefault();
-        var variable = $(this).attr("tag");
-        $(this).removeClass("activo");
-        $(".c-" + variable).removeClass("hidden");
-
-        $(".c-variable_2").addClass('hidden');
-        $(".c-variable_3").addClass('hidden');
-        $(".c-variable_4").addClass('hidden');
-
-        $(".vari").css("margin-bottom", "5%");
-
-    });
-
-    $(document).on("click", ".variables2", function(ev)
-    {
-
-        ev.preventDefault();
-        var variable = $(this).attr("tag");
-        $(this).removeClass("activo");
-        $(".c-" + variable).removeClass("hidden");
-
-        $(".c-variable_1").addClass('hidden');
-        $(".c-variable_3").addClass('hidden');
-        $(".c-variable_4").addClass('hidden');
-
-        $(".vari").css("margin-bottom", "5%");
-
-    });
-
-    $(document).on("click", ".variables3", function(ev)
-    {
-
-        ev.preventDefault();
-        var variable = $(this).attr("tag");
-        $(this).removeClass("activo");
-        $(".c-" + variable).removeClass("hidden");
-
-        $(".c-variable_2").addClass('hidden');
-        $(".c-variable_1").addClass('hidden');
-        $(".c-variable_4").addClass('hidden');
-
-        $(".vari").css("margin-bottom", "5%");
-
-    });
-
-    $(document).on("click", ".variables4", function(ev)
-    {
-
-        ev.preventDefault();
-        var variable = $(this).attr("tag");
-        $(this).removeClass("activo");
-        $(".c-" + variable).removeClass("hidden");
-
-        $(".c-variable_2").addClass('hidden');
-        $(".c-variable_1").addClass('hidden');
-        $(".c-variable_3").addClass('hidden');
-
-        $(".vari").css("margin-bottom", "5%");
-
-    });
-
-    $("input:checkbox[name=vehicle]").change(function(ev, shouldLoad)
-    {
-        var $box = $(this);
-        var nombre = $(this).attr("tag");
-        var va = $(this).attr("value2");
-
-        window.z = 0;
-
-        updateBlockFilters('#categoria3', nombre, va); // update view of filter blocks
-
-        updateTextRoute(va, "categoria2");
-
-        if ($(".limpiar").hasClass("hidden"))
-        {
-            $(".limpiar").removeClass("hidden");
-        }
-
-        localStorage.setItem("subcategoriaProd", $(".texto-ruta").html());
-
-        // New filter logic
-
-        var groups = window.tagGroups.Categoria3;
-
-        window.tagGroups.Categoria3 = updateGroupTag(groups, nombre);
-
-        window.config.tag = prepareTags(tagGroups);
-
-        var tags = window.url_tags;
-
-        window.url_tags = updateURLTags(tags, nombre);
-
-        var url = getCurrentUrl();
-
-        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
-
-        if (shouldLoad !== false)
-        {
-            $('.products').html("");
-            $('.products').ecommerce('destroy');
-            $('.products').ecommerce(window.config)
-        }
-    });
-
-    $("input:checkbox[name=color]").change(function(ev, shouldLoad)
-    {
-
-        var $box = $(this);
-        var nombre = $(this).attr("tag");
-        var va = $(this).attr("value2");
-
-        window.z = 0;
-
-        updateBlockFilters('#color', nombre, va);
-
-        updateTextRoute(va, "color2");
-
-        if ($(".limpiar").hasClass("hidden"))
-        {
-            $(".limpiar").removeClass("hidden");
-        }
-
-        // New filter logic
-
-        var groups = window.tagGroups.Color;
-
-        window.tagGroups.Color = updateGroupTag(groups, nombre);
-
-        window.config.tag = prepareTags(tagGroups);
-
-        var tags = window.url_tags;
-
-        window.url_tags = updateURLTags(tags, nombre);
-
-        var url = getCurrentUrl();
-
-        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
-
-        if (shouldLoad !== false)
-        {
-            $('.products').html("");
-            $('.products').ecommerce('destroy');
-            $('.products').ecommerce(window.config);
-        }
-
-    });
-
-    $("input:checkbox[name=material]").change(function(ev, shouldLoad)
-    {
-        var $box = $(this);
-        var nombre = $(this).attr("tag");
-        var va = $(this).attr("value2");
-
-        window.z = 0;
-
-        updateBlockFilters('#mat', nombre, va);
-
-        updateTextRoute(va, "mat2");
-
-        if ($(".limpiar").hasClass("hidden"))
-        {
-            $(".limpiar").removeClass("hidden");
-        }
-
-        localStorage.setItem("subcategoriaProd", $(".texto-ruta").html());
-
-        // New filter logic
-
-        var groups = window.tagGroups.Mat;
-
-        window.tagGroups.Mat = updateGroupTag(groups, nombre);
-
-        window.config.tag = prepareTags(tagGroups);
-
-        var tags = window.url_tags;
-
-        window.url_tags = updateURLTags(tags, nombre);
-
-        var url = getCurrentUrl();
-
-        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
-
-        if (shouldLoad !== false)
-        {
-            $('.products').empty();
-            $('.products').ecommerce('destroy');
-            $('.products').ecommerce(window.config);
-        }
-
-    });
-
-    $("input:checkbox[name=marca]").change(function(ev, shouldLoad)
-    {
-        var $box = $(this);
-        var nombre = $(this).attr("tag");
-        var va = $(this).attr("value2");
-
-        window.z = 0;
-
-        updateBlockFilters('#marca', nombre, va);
-
-        updateTextRoute(va, "marca2");
-
-        if ($(".limpiar").hasClass("hidden"))
-        {
-            $(".limpiar").removeClass("hidden");
-        }
-
-        localStorage.setItem("subcategoriaProd", $(".texto-ruta").html());
-
-        // New filter logic
-
-        var groups = window.tagGroups.Marca;
-
-        window.tagGroups.Marca = updateGroupTag(groups, nombre);
-
-        window.config.tag = prepareTags(tagGroups);
-
-        var tags = window.url_tags;
-
-        window.url_tags = updateURLTags(tags, nombre);
-
-        var url = getCurrentUrl();
-
-        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
-
-        if (shouldLoad !== false)
-        {
-            $('.products').html("");
-            $('.products').ecommerce('destroy');
-            $('.products').ecommerce(window.config);
-        }
-
+        e.preventDefault();
+
+        var target = $(this).attr("target");
+        $(".dropdown-filter>div").addClass("hidden");
+        $("." + target).removeClass("hidden");
     });
 
 
-    $("input:checkbox[name=talla]").change(function(ev, shouldLoad)
+    // remove desktop filters in mobile
+    if ($(".visible-xs").is(":visible"))
     {
-
-        var $box = $(this);
-        var nombre = $(this).attr("tag");
-        var va = $(this).attr("value2");
-
-        window.z = 0;
-
-        updateBlockFilters('#talla', nombre, va);
-
-        updateTextRoute(va, "talla2");
-
-        if ($(".limpiar").hasClass("hidden"))
-        {
-            $(".limpiar").removeClass("hidden");
-        }
-
-        localStorage.setItem("subcategoriaProd", $(".texto-ruta").html());
-
-        // New filter logic
-
-        var groups = window.tagGroups.Talla;
-
-        window.tagGroups.Talla = updateGroupTag(groups, nombre);
-
-        window.config.tag = prepareTags(tagGroups);
-
-        var tags = window.url_tags;
-
-        window.url_tags = updateURLTags(tags, nombre);
-
-        var url = getCurrentUrl();
-
-        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
-
-        if (shouldLoad !== false)
-        {
-            $('.products').html("");
-            $('.products').ecommerce('destroy');
-            $('.products').ecommerce(window.config);
-        }
-
-    });
-
-    $("input:checkbox[name=taco]").change(function(ev, shouldLoad)
-    {
-
-        var $box = $(this);
-        var nombre = $(this).attr("tag");
-        var va = $(this).attr("value2");
-
-        window.z = 0;
-
-        updateBlockFilters('#Forma_Taco', nombre, va);
-
-        updateTextRoute(va, "taco2");
-
-        if ($(".limpiar").hasClass("hidden"))
-        {
-            $(".limpiar").removeClass("hidden");
-        }
-
-        localStorage.setItem("subcategoriaProd", $(".texto-ruta").html());
-
-        // New filter logic
-
-        var groups = window.tagGroups.Taco;
-
-        window.tagGroups.Taco = updateGroupTag(groups, nombre);
-
-        window.config.tag = prepareTags(tagGroups);
-
-        var tags = window.url_tags;
-
-        window.url_tags = updateURLTags(tags, nombre);
-
-        var url = getCurrentUrl();
-
-        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
-
-        if (shouldLoad !== false)
-        {
-            $('.products').html("");
-            $('.products').ecommerce('destroy');
-            $('.products').ecommerce(window.config);
-        }
-
-    });
-
-    $("input:checkbox[name=alt_taco]").change(function(ev, shouldLoad)
-    {
-
-        var $box = $(this);
-        var nombre = $(this).attr("tag");
-        var va = $(this).attr("value2");
-
-        window.z = 0;
-
-        updateBlockFilters('#Taco', nombre, va);
-
-        updateTextRoute(va, "alt_taco2");
-
-        if ($(".limpiar").hasClass("hidden"))
-        {
-            $(".limpiar").removeClass("hidden");
-        }
-
-        localStorage.setItem("subcategoriaProd", $(".texto-ruta").html());
-
-        // New filter logic
-
-        var groups = window.tagGroups.Alt_Taco;
-
-        window.tagGroups.Alt_Taco = updateGroupTag(groups, nombre);
-
-        window.config.tag = prepareTags(tagGroups);
-
-        var tags = window.url_tags;
-
-        window.url_tags = updateURLTags(tags, nombre);
-
-        var url = getCurrentUrl();
-
-        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
-
-        if (shouldLoad !== false)
-        {
-            $('.products').html("");
-            $('.products').ecommerce('destroy');
-            $('.products').ecommerce(window.config);
-        }
-
-    });
-
-
-    $("input:checkbox[name=alt_plat]").change(function(ev, shouldLoad)
-    {
-
-        var $box = $(this);
-        var nombre = $(this).attr("tag");
-        var va = $(this).attr("value2");
-
-        window.z = 0;
-
-        updateBlockFilters('#Platform', nombre, va);
-
-        updateTextRoute(va, "alt_plat2");
-
-        if ($(".limpiar").hasClass("hidden"))
-        {
-            $(".limpiar").removeClass("hidden");
-        }
-
-        localStorage.setItem("subcategoriaProd", $(".texto-ruta").html());
-
-        // New filter logic
-
-        var groups = window.tagGroups.Alt_Plat;
-
-        window.tagGroups.Alt_Plat = updateGroupTag(groups, nombre);
-
-        window.config.tag = prepareTags(tagGroups);
-
-        var tags = window.url_tags;
-
-        window.url_tags = updateURLTags(tags, nombre);
-
-        var url = getCurrentUrl();
-
-        history.replaceState('', 'Placare', url + '?tag=' + url_tags.join(','));
-
-        if (shouldLoad !== false)
-        {
-            $('.products').html("");
-            $('.products').ecommerce('destroy');
-            $('.products').ecommerce(window.config);
-        }
-
-    });
-
-    onLoadInit(); // Load products and filters
-}); // End of $(document).ready()
-
-//<-------------------FUNCIONES-------------------->
-
-function onLoadInit(tagGroups, tag_url)
-{
-    //Append filters categories
-    $('.filtrosRec').append('<li class="fil-ul" id="categoria3"></li>' +
-        '<li class="fil-ul" id="color"></li>' +
-        '<li class="fil-ul" id="mat"></li>' +
-        '<li class="fil-ul" id="marca"></li>' +
-        '<li class="fil-ul" id="talla"></li>' +
-        '<li class="fil-ul" id="Forma_Taco"></li>' +
-        '<li class="fil-ul" id="Taco"></li>' + // Altura de taco
-        '<li class="fil-ul" id="Platform"></li>'); //Altura plataforma
-
-    // Load filters from tag parameter in url
-    if (Utils.getUrlParameter('tag') !== undefined)
-    {
-        tag_list = Utils.getUrlParameter('tag').split(',');
-
-        tag_list.forEach(function(i)
-        {
-            var temp = i.replace(/[+-]/g, "");
-
-            if ($(window).width() < 800) //on mobile
-            {
-                if (retrieveLocation().includes("mujer") || retrieveLocation().includes("listado_productos"))
-                {
-                    $('input.mobile-filter.female-filter[type=checkbox]').each(function(a, v)
-                    {
-                        if ($(this).hasClass("c-" + temp))
-                        {
-                            $(this).trigger('change', [false]);
-                            $(this).attr('checked', true);
-                        }
-                    });
-                }
-            } else // on desktop
-            {
-                $('input.desk-filter[type=checkbox]').each(function(a, v)
-                {
-                    if ($(this).hasClass("c-" + temp))
-                    {
-                        $(this).trigger('change', [false]);
-                        $(this).attr('checked', true);
-                    }
-                });
-            }
-
-            //Test for special filters
-            if (/Categoria4_/g.test(temp) || /Cierre_/g.test(temp))
-            {
-                window.tagGroups.Otros.push(temp);
-            }
-        });
+        $(".filter-desktop-wrapper").remove();
     }
-
-    if (window.tagGroups.Otros.length > 0)
-    {
-        window.tagGroups.Otros.forEach(function(i)
-        {
-            window.config.tag += "," + i;
-        });
-    }
-
-    $('.products').ecommerce('destroy');
-    $('.products').ecommerce(window.config);
-}
-
-
-//<---------------FUNCION LIMPIAR------------------>
-
-function limpiar()
-{
-
-    window.z = 0;
-
-    $(".limpiar").addClass("hidden");
-    $(".texto-ruta").html("Home ");
-    $(".fa-check-square").addClass("hidden");
-
-    var d = getDefaultFilter();
-
-    $('input:checkbox').each(function()
-    {
-        // If this checkbox doesn't have the default filtering class, it enters the conditional
-        if (!$(this).hasClass(d))
-        {
-            $(this).attr('checked', false);
-        }
-    });
-
-    $('.filtrosRec').children().each(function()
-    {
-        $(this).empty();
-    });
-
-
-
-    window.tagGroups = {
-        'Categoria3': [],
-        'Color': [],
-        'Mat': [],
-        'Marca': [],
-        'Talla': [],
-        'Taco': [],
-        'Alt_Taco': [],
-        'Alt_Plat': []
-    };
-
-    window.url_tags = [];
-
-    window.config.tag = getClassDefaultTag();
-    window.config.column = 'random(' + Math.random() + ')';
-
-    var url = getCurrentUrl();
-
-    history.replaceState('', 'Placare', url + '?tag='); //Agregar url custom
-
-    $('.products').ecommerce('destroy');
-    $('.products').ecommerce(window.config);
-};
-
-//<-------------END FUNCION LIMPIAR---------------->
-
-function prepareTags(tG)
-{
-
-    var tg = window.default_tag;
-
-    jQuery.each(tG, function(i, val)
-    {
-        if (val.length > 0)
-        {
-            tg += ",(";
-            for (var t in val)
-            {
-                if (t == 0)
-                {
-                    tg += val[t];
-                }
-                else
-                {
-                    tg += "," + val[t];
-                }
-            }
-            tg += ")";
-        }
-    });
-
-    return tg;
-}
-
-function updateGroupTag(tagGroup, tagName)
-{
-    if (tagGroup.length > 0)
-    {
-        if (tagGroup.includes("+" + tagName))
-        {
-            tagGroup.splice(tagGroup.indexOf("+" + tagName), 1);
-        }
-        else
-        {
-            tagGroup.push("+" + tagName);
-        }
-    }
-    else
-    {
-        tagGroup.push("+" + tagName);
-    }
-    return tagGroup;
-}
-
-function updateURLTags(tagURL, tag)
-{
-    if (tagURL.length > 0)
-    {
-        if (tagURL.includes(tag))
-        {
-            tagURL.splice(tagURL.indexOf(tag), 1);
-        }
-        else
-        {
-            tagURL.push(tag);
-        }
-    }
-    else
-    {
-        tagURL.push(tag);
-    }
-
-    return tagURL;
-}
-
-function updateBlockFilters(category, tagName, value)
-{
-    var filterBlocks = $(category).find('ul');
-    var toAdd = true;
-    var auxValue = value;
-
-    if (category === "#Taco" || category === "#Platform")
-    {
-        if (value % 1 !== 0)
-        {
-            value = value.toString().replace(".", "_");
-        }
-        else
-        {
-            value = value.toString() + "_0";
-        }
-    }
-
-    var className = category.charAt(1).toUpperCase() + category.slice(2) + '_' + value;
-    value = auxValue;
-
-    //Special case of category name
-    switch (className)
-    {
-        // Vertical spec filters
-        case "Categoria3_Slippers":
-            className = "Categoria3_Mules";
-            break;
-        case "Color_Café":
-            className = "Color_Cafe";
-            break;
-        case "Color_Metálico":
-            className = "Color_Metalico";
-            break;
-        case "Mat_Cuero":
-            className = "Mat_Capellada_Cuero";
-            break;
-        case "Mat_Eco Cuero":
-            className = "Mat_Capellada_Eco_Cuero";
-            break;
-        case "Marca_Eda Manzini":
-            className = "Marca_Eda_Manzini";
-            break;
-        case "Marca_Lola Canales":
-            className = "Marca_Lola_Canales";
-            break;
-            // Horizontal spec filter
-        case "Forma_Taco_alto":
-            className = "Forma_Taco_Alto";
-            break;
-        case "Forma_Taco_bajo":
-            className = "Forma_Taco_Bajo";
-            break;
-        case "Forma_Taco_chino":
-            className = "Forma_Taco_Chino";
-            break;
-
-
-    }
-
-    if (filterBlocks.length > 0)
-    {
-        filterBlocks.each(function(i, val)
-        {
-            if ($(this).hasClass(className))
-            {
-                $(this).remove();
-                toAdd = false;
-                return false;
-            }
-        });
-
-        if (toAdd)
-            $(category).append('<ul class="fil-ul ' + tagName + '"><li class="ca li-fil"><div class="ordenar-precio ' + tagName + '">' + value + '</div></li></ul>');
-    }
-    else
-    {
-        $(category).append('<ul class="fil-ul ' + tagName + '"><li class="ca li-fil"><div class="ordenar-precio ' + tagName + '">' + value + '</div></li></ul>');
-    }
-
-
-}
-
-function retrieveLocation()
-{
-    try {
-        var loc = window.location.href.match(/(?!\/)([^\/]+)\/?$/g).toString();
-        if (/(.*?).*(?=\?)/g.test(loc))
-        {
-            return loc.match(/(.*?)(?=\?)/g)[0];
-        }
-        else
-        {
-            return loc;
-        }
-    } catch (ex)
-    {}
-}
-
-function getCurrentUrl()
-{
-
-    var loc = retrieveLocation();
-
-    var urlPart = "mujer"; //Default value
-
-    var friendlyurls = ["ballerinas", "botines", "mocasines", "mules", "plataformas", "playeras", "sandalias", "zapatos"];
-
-    friendlyurls.forEach(function(i)
-    {
-        if (loc.includes(i))
-            urlPart = i + "-mujer";
-    });
-
-    if (loc.includes("listado_productos"))
-        urlPart = "listado_productos";
-
-    if (urlPart === "mules-mujer")
-        urlPart = "mules-slippers-mujer";
-
-    return urlPart;
-}
-
-function getDefaultFilter()
-{
-
-    var loc = retrieveLocation();
-
-    var defaultTag = "";
-
-    var friendlyurls = ["ballerinas", "botines", "mocasines", "mules", "plataformas", "playeras", "sandalias", "zapatos"];
-
-    friendlyurls.forEach(function(i)
-    {
-        if (loc.includes(i))
-            defaultTag = "c-Categoria3_" + i.charAt(0).toUpperCase() + i.slice(1);
-    });
-
-    return defaultTag;
-}
-
-/**
- * get tags by url, you can setup in variable called window.url_tags
- * @example:
- *          <script>window.url_tags = "Mujer,Categoria2_Calzado_Mujer,-..."
- */
-function getClassDefaultTag()
-{
-    return window.url_tags;
-}
-
-function updateTextRoute(name, category)
-{
-
-    var element = '<div class="fil-ul" id="' + category + '">' + name + '</div>';
-
-    var textoRuta = $(".texto-ruta").html();
-
-    if ($('#' + category).html() !== undefined)
-    {
-        $('#' + category).html(name);
-    }
-    else
-    {
-        $(".texto-ruta").html(textoRuta + " / " + element);
-    }
-}
+});

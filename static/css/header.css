@@ -427,6 +427,40 @@ li.slogan a:nth-last-child(1)
 }
 
 
+.btn-primary
+{
+    color: #7e818c;
+    background-color: white;
+    border-color: rgba(128, 128, 128, 0.4);
+    float: right;
+    border-radius: 0px;
+    text-align: left;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    position: relative;
+    min-width: 200px;
+    max-width: 100%;
+}
+
+.col-md-9.col-sm-9.col-xs-12 .dropdown
+{
+    display: inline-block;
+    float: right;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary
+{
+    color: rgba(128, 128, 128, 0.65);
+    background-color: #fff;
+    border-color: rgba(128, 128, 128, 0.4);
+}
+
 
 /*------------------------------------------Responsive--------------------------------*/
 

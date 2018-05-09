@@ -1,0 +1,164 @@
+/*
+* @Author: Ricardo Silva
+* @Date:   2018-05-07 18:59:21
+* @Last Modified by:   Ricardo Silva
+* @Last Modified time: 2018-05-08 18:54:26
+*/
+
+/*doc
+
+---
+title: Filter
+name: filter
+category: filter
+---
+
+### Filter element
+
+```html_example
+<div class="filters-container">
+    <h4>Filter Name</h4>
+
+    <div class="filter">
+        <input id="Marca_A" class="checkbox-filter" type="checkbox" label="A" >
+        <label for="Marca_A" >A</label>
+    </div>
+    <div class="filter">
+        <input id="Marca_B" class="checkbox-filter" type="checkbox" label="B" >
+        <label for="Marca_B" >B</label>
+    </div>
+</div>
+<div class="filters-container">
+    <h4>Filter Name</h4>
+
+    <div class="filter">
+        <input id="Marca_A" class="checkbox-filter" type="checkbox" label="A" >
+        <label for="Marca_A" >A</label>
+    </div>
+    <div class="filter">
+        <input id="Marca_B" class="checkbox-filter" type="checkbox" label="B" >
+        <label for="Marca_B" >B</label>
+    </div>
+</div>
+<div class="filters-container">
+    <h4>Filter Name</h4>
+
+    <div class="filter">
+        <input id="Marca_A" class="checkbox-filter" type="checkbox" label="A" >
+        <label for="Marca_A" >A</label>
+    </div>
+    <div class="filter">
+        <input id="Marca_B" class="checkbox-filter" type="checkbox" label="B" >
+        <label for="Marca_B" >B</label>
+    </div>
+</div>
+<div class="clearfix"></div>
+```
+
+### breadcrumb
+
+```html_example
+<div class="filters-breadcrumb">
+    <div class="filter-crumb">B</div>
+    <div class="filter-crumb">A</div>
+    <div class="filter-crumb">Azul</div>
+    <div class="filter-crumb">Rojo</div>
+</div>
+
+<div class="clearfix"></div>
+```
+
+### dropdown filters
+
+```html_example
+<div>
+    <a href="!#" class="dropdown-filter-header" target="dropwdown-filter-talla" >Tallas Disponibles</a>
+    <a href="!#" class="dropdown-filter-header" target="dropwdown-filter-taco" >Tipo de Taco</a>
+    <a href="!#" class="dropdown-filter-header" target="dropwdown-filter-altura" >Altura Taco</a>
+    <a href="!#" class="dropdown-filter-header" target="dropwdown-filter-plataforma" >Altura Plataforma </a>
+</div>
+
+<div class="clearfix"></div>
+```
+
+*/
+
+
+.filters-container
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #E9E9EF;
+}
+
+.filters-container:nth-child(1)
+{
+    border-top: none;
+    padding-top: 5px;
+}
+
+.filters-container input[type=checkbox]
+{
+    margin-top: 0px;
+    margin-right: 0px;
+    height: 15px;
+    width: 14px;
+}
+
+.filters-container label
+{
+    margin-bottom: 0px;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.filters-container h4
+{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #282c3f;
+}
+
+.filters-container:nth-child(1) h4
+{
+    margin-top: 0px;
+}
+
+.filter
+{
+    padding-left: 5px;
+}
+
+/* breadcrumb */
+.filters-breadcrumb
+{
+    padding-top: 10px
+}
+
+.filter-crumb
+{
+    width: 140px;
+    float: left;
+    border: 1px solid #bfc0c6;
+    padding: 4px 5px 3px 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #3e4152;
+}
+
+/* dropdown filter */
+.dropdown-filter-header
+{
+    margin-right: 15px;
+}
+
+.dropdown-filter-header:hover,
+.dropdown-filter-header:focus,
+.dropdown-filter-header:active
+{
+    color: #2f2c2c;
+    text-decoration: none !important;
+    border-bottom: 1px solid #526CD0;
+}
