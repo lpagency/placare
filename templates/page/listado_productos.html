@@ -141,7 +141,7 @@ $("#menu-toggle").click(function(e)
     <section class="pinner">
         <div class="container min dos">
             <div class="row col-side-padding">
-                <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="col-md-3 col-sm-3 col-xs-12 sticky-menu">
                     <section class="h_submenu hidden-xs visible-md visible-sm visible-lg" id="menu-fixed">
                         <div class="filter-desktop-wrapper">
                             {% block categories %}
@@ -150,7 +150,7 @@ $("#menu-toggle").click(function(e)
                         </div>
                     </section>
                 </div>
-                <section>
+                <section class="sticky-menu-margin" >
                     <div class="col-md-9 col-sm-9 col-xs-12">
                         <div>
                             <div class="texto-header-pro-2 tag-header">{% block section_name %}Mujeres{% end %}</div>
@@ -392,11 +392,11 @@ $("#menu-toggle").click(function(e)
                         </button>
                     </div>
                 </div>
-                <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="col-md-9 col-sm-9 col-xs-12 sticky-menu-margin">
                     <div class="" style=""></div>
                     <hr class="listado">
                 </div>
-                <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="col-md-9 col-sm-9 col-xs-12 sticky-menu-margin">
                     <div class="products row"></div>
                     <div class="col-xs-12">
                         <div align="center">

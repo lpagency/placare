@@ -313,8 +313,78 @@ $(document).on("ready", function()
     {
         $(".filter-desktop-wrapper").remove();
     }
-    else
-    {
-        // add sticky menu only for desktop
-    }
 });
+
+
+// add sticky menu only for desktop
+// // should do before document ready
+// var $sticky = $(".sticky-menu");
+// var $sticky_margin = $(".sticky-menu-margin");
+// var $footer = $("#footer");  // for bottom boundary
+// var sticky_top = $sticky.offset().top;
+// var sticky_height = $sticky.outerHeight();
+// var sticky_width = $sticky.outerWidth();
+// var current_scroll = $(document).scrollTop();
+// var diff = 0;
+// var current_status = 0;  // 0 iddle, 1 scrolling, 2 bottom hit
+
+// var setStatus = function(status)
+// {
+
+//     if (status === current_status)
+//         return;
+
+//     current_status = status;
+
+//     if (current_status === 0)  // iddle
+//     {
+//         $sticky.css("position", "relative");
+//         $sticky.css("top", "0px");
+//         $sticky.css("width", "");
+//         $sticky_margin.css("margin-left", "");
+//     }
+//     else if (current_status === 1)
+//     {
+//         var diff = ($footer.offset().top - 30) - (current_scroll + sticky_height);
+//         $sticky.css("position", "relative");
+//         $sticky.css("top", (current_scroll - sticky_top + diff) + "px");
+//         $sticky.css("width", "");
+//         $sticky_margin.css("margin-left", "");
+//     }
+//     else if (current_status === 2)
+//     {
+//         console.log("llegaa")
+//         $sticky.css("position", "fixed");
+//         $sticky.css("top", "0px");
+//         $sticky.css("width", sticky_width + "px");
+//         $sticky_margin.css("margin-left", sticky_width + "px");
+//         // $sticky.css("top", (current_scroll - sticky_top) + "px");
+//     }
+// }
+
+// var applyScroll = function(current_scroll)
+// {
+//     // set boundary
+//     if (current_scroll > sticky_top)
+//     {
+//         if (current_scroll - sticky_top + sticky_height > $footer.offset().top - 30)
+//         {
+//             setStatus(1);
+//         }
+//         else
+//         {
+//             setStatus(2);
+//         }
+//     }
+//     else  // scroll is at the top
+//         setStatus(0);
+// }
+
+// // first setup
+// applyScroll(current_scroll);
+
+// $(window).scroll(function()
+// {
+//     current_scroll = $(document).scrollTop();
+//     applyScroll(current_scroll);
+// });
