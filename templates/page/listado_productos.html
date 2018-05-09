@@ -128,7 +128,6 @@ $("#menu-toggle").click(function(e)
     {% set editabletext = '' %}
 {% end %}
 <!-- *contenido* -->
-
 <body>
     <section>
         <div class="container min">
@@ -144,59 +143,9 @@ $("#menu-toggle").click(function(e)
             <div class="row col-side-padding">
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <section class="h_submenu hidden-xs visible-md visible-sm visible-lg" id="menu-fixed">
-                        <div class="">
+                        <div class="filter-desktop-wrapper">
                             {% block categories %}
-                                <div>
-                                    <div class="filters-container">
-                                        <h4>TIPO DE CALZADO</h4>
-                                        <div class="filter">
-                                            <input id="Categoria3_Ballerinas" class="checkbox-filter" type="checkbox" label="Ballerinas" >
-                                            <label for="Categoria3_Ballerinas" >Ballerinas</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Botas" class="checkbox-filter" type="checkbox" label="Botas" >
-                                            <label for="Categoria3_Botas" >Botas</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Botines" class="checkbox-filter" type="checkbox" label="Botines" >
-                                            <label for="Categoria3_Botines" >Botines</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Casuales" class="checkbox-filter" type="checkbox" label="Casuales" >
-                                            <label for="Categoria3_Casuales" >Casuales</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Zapatos_de_Vestir_Fiesta" class="checkbox-filter" type="checkbox" label="Fiesta / Vestir" >
-                                            <label for="Categoria3_Zapatos_de_Vestir_Fiesta" >Fiesta / Vestir</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Mocasines" class="checkbox-filter" type="checkbox" label="Mocasines" >
-                                            <label for="Categoria3_Mocasines" >Mocasines</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Mules" class="checkbox-filter" type="checkbox" label="Mules / Slippers" >
-                                            <label for="Categoria3_Mules" >Mules / Slippers</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Oxford" class="checkbox-filter" type="checkbox" label="Oxford" >
-                                            <label for="Categoria3_Oxford" >Oxford</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Plataformas" class="checkbox-filter" type="checkbox" label="Plataformas" >
-                                            <label for="Categoria3_Plataformas" >Plataformas</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Playeras" class="checkbox-filter" type="checkbox" label="Playeras" >
-                                            <label for="Categoria3_Playeras" >Playeras</label>
-                                        </div>
-                                        <div class="filter">
-                                            <input id="Categoria3_Sandalias" class="checkbox-filter" type="checkbox" label="Sandalias" >
-                                            <label for="Categoria3_Sandalias" >Sandalias</label>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    {% include 'common-filters-mujer.html' %}
-                                </div>
+                                {% include all-categories-mujer.html %}
                             {% end %}
                         </div>
                     </section>
@@ -473,4 +422,52 @@ $("#menu-toggle").click(function(e)
     </div>
 </body>
 {% include '../home/footer.html' %}
+
+<!-- Modal -->
+<div id="myModal-orde" class="modal fade" role="dialog">
+    <div class="modal-dialog filtrosmovil">
+        <!-- Modal content-->
+        <div class="modal-content filtros">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center"><br> ORDENAR POR:</h4>
+            </div>
+            <div class="modal-body text-center">
+                <ul class="">
+                    <li><a href="#!" class="sort-by" field="main_price" dir="desc" >Precio: Mayor a menor</a></li>
+                    <li><a href="#!" class="sort-by" field="main_price" dir="asc" >Precio: Menor a mayor</a></li>
+                    <li><a href="#!" class="sort-by" field="name" dir="toggle" >Nombre</a></li>
+                    <li><a href="#!" class="sort-by" field="random" dir="asc">Aleatorio</a></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal-fil" class="modal fade" role="dialog">
+    <div class="modal-dialog filtrosmovil">
+        <!-- Modal content-->
+        <div class="modal-content filtros">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center"><br> FILTRAR POR:</h4>
+            </div>
+            <div class="modal-body fili text-center">
+                <section class="h_submenu hidden-md hidden-lg hidden-sm visible-xs">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        {% block categories %}
+                            {% include all-categories-mujer.html %}
+                        {% end %}
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default col-xs-6" data-dismiss="modal">Aplicar Filtro</button>
+                <button class="limpiar limpiar_modal col-xs-6">Limpiar Todo </button>
+            </div>
+        </div>
+    </div>
+</div>
 {% end %}

@@ -291,4 +291,11 @@ $(document).on("ready", function()
         $(".dropdown-filter>div").addClass("hidden");
         $("." + target).removeClass("hidden");
     });
+
+
+    // remove desktop filters in mobile
+    if ($(".visible-xs").is(":visible"))
+    {
+        $(".filter-desktop-wrapper").remove();
+    }
 });

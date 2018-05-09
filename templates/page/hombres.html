@@ -7,33 +7,5 @@ Hombres
 {% block tags %}Categoria2_Calzado_Hombre,-Categoria2_Calzado_Mujer,Categoria3_Botines{% end %}
 
 {% block categories %}
-
-<div>
-
-    <div class="filters-container">
-        <h4>TIPO DE CALZADO</h4>
-
-        <div class="filter">
-            <input id="Categoria3_Botines" class="checkbox-filter" type="checkbox" label="Botines" >
-            <label for="Categoria3_Botines">Botines</label>
-        </div>
-        <div class="filter">
-            <input id="Categoria3_Formales" class="checkbox-filter" type="checkbox" label="Formales" >
-            <label for="Categoria3_Formales">Formales</label>
-        </div>
-        <div class="filter">
-            <input id="Categoria3_Sandalias" class="checkbox-filter" type="checkbox" label="Sandalias" >
-            <label for="Categoria3_Sandalias">Sandalias</label>
-        </div>
-        <div class="filter">
-            <input id="Categoria3_Zapatos" class="checkbox-filter" type="checkbox" label="Zapatos" >
-            <label for="Categoria3_Zapatos">Zapatos</label>
-        </div>
-
-    </div>
-    <div class="clearfix"></div>
-
-    {% include 'common-filters-hombre.html' %}
-</div>
-
+    {% include 'all-categories-hombre.html' %}
 {% end %}
