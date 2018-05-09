@@ -345,7 +345,6 @@ li.slogan a:nth-last-child(1)
 {
     position: absolute;
     top: 100%;
-    left: 6px;
     z-index: 1000;
     width: 100%;
     display: none;
