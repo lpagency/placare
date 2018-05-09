@@ -1,21 +1,41 @@
-var tags = window.url_tags;
+var tags = []; // copy defaults tags
 
 var modifyURL = function()
 {
-    history.replaceState(
-        '', document.title, document.location.pathname + '?tag=' + tags.join(',')
-    );
+    var cleared_tags = [];
+    var t;
+    var should_modify = false;
+
+    for (t in tags)
+    {
+        // dont show default tags in url
+        if (window.default_tags.indexOf(tags[t]) === -1)
+        {
+            should_modify = true;
+            cleared_tags.push(tags[t]);
+        }
+    }
+
+    // only modify url if there is other than default tags
+    if (should_modify)
+        history.replaceState(
+            '', document.title, document.location.pathname + '?tag=' + cleared_tags.join(',')
+        );
 }
 
 var drawFiltersBread = function()
 {
     var html = [];
+
     for (var t in tags)
     {
-        html.push(
-            "<div class='filter-crumb'>" +
-            $("#" + tags[t]).attr("label") +
-            "</div>");
+        if (window.default_tags.indexOf(tags[t]) === -1)
+        {
+            html.push(
+                "<div class='filter-crumb'>" +
+                $("#" + tags[t]).attr("label") +
+                "</div>");
+        }
     }
 
     $(".filters-breadcrumb").html(html.join(""));
@@ -30,6 +50,11 @@ var toggleTag = function(tag, should_add)
         tags.splice(index, 1);
 }
 
+var clearTagName = function(t)
+{
+    return t.split("-").join("").split("+").join("");
+}
+
 var getURLFilters = function()
 {
     var groups = {};
@@ -37,7 +62,7 @@ var getURLFilters = function()
     // get tags groups
     for (var t in tags)
     {
-        var group_name = tags[t].split("_")[0];
+        var group_name = clearTagName(tags[t]).split("_")[0];
         if (groups[group_name] === undefined)
             groups[group_name] = [];
 
@@ -48,15 +73,19 @@ var getURLFilters = function()
     var generated = [];
     for (var g in groups)
     {
-        generated.push("+" + groups[g].join(",+"));
+        var group = "+" + groups[g].join(",+");
+        group = group.split("+-").join("-");  // resolve double operator
+        generated.push(group);
     }
 
+    if (generated.length === 0)
+        return "";
     return "(" + generated.join("),(") + ")";
 }
 
 var reloadEcommerce = function()
 {
-    window.config.tag = getURLFilters();
+    window.config.tag = [window.default_tags, getURLFilters()].join(",");
 
     $('.products').html("");
     $('.products').ecommerce("destroy");
@@ -119,7 +148,7 @@ $(document).on("ready", function()
         'app_public': app_public,
         'base_url': base_url,
         'products_per_page' : 12,
-        'tag': tags,
+        'tag': [window.default_tags, tags].join(","),
         'ignore_stock': false,
         'infinite_scroll': false,
         'column' : random_seed,
@@ -251,5 +280,15 @@ $(document).on("ready", function()
 
         drawFiltersBread();
         reloadEcommerce();
-    })
+    });
+
+    // dropdown filter
+    $(document).on("click", ".dropdown-filter-header", function(e)
+    {
+        e.preventDefault();
+
+        var target = $(this).attr("target");
+        $(".dropdown-filter>div").addClass("hidden");
+        $("." + target).removeClass("hidden");
+    });
 });
