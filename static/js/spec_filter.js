@@ -32,8 +32,9 @@ var drawFiltersBread = function()
         if (window.default_tags.indexOf(tags[t]) === -1)
         {
             html.push(
-                "<div class='filter-crumb'>" +
+                "<div class='filter-crumb' >" +
                 $("#" + tags[t]).attr("label") +
+                "<a href='#!' tag='" + tags[t] + "' class='pull-right remove-tag' >x</a>" +
                 "</div>");
         }
     }
@@ -290,6 +291,20 @@ $(document).on("ready", function()
         var target = $(this).attr("target");
         $(".dropdown-filter>div").addClass("hidden");
         $("." + target).removeClass("hidden");
+    });
+
+    // remove tag button
+    $(document).on("click", ".remove-tag", function(e)
+    {
+        e.preventDefault();
+
+        // remove selected fitler
+        var tag = $(this).attr("tag");
+
+        $("#" + tag).removeAttr("checked");
+        toggleTag(tag, false);
+        drawFiltersBread();
+        reloadEcommerce();
     });
 
 
