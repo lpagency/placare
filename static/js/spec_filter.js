@@ -276,7 +276,7 @@ $(document).on("ready", function()
         // clear tags
         tags = [];
         total_products = 0;
-        $(".checkbox-filter").removeAttr("checked");
+        $(".checkbox-filter:enabled").removeAttr("checked");
 
         drawFiltersBread();
         reloadEcommerce();
