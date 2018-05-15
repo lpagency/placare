@@ -414,17 +414,8 @@ hr.len
 
 .sku-detalle
 {
-    text-align: left;
     color: #696b79;
-    font-weight: 500;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-size: 11px;
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    margin-top: 0;
 }
 
 .btn-success.car
@@ -451,6 +442,12 @@ hr.len
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.btn-success.car:disabled
+{
+    background-color: #ffbf7c;
+    border-color: #ffbf7c;
 }
 
 
@@ -598,6 +595,12 @@ a.talla
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.btn-success.car-2:disabled
+{
+    background-color: #94928e;
+    border-color: #94928e;
 }
 
 .linea-separacion-2
