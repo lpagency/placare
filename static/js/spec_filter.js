@@ -89,7 +89,9 @@ var reloadEcommerce = function()
     window.config.tag = [window.default_tags, getURLFilters()].join(",");
 
     $('.products').html("");
-    $('.products').ecommerce("destroy");
+    // only destroy if exists
+    if ($(".products").data("ecommerce"))
+        $('.products').ecommerce("destroy");
     $('.products').ecommerce(config);
 
     modifyURL();
