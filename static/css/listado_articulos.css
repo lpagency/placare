@@ -8,7 +8,6 @@
     color: white;
     font-weight: 300;
     font-size: 29px;
-    /* font-family: Thaoma,Verdana,sans-serif; */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -90,7 +89,6 @@
 {
     margin-top: 115px;
     width: 47%;
-    /* left: -192px;*/
     left: -74px;
 }
 
@@ -353,7 +351,6 @@ hr.len
     .col-md-12:nth-child(even)>.lef
     {
         width: 100%;
-        /* left: -192px; */
         left: -5px;
         margin-top: 100px;
         margin-bottom: -172px
