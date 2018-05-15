@@ -269,6 +269,15 @@
             $(".buscar-movil").toggle(1000);
         });
         /* /search menu */
+
+
+        /* menu mobile */
+        $("#menu-toggle").click(function(e)
+        {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        /* /menu mobile */
     });
 
     $(document).on('ready pageshow', function()

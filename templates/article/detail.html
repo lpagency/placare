@@ -1,12 +1,18 @@
 {% extends "../base.html" %}
-{% block title %} {{ site.name }} {% end %}
+
+{% block title %}
+    {{ site.name }}
+{% end %}
+{% block header %}
+    {% include '../home/header.html' %}
+{% end %}
 
 {% block css %}
-<link href="https://fonts.googleapis.com/css?family=Lato" type="text/css" /> {% if is_admin %}
-<link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/textbox_io.css" type="text/css">
-<link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/detalle_articulos.css">
-<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/article/detail.js"></script>
-{% end %}
+<link href="https://fonts.googleapis.com/css?family=Lato" type="text/css" />
+    {% if is_admin %}
+        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/textbox_io.css" type="text/css">
+        <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/detalle_articulos.css">
+    {% end %}
 <style type="text/css">
 html,
 body
@@ -29,9 +35,12 @@ body
 </style>
 {% end %}
 
-{% block header %} {% include '../home/header.html' %} {% end %}
 {% block javascript %}
+    {% if is_admin %}
+        <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/article/detail.js"></script>
+    {% end %}
 {% end %}
+
 {% block body %}
 <!-- registration -->
 <div class="container min">
@@ -98,4 +107,5 @@ body
     <div class="flecha clearfix">
     </div>
 </div>
-{% include '../home/footer.html' %} {% end %}
+{% include '../home/footer.html' %}
+{% end %}
