@@ -129,8 +129,8 @@ $(document).on("ready", function()
 {
     var random_seed = 'random('+Math.random()+')';
     var base_url = $.environmentVar(
-        'https://apibodegas.loadingplay.com/',
-        'https://apibodegas.loadingplay.com/',
+        'https://apibodegas.ondev.today/',
+        'https://apibodegas.ondev.today/',
         'https://apibodegas.loadingplay.com/');
     var checkout_url = $.environmentVar(
         'http://localhost:8522/',
