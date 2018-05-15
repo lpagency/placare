@@ -1,12 +1,3 @@
-.fa-angle-right.lis
-{
-    float: right;
-    right: 11px;
-    font-size: 22px !important;
-    color: white;
-    top: 10px;
-}
-
 
 .is
 {
@@ -29,8 +20,6 @@
     padding-left: 5px;
     padding-right: 5px;
 }
-
-
 
 .img-talla
 {
@@ -138,7 +127,6 @@
     height: 24px;
 }
 
-
 .fondo-detalle
 {
     width: 100%;
@@ -189,7 +177,6 @@
 {
     border: 1px solid orange !important;
 }
-
 
 .name_prod_detail
 {
@@ -376,7 +363,6 @@ hr.len
     top: 15px;
 }
 
-
 .fa-plus
 {
     float: right;
@@ -432,6 +418,15 @@ hr.len
     opacity: 1;
 }
 
+.btn-success.car i,
+.btn-success.car-2 i
+{
+    color: white;
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
 .btn-success.car:hover
 {
     color: #FF9D36;
@@ -450,6 +445,10 @@ hr.len
     border-color: #ffbf7c;
 }
 
+.btn-success.car:hover i
+{
+    color: #FF9D36;
+}
 
 .original-de
 {
@@ -493,7 +492,6 @@ hr.len
     font-weight: 600;
     color: #282c3f;
 }
-
 
 a.talla
 {
@@ -569,7 +567,6 @@ a.talla
     font-weight: 600;
 }
 
-
 .btn-success.car-2
 {
     color: white;
@@ -603,6 +600,11 @@ a.talla
     border-color: #94928e;
 }
 
+.btn-success.car-2:hover i
+{
+    color: #5A5751;
+}
+
 .linea-separacion-2
 {
     border-bottom: 1px solid #E9E9ED;
@@ -628,8 +630,6 @@ a.talla
     margin-bottom: 0px;
     padding-left: 0px;
 }
-
-
 
 hr.listado
 {
@@ -965,7 +965,6 @@ a.variables:active
     width: 100%;
 }
 
-
 .conti:hover .middle
 {
     opacity: 1;
@@ -1177,8 +1176,6 @@ hr.lon
         margin-top: -24px;
     }
 
-
-
     .oferta,
     .original-tachado
     {
@@ -1225,7 +1222,6 @@ hr.lon
         border-right: 1px solid #ebedef;
     }
 
-
     .background-color-producto
     {
         background-color: pink;
@@ -1263,7 +1259,6 @@ hr.lon
         max-width: 100%;
     }
 
-
     .mtl
     {
         padding-top: 0px !important;
@@ -1294,8 +1289,6 @@ hr.lon
     }
 }
 
-
-
 @media (max-width: 767px)
 {
 
@@ -1323,7 +1316,6 @@ hr.lon
         width: 140px;
         max-width: 100%;
     }
-
 
     .container.min.dos .col-md-3.col-sm-3.col-xs-12+section .row,
     .container.min.dos .col-md-3.col-sm-3.col-xs-12+section .dropdown
@@ -1441,8 +1433,6 @@ hr.lon
         margin-bottom: 0px;
     }
 
-
-
     .img-pro
     {
         width: 100%;
@@ -1508,7 +1498,6 @@ hr.lon
     {
         margin-top: 35px;
     }
-
 
     #product-detail-id .ellipsis
     {
@@ -1649,8 +1638,6 @@ hr.lon
         outline-offset: 0px;
     }
 
-
-
     .linea-separacion-3
     {
         border-bottom: 1px solid rgba(0, 0, 0, 0.27);
@@ -1758,8 +1745,6 @@ hr.lon
         float: left;
     }
 
-
-
     .modal-content.filtros
     {
         position: relative;
@@ -1820,7 +1805,6 @@ hr.lon
         width: auto;
         margin: 0px;
     }
-
 
     .swiper-slide
     {
@@ -1945,14 +1929,12 @@ hr.lon
     }
 }
 
-
 @media (max-width: 700px)
 {
     .img-container
     {
         display: inline;
     }
-
 
     .text-relac
     {
@@ -2018,7 +2000,6 @@ hr.lon
         margin-left: -10px;
         top: 200px;
     }
-
 
     .linea-separacion
     {
@@ -2086,7 +2067,6 @@ hr.lon
     }
 }
 
-
 @media (max-width: 500px)
 {
     .texto-header-pro-3
@@ -2103,8 +2083,6 @@ hr.lon
     }
 }
 
-
-
 @media (max-width: 459px)
 {
     .ver-oferta
@@ -2120,7 +2098,6 @@ hr.lon
         float: left;
     }
 }
-
 
 @media (max-width: 414px)
 {
@@ -2340,7 +2317,6 @@ hr.lon
         left: 0px;
     }
 
-
     .size-item
     {
         padding: 15px 0px;
@@ -2397,7 +2373,6 @@ hr.lon
     {}
 }
 
-
 @media (max-width: 350px)
 {
 
@@ -2436,8 +2411,6 @@ hr.lon
         font-size: 13px;
         font-weight: 600;
     }
-
-
 
     a.talla
     {
