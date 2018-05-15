@@ -37,6 +37,13 @@ a:hover
     color: #333;
 }
 
+
+select.input-lg
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
 @media (min-width: 991.98px)
 {
     .col-side-padding
