@@ -225,7 +225,7 @@
     <script type="text/javascript">
     $(document).on("ready", function()
     {
-        /* dropdown menu */
+        // dropdown menu
         $('ul.nav div.dropdown').hover(function()
         {
             $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
@@ -233,9 +233,7 @@
         {
             $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
         });
-        /* /dropdown menu */
 
-        /* subscribe button */
         // prevent default event in footer email
         $('#formid').on('keyup keypress', function(e)
         {
@@ -260,24 +258,19 @@
                 $("input[name=SingleLine]").val("Hombre");
             }
         });
-        /* /subscribe button */
 
-        /* search menu */
         // show search menu
         $(document).on("click", ".lupita", function(ev)
         {
             $(".buscar-movil").toggle(1000);
         });
-        /* /search menu */
 
-
-        /* menu mobile */
+        // menu mobile
         $("#menu-toggle").click(function(e)
         {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-        /* /menu mobile */
     });
 
     $(document).on('ready pageshow', function()

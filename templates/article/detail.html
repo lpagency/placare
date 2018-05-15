@@ -42,70 +42,70 @@ body
 {% end %}
 
 {% block body %}
-<!-- registration -->
-<div class="container min">
-    <div class="mobile-det" style="background:url('{{ article['thumb_500'] }}'); height:400px; background-size:cover; margin-top: 0px;  filter: grayscale(0%) brightness(65%);-webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);-ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%);">
-        <img class="fondo-articulo hidden" src="{{ article["thumb_500"] }}" class="img-responsive lazy" data-original="{{ article["url"] }}" alt="item">
-    </div>
-</div>
-<div id="first-page-scroll" class="container min cart-list productlist">
-    <!--    <div class="row cero" > -->
-    <div class="col-sm-12 blog-content">
-        <input type="hidden" id="article-description-ajax-url" value="{{ site.url }}article/update-description">
-        <input type="hidden" id="article-content-id" value="{{article['id']}}">
-        <div class="col-sm-12 blog-content" style="margin-bottom: 30px;">
-            <h1 class="text-center h1-art til-ban">
-                {{ article["title"] }}
-            </h1>
-            <div class="post-date" style="text-align:center;">
-                <br>
-            </div>
+    <!-- registration -->
+    <div class="container min">
+        <div class="mobile-det" style="background:url('{{ article['thumb_500'] }}'); height:400px; background-size:cover; margin-top: 0px;  filter: grayscale(0%) brightness(65%);-webkit-filter: grayscale(0%) brightness(65%);
+        -moz-filter: grayscale(0%) brightness(65%);-ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%);">
+            <img class="fondo-articulo hidden" src="{{ article["thumb_500"] }}" class="img-responsive lazy" data-original="{{ article["url"] }}" alt="item">
         </div>
-        <div class="content articulo-text" >
-            <div class="col-sm-12 especial">
-                <h2 class="h2-art til-ban-2">{{ article["caption"] }}
-                </h2>
-            </div>
-            <div align="center">
-                <div class="col-md-12 content-picture">
+    </div>
+    <div id="first-page-scroll" class="container min cart-list productlist">
+        <!--    <div class="row cero" > -->
+        <div class="col-sm-12 blog-content">
+            <input type="hidden" id="article-description-ajax-url" value="{{ site.url }}article/update-description">
+            <input type="hidden" id="article-content-id" value="{{article['id']}}">
+            <div class="col-sm-12 blog-content" style="margin-bottom: 30px;">
+                <h1 class="text-center h1-art til-ban">
+                    {{ article["title"] }}
+                </h1>
+                <div class="post-date" style="text-align:center;">
+                    <br>
                 </div>
             </div>
-            <div align="center">
-                <div class="col-sm-12">
-                    <div class="">
-                        <div id="description" class="p-art dan">
-                            {{ article["description"] }}
+            <div class="content articulo-text" >
+                <div class="col-sm-12 especial">
+                    <h2 class="h2-art til-ban-2">{{ article["caption"] }}
+                    </h2>
+                </div>
+                <div align="center">
+                    <div class="col-md-12 content-picture">
+                    </div>
+                </div>
+                <div align="center">
+                    <div class="col-sm-12">
+                        <div class="">
+                            <div id="description" class="p-art dan">
+                                {{ article["description"] }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 especial p-art" style="text-align: right;">
-            </div>
-            <div class="col-sm-12 p-art ">
-                tags | <a>{{ "</a> ,<a>".join(article["tags"]) }}</a>
+                <div class="col-sm-12 especial p-art" style="text-align: right;">
+                </div>
+                <div class="col-sm-12 p-art ">
+                    tags | <a>{{ "</a> ,<a>".join(article["tags"]) }}</a>
+                </div>
             </div>
         </div>
+        <div class="col-sm-3 blog-sidebar">
+            <div class="widget" style="text-align:left;">
+            </div>
+        </div>
+        <!-- row 4 -->
     </div>
-    <div class="col-sm-3 blog-sidebar">
-        <div class="widget" style="text-align:left;">
+    <div id="contenedor" class="container-fluid productlist">
+        <article>
+            <header>
+                <h1 class="h1-art especial text-center">Contenido relacionado a este articulo</h1>
+            </header>
+        </article>
+        <div class="row cont-rel">
+            {{ getRelatedArticles(article["id"], html="article/box.html") }}
         </div>
     </div>
-    <!-- row 4 -->
-</div>
-<div id="contenedor" class="container-fluid productlist">
-    <article>
-        <header>
-            <h1 class="h1-art especial text-center">Contenido relacionado a este articulo</h1>
-        </header>
-    </article>
-    <div class="row cont-rel">
-        {{ getRelatedArticles(article["id"], html="article/box.html") }}
+    <div class="carritoproductos clearfix">
+        <div class="flecha clearfix">
+        </div>
     </div>
-</div>
-<div class="carritoproductos clearfix">
-    <div class="flecha clearfix">
-    </div>
-</div>
-{% include '../home/footer.html' %}
+    {% include '../home/footer.html' %}
 {% end %}
