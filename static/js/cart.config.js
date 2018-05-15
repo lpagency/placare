@@ -9,9 +9,6 @@ var getIncludeParameters = function()
 {
     var scripts = document.getElementsByTagName('script');
     var myScript = scripts[ scripts.length - 6 ];
-    // var scripts = document.getElementsByTagName('script');
-    // var myScript = scripts[ scripts.length - 1 ];
-
     var queryString = myScript.src.replace(/^[^\?]+\??/,'');
 
     var params = parseQuery( queryString );

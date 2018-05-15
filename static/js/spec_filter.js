@@ -89,7 +89,9 @@ var reloadEcommerce = function()
     window.config.tag = [window.default_tags, getURLFilters()].join(",");
 
     $('.products').html("");
-    $('.products').ecommerce("destroy");
+    // only destroy if exists
+    if ($(".products").data("ecommerce"))
+        $('.products').ecommerce("destroy");
     $('.products').ecommerce(config);
 
     modifyURL();
@@ -128,16 +130,6 @@ var clearWhiteTags = function()
 $(document).on("ready", function()
 {
     var random_seed = 'random('+Math.random()+')';
-    var base_url = $.environmentVar(
-        'https://apibodegas.loadingplay.com/',
-        'https://apibodegas.loadingplay.com/',
-        'https://apibodegas.loadingplay.com/');
-    var checkout_url = $.environmentVar(
-        'http://localhost:8522/',
-        'https://lpcheckout.ondev.today',
-        'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(53,53,53);
-    var site_name = $.environmentVar('placare', 'placare', 'placare');
 
     // load tags from url before init the checkbox filter events
     clearWhiteTags();  // clear bad formatted tags

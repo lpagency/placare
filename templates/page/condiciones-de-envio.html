@@ -12,57 +12,35 @@
 {% end %}
 
 {% block javascript %}
-<script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-</script>
 <script type="text/javascript">
-    $(document).ready(function()
+$(document).ready(function()
+{
+    // EXCLUSIVO PARA PLACARE
+    $("title").html("Placare - Condiciones de envío");
+    $("meta[name=description]").attr("content", "condiciones de envío");
+
+    $("#OpenAlert").click();
+
+    var config = {
+        'app_public': app_public,
+        'base_url': base_url,
+        'maxProducts': 16,
+        'templateOrigin': '#product_template',
+        'tag': '',
+        'ignore_stock': true
+    };
+
+    $(document).ecommerce(
     {
-      // EXCLUSIVO PARA PLACARE
-      $("title").html("Placare - Condiciones de envío");
-      $("meta[name=description]").attr("content", "condiciones de envío");
-
-      $("#OpenAlert").click();
-
-        var base_url = $.environmentVar(
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.ondev.today/',
-            'https://apibodegas.loadingplay.com/');
-        var checkout_url = $.environmentVar(
-            'https://lpcheckout.ondev.today',
-            'https://lpcheckout.ondev.today',
-            'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(53,53,53);
-        var site_name = $.environmentVar('placare', 'placare', 'placare');
-        var config = {
-            'app_public' : app_public,
-            'base_url' : base_url,
-            'maxProducts' : 16,
-            'templateOrigin' : '#product_template',
-            'tag' : '',
-            'ignore_stock' : true,
-            'onLoad':function(){
-               // $('.ellipsis').ellipsis();
-               // $(".ellipsis").dotdotdot();
-             }
-        };
-         $(document).ecommerce({
-       'app_public' :  app_public,
-       'animation' : 'simple',
-       'base_url' : base_url,
-       'checkout_url' :  checkout_url,
-       'products_per_page' : 9
-     });
-
-        $('.product-list').ecommerce('product_box', config);
-
-        // destacado categoria 2
-        // config.tag = 'destacado_categoria2';
-        // $('.product-list2').ecommerce('product_box', config);
+        'app_public': app_public,
+        'animation': 'simple',
+        'base_url': base_url,
+        'checkout_url': checkout_url,
+        'products_per_page': 9
     });
+
+    $('.product-list').ecommerce('product_box', config);
+});
 </script>
 {% end %}
 
@@ -78,28 +56,20 @@
 
 
 <!-- *contenido* -->
+
 <body id="lapimport">
-
-<section>
-  <div class="container min">
-    <div class="row">
-      <div class="col-md-12">
-             <div class="text-cont {{editabletext}}" text-id="{{ site.name + '_cin' }}"> {{ read_text(site.name +  '_cin') }} </div>
-
-             <div class="text-black {{editabletext}}" text-id="{{ site.name + '_ter_cin' }}"> {{ read_text(site.name +  '_ter_cin') }} </div>
-
-      </div>
-    </div>
-  </div>
-
-</section>
-
-
-
-
-<div style="margin-bottom:100px;"></div>
+    <section>
+        <div class="container min">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-cont {{editabletext}}" text-id="{{ site.name + '_cin' }}"> {{ read_text(site.name + '_cin') }} </div>
+                    <div class="text-black {{editabletext}}" text-id="{{ site.name + '_ter_cin' }}"> {{ read_text(site.name + '_ter_cin') }} </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="margin-bottom:100px;"></div>
 </body>
-
 
 {% include '../home/footer.html' %}
 {% end %}

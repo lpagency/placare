@@ -174,6 +174,20 @@
     <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.min.js?1"></script>
     <script type="text/javascript" src="https://cdn.loadingplay.com/js/connect/bodegas.client.min.js"></script>
 
+    <!-- config shopping cart -->
+    <script type="text/javascript">
+        window.base_url = $.environmentVar(
+            'https://apibodegas.ondev.today/',
+            'https://apibodegas.ondev.today/',
+            'https://apibodegas.loadingplay.com/');
+        window.checkout_url = $.environmentVar(
+            'https://lpcheckout.ondev.today',
+            'https://lpcheckout.ondev.today',
+            'https://pay.loadingplay.com');
+        window.app_public = $.environmentVar(53,53,53);
+        window.site_name = $.environmentVar('placare', 'placare', 'placare');
+    </script>
+
     <!-- templates -->
     <script type="text/x-template" id="shopping-cart-product">
         <tr>
