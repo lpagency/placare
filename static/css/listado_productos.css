@@ -2140,6 +2140,18 @@ hr.lon
         border-color: #74E2C7;
     }
 
+    .btn-success.car:disabled
+    {
+        background-color: #9fe9da;
+        border-color: #9fe9da;
+    }
+
+    .btn-success.car-2:disabled
+    {
+        background-color: #f6b57f;
+        border-color: #f6b57f;
+    }
+
     .conti>a,
     .conti-de
     {
