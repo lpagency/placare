@@ -39,19 +39,8 @@ body
     -moz-filter: grayscale(0%) brightness(65%);-ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%);">
         <img class="fondo-articulo hidden" src="{{ article["thumb_500"] }}" class="img-responsive lazy" data-original="{{ article["url"] }}" alt="item">
     </div>
-    <div class="col-md-12">
-        <div align="center">
-            <a href="#first-page-scroll" class="anchorLink">
-                <div class="contenedor-circulo">
-                    <div class="circulo-bajada">
-                        <i class="fa  fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
 </div>
-<div id="first-page-scroll" class="container cart-list productlist">
+<div id="first-page-scroll" class="container min cart-list productlist">
     <!--    <div class="row cero" > -->
     <div class="col-sm-12 blog-content">
         <input type="hidden" id="article-description-ajax-url" value="{{ site.url }}article/update-description">
@@ -65,9 +54,9 @@ body
                 <!-- {{ article["creation_date"].strftime("%d %b %Y") }} -->
             </div>
         </div>
-        <div class="content articulo-text" style="text-align:center; float:left;">
+        <div class="content articulo-text" >
             <div class="col-sm-12 especial">
-                <h2 class="h2-art til-ban-2" style="color: rgba(132, 132, 132, 0.62); font-weight: 300; text-align:left; font-size: 22px;">{{ article["caption"] }}
+                <h2 class="h2-art til-ban-2">{{ article["caption"] }}
                 </h2>
             </div>
             <div align="center">
