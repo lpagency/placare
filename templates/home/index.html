@@ -29,28 +29,13 @@ $(document).ready(function()
 
     $("#OpenAlert").click();
 
-    var base_url = $.environmentVar(
-        'https://apibodegas.ondev.today/',
-        'https://apibodegas.ondev.today/',
-        'https://apibodegas.loadingplay.com/');
-    var checkout_url = $.environmentVar(
-        'https://lpcheckout.ondev.today',
-        'https://lpcheckout.ondev.today',
-        'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(53, 53, 53);
-    var site_name = $.environmentVar('placare', 'placare', 'placare');
     var config = {
         'app_public': app_public,
         'base_url': base_url,
         'maxProducts': 16,
         'templateOrigin': '#product_template',
         'tag': '',
-        'ignore_stock': false,
-        'onLoad': function()
-        {
-            // $('.ellipsis').ellipsis();
-            // $(".ellipsis").dotdotdot();
-        }
+        'ignore_stock': false
     };
     $(document).ecommerce({
         'app_public': app_public,

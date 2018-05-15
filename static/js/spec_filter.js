@@ -128,16 +128,6 @@ var clearWhiteTags = function()
 $(document).on("ready", function()
 {
     var random_seed = 'random('+Math.random()+')';
-    var base_url = $.environmentVar(
-        'https://apibodegas.ondev.today/',
-        'https://apibodegas.ondev.today/',
-        'https://apibodegas.loadingplay.com/');
-    var checkout_url = $.environmentVar(
-        'http://localhost:8522/',
-        'https://lpcheckout.ondev.today',
-        'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(53,53,53);
-    var site_name = $.environmentVar('placare', 'placare', 'placare');
 
     // load tags from url before init the checkbox filter events
     clearWhiteTags();  // clear bad formatted tags
