@@ -239,6 +239,19 @@
     <script type="text/javascript">
     $(document).on("ready", function()
     {
+        // show search menu
+        $(document).on("click", ".lupita", function(ev)
+        {
+            $(".buscar-movil").toggle(1000);
+        });
+
+        // menu mobile
+        $("#menu-toggle").click(function(e)
+        {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
         // dropdown menu
         $('ul.nav div.dropdown').hover(function()
         {
@@ -271,19 +284,6 @@
             {
                 $("input[name=SingleLine]").val("Hombre");
             }
-        });
-
-        // show search menu
-        $(document).on("click", ".lupita", function(ev)
-        {
-            $(".buscar-movil").toggle(1000);
-        });
-
-        // menu mobile
-        $("#menu-toggle").click(function(e)
-        {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
         });
     });
 
