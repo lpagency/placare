@@ -131,7 +131,6 @@ $(document).ready(function()
                 $(this).css("transform", "scale(1.1)");
             });
 
-
             var main = $(".descuento-detalle").attr("main-price");
             var promotion = $(".descuento-detalle").attr("promotion-price");
 
