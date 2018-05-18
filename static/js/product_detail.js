@@ -35,7 +35,6 @@ $(document).ready(function()
     {
         $(".img_prod_little").css("border", "none");
         $(this).children().css("border", "solid 1px orange");
-
     });
 
     // load product detail
@@ -68,6 +67,7 @@ $(document).ready(function()
                 var titulo = $(this).html().replace("_", " ");
                 $(this).html(titulo);
             });
+
             var titulo = $(".up-ex-detalle").html().replace("_", " ");
             $(".up-ex-detalle").html(titulo);
 
@@ -97,7 +97,8 @@ $(document).ready(function()
                         $('.add-to-cart').removeAttr('product-combination');
                         $('.add-to-cart').attr('disabled', true);
                     }
-                });
+                }
+            );
 
             variants_loaded = true; // execute this onces
             options.onLoad = $.noop;
@@ -186,7 +187,8 @@ $(document).ready(function()
                     $("[value=" + last + "]").children("span").remove();
                 }
             }
-        });
+        }
+    );
 
     // productos relacionados
     var related = function(tag)
