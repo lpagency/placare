@@ -238,90 +238,90 @@
 
     <!-- codigo intercom-->
     <script type="text/javascript" >
-    window.intercomSettings = {
-        app_id: "dyefpt3j"
-    };
+        window.intercomSettings = {
+            app_id: "dyefpt3j"
+        };
     </script>
     <script>
-    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dyefpt3j';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dyefpt3j';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
     </script>
     <!--end codigo intercom-->
 
     <script type="text/javascript">
-    $(document).on("ready", function()
-    {
-        // show search menu
-        $(document).on("click", ".lupita", function(ev)
+        $(document).on("ready", function()
         {
-            $(".buscar-movil").toggle(1000);
-        });
+            // show search menu
+            $(document).on("click", ".lupita", function(ev)
+            {
+                $(".buscar-movil").toggle(1000);
+            });
 
-        // menu mobile
-        $("#menu-toggle").click(function(e)
-        {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-
-        // dropdown menu
-        $('ul.nav div.dropdown').hover(function()
-        {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-        }, function()
-        {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-        });
-
-        // prevent default event in footer email
-        $('#formid').on('keyup keypress', function(e)
-        {
-            var keyCode = e.keyCode || e.which;
-            if (keyCode === 13)
+            // menu mobile
+            $("#menu-toggle").click(function(e)
             {
                 e.preventDefault();
-                return false;
-            }
+                $("#wrapper").toggleClass("toggled");
+            });
+
+            // dropdown menu
+            $('ul.nav div.dropdown').hover(function()
+            {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+            }, function()
+            {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+            });
+
+            // prevent default event in footer email
+            $('#formid').on('keyup keypress', function(e)
+            {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 13)
+                {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // subscribe button
+            $(document).on("click", ".boton-news", function()
+            {
+                $(this).html("espere");
+                if ($(this).hasClass("sus"))
+                {
+                    $("input[name=SingleLine]").val("Mujer");
+                }
+                if ($(this).hasClass("sus-h"))
+                {
+                    $("input[name=SingleLine]").val("Hombre");
+                }
+            });
         });
 
-        // subscribe button
-        $(document).on("click", ".boton-news", function()
+        $(document).on('ready pageshow', function()
         {
-            $(this).html("espere");
-            if ($(this).hasClass("sus"))
-            {
-                $("input[name=SingleLine]").val("Mujer");
-            }
-            if ($(this).hasClass("sus-h"))
-            {
-                $("input[name=SingleLine]").val("Hombre");
-            }
+            $(".more-products").removeClass("hidden");
         });
-    });
-
-    $(document).on('ready pageshow', function()
-    {
-        $(".more-products").removeClass("hidden");
-    });
     </script>
 
     <!-- Start of placarehelp Zendesk Widget script -->
     <script>
-    /*<![CDATA[*/
-    window.zEmbed || function(e, t) {
-        var n, o, d, i, s, a = [],
-            r = document.createElement("iframe");
-        window.zEmbed = function() { a.push(arguments) }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
-        try { o = s } catch (e) { n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s } o.open()._l = function() {
-            var e = this.createElement("script");
-            n && (this.domain = n), e.id = "js-iframe-async", e.src = "https://assets.zendesk.com/embeddable_framework/main.js", this.t = +new Date, this.zendeskHost = "placarehelp.zendesk.com", this.zEQueue = a, this.body.appendChild(e)
-        }, o.write('<body onload="document._l();">'), o.close()
-    }();
-    /*]]>*/
+        /*<![CDATA[*/
+        window.zEmbed || function(e, t) {
+            var n, o, d, i, s, a = [],
+                r = document.createElement("iframe");
+            window.zEmbed = function() { a.push(arguments) }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+            try { o = s } catch (e) { n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s } o.open()._l = function() {
+                var e = this.createElement("script");
+                n && (this.domain = n), e.id = "js-iframe-async", e.src = "https://assets.zendesk.com/embeddable_framework/main.js", this.t = +new Date, this.zendeskHost = "placarehelp.zendesk.com", this.zEQueue = a, this.body.appendChild(e)
+            }, o.write('<body onload="document._l();">'), o.close()
+        }();
+        /*]]>*/
     </script>
 
     <!-- Facebook Pixel Code -->
     <script>
-    ! function(f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1993876297507428'); fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1993876297507428'); fbq('track', 'PageView');
     </script>
     <noscript>
         <img height="1" width="1" src="https://www.facebook.com/tr?id=1993876297507428&ev=PageView&noscript=1" />
@@ -329,7 +329,7 @@
     <!-- End Facebook Pixel Code -->
 
     <script>
-    window.fbAsyncInit = function() { FB.init({ appId: '348231912006000', xfbml: true, version: 'v2.1' }); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js?1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+        window.fbAsyncInit = function() { FB.init({ appId: '348231912006000', xfbml: true, version: 'v2.1' }); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js?1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 
